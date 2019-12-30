@@ -1,0 +1,145 @@
+syntax = "proto3";
+package proto;
+
+message AppMsg {
+    enum Cmd {
+        // 库保留部分
+        NONE = 0;
+        RESERVED = 10;
+
+        // 上位机对工控板命令
+        set_device_add = 11;    // 设置数据采集模块的IP地址、子网掩码、网关地址
+        get_device_add = 12;
+
+        set_server_add = 13;    // 设置服务器的IPV4地址和端口
+        get_server_add = 14;
+
+        set_platform_id = 15;   // 设置平台ID
+        get_platform_id = 16;
+
+        set_station_id = 17;    // 设置车站主机ID
+        get_station_id = 18;
+
+        set_turnout_id = 19;    // 设置道岔ID
+        get_turnout_id = 20;
+
+        set_item_id = 21;       // 设置监测项目ID
+        get_item_id = 22;
+
+        set_sensor_id = 23;     // 设置指定采集通道对应的传感器ID
+        get_sensor_id = 24;
+
+        set_sample_frequency = 25;  // 设置数据采集模块的低速采样频率1
+        get_sample_frequency = 26;
+
+        set_zero_offset = 27;       // 设置数据采集模块指定通道的标定0点
+        get_zero_offset = 28;
+
+        set_fault_voltage = 29;     // 设置传感器故障电压的阀值，过车时，如果压电传感器的电压始终小于该阀值，则产生传感器故障报警。
+        get_fault_voltage = 30;
+
+        set_abnormal_param  = 31;   // 设置通道异常电压阀值和通道异常时阀值。Level:以伏为单位的电压值。Duration:以毫秒为单位的时间。
+        get_abnormal_param = 32;
+
+        set_full_scale = 34;        // 设置数据采集模块指定通道的满度值
+        get_full_scale = 35;
+
+        set_judgement_mode = 36;    // 设置过车判断模式：axle_counter/piezoelectricity 分别表示使用计轴传感器和压电传感器
+
+        set_pzltrct_param = 37;     // 设置压电传感器判断过车算法使用的参数：过车电压阀值和过车时长阀值。Threshold:以伏为单位的电压值。Duration:以毫秒为单位的时间。
+        get_pzltrct_param = 38;
+
+        set_axis_counting_param = 39;   // 设置计轴器判断过车算法使用的参数。轮对最长间隔。Duration:以毫秒为单位的时间。
+        get_axis_counting_param = 40;
+
+        set_transportion_enable = 41;   // 设置指定通道的数据是否上传到监测服务器。只能设置压电传感器对就的通道号。
+        get_transportion_enable = 42;
+
+        capture_adc_data = 43;          // 采集ADC数据
+
+        capture_adc_data_auto = 44;     // 采集ADC数据    消息类型: BoolValue 开始/停止
+
+        // 工控板对上位机命令
+        auto_adc_data = 1000;           // 自动采集的ADC数据
+
+        error_msg = 1001;               // 错误消息
+    }
+
+    message device_add {
+        string ip = 1;
+        string netmask = 2;
+        string gateway = 3;
+    }
+
+    message server_add {
+        string ip = 1;
+        uint32 port = 2;
+    }
+
+    message platform_id {
+        uint32 id = 1;
+    }
+
+    message station_id {
+        uint32 id = 1;
+    }
+
+    message turnout_id {
+        uint32 id = 1;
+    }
+
+    message item_id {
+        uint32 id = 1;
+    }
+
+    message sensor_id {
+        uint32 channel = 1;
+        uint32 id = 2;
+    }
+
+    message sample_frequency {
+        uint32 frequency = 1;
+    }
+
+    message zero_offse {
+        uint32 channel = 1;
+        uint32 offset = 2;
+    }
+
+    message fault_voltage {
+        double level = 1;
+    }
+
+    message abnormal_param {
+        double level = 1;
+        uint32 duration = 2;
+    }
+
+    message full_scale {
+        uint32 channel = 1;
+        int32 scale = 2;
+    }
+
+    message judgement_mode {
+        string mode = 1;
+    }
+
+    message pzltrct_param {
+        double threshold = 1;
+        uint32 duration = 2;
+    }
+
+    message axis_counting_param {
+        uint32 duration = 1;
+    }
+
+    message transportion_enable {
+        uint32 channel = 1;
+        bool enable = 2;
+    }
+
+    message adc_data {
+        uint32 time = 1;
+        bytes data = 2;
+    }
+}

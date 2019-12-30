@@ -1,0 +1,83 @@
+syntax = "proto3";
+package proto;
+
+message AlarmMsg {
+    enum Cmd {
+        NONE = 0;
+
+        //// 采集卡发送服务器（板卡到上位机）
+        channel_state = 2000;   // 设备、传感器状态
+        alarm_report = 2001;    // 报警
+        disk_state = 2002;      // 磁盘状态
+
+        //// 服务器到采集卡
+        set_time = 2100;        // 校时命令
+        set_heart_beat = 2101;  // 设置心跳
+        start_repair = 2102;    // 维护开始
+        stop_repair = 2103;     // 维护结束
+    }
+
+    message DeviceAddr {
+        uint32 platform_id = 1;         // 平台 ID
+        uint32 chezhanzhuji_id = 2;     // 车站主机 ID
+        uint32 daocha_id = 3;           // 道岔 ID
+        uint32 jiancexiangmu_id = 4;    // 监测项目 ID
+        uint32 sensor_id = 5;           // 传感器 ID
+    }
+
+    message ChannelStates {
+        // 地址域
+        DeviceAddr device_addr = 1;
+
+        // 数据域
+        repeated ChannelState channel_state = 2;
+
+        // 通道状态
+        message ChannelState {
+            uint32 sensor_id = 1;   // 传感器ID
+            State state = 2;        // 传感器状态
+            uint64 time = 3;        // timestamp 时间戳 秒
+        }
+
+        // 传感器状态
+        enum State {
+            Normal = 0;         // 正常
+            SensorError = 1;    // 传感器故障
+            ChannelError = 2;   // 传感器通道故障
+        }
+    }
+
+    message AlarmReport {
+        // 地址域
+        DeviceAddr device_addr = 1;
+
+        // 通道状态
+        ChannelStates channel_state = 2;
+
+        // 报警
+        Alarm alarm = 3;
+        
+        enum Alarm {
+            Normal = 0;     // 正常
+            Warning = 1;    // 预警
+            Emergency = 2;  // 报警
+        }
+    }
+
+    message DiskState {
+        // 地址域
+        DeviceAddr device_addr = 1;
+
+        // 采集卡空间状态
+        State state = 2;
+
+        enum State {
+            Normal = 0;     // 正常
+            Full = 1;       // 已满
+        }
+    }
+
+    message Time {
+        uint64 time = 1;    // timestamp 时间戳 秒
+    }
+}
