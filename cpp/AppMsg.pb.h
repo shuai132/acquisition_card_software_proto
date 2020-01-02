@@ -107,9 +107,9 @@ extern AppMsg_transportion_enableDefaultTypeInternal _AppMsg_transportion_enable
 class AppMsg_turnout_id;
 class AppMsg_turnout_idDefaultTypeInternal;
 extern AppMsg_turnout_idDefaultTypeInternal _AppMsg_turnout_id_default_instance_;
-class AppMsg_zero_offse;
-class AppMsg_zero_offseDefaultTypeInternal;
-extern AppMsg_zero_offseDefaultTypeInternal _AppMsg_zero_offse_default_instance_;
+class AppMsg_zero_offset;
+class AppMsg_zero_offsetDefaultTypeInternal;
+extern AppMsg_zero_offsetDefaultTypeInternal _AppMsg_zero_offset_default_instance_;
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::AppMsg* Arena::CreateMaybeMessage<::proto::AppMsg>(Arena*);
@@ -129,7 +129,7 @@ template<> ::proto::AppMsg_server_add* Arena::CreateMaybeMessage<::proto::AppMsg
 template<> ::proto::AppMsg_station_id* Arena::CreateMaybeMessage<::proto::AppMsg_station_id>(Arena*);
 template<> ::proto::AppMsg_transportion_enable* Arena::CreateMaybeMessage<::proto::AppMsg_transportion_enable>(Arena*);
 template<> ::proto::AppMsg_turnout_id* Arena::CreateMaybeMessage<::proto::AppMsg_turnout_id>(Arena*);
-template<> ::proto::AppMsg_zero_offse* Arena::CreateMaybeMessage<::proto::AppMsg_zero_offse>(Arena*);
+template<> ::proto::AppMsg_zero_offset* Arena::CreateMaybeMessage<::proto::AppMsg_zero_offset>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace proto {
 
@@ -1295,23 +1295,23 @@ class AppMsg_sample_frequency :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_zero_offse :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.zero_offse) */ {
+class AppMsg_zero_offset :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.zero_offset) */ {
  public:
-  AppMsg_zero_offse();
-  virtual ~AppMsg_zero_offse();
+  AppMsg_zero_offset();
+  virtual ~AppMsg_zero_offset();
 
-  AppMsg_zero_offse(const AppMsg_zero_offse& from);
-  AppMsg_zero_offse(AppMsg_zero_offse&& from) noexcept
-    : AppMsg_zero_offse() {
+  AppMsg_zero_offset(const AppMsg_zero_offset& from);
+  AppMsg_zero_offset(AppMsg_zero_offset&& from) noexcept
+    : AppMsg_zero_offset() {
     *this = ::std::move(from);
   }
 
-  inline AppMsg_zero_offse& operator=(const AppMsg_zero_offse& from) {
+  inline AppMsg_zero_offset& operator=(const AppMsg_zero_offset& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppMsg_zero_offse& operator=(AppMsg_zero_offse&& from) noexcept {
+  inline AppMsg_zero_offset& operator=(AppMsg_zero_offset&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1329,37 +1329,37 @@ class AppMsg_zero_offse :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AppMsg_zero_offse& default_instance();
+  static const AppMsg_zero_offset& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_zero_offse* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_zero_offse*>(
-               &_AppMsg_zero_offse_default_instance_);
+  static inline const AppMsg_zero_offset* internal_default_instance() {
+    return reinterpret_cast<const AppMsg_zero_offset*>(
+               &_AppMsg_zero_offset_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(AppMsg_zero_offse& a, AppMsg_zero_offse& b) {
+  friend void swap(AppMsg_zero_offset& a, AppMsg_zero_offset& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppMsg_zero_offse* other) {
+  inline void Swap(AppMsg_zero_offset* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AppMsg_zero_offse* New() const final {
-    return CreateMaybeMessage<AppMsg_zero_offse>(nullptr);
+  inline AppMsg_zero_offset* New() const final {
+    return CreateMaybeMessage<AppMsg_zero_offset>(nullptr);
   }
 
-  AppMsg_zero_offse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_zero_offse>(arena);
+  AppMsg_zero_offset* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMsg_zero_offset>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_zero_offse& from);
-  void MergeFrom(const AppMsg_zero_offse& from);
+  void CopyFrom(const AppMsg_zero_offset& from);
+  void MergeFrom(const AppMsg_zero_offset& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1380,10 +1380,10 @@ class AppMsg_zero_offse :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_zero_offse* other);
+  void InternalSwap(AppMsg_zero_offset* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.zero_offse";
+    return "proto.AppMsg.zero_offset";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1421,7 +1421,7 @@ class AppMsg_zero_offse :
   ::PROTOBUF_NAMESPACE_ID::uint32 offset() const;
   void set_offset(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.zero_offse)
+  // @@protoc_insertion_point(class_scope:proto.AppMsg.zero_offset)
  private:
   class _Internal;
 
@@ -2646,7 +2646,7 @@ class AppMsg :
   typedef AppMsg_item_id item_id;
   typedef AppMsg_sensor_id sensor_id;
   typedef AppMsg_sample_frequency sample_frequency;
-  typedef AppMsg_zero_offse zero_offse;
+  typedef AppMsg_zero_offset zero_offset;
   typedef AppMsg_fault_voltage fault_voltage;
   typedef AppMsg_abnormal_param abnormal_param;
   typedef AppMsg_full_scale full_scale;
@@ -3123,34 +3123,34 @@ inline void AppMsg_sample_frequency::set_frequency(::PROTOBUF_NAMESPACE_ID::uint
 
 // -------------------------------------------------------------------
 
-// AppMsg_zero_offse
+// AppMsg_zero_offset
 
 // uint32 channel = 1;
-inline void AppMsg_zero_offse::clear_channel() {
+inline void AppMsg_zero_offset::clear_channel() {
   channel_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offse::channel() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offse.channel)
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offset::channel() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offset.channel)
   return channel_;
 }
-inline void AppMsg_zero_offse::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_zero_offset::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   channel_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offse.channel)
+  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offset.channel)
 }
 
 // uint32 offset = 2;
-inline void AppMsg_zero_offse::clear_offset() {
+inline void AppMsg_zero_offset::clear_offset() {
   offset_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offse::offset() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offse.offset)
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offset::offset() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offset.offset)
   return offset_;
 }
-inline void AppMsg_zero_offse::set_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_zero_offset::set_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   offset_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offse.offset)
+  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offset.offset)
 }
 
 // -------------------------------------------------------------------

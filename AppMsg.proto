@@ -101,7 +101,7 @@ message AppMsg {
         uint32 frequency = 1;
     }
 
-    message zero_offse {
+    message zero_offset {
         uint32 channel = 1;
         uint32 offset = 2;
     }
