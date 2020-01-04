@@ -507,7 +507,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\330\013\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\215\014\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -524,7 +524,7 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_para"
   "m\022\020\n\010duration\030\001 \001(\r\0326\n\023transportion_enab"
   "le\022\017\n\007channel\030\001 \001(\r\022\016\n\006enable\030\002 \001(\010\032&\n\010a"
-  "dc_data\022\014\n\004time\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\"\242\006\n\003"
+  "dc_data\022\014\n\004time\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\"\327\006\n\003"
   "Cmd\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_devic"
   "e_add\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_serve"
   "r_add\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platf"
@@ -537,15 +537,16 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "_zero_offset\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021s"
   "et_fault_voltage\020\035\022\025\n\021get_fault_voltage\020"
   "\036\022\026\n\022set_abnormal_param\020\037\022\026\n\022get_abnorma"
-  "l_param\020 \022\022\n\016set_full_scale\020\"\022\022\n\016get_ful"
-  "l_scale\020#\022\026\n\022set_judgement_mode\020$\022\025\n\021set"
-  "_pzltrct_param\020%\022\025\n\021get_pzltrct_param\020&\022"
-  "\033\n\027set_axis_counting_param\020\'\022\033\n\027get_axis"
-  "_counting_param\020(\022\033\n\027set_transportion_en"
-  "able\020)\022\033\n\027get_transportion_enable\020*\022\024\n\020c"
-  "apture_adc_data\020+\022\031\n\025capture_adc_data_au"
-  "to\020,\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020\351\007"
-  "b\006proto3"
+  "l_param\020 \022\022\n\016set_full_scale\020!\022\022\n\016get_ful"
+  "l_scale\020\"\022\026\n\022set_judgement_mode\020#\022\026\n\022get"
+  "_judgement_mode\020$\022\025\n\021set_pzltrct_param\020%"
+  "\022\025\n\021get_pzltrct_param\020&\022\033\n\027set_axis_coun"
+  "ting_param\020\'\022\033\n\027get_axis_counting_param\020"
+  "(\022\033\n\027set_transportion_enable\020)\022\033\n\027get_tr"
+  "ansportion_enable\020*\022\024\n\020capture_adc_data\020"
+  "+\022\032\n\026set_capture_auto_state\020,\022\032\n\026get_cap"
+  "ture_auto_state\020-\022\022\n\rauto_adc_data\020\350\007\022\016\n"
+  "\terror_msg\020\351\007b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
@@ -572,7 +573,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1528,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1581,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 18, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 18, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -611,6 +612,7 @@ bool AppMsg_Cmd_IsValid(int value) {
     case 30:
     case 31:
     case 32:
+    case 33:
     case 34:
     case 35:
     case 36:
@@ -622,6 +624,7 @@ bool AppMsg_Cmd_IsValid(int value) {
     case 42:
     case 43:
     case 44:
+    case 45:
     case 1000:
     case 1001:
       return true;
@@ -658,6 +661,7 @@ constexpr AppMsg_Cmd AppMsg::get_abnormal_param;
 constexpr AppMsg_Cmd AppMsg::set_full_scale;
 constexpr AppMsg_Cmd AppMsg::get_full_scale;
 constexpr AppMsg_Cmd AppMsg::set_judgement_mode;
+constexpr AppMsg_Cmd AppMsg::get_judgement_mode;
 constexpr AppMsg_Cmd AppMsg::set_pzltrct_param;
 constexpr AppMsg_Cmd AppMsg::get_pzltrct_param;
 constexpr AppMsg_Cmd AppMsg::set_axis_counting_param;
@@ -665,7 +669,8 @@ constexpr AppMsg_Cmd AppMsg::get_axis_counting_param;
 constexpr AppMsg_Cmd AppMsg::set_transportion_enable;
 constexpr AppMsg_Cmd AppMsg::get_transportion_enable;
 constexpr AppMsg_Cmd AppMsg::capture_adc_data;
-constexpr AppMsg_Cmd AppMsg::capture_adc_data_auto;
+constexpr AppMsg_Cmd AppMsg::set_capture_auto_state;
+constexpr AppMsg_Cmd AppMsg::get_capture_auto_state;
 constexpr AppMsg_Cmd AppMsg::auto_adc_data;
 constexpr AppMsg_Cmd AppMsg::error_msg;
 constexpr AppMsg_Cmd AppMsg::Cmd_MIN;

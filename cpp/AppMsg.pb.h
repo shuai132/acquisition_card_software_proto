@@ -158,9 +158,10 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_get_fault_voltage = 30,
   AppMsg_Cmd_set_abnormal_param = 31,
   AppMsg_Cmd_get_abnormal_param = 32,
-  AppMsg_Cmd_set_full_scale = 34,
-  AppMsg_Cmd_get_full_scale = 35,
-  AppMsg_Cmd_set_judgement_mode = 36,
+  AppMsg_Cmd_set_full_scale = 33,
+  AppMsg_Cmd_get_full_scale = 34,
+  AppMsg_Cmd_set_judgement_mode = 35,
+  AppMsg_Cmd_get_judgement_mode = 36,
   AppMsg_Cmd_set_pzltrct_param = 37,
   AppMsg_Cmd_get_pzltrct_param = 38,
   AppMsg_Cmd_set_axis_counting_param = 39,
@@ -168,7 +169,8 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_set_transportion_enable = 41,
   AppMsg_Cmd_get_transportion_enable = 42,
   AppMsg_Cmd_capture_adc_data = 43,
-  AppMsg_Cmd_capture_adc_data_auto = 44,
+  AppMsg_Cmd_set_capture_auto_state = 44,
+  AppMsg_Cmd_get_capture_auto_state = 45,
   AppMsg_Cmd_auto_adc_data = 1000,
   AppMsg_Cmd_error_msg = 1001,
   AppMsg_Cmd_AppMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
@@ -2711,6 +2713,8 @@ class AppMsg :
     AppMsg_Cmd_get_full_scale;
   static constexpr Cmd set_judgement_mode =
     AppMsg_Cmd_set_judgement_mode;
+  static constexpr Cmd get_judgement_mode =
+    AppMsg_Cmd_get_judgement_mode;
   static constexpr Cmd set_pzltrct_param =
     AppMsg_Cmd_set_pzltrct_param;
   static constexpr Cmd get_pzltrct_param =
@@ -2725,8 +2729,10 @@ class AppMsg :
     AppMsg_Cmd_get_transportion_enable;
   static constexpr Cmd capture_adc_data =
     AppMsg_Cmd_capture_adc_data;
-  static constexpr Cmd capture_adc_data_auto =
-    AppMsg_Cmd_capture_adc_data_auto;
+  static constexpr Cmd set_capture_auto_state =
+    AppMsg_Cmd_set_capture_auto_state;
+  static constexpr Cmd get_capture_auto_state =
+    AppMsg_Cmd_get_capture_auto_state;
   static constexpr Cmd auto_adc_data =
     AppMsg_Cmd_auto_adc_data;
   static constexpr Cmd error_msg =

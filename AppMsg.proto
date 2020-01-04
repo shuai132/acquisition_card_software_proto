@@ -41,10 +41,11 @@ message AppMsg {
         set_abnormal_param  = 31;   // 设置通道异常电压阀值和通道异常时阀值。Level:以伏为单位的电压值。Duration:以毫秒为单位的时间。
         get_abnormal_param = 32;
 
-        set_full_scale = 34;        // 设置数据采集模块指定通道的满度值
-        get_full_scale = 35;
+        set_full_scale = 33;        // 设置数据采集模块指定通道的满度值
+        get_full_scale = 34;
 
-        set_judgement_mode = 36;    // 设置过车判断模式：axle_counter/piezoelectricity 分别表示使用计轴传感器和压电传感器
+        set_judgement_mode = 35;    // 设置过车判断模式：axle_counter/piezoelectricity 分别表示使用计轴传感器和压电传感器
+        get_judgement_mode = 36;
 
         set_pzltrct_param = 37;     // 设置压电传感器判断过车算法使用的参数：过车电压阀值和过车时长阀值。Threshold:以伏为单位的电压值。Duration:以毫秒为单位的时间。
         get_pzltrct_param = 38;
@@ -57,7 +58,8 @@ message AppMsg {
 
         capture_adc_data = 43;          // 采集ADC数据
 
-        capture_adc_data_auto = 44;     // 采集ADC数据    消息类型: BoolValue 开始/停止
+        set_capture_auto_state = 44;    // 采集ADC数据    消息类型: BoolValue 开始/停止
+        get_capture_auto_state = 45;
 
         // 工控板对上位机命令
         auto_adc_data = 1000;           // 自动采集的ADC数据
