@@ -38,7 +38,7 @@ message AppMsg {
         set_fault_voltage = 29;     // 设置传感器故障电压的阀值，过车时，如果压电传感器的电压始终小于该阀值，则产生传感器故障报警。
         get_fault_voltage = 30;
 
-        set_abnormal_param  = 31;   // 设置通道异常电压阀值和通道异常时阀值。Level:以伏为单位的电压值。Duration:以毫秒为单位的时间。
+        set_abnormal_param = 31;    // 设置通道异常电压阀值和通道异常时阀值。Level:以伏为单位的电压值。Duration:以毫秒为单位的时间。
         get_abnormal_param = 32;
 
         set_full_scale = 33;        // 设置数据采集模块指定通道的满度值
@@ -53,8 +53,8 @@ message AppMsg {
         set_axis_counting_param = 39;   // 设置计轴器判断过车算法使用的参数。轮对最长间隔。Duration:以毫秒为单位的时间。
         get_axis_counting_param = 40;
 
-        set_transportion_enable = 41;   // 设置指定通道的数据是否上传到监测服务器。只能设置压电传感器对就的通道号。
-        get_transportion_enable = 42;
+        set_sample_card_num = 41;   // 设置启用的采集卡数量
+        get_sample_card_num = 42;
 
         capture_adc_data = 43;          // 采集ADC数据
 
@@ -135,13 +135,18 @@ message AppMsg {
         uint32 duration = 1;
     }
 
-    message transportion_enable {
-        uint32 channel = 1;
-        bool enable = 2;
+    message sample_card_num {
+        uint32 num = 1;
     }
 
     message adc_data {
         uint32 time = 1;
-        bytes data = 2;
+        sample_card_num sample_card_num = 2;
+        sample_frequency sample_frequency = 3;
+        bytes data = 9;
+        platform_id platform_id = 10;
+        station_id station_id = 11;
+        turnout_id turnout_id = 12;
+        item_id item_id = 13;
     }
 }

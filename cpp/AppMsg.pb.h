@@ -89,6 +89,9 @@ extern AppMsg_platform_idDefaultTypeInternal _AppMsg_platform_id_default_instanc
 class AppMsg_pzltrct_param;
 class AppMsg_pzltrct_paramDefaultTypeInternal;
 extern AppMsg_pzltrct_paramDefaultTypeInternal _AppMsg_pzltrct_param_default_instance_;
+class AppMsg_sample_card_num;
+class AppMsg_sample_card_numDefaultTypeInternal;
+extern AppMsg_sample_card_numDefaultTypeInternal _AppMsg_sample_card_num_default_instance_;
 class AppMsg_sample_frequency;
 class AppMsg_sample_frequencyDefaultTypeInternal;
 extern AppMsg_sample_frequencyDefaultTypeInternal _AppMsg_sample_frequency_default_instance_;
@@ -101,9 +104,6 @@ extern AppMsg_server_addDefaultTypeInternal _AppMsg_server_add_default_instance_
 class AppMsg_station_id;
 class AppMsg_station_idDefaultTypeInternal;
 extern AppMsg_station_idDefaultTypeInternal _AppMsg_station_id_default_instance_;
-class AppMsg_transportion_enable;
-class AppMsg_transportion_enableDefaultTypeInternal;
-extern AppMsg_transportion_enableDefaultTypeInternal _AppMsg_transportion_enable_default_instance_;
 class AppMsg_turnout_id;
 class AppMsg_turnout_idDefaultTypeInternal;
 extern AppMsg_turnout_idDefaultTypeInternal _AppMsg_turnout_id_default_instance_;
@@ -123,11 +123,11 @@ template<> ::proto::AppMsg_item_id* Arena::CreateMaybeMessage<::proto::AppMsg_it
 template<> ::proto::AppMsg_judgement_mode* Arena::CreateMaybeMessage<::proto::AppMsg_judgement_mode>(Arena*);
 template<> ::proto::AppMsg_platform_id* Arena::CreateMaybeMessage<::proto::AppMsg_platform_id>(Arena*);
 template<> ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(Arena*);
+template<> ::proto::AppMsg_sample_card_num* Arena::CreateMaybeMessage<::proto::AppMsg_sample_card_num>(Arena*);
 template<> ::proto::AppMsg_sample_frequency* Arena::CreateMaybeMessage<::proto::AppMsg_sample_frequency>(Arena*);
 template<> ::proto::AppMsg_sensor_id* Arena::CreateMaybeMessage<::proto::AppMsg_sensor_id>(Arena*);
 template<> ::proto::AppMsg_server_add* Arena::CreateMaybeMessage<::proto::AppMsg_server_add>(Arena*);
 template<> ::proto::AppMsg_station_id* Arena::CreateMaybeMessage<::proto::AppMsg_station_id>(Arena*);
-template<> ::proto::AppMsg_transportion_enable* Arena::CreateMaybeMessage<::proto::AppMsg_transportion_enable>(Arena*);
 template<> ::proto::AppMsg_turnout_id* Arena::CreateMaybeMessage<::proto::AppMsg_turnout_id>(Arena*);
 template<> ::proto::AppMsg_zero_offset* Arena::CreateMaybeMessage<::proto::AppMsg_zero_offset>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -166,8 +166,8 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_get_pzltrct_param = 38,
   AppMsg_Cmd_set_axis_counting_param = 39,
   AppMsg_Cmd_get_axis_counting_param = 40,
-  AppMsg_Cmd_set_transportion_enable = 41,
-  AppMsg_Cmd_get_transportion_enable = 42,
+  AppMsg_Cmd_set_sample_card_num = 41,
+  AppMsg_Cmd_get_sample_card_num = 42,
   AppMsg_Cmd_capture_adc_data = 43,
   AppMsg_Cmd_set_capture_auto_state = 44,
   AppMsg_Cmd_get_capture_auto_state = 45,
@@ -2248,23 +2248,23 @@ class AppMsg_axis_counting_param :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_transportion_enable :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.transportion_enable) */ {
+class AppMsg_sample_card_num :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.sample_card_num) */ {
  public:
-  AppMsg_transportion_enable();
-  virtual ~AppMsg_transportion_enable();
+  AppMsg_sample_card_num();
+  virtual ~AppMsg_sample_card_num();
 
-  AppMsg_transportion_enable(const AppMsg_transportion_enable& from);
-  AppMsg_transportion_enable(AppMsg_transportion_enable&& from) noexcept
-    : AppMsg_transportion_enable() {
+  AppMsg_sample_card_num(const AppMsg_sample_card_num& from);
+  AppMsg_sample_card_num(AppMsg_sample_card_num&& from) noexcept
+    : AppMsg_sample_card_num() {
     *this = ::std::move(from);
   }
 
-  inline AppMsg_transportion_enable& operator=(const AppMsg_transportion_enable& from) {
+  inline AppMsg_sample_card_num& operator=(const AppMsg_sample_card_num& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppMsg_transportion_enable& operator=(AppMsg_transportion_enable&& from) noexcept {
+  inline AppMsg_sample_card_num& operator=(AppMsg_sample_card_num&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2282,37 +2282,37 @@ class AppMsg_transportion_enable :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AppMsg_transportion_enable& default_instance();
+  static const AppMsg_sample_card_num& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_transportion_enable* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_transportion_enable*>(
-               &_AppMsg_transportion_enable_default_instance_);
+  static inline const AppMsg_sample_card_num* internal_default_instance() {
+    return reinterpret_cast<const AppMsg_sample_card_num*>(
+               &_AppMsg_sample_card_num_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     15;
 
-  friend void swap(AppMsg_transportion_enable& a, AppMsg_transportion_enable& b) {
+  friend void swap(AppMsg_sample_card_num& a, AppMsg_sample_card_num& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppMsg_transportion_enable* other) {
+  inline void Swap(AppMsg_sample_card_num* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AppMsg_transportion_enable* New() const final {
-    return CreateMaybeMessage<AppMsg_transportion_enable>(nullptr);
+  inline AppMsg_sample_card_num* New() const final {
+    return CreateMaybeMessage<AppMsg_sample_card_num>(nullptr);
   }
 
-  AppMsg_transportion_enable* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_transportion_enable>(arena);
+  AppMsg_sample_card_num* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMsg_sample_card_num>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_transportion_enable& from);
-  void MergeFrom(const AppMsg_transportion_enable& from);
+  void CopyFrom(const AppMsg_sample_card_num& from);
+  void MergeFrom(const AppMsg_sample_card_num& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2333,10 +2333,10 @@ class AppMsg_transportion_enable :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_transportion_enable* other);
+  void InternalSwap(AppMsg_sample_card_num* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.transportion_enable";
+    return "proto.AppMsg.sample_card_num";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -2361,26 +2361,19 @@ class AppMsg_transportion_enable :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChannelFieldNumber = 1,
-    kEnableFieldNumber = 2,
+    kNumFieldNumber = 1,
   };
-  // uint32 channel = 1;
-  void clear_channel();
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
-  void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 num = 1;
+  void clear_num();
+  ::PROTOBUF_NAMESPACE_ID::uint32 num() const;
+  void set_num(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // bool enable = 2;
-  void clear_enable();
-  bool enable() const;
-  void set_enable(bool value);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(class_scope:proto.AppMsg.sample_card_num)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
-  bool enable_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 num_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -2499,10 +2492,16 @@ class AppMsg_adc_data :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 2,
+    kDataFieldNumber = 9,
+    kSampleCardNumFieldNumber = 2,
+    kSampleFrequencyFieldNumber = 3,
+    kPlatformIdFieldNumber = 10,
+    kStationIdFieldNumber = 11,
+    kTurnoutIdFieldNumber = 12,
+    kItemIdFieldNumber = 13,
     kTimeFieldNumber = 1,
   };
-  // bytes data = 2;
+  // bytes data = 9;
   void clear_data();
   const std::string& data() const;
   void set_data(const std::string& value);
@@ -2512,6 +2511,54 @@ class AppMsg_adc_data :
   std::string* mutable_data();
   std::string* release_data();
   void set_allocated_data(std::string* data);
+
+  // .proto.AppMsg.sample_card_num sample_card_num = 2;
+  bool has_sample_card_num() const;
+  void clear_sample_card_num();
+  const ::proto::AppMsg_sample_card_num& sample_card_num() const;
+  ::proto::AppMsg_sample_card_num* release_sample_card_num();
+  ::proto::AppMsg_sample_card_num* mutable_sample_card_num();
+  void set_allocated_sample_card_num(::proto::AppMsg_sample_card_num* sample_card_num);
+
+  // .proto.AppMsg.sample_frequency sample_frequency = 3;
+  bool has_sample_frequency() const;
+  void clear_sample_frequency();
+  const ::proto::AppMsg_sample_frequency& sample_frequency() const;
+  ::proto::AppMsg_sample_frequency* release_sample_frequency();
+  ::proto::AppMsg_sample_frequency* mutable_sample_frequency();
+  void set_allocated_sample_frequency(::proto::AppMsg_sample_frequency* sample_frequency);
+
+  // .proto.AppMsg.platform_id platform_id = 10;
+  bool has_platform_id() const;
+  void clear_platform_id();
+  const ::proto::AppMsg_platform_id& platform_id() const;
+  ::proto::AppMsg_platform_id* release_platform_id();
+  ::proto::AppMsg_platform_id* mutable_platform_id();
+  void set_allocated_platform_id(::proto::AppMsg_platform_id* platform_id);
+
+  // .proto.AppMsg.station_id station_id = 11;
+  bool has_station_id() const;
+  void clear_station_id();
+  const ::proto::AppMsg_station_id& station_id() const;
+  ::proto::AppMsg_station_id* release_station_id();
+  ::proto::AppMsg_station_id* mutable_station_id();
+  void set_allocated_station_id(::proto::AppMsg_station_id* station_id);
+
+  // .proto.AppMsg.turnout_id turnout_id = 12;
+  bool has_turnout_id() const;
+  void clear_turnout_id();
+  const ::proto::AppMsg_turnout_id& turnout_id() const;
+  ::proto::AppMsg_turnout_id* release_turnout_id();
+  ::proto::AppMsg_turnout_id* mutable_turnout_id();
+  void set_allocated_turnout_id(::proto::AppMsg_turnout_id* turnout_id);
+
+  // .proto.AppMsg.item_id item_id = 13;
+  bool has_item_id() const;
+  void clear_item_id();
+  const ::proto::AppMsg_item_id& item_id() const;
+  ::proto::AppMsg_item_id* release_item_id();
+  ::proto::AppMsg_item_id* mutable_item_id();
+  void set_allocated_item_id(::proto::AppMsg_item_id* item_id);
 
   // uint32 time = 1;
   void clear_time();
@@ -2524,6 +2571,12 @@ class AppMsg_adc_data :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
+  ::proto::AppMsg_sample_card_num* sample_card_num_;
+  ::proto::AppMsg_sample_frequency* sample_frequency_;
+  ::proto::AppMsg_platform_id* platform_id_;
+  ::proto::AppMsg_station_id* station_id_;
+  ::proto::AppMsg_turnout_id* turnout_id_;
+  ::proto::AppMsg_item_id* item_id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 time_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
@@ -2655,7 +2708,7 @@ class AppMsg :
   typedef AppMsg_judgement_mode judgement_mode;
   typedef AppMsg_pzltrct_param pzltrct_param;
   typedef AppMsg_axis_counting_param axis_counting_param;
-  typedef AppMsg_transportion_enable transportion_enable;
+  typedef AppMsg_sample_card_num sample_card_num;
   typedef AppMsg_adc_data adc_data;
 
   typedef AppMsg_Cmd Cmd;
@@ -2723,10 +2776,10 @@ class AppMsg :
     AppMsg_Cmd_set_axis_counting_param;
   static constexpr Cmd get_axis_counting_param =
     AppMsg_Cmd_get_axis_counting_param;
-  static constexpr Cmd set_transportion_enable =
-    AppMsg_Cmd_set_transportion_enable;
-  static constexpr Cmd get_transportion_enable =
-    AppMsg_Cmd_get_transportion_enable;
+  static constexpr Cmd set_sample_card_num =
+    AppMsg_Cmd_set_sample_card_num;
+  static constexpr Cmd get_sample_card_num =
+    AppMsg_Cmd_get_sample_card_num;
   static constexpr Cmd capture_adc_data =
     AppMsg_Cmd_capture_adc_data;
   static constexpr Cmd set_capture_auto_state =
@@ -3348,34 +3401,20 @@ inline void AppMsg_axis_counting_param::set_duration(::PROTOBUF_NAMESPACE_ID::ui
 
 // -------------------------------------------------------------------
 
-// AppMsg_transportion_enable
+// AppMsg_sample_card_num
 
-// uint32 channel = 1;
-inline void AppMsg_transportion_enable::clear_channel() {
-  channel_ = 0u;
+// uint32 num = 1;
+inline void AppMsg_sample_card_num::clear_num() {
+  num_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_transportion_enable::channel() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.transportion_enable.channel)
-  return channel_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_sample_card_num::num() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.sample_card_num.num)
+  return num_;
 }
-inline void AppMsg_transportion_enable::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_sample_card_num::set_num(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  channel_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.transportion_enable.channel)
-}
-
-// bool enable = 2;
-inline void AppMsg_transportion_enable::clear_enable() {
-  enable_ = false;
-}
-inline bool AppMsg_transportion_enable::enable() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.transportion_enable.enable)
-  return enable_;
-}
-inline void AppMsg_transportion_enable::set_enable(bool value) {
-  
-  enable_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.transportion_enable.enable)
+  num_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.sample_card_num.num)
 }
 
 // -------------------------------------------------------------------
@@ -3396,7 +3435,109 @@ inline void AppMsg_adc_data::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.time)
 }
 
-// bytes data = 2;
+// .proto.AppMsg.sample_card_num sample_card_num = 2;
+inline bool AppMsg_adc_data::has_sample_card_num() const {
+  return this != internal_default_instance() && sample_card_num_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_sample_card_num() {
+  if (GetArenaNoVirtual() == nullptr && sample_card_num_ != nullptr) {
+    delete sample_card_num_;
+  }
+  sample_card_num_ = nullptr;
+}
+inline const ::proto::AppMsg_sample_card_num& AppMsg_adc_data::sample_card_num() const {
+  const ::proto::AppMsg_sample_card_num* p = sample_card_num_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.sample_card_num)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_sample_card_num*>(
+      &::proto::_AppMsg_sample_card_num_default_instance_);
+}
+inline ::proto::AppMsg_sample_card_num* AppMsg_adc_data::release_sample_card_num() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.sample_card_num)
+  
+  ::proto::AppMsg_sample_card_num* temp = sample_card_num_;
+  sample_card_num_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_sample_card_num* AppMsg_adc_data::mutable_sample_card_num() {
+  
+  if (sample_card_num_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_sample_card_num>(GetArenaNoVirtual());
+    sample_card_num_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.sample_card_num)
+  return sample_card_num_;
+}
+inline void AppMsg_adc_data::set_allocated_sample_card_num(::proto::AppMsg_sample_card_num* sample_card_num) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete sample_card_num_;
+  }
+  if (sample_card_num) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      sample_card_num = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, sample_card_num, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  sample_card_num_ = sample_card_num;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.sample_card_num)
+}
+
+// .proto.AppMsg.sample_frequency sample_frequency = 3;
+inline bool AppMsg_adc_data::has_sample_frequency() const {
+  return this != internal_default_instance() && sample_frequency_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_sample_frequency() {
+  if (GetArenaNoVirtual() == nullptr && sample_frequency_ != nullptr) {
+    delete sample_frequency_;
+  }
+  sample_frequency_ = nullptr;
+}
+inline const ::proto::AppMsg_sample_frequency& AppMsg_adc_data::sample_frequency() const {
+  const ::proto::AppMsg_sample_frequency* p = sample_frequency_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.sample_frequency)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_sample_frequency*>(
+      &::proto::_AppMsg_sample_frequency_default_instance_);
+}
+inline ::proto::AppMsg_sample_frequency* AppMsg_adc_data::release_sample_frequency() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.sample_frequency)
+  
+  ::proto::AppMsg_sample_frequency* temp = sample_frequency_;
+  sample_frequency_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_sample_frequency* AppMsg_adc_data::mutable_sample_frequency() {
+  
+  if (sample_frequency_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_sample_frequency>(GetArenaNoVirtual());
+    sample_frequency_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.sample_frequency)
+  return sample_frequency_;
+}
+inline void AppMsg_adc_data::set_allocated_sample_frequency(::proto::AppMsg_sample_frequency* sample_frequency) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete sample_frequency_;
+  }
+  if (sample_frequency) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      sample_frequency = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, sample_frequency, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  sample_frequency_ = sample_frequency;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.sample_frequency)
+}
+
+// bytes data = 9;
 inline void AppMsg_adc_data::clear_data() {
   data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -3445,6 +3586,210 @@ inline void AppMsg_adc_data::set_allocated_data(std::string* data) {
   }
   data_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data);
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.data)
+}
+
+// .proto.AppMsg.platform_id platform_id = 10;
+inline bool AppMsg_adc_data::has_platform_id() const {
+  return this != internal_default_instance() && platform_id_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_platform_id() {
+  if (GetArenaNoVirtual() == nullptr && platform_id_ != nullptr) {
+    delete platform_id_;
+  }
+  platform_id_ = nullptr;
+}
+inline const ::proto::AppMsg_platform_id& AppMsg_adc_data::platform_id() const {
+  const ::proto::AppMsg_platform_id* p = platform_id_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.platform_id)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_platform_id*>(
+      &::proto::_AppMsg_platform_id_default_instance_);
+}
+inline ::proto::AppMsg_platform_id* AppMsg_adc_data::release_platform_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.platform_id)
+  
+  ::proto::AppMsg_platform_id* temp = platform_id_;
+  platform_id_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_platform_id* AppMsg_adc_data::mutable_platform_id() {
+  
+  if (platform_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_platform_id>(GetArenaNoVirtual());
+    platform_id_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.platform_id)
+  return platform_id_;
+}
+inline void AppMsg_adc_data::set_allocated_platform_id(::proto::AppMsg_platform_id* platform_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete platform_id_;
+  }
+  if (platform_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      platform_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, platform_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  platform_id_ = platform_id;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.platform_id)
+}
+
+// .proto.AppMsg.station_id station_id = 11;
+inline bool AppMsg_adc_data::has_station_id() const {
+  return this != internal_default_instance() && station_id_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_station_id() {
+  if (GetArenaNoVirtual() == nullptr && station_id_ != nullptr) {
+    delete station_id_;
+  }
+  station_id_ = nullptr;
+}
+inline const ::proto::AppMsg_station_id& AppMsg_adc_data::station_id() const {
+  const ::proto::AppMsg_station_id* p = station_id_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.station_id)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_station_id*>(
+      &::proto::_AppMsg_station_id_default_instance_);
+}
+inline ::proto::AppMsg_station_id* AppMsg_adc_data::release_station_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.station_id)
+  
+  ::proto::AppMsg_station_id* temp = station_id_;
+  station_id_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_station_id* AppMsg_adc_data::mutable_station_id() {
+  
+  if (station_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_station_id>(GetArenaNoVirtual());
+    station_id_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.station_id)
+  return station_id_;
+}
+inline void AppMsg_adc_data::set_allocated_station_id(::proto::AppMsg_station_id* station_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete station_id_;
+  }
+  if (station_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      station_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, station_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  station_id_ = station_id;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.station_id)
+}
+
+// .proto.AppMsg.turnout_id turnout_id = 12;
+inline bool AppMsg_adc_data::has_turnout_id() const {
+  return this != internal_default_instance() && turnout_id_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_turnout_id() {
+  if (GetArenaNoVirtual() == nullptr && turnout_id_ != nullptr) {
+    delete turnout_id_;
+  }
+  turnout_id_ = nullptr;
+}
+inline const ::proto::AppMsg_turnout_id& AppMsg_adc_data::turnout_id() const {
+  const ::proto::AppMsg_turnout_id* p = turnout_id_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.turnout_id)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_turnout_id*>(
+      &::proto::_AppMsg_turnout_id_default_instance_);
+}
+inline ::proto::AppMsg_turnout_id* AppMsg_adc_data::release_turnout_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.turnout_id)
+  
+  ::proto::AppMsg_turnout_id* temp = turnout_id_;
+  turnout_id_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_turnout_id* AppMsg_adc_data::mutable_turnout_id() {
+  
+  if (turnout_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_turnout_id>(GetArenaNoVirtual());
+    turnout_id_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.turnout_id)
+  return turnout_id_;
+}
+inline void AppMsg_adc_data::set_allocated_turnout_id(::proto::AppMsg_turnout_id* turnout_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete turnout_id_;
+  }
+  if (turnout_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      turnout_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, turnout_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  turnout_id_ = turnout_id;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.turnout_id)
+}
+
+// .proto.AppMsg.item_id item_id = 13;
+inline bool AppMsg_adc_data::has_item_id() const {
+  return this != internal_default_instance() && item_id_ != nullptr;
+}
+inline void AppMsg_adc_data::clear_item_id() {
+  if (GetArenaNoVirtual() == nullptr && item_id_ != nullptr) {
+    delete item_id_;
+  }
+  item_id_ = nullptr;
+}
+inline const ::proto::AppMsg_item_id& AppMsg_adc_data::item_id() const {
+  const ::proto::AppMsg_item_id* p = item_id_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.item_id)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_item_id*>(
+      &::proto::_AppMsg_item_id_default_instance_);
+}
+inline ::proto::AppMsg_item_id* AppMsg_adc_data::release_item_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.item_id)
+  
+  ::proto::AppMsg_item_id* temp = item_id_;
+  item_id_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_item_id* AppMsg_adc_data::mutable_item_id() {
+  
+  if (item_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_item_id>(GetArenaNoVirtual());
+    item_id_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.item_id)
+  return item_id_;
+}
+inline void AppMsg_adc_data::set_allocated_item_id(::proto::AppMsg_item_id* item_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete item_id_;
+  }
+  if (item_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      item_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, item_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  item_id_ = item_id;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.item_id)
 }
 
 // -------------------------------------------------------------------

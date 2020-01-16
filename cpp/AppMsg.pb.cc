@@ -15,6 +15,12 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_platform_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_sample_card_num_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_sample_frequency_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_turnout_id_AppMsg_2eproto;
 namespace proto {
 class AppMsg_device_addDefaultTypeInternal {
  public:
@@ -76,10 +82,10 @@ class AppMsg_axis_counting_paramDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_axis_counting_param> _instance;
 } _AppMsg_axis_counting_param_default_instance_;
-class AppMsg_transportion_enableDefaultTypeInternal {
+class AppMsg_sample_card_numDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_transportion_enable> _instance;
-} _AppMsg_transportion_enable_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_sample_card_num> _instance;
+} _AppMsg_sample_card_num_default_instance_;
 class AppMsg_adc_dataDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_adc_data> _instance;
@@ -128,8 +134,14 @@ static void InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto() {
   ::proto::AppMsg_adc_data::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_adc_data_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_AppMsg_adc_data_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 6, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
+      &scc_info_AppMsg_sample_card_num_AppMsg_2eproto.base,
+      &scc_info_AppMsg_sample_frequency_AppMsg_2eproto.base,
+      &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
+      &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
+      &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
+      &scc_info_AppMsg_item_id_AppMsg_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppMsg_axis_counting_param_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -243,6 +255,20 @@ static void InitDefaultsscc_info_AppMsg_pzltrct_param_AppMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_pzltrct_param_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_pzltrct_param_AppMsg_2eproto}, {}};
 
+static void InitDefaultsscc_info_AppMsg_sample_card_num_AppMsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::proto::_AppMsg_sample_card_num_default_instance_;
+    new (ptr) ::proto::AppMsg_sample_card_num();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::proto::AppMsg_sample_card_num::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_sample_card_num_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_sample_card_num_AppMsg_2eproto}, {}};
+
 static void InitDefaultsscc_info_AppMsg_sample_frequency_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -298,20 +324,6 @@ static void InitDefaultsscc_info_AppMsg_station_id_AppMsg_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_station_id_AppMsg_2eproto}, {}};
-
-static void InitDefaultsscc_info_AppMsg_transportion_enable_AppMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AppMsg_transportion_enable_default_instance_;
-    new (ptr) ::proto::AppMsg_transportion_enable();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AppMsg_transportion_enable::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_transportion_enable_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_transportion_enable_AppMsg_2eproto}, {}};
 
 static void InitDefaultsscc_info_AppMsg_turnout_id_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -445,19 +457,24 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_axis_counting_param, duration_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_transportion_enable, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_sample_card_num, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_transportion_enable, channel_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_transportion_enable, enable_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_sample_card_num, num_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, time_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_card_num_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_frequency_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, data_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, platform_id_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, station_id_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, turnout_id_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, item_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -480,9 +497,9 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 79, -1, sizeof(::proto::AppMsg_judgement_mode)},
   { 85, -1, sizeof(::proto::AppMsg_pzltrct_param)},
   { 92, -1, sizeof(::proto::AppMsg_axis_counting_param)},
-  { 98, -1, sizeof(::proto::AppMsg_transportion_enable)},
-  { 105, -1, sizeof(::proto::AppMsg_adc_data)},
-  { 112, -1, sizeof(::proto::AppMsg)},
+  { 98, -1, sizeof(::proto::AppMsg_sample_card_num)},
+  { 104, -1, sizeof(::proto::AppMsg_adc_data)},
+  { 117, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -501,13 +518,13 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_judgement_mode_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_pzltrct_param_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_axis_counting_param_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_transportion_enable_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_sample_card_num_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_adc_data_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_default_instance_),
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\215\014\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\224\016\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -522,31 +539,38 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "\005scale\030\002 \001(\005\032\036\n\016judgement_mode\022\014\n\004mode\030\001"
   " \001(\t\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001(\001"
   "\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_para"
-  "m\022\020\n\010duration\030\001 \001(\r\0326\n\023transportion_enab"
-  "le\022\017\n\007channel\030\001 \001(\r\022\016\n\006enable\030\002 \001(\010\032&\n\010a"
-  "dc_data\022\014\n\004time\030\001 \001(\r\022\014\n\004data\030\002 \001(\014\"\327\006\n\003"
-  "Cmd\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_devic"
-  "e_add\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_serve"
-  "r_add\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platf"
-  "orm_id\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016set_sta"
-  "tion_id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016set_tur"
-  "nout_id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013set_ite"
-  "m_id\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sensor_id"
-  "\020\027\022\021\n\rget_sensor_id\020\030\022\030\n\024set_sample_freq"
-  "uency\020\031\022\030\n\024get_sample_frequency\020\032\022\023\n\017set"
-  "_zero_offset\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021s"
-  "et_fault_voltage\020\035\022\025\n\021get_fault_voltage\020"
-  "\036\022\026\n\022set_abnormal_param\020\037\022\026\n\022get_abnorma"
-  "l_param\020 \022\022\n\016set_full_scale\020!\022\022\n\016get_ful"
-  "l_scale\020\"\022\026\n\022set_judgement_mode\020#\022\026\n\022get"
-  "_judgement_mode\020$\022\025\n\021set_pzltrct_param\020%"
-  "\022\025\n\021get_pzltrct_param\020&\022\033\n\027set_axis_coun"
-  "ting_param\020\'\022\033\n\027get_axis_counting_param\020"
-  "(\022\033\n\027set_transportion_enable\020)\022\033\n\027get_tr"
-  "ansportion_enable\020*\022\024\n\020capture_adc_data\020"
-  "+\022\032\n\026set_capture_auto_state\020,\022\032\n\026get_cap"
-  "ture_auto_state\020-\022\022\n\rauto_adc_data\020\350\007\022\016\n"
-  "\terror_msg\020\351\007b\006proto3"
+  "m\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num\022\013"
+  "\n\003num\030\001 \001(\r\032\314\002\n\010adc_data\022\014\n\004time\030\001 \001(\r\0226"
+  "\n\017sample_card_num\030\002 \001(\0132\035.proto.AppMsg.s"
+  "ample_card_num\0228\n\020sample_frequency\030\003 \001(\013"
+  "2\036.proto.AppMsg.sample_frequency\022\014\n\004data"
+  "\030\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppM"
+  "sg.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.pro"
+  "to.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\013"
+  "2\030.proto.AppMsg.turnout_id\022&\n\007item_id\030\r "
+  "\001(\0132\025.proto.AppMsg.item_id\"\317\006\n\003Cmd\022\010\n\004NO"
+  "NE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_add\020\013\022\022"
+  "\n\016get_device_add\020\014\022\022\n\016set_server_add\020\r\022\022"
+  "\n\016get_server_add\020\016\022\023\n\017set_platform_id\020\017\022"
+  "\023\n\017get_platform_id\020\020\022\022\n\016set_station_id\020\021"
+  "\022\022\n\016get_station_id\020\022\022\022\n\016set_turnout_id\020\023"
+  "\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_id\020\025\022\017\n"
+  "\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022\021\n\rget"
+  "_sensor_id\020\030\022\030\n\024set_sample_frequency\020\031\022\030"
+  "\n\024get_sample_frequency\020\032\022\023\n\017set_zero_off"
+  "set\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021set_fault_"
+  "voltage\020\035\022\025\n\021get_fault_voltage\020\036\022\026\n\022set_"
+  "abnormal_param\020\037\022\026\n\022get_abnormal_param\020 "
+  "\022\022\n\016set_full_scale\020!\022\022\n\016get_full_scale\020\""
+  "\022\026\n\022set_judgement_mode\020#\022\026\n\022get_judgemen"
+  "t_mode\020$\022\025\n\021set_pzltrct_param\020%\022\025\n\021get_p"
+  "zltrct_param\020&\022\033\n\027set_axis_counting_para"
+  "m\020\'\022\033\n\027get_axis_counting_param\020(\022\027\n\023set_"
+  "sample_card_num\020)\022\027\n\023get_sample_card_num"
+  "\020*\022\024\n\020capture_adc_data\020+\022\032\n\026set_capture_"
+  "auto_state\020,\022\032\n\026get_capture_auto_state\020-"
+  "\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020\351\007b\006pr"
+  "oto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
@@ -562,18 +586,18 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
   &scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base,
   &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
   &scc_info_AppMsg_pzltrct_param_AppMsg_2eproto.base,
+  &scc_info_AppMsg_sample_card_num_AppMsg_2eproto.base,
   &scc_info_AppMsg_sample_frequency_AppMsg_2eproto.base,
   &scc_info_AppMsg_sensor_id_AppMsg_2eproto.base,
   &scc_info_AppMsg_server_add_AppMsg_2eproto.base,
   &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
-  &scc_info_AppMsg_transportion_enable_AppMsg_2eproto.base,
   &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
   &scc_info_AppMsg_zero_offset_AppMsg_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1581,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1844,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 18, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 18, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -666,8 +690,8 @@ constexpr AppMsg_Cmd AppMsg::set_pzltrct_param;
 constexpr AppMsg_Cmd AppMsg::get_pzltrct_param;
 constexpr AppMsg_Cmd AppMsg::set_axis_counting_param;
 constexpr AppMsg_Cmd AppMsg::get_axis_counting_param;
-constexpr AppMsg_Cmd AppMsg::set_transportion_enable;
-constexpr AppMsg_Cmd AppMsg::get_transportion_enable;
+constexpr AppMsg_Cmd AppMsg::set_sample_card_num;
+constexpr AppMsg_Cmd AppMsg::get_sample_card_num;
 constexpr AppMsg_Cmd AppMsg::capture_adc_data;
 constexpr AppMsg_Cmd AppMsg::set_capture_auto_state;
 constexpr AppMsg_Cmd AppMsg::get_capture_auto_state;
@@ -4874,81 +4898,68 @@ void AppMsg_axis_counting_param::InternalSwap(AppMsg_axis_counting_param* other)
 
 // ===================================================================
 
-void AppMsg_transportion_enable::InitAsDefaultInstance() {
+void AppMsg_sample_card_num::InitAsDefaultInstance() {
 }
-class AppMsg_transportion_enable::_Internal {
+class AppMsg_sample_card_num::_Internal {
  public:
 };
 
-AppMsg_transportion_enable::AppMsg_transportion_enable()
+AppMsg_sample_card_num::AppMsg_sample_card_num()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(constructor:proto.AppMsg.sample_card_num)
 }
-AppMsg_transportion_enable::AppMsg_transportion_enable(const AppMsg_transportion_enable& from)
+AppMsg_sample_card_num::AppMsg_sample_card_num(const AppMsg_sample_card_num& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&channel_, &from.channel_,
-    static_cast<size_t>(reinterpret_cast<char*>(&enable_) -
-    reinterpret_cast<char*>(&channel_)) + sizeof(enable_));
-  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.transportion_enable)
+  num_ = from.num_;
+  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.sample_card_num)
 }
 
-void AppMsg_transportion_enable::SharedCtor() {
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&enable_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(enable_));
+void AppMsg_sample_card_num::SharedCtor() {
+  num_ = 0u;
 }
 
-AppMsg_transportion_enable::~AppMsg_transportion_enable() {
-  // @@protoc_insertion_point(destructor:proto.AppMsg.transportion_enable)
+AppMsg_sample_card_num::~AppMsg_sample_card_num() {
+  // @@protoc_insertion_point(destructor:proto.AppMsg.sample_card_num)
   SharedDtor();
 }
 
-void AppMsg_transportion_enable::SharedDtor() {
+void AppMsg_sample_card_num::SharedDtor() {
 }
 
-void AppMsg_transportion_enable::SetCachedSize(int size) const {
+void AppMsg_sample_card_num::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AppMsg_transportion_enable& AppMsg_transportion_enable::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_transportion_enable_AppMsg_2eproto.base);
+const AppMsg_sample_card_num& AppMsg_sample_card_num::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_sample_card_num_AppMsg_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void AppMsg_transportion_enable::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AppMsg.transportion_enable)
+void AppMsg_sample_card_num::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.AppMsg.sample_card_num)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&enable_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(enable_));
+  num_ = 0u;
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AppMsg_transportion_enable::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* AppMsg_sample_card_num::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // uint32 channel = 1;
+      // uint32 num = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // bool enable = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          enable_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4972,36 +4983,23 @@ failure:
 #undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AppMsg_transportion_enable::MergePartialFromCodedStream(
+bool AppMsg_sample_card_num::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(parse_start:proto.AppMsg.sample_card_num)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 channel = 1;
+      // uint32 num = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &channel_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // bool enable = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &enable_)));
+                 input, &num_)));
         } else {
           goto handle_unusual;
         }
@@ -5020,64 +5018,54 @@ bool AppMsg_transportion_enable::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(parse_success:proto.AppMsg.sample_card_num)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(parse_failure:proto.AppMsg.sample_card_num)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void AppMsg_transportion_enable::SerializeWithCachedSizes(
+void AppMsg_sample_card_num::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(serialize_start:proto.AppMsg.sample_card_num)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
-  }
-
-  // bool enable = 2;
-  if (this->enable() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBool(2, this->enable(), output);
+  // uint32 num = 1;
+  if (this->num() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->num(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(serialize_end:proto.AppMsg.sample_card_num)
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_transportion_enable::InternalSerializeWithCachedSizesToArray(
+::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_sample_card_num::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.sample_card_num)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
-  }
-
-  // bool enable = 2;
-  if (this->enable() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->enable(), target);
+  // uint32 num = 1;
+  if (this->num() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->num(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.sample_card_num)
   return target;
 }
 
-size_t AppMsg_transportion_enable::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.transportion_enable)
+size_t AppMsg_sample_card_num::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.sample_card_num)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -5089,16 +5077,11 @@ size_t AppMsg_transportion_enable::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
+  // uint32 num = 1;
+  if (this->num() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->channel());
-  }
-
-  // bool enable = 2;
-  if (this->enable() != 0) {
-    total_size += 1 + 1;
+        this->num());
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -5106,62 +5089,58 @@ size_t AppMsg_transportion_enable::ByteSizeLong() const {
   return total_size;
 }
 
-void AppMsg_transportion_enable::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.transportion_enable)
+void AppMsg_sample_card_num::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.sample_card_num)
   GOOGLE_DCHECK_NE(&from, this);
-  const AppMsg_transportion_enable* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_transportion_enable>(
+  const AppMsg_sample_card_num* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_sample_card_num>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.sample_card_num)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.transportion_enable)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.sample_card_num)
     MergeFrom(*source);
   }
 }
 
-void AppMsg_transportion_enable::MergeFrom(const AppMsg_transportion_enable& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.transportion_enable)
+void AppMsg_sample_card_num::MergeFrom(const AppMsg_sample_card_num& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.sample_card_num)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.channel() != 0) {
-    set_channel(from.channel());
-  }
-  if (from.enable() != 0) {
-    set_enable(from.enable());
+  if (from.num() != 0) {
+    set_num(from.num());
   }
 }
 
-void AppMsg_transportion_enable::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.transportion_enable)
+void AppMsg_sample_card_num::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.sample_card_num)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void AppMsg_transportion_enable::CopyFrom(const AppMsg_transportion_enable& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.transportion_enable)
+void AppMsg_sample_card_num::CopyFrom(const AppMsg_sample_card_num& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.sample_card_num)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AppMsg_transportion_enable::IsInitialized() const {
+bool AppMsg_sample_card_num::IsInitialized() const {
   return true;
 }
 
-void AppMsg_transportion_enable::InternalSwap(AppMsg_transportion_enable* other) {
+void AppMsg_sample_card_num::InternalSwap(AppMsg_sample_card_num* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(channel_, other->channel_);
-  swap(enable_, other->enable_);
+  swap(num_, other->num_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_transportion_enable::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_sample_card_num::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -5169,11 +5148,53 @@ void AppMsg_transportion_enable::InternalSwap(AppMsg_transportion_enable* other)
 // ===================================================================
 
 void AppMsg_adc_data::InitAsDefaultInstance() {
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->sample_card_num_ = const_cast< ::proto::AppMsg_sample_card_num*>(
+      ::proto::AppMsg_sample_card_num::internal_default_instance());
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->sample_frequency_ = const_cast< ::proto::AppMsg_sample_frequency*>(
+      ::proto::AppMsg_sample_frequency::internal_default_instance());
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->platform_id_ = const_cast< ::proto::AppMsg_platform_id*>(
+      ::proto::AppMsg_platform_id::internal_default_instance());
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->station_id_ = const_cast< ::proto::AppMsg_station_id*>(
+      ::proto::AppMsg_station_id::internal_default_instance());
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->turnout_id_ = const_cast< ::proto::AppMsg_turnout_id*>(
+      ::proto::AppMsg_turnout_id::internal_default_instance());
+  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->item_id_ = const_cast< ::proto::AppMsg_item_id*>(
+      ::proto::AppMsg_item_id::internal_default_instance());
 }
 class AppMsg_adc_data::_Internal {
  public:
+  static const ::proto::AppMsg_sample_card_num& sample_card_num(const AppMsg_adc_data* msg);
+  static const ::proto::AppMsg_sample_frequency& sample_frequency(const AppMsg_adc_data* msg);
+  static const ::proto::AppMsg_platform_id& platform_id(const AppMsg_adc_data* msg);
+  static const ::proto::AppMsg_station_id& station_id(const AppMsg_adc_data* msg);
+  static const ::proto::AppMsg_turnout_id& turnout_id(const AppMsg_adc_data* msg);
+  static const ::proto::AppMsg_item_id& item_id(const AppMsg_adc_data* msg);
 };
 
+const ::proto::AppMsg_sample_card_num&
+AppMsg_adc_data::_Internal::sample_card_num(const AppMsg_adc_data* msg) {
+  return *msg->sample_card_num_;
+}
+const ::proto::AppMsg_sample_frequency&
+AppMsg_adc_data::_Internal::sample_frequency(const AppMsg_adc_data* msg) {
+  return *msg->sample_frequency_;
+}
+const ::proto::AppMsg_platform_id&
+AppMsg_adc_data::_Internal::platform_id(const AppMsg_adc_data* msg) {
+  return *msg->platform_id_;
+}
+const ::proto::AppMsg_station_id&
+AppMsg_adc_data::_Internal::station_id(const AppMsg_adc_data* msg) {
+  return *msg->station_id_;
+}
+const ::proto::AppMsg_turnout_id&
+AppMsg_adc_data::_Internal::turnout_id(const AppMsg_adc_data* msg) {
+  return *msg->turnout_id_;
+}
+const ::proto::AppMsg_item_id&
+AppMsg_adc_data::_Internal::item_id(const AppMsg_adc_data* msg) {
+  return *msg->item_id_;
+}
 AppMsg_adc_data::AppMsg_adc_data()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -5187,6 +5208,36 @@ AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
   if (!from.data().empty()) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
+  if (from.has_sample_card_num()) {
+    sample_card_num_ = new ::proto::AppMsg_sample_card_num(*from.sample_card_num_);
+  } else {
+    sample_card_num_ = nullptr;
+  }
+  if (from.has_sample_frequency()) {
+    sample_frequency_ = new ::proto::AppMsg_sample_frequency(*from.sample_frequency_);
+  } else {
+    sample_frequency_ = nullptr;
+  }
+  if (from.has_platform_id()) {
+    platform_id_ = new ::proto::AppMsg_platform_id(*from.platform_id_);
+  } else {
+    platform_id_ = nullptr;
+  }
+  if (from.has_station_id()) {
+    station_id_ = new ::proto::AppMsg_station_id(*from.station_id_);
+  } else {
+    station_id_ = nullptr;
+  }
+  if (from.has_turnout_id()) {
+    turnout_id_ = new ::proto::AppMsg_turnout_id(*from.turnout_id_);
+  } else {
+    turnout_id_ = nullptr;
+  }
+  if (from.has_item_id()) {
+    item_id_ = new ::proto::AppMsg_item_id(*from.item_id_);
+  } else {
+    item_id_ = nullptr;
+  }
   time_ = from.time_;
   // @@protoc_insertion_point(copy_constructor:proto.AppMsg.adc_data)
 }
@@ -5194,7 +5245,9 @@ AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
 void AppMsg_adc_data::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_adc_data_AppMsg_2eproto.base);
   data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  time_ = 0u;
+  ::memset(&sample_card_num_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&time_) -
+      reinterpret_cast<char*>(&sample_card_num_)) + sizeof(time_));
 }
 
 AppMsg_adc_data::~AppMsg_adc_data() {
@@ -5204,6 +5257,12 @@ AppMsg_adc_data::~AppMsg_adc_data() {
 
 void AppMsg_adc_data::SharedDtor() {
   data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete sample_card_num_;
+  if (this != internal_default_instance()) delete sample_frequency_;
+  if (this != internal_default_instance()) delete platform_id_;
+  if (this != internal_default_instance()) delete station_id_;
+  if (this != internal_default_instance()) delete turnout_id_;
+  if (this != internal_default_instance()) delete item_id_;
 }
 
 void AppMsg_adc_data::SetCachedSize(int size) const {
@@ -5222,6 +5281,30 @@ void AppMsg_adc_data::Clear() {
   (void) cached_has_bits;
 
   data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && sample_card_num_ != nullptr) {
+    delete sample_card_num_;
+  }
+  sample_card_num_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && sample_frequency_ != nullptr) {
+    delete sample_frequency_;
+  }
+  sample_frequency_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && platform_id_ != nullptr) {
+    delete platform_id_;
+  }
+  platform_id_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && station_id_ != nullptr) {
+    delete station_id_;
+  }
+  station_id_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && turnout_id_ != nullptr) {
+    delete turnout_id_;
+  }
+  turnout_id_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && item_id_ != nullptr) {
+    delete item_id_;
+  }
+  item_id_ = nullptr;
   time_ = 0u;
   _internal_metadata_.Clear();
 }
@@ -5241,10 +5324,52 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes data = 2;
+      // .proto.AppMsg.sample_card_num sample_card_num = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_sample_card_num(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.sample_frequency sample_frequency = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(mutable_sample_frequency(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes data = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_data(), ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.platform_id platform_id = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr = ctx->ParseMessage(mutable_platform_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.station_id station_id = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          ptr = ctx->ParseMessage(mutable_station_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.turnout_id turnout_id = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          ptr = ctx->ParseMessage(mutable_turnout_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.item_id item_id = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          ptr = ctx->ParseMessage(mutable_item_id(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5291,11 +5416,77 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // bytes data = 2;
+      // .proto.AppMsg.sample_card_num sample_card_num = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_sample_card_num()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.sample_frequency sample_frequency = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_sample_frequency()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes data = 9;
+      case 9: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_data()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.platform_id platform_id = 10;
+      case 10: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_platform_id()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.station_id station_id = 11;
+      case 11: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_station_id()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.turnout_id turnout_id = 12;
+      case 12: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_turnout_id()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.item_id item_id = 13;
+      case 13: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_item_id()));
         } else {
           goto handle_unusual;
         }
@@ -5334,10 +5525,46 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->time(), output);
   }
 
-  // bytes data = 2;
+  // .proto.AppMsg.sample_card_num sample_card_num = 2;
+  if (this->has_sample_card_num()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::sample_card_num(this), output);
+  }
+
+  // .proto.AppMsg.sample_frequency sample_frequency = 3;
+  if (this->has_sample_frequency()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, _Internal::sample_frequency(this), output);
+  }
+
+  // bytes data = 9;
   if (this->data().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->data(), output);
+      9, this->data(), output);
+  }
+
+  // .proto.AppMsg.platform_id platform_id = 10;
+  if (this->has_platform_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, _Internal::platform_id(this), output);
+  }
+
+  // .proto.AppMsg.station_id station_id = 11;
+  if (this->has_station_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, _Internal::station_id(this), output);
+  }
+
+  // .proto.AppMsg.turnout_id turnout_id = 12;
+  if (this->has_turnout_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, _Internal::turnout_id(this), output);
+  }
+
+  // .proto.AppMsg.item_id item_id = 13;
+  if (this->has_item_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, _Internal::item_id(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -5358,11 +5585,53 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->time(), target);
   }
 
-  // bytes data = 2;
+  // .proto.AppMsg.sample_card_num sample_card_num = 2;
+  if (this->has_sample_card_num()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::sample_card_num(this), target);
+  }
+
+  // .proto.AppMsg.sample_frequency sample_frequency = 3;
+  if (this->has_sample_frequency()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, _Internal::sample_frequency(this), target);
+  }
+
+  // bytes data = 9;
   if (this->data().size() > 0) {
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        2, this->data(), target);
+        9, this->data(), target);
+  }
+
+  // .proto.AppMsg.platform_id platform_id = 10;
+  if (this->has_platform_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, _Internal::platform_id(this), target);
+  }
+
+  // .proto.AppMsg.station_id station_id = 11;
+  if (this->has_station_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, _Internal::station_id(this), target);
+  }
+
+  // .proto.AppMsg.turnout_id turnout_id = 12;
+  if (this->has_turnout_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, _Internal::turnout_id(this), target);
+  }
+
+  // .proto.AppMsg.item_id item_id = 13;
+  if (this->has_item_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, _Internal::item_id(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -5386,11 +5655,53 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes data = 2;
+  // bytes data = 9;
   if (this->data().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->data());
+  }
+
+  // .proto.AppMsg.sample_card_num sample_card_num = 2;
+  if (this->has_sample_card_num()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *sample_card_num_);
+  }
+
+  // .proto.AppMsg.sample_frequency sample_frequency = 3;
+  if (this->has_sample_frequency()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *sample_frequency_);
+  }
+
+  // .proto.AppMsg.platform_id platform_id = 10;
+  if (this->has_platform_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *platform_id_);
+  }
+
+  // .proto.AppMsg.station_id station_id = 11;
+  if (this->has_station_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *station_id_);
+  }
+
+  // .proto.AppMsg.turnout_id turnout_id = 12;
+  if (this->has_turnout_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *turnout_id_);
+  }
+
+  // .proto.AppMsg.item_id item_id = 13;
+  if (this->has_item_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *item_id_);
   }
 
   // uint32 time = 1;
@@ -5431,6 +5742,24 @@ void AppMsg_adc_data::MergeFrom(const AppMsg_adc_data& from) {
 
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
+  if (from.has_sample_card_num()) {
+    mutable_sample_card_num()->::proto::AppMsg_sample_card_num::MergeFrom(from.sample_card_num());
+  }
+  if (from.has_sample_frequency()) {
+    mutable_sample_frequency()->::proto::AppMsg_sample_frequency::MergeFrom(from.sample_frequency());
+  }
+  if (from.has_platform_id()) {
+    mutable_platform_id()->::proto::AppMsg_platform_id::MergeFrom(from.platform_id());
+  }
+  if (from.has_station_id()) {
+    mutable_station_id()->::proto::AppMsg_station_id::MergeFrom(from.station_id());
+  }
+  if (from.has_turnout_id()) {
+    mutable_turnout_id()->::proto::AppMsg_turnout_id::MergeFrom(from.turnout_id());
+  }
+  if (from.has_item_id()) {
+    mutable_item_id()->::proto::AppMsg_item_id::MergeFrom(from.item_id());
+  }
   if (from.time() != 0) {
     set_time(from.time());
   }
@@ -5459,6 +5788,12 @@ void AppMsg_adc_data::InternalSwap(AppMsg_adc_data* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(sample_card_num_, other->sample_card_num_);
+  swap(sample_frequency_, other->sample_frequency_);
+  swap(platform_id_, other->platform_id_);
+  swap(station_id_, other->station_id_);
+  swap(turnout_id_, other->turnout_id_);
+  swap(item_id_, other->item_id_);
   swap(time_, other->time_);
 }
 
@@ -5714,8 +6049,8 @@ template<> PROTOBUF_NOINLINE ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMe
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_axis_counting_param* Arena::CreateMaybeMessage< ::proto::AppMsg_axis_counting_param >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_axis_counting_param >(arena);
 }
-template<> PROTOBUF_NOINLINE ::proto::AppMsg_transportion_enable* Arena::CreateMaybeMessage< ::proto::AppMsg_transportion_enable >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AppMsg_transportion_enable >(arena);
+template<> PROTOBUF_NOINLINE ::proto::AppMsg_sample_card_num* Arena::CreateMaybeMessage< ::proto::AppMsg_sample_card_num >(Arena* arena) {
+  return Arena::CreateInternal< ::proto::AppMsg_sample_card_num >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage< ::proto::AppMsg_adc_data >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_adc_data >(arena);
