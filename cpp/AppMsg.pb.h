@@ -2095,10 +2095,10 @@ class AppMsg_pzltrct_param :
     kThresholdFieldNumber = 1,
     kDurationFieldNumber = 2,
   };
-  // double threshold = 1;
+  // uint32 threshold = 1;
   void clear_threshold();
-  double threshold() const;
-  void set_threshold(double value);
+  ::PROTOBUF_NAMESPACE_ID::uint32 threshold() const;
+  void set_threshold(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // uint32 duration = 2;
   void clear_duration();
@@ -2110,7 +2110,7 @@ class AppMsg_pzltrct_param :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  double threshold_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 threshold_;
   ::PROTOBUF_NAMESPACE_ID::uint32 duration_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
@@ -2493,13 +2493,14 @@ class AppMsg_adc_data :
 
   enum : int {
     kDataFieldNumber = 9,
-    kSampleCardNumFieldNumber = 2,
-    kSampleFrequencyFieldNumber = 3,
     kPlatformIdFieldNumber = 10,
     kStationIdFieldNumber = 11,
     kTurnoutIdFieldNumber = 12,
     kItemIdFieldNumber = 13,
     kTimeFieldNumber = 1,
+    kSampleCardNumFieldNumber = 2,
+    kSampleFrequencyFieldNumber = 3,
+    kSampleNumberFieldNumber = 4,
   };
   // bytes data = 9;
   void clear_data();
@@ -2511,22 +2512,6 @@ class AppMsg_adc_data :
   std::string* mutable_data();
   std::string* release_data();
   void set_allocated_data(std::string* data);
-
-  // .proto.AppMsg.sample_card_num sample_card_num = 2;
-  bool has_sample_card_num() const;
-  void clear_sample_card_num();
-  const ::proto::AppMsg_sample_card_num& sample_card_num() const;
-  ::proto::AppMsg_sample_card_num* release_sample_card_num();
-  ::proto::AppMsg_sample_card_num* mutable_sample_card_num();
-  void set_allocated_sample_card_num(::proto::AppMsg_sample_card_num* sample_card_num);
-
-  // .proto.AppMsg.sample_frequency sample_frequency = 3;
-  bool has_sample_frequency() const;
-  void clear_sample_frequency();
-  const ::proto::AppMsg_sample_frequency& sample_frequency() const;
-  ::proto::AppMsg_sample_frequency* release_sample_frequency();
-  ::proto::AppMsg_sample_frequency* mutable_sample_frequency();
-  void set_allocated_sample_frequency(::proto::AppMsg_sample_frequency* sample_frequency);
 
   // .proto.AppMsg.platform_id platform_id = 10;
   bool has_platform_id() const;
@@ -2565,19 +2550,35 @@ class AppMsg_adc_data :
   ::PROTOBUF_NAMESPACE_ID::uint32 time() const;
   void set_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
+  // uint32 sample_card_num = 2;
+  void clear_sample_card_num();
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_card_num() const;
+  void set_sample_card_num(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 sample_frequency = 3;
+  void clear_sample_frequency();
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_frequency() const;
+  void set_sample_frequency(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 sample_number = 4;
+  void clear_sample_number();
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_number() const;
+  void set_sample_number(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.AppMsg.adc_data)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
-  ::proto::AppMsg_sample_card_num* sample_card_num_;
-  ::proto::AppMsg_sample_frequency* sample_frequency_;
   ::proto::AppMsg_platform_id* platform_id_;
   ::proto::AppMsg_station_id* station_id_;
   ::proto::AppMsg_turnout_id* turnout_id_;
   ::proto::AppMsg_item_id* item_id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 time_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_card_num_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_frequency_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sample_number_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -3353,15 +3354,15 @@ inline void AppMsg_judgement_mode::set_allocated_mode(std::string* mode) {
 
 // AppMsg_pzltrct_param
 
-// double threshold = 1;
+// uint32 threshold = 1;
 inline void AppMsg_pzltrct_param::clear_threshold() {
-  threshold_ = 0;
+  threshold_ = 0u;
 }
-inline double AppMsg_pzltrct_param::threshold() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_pzltrct_param::threshold() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.pzltrct_param.threshold)
   return threshold_;
 }
-inline void AppMsg_pzltrct_param::set_threshold(double value) {
+inline void AppMsg_pzltrct_param::set_threshold(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   threshold_ = value;
   // @@protoc_insertion_point(field_set:proto.AppMsg.pzltrct_param.threshold)
@@ -3435,106 +3436,46 @@ inline void AppMsg_adc_data::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.time)
 }
 
-// .proto.AppMsg.sample_card_num sample_card_num = 2;
-inline bool AppMsg_adc_data::has_sample_card_num() const {
-  return this != internal_default_instance() && sample_card_num_ != nullptr;
-}
+// uint32 sample_card_num = 2;
 inline void AppMsg_adc_data::clear_sample_card_num() {
-  if (GetArenaNoVirtual() == nullptr && sample_card_num_ != nullptr) {
-    delete sample_card_num_;
-  }
-  sample_card_num_ = nullptr;
+  sample_card_num_ = 0u;
 }
-inline const ::proto::AppMsg_sample_card_num& AppMsg_adc_data::sample_card_num() const {
-  const ::proto::AppMsg_sample_card_num* p = sample_card_num_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_adc_data::sample_card_num() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.sample_card_num)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_sample_card_num*>(
-      &::proto::_AppMsg_sample_card_num_default_instance_);
-}
-inline ::proto::AppMsg_sample_card_num* AppMsg_adc_data::release_sample_card_num() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.sample_card_num)
-  
-  ::proto::AppMsg_sample_card_num* temp = sample_card_num_;
-  sample_card_num_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_sample_card_num* AppMsg_adc_data::mutable_sample_card_num() {
-  
-  if (sample_card_num_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_sample_card_num>(GetArenaNoVirtual());
-    sample_card_num_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.sample_card_num)
   return sample_card_num_;
 }
-inline void AppMsg_adc_data::set_allocated_sample_card_num(::proto::AppMsg_sample_card_num* sample_card_num) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete sample_card_num_;
-  }
-  if (sample_card_num) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      sample_card_num = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, sample_card_num, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  sample_card_num_ = sample_card_num;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.sample_card_num)
+inline void AppMsg_adc_data::set_sample_card_num(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sample_card_num_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.sample_card_num)
 }
 
-// .proto.AppMsg.sample_frequency sample_frequency = 3;
-inline bool AppMsg_adc_data::has_sample_frequency() const {
-  return this != internal_default_instance() && sample_frequency_ != nullptr;
-}
+// uint32 sample_frequency = 3;
 inline void AppMsg_adc_data::clear_sample_frequency() {
-  if (GetArenaNoVirtual() == nullptr && sample_frequency_ != nullptr) {
-    delete sample_frequency_;
-  }
-  sample_frequency_ = nullptr;
+  sample_frequency_ = 0u;
 }
-inline const ::proto::AppMsg_sample_frequency& AppMsg_adc_data::sample_frequency() const {
-  const ::proto::AppMsg_sample_frequency* p = sample_frequency_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_adc_data::sample_frequency() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.sample_frequency)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_sample_frequency*>(
-      &::proto::_AppMsg_sample_frequency_default_instance_);
-}
-inline ::proto::AppMsg_sample_frequency* AppMsg_adc_data::release_sample_frequency() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.adc_data.sample_frequency)
-  
-  ::proto::AppMsg_sample_frequency* temp = sample_frequency_;
-  sample_frequency_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_sample_frequency* AppMsg_adc_data::mutable_sample_frequency() {
-  
-  if (sample_frequency_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_sample_frequency>(GetArenaNoVirtual());
-    sample_frequency_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.sample_frequency)
   return sample_frequency_;
 }
-inline void AppMsg_adc_data::set_allocated_sample_frequency(::proto::AppMsg_sample_frequency* sample_frequency) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete sample_frequency_;
-  }
-  if (sample_frequency) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      sample_frequency = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, sample_frequency, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  sample_frequency_ = sample_frequency;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.sample_frequency)
+inline void AppMsg_adc_data::set_sample_frequency(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sample_frequency_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.sample_frequency)
+}
+
+// uint32 sample_number = 4;
+inline void AppMsg_adc_data::clear_sample_number() {
+  sample_number_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_adc_data::sample_number() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.sample_number)
+  return sample_number_;
+}
+inline void AppMsg_adc_data::set_sample_number(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sample_number_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.sample_number)
 }
 
 // bytes data = 9;

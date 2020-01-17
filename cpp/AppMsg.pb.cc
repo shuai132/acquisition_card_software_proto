@@ -17,8 +17,6 @@
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_platform_id_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_sample_card_num_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_sample_frequency_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_turnout_id_AppMsg_2eproto;
 namespace proto {
@@ -134,10 +132,8 @@ static void InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto() {
   ::proto::AppMsg_adc_data::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_AppMsg_adc_data_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 6, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
-      &scc_info_AppMsg_sample_card_num_AppMsg_2eproto.base,
-      &scc_info_AppMsg_sample_frequency_AppMsg_2eproto.base,
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_AppMsg_adc_data_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
       &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
@@ -470,6 +466,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, time_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_card_num_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_frequency_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_number_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, data_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, platform_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, station_id_),
@@ -499,7 +496,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 92, -1, sizeof(::proto::AppMsg_axis_counting_param)},
   { 98, -1, sizeof(::proto::AppMsg_sample_card_num)},
   { 104, -1, sizeof(::proto::AppMsg_adc_data)},
-  { 117, -1, sizeof(::proto::AppMsg)},
+  { 118, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -524,7 +521,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\224\016\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\354\r\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -537,13 +534,12 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "bnormal_param\022\r\n\005level\030\001 \001(\001\022\020\n\010duration"
   "\030\002 \001(\r\032,\n\nfull_scale\022\017\n\007channel\030\001 \001(\r\022\r\n"
   "\005scale\030\002 \001(\005\032\036\n\016judgement_mode\022\014\n\004mode\030\001"
-  " \001(\t\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001(\001"
+  " \001(\t\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001(\r"
   "\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_para"
   "m\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num\022\013"
-  "\n\003num\030\001 \001(\r\032\314\002\n\010adc_data\022\014\n\004time\030\001 \001(\r\0226"
-  "\n\017sample_card_num\030\002 \001(\0132\035.proto.AppMsg.s"
-  "ample_card_num\0228\n\020sample_frequency\030\003 \001(\013"
-  "2\036.proto.AppMsg.sample_frequency\022\014\n\004data"
+  "\n\003num\030\001 \001(\r\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\r\022\027"
+  "\n\017sample_card_num\030\002 \001(\r\022\030\n\020sample_freque"
+  "ncy\030\003 \001(\r\022\025\n\rsample_number\030\004 \001(\r\022\014\n\004data"
   "\030\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppM"
   "sg.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.pro"
   "to.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\013"
@@ -597,7 +593,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1844,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1804,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 18, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 18, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -4419,11 +4415,11 @@ const char* AppMsg_pzltrct_param::_InternalParse(const char* ptr, ::PROTOBUF_NAM
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // double threshold = 1;
+      // uint32 threshold = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
-          threshold_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          threshold_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // uint32 duration = 2;
@@ -4463,12 +4459,12 @@ bool AppMsg_pzltrct_param::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double threshold = 1;
+      // uint32 threshold = 1;
       case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (9 & 0xFF)) {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
                  input, &threshold_)));
         } else {
           goto handle_unusual;
@@ -4516,9 +4512,9 @@ void AppMsg_pzltrct_param::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double threshold = 1;
-  if (!(this->threshold() <= 0 && this->threshold() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(1, this->threshold(), output);
+  // uint32 threshold = 1;
+  if (this->threshold() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->threshold(), output);
   }
 
   // uint32 duration = 2;
@@ -4539,9 +4535,9 @@ void AppMsg_pzltrct_param::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double threshold = 1;
-  if (!(this->threshold() <= 0 && this->threshold() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->threshold(), target);
+  // uint32 threshold = 1;
+  if (this->threshold() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->threshold(), target);
   }
 
   // uint32 duration = 2;
@@ -4570,9 +4566,11 @@ size_t AppMsg_pzltrct_param::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // double threshold = 1;
-  if (!(this->threshold() <= 0 && this->threshold() >= 0)) {
-    total_size += 1 + 8;
+  // uint32 threshold = 1;
+  if (this->threshold() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->threshold());
   }
 
   // uint32 duration = 2;
@@ -4609,7 +4607,7 @@ void AppMsg_pzltrct_param::MergeFrom(const AppMsg_pzltrct_param& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!(from.threshold() <= 0 && from.threshold() >= 0)) {
+  if (from.threshold() != 0) {
     set_threshold(from.threshold());
   }
   if (from.duration() != 0) {
@@ -5148,10 +5146,6 @@ void AppMsg_sample_card_num::InternalSwap(AppMsg_sample_card_num* other) {
 // ===================================================================
 
 void AppMsg_adc_data::InitAsDefaultInstance() {
-  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->sample_card_num_ = const_cast< ::proto::AppMsg_sample_card_num*>(
-      ::proto::AppMsg_sample_card_num::internal_default_instance());
-  ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->sample_frequency_ = const_cast< ::proto::AppMsg_sample_frequency*>(
-      ::proto::AppMsg_sample_frequency::internal_default_instance());
   ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->platform_id_ = const_cast< ::proto::AppMsg_platform_id*>(
       ::proto::AppMsg_platform_id::internal_default_instance());
   ::proto::_AppMsg_adc_data_default_instance_._instance.get_mutable()->station_id_ = const_cast< ::proto::AppMsg_station_id*>(
@@ -5163,22 +5157,12 @@ void AppMsg_adc_data::InitAsDefaultInstance() {
 }
 class AppMsg_adc_data::_Internal {
  public:
-  static const ::proto::AppMsg_sample_card_num& sample_card_num(const AppMsg_adc_data* msg);
-  static const ::proto::AppMsg_sample_frequency& sample_frequency(const AppMsg_adc_data* msg);
   static const ::proto::AppMsg_platform_id& platform_id(const AppMsg_adc_data* msg);
   static const ::proto::AppMsg_station_id& station_id(const AppMsg_adc_data* msg);
   static const ::proto::AppMsg_turnout_id& turnout_id(const AppMsg_adc_data* msg);
   static const ::proto::AppMsg_item_id& item_id(const AppMsg_adc_data* msg);
 };
 
-const ::proto::AppMsg_sample_card_num&
-AppMsg_adc_data::_Internal::sample_card_num(const AppMsg_adc_data* msg) {
-  return *msg->sample_card_num_;
-}
-const ::proto::AppMsg_sample_frequency&
-AppMsg_adc_data::_Internal::sample_frequency(const AppMsg_adc_data* msg) {
-  return *msg->sample_frequency_;
-}
 const ::proto::AppMsg_platform_id&
 AppMsg_adc_data::_Internal::platform_id(const AppMsg_adc_data* msg) {
   return *msg->platform_id_;
@@ -5208,16 +5192,6 @@ AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
   if (!from.data().empty()) {
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  if (from.has_sample_card_num()) {
-    sample_card_num_ = new ::proto::AppMsg_sample_card_num(*from.sample_card_num_);
-  } else {
-    sample_card_num_ = nullptr;
-  }
-  if (from.has_sample_frequency()) {
-    sample_frequency_ = new ::proto::AppMsg_sample_frequency(*from.sample_frequency_);
-  } else {
-    sample_frequency_ = nullptr;
-  }
   if (from.has_platform_id()) {
     platform_id_ = new ::proto::AppMsg_platform_id(*from.platform_id_);
   } else {
@@ -5238,16 +5212,18 @@ AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
   } else {
     item_id_ = nullptr;
   }
-  time_ = from.time_;
+  ::memcpy(&time_, &from.time_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sample_number_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(sample_number_));
   // @@protoc_insertion_point(copy_constructor:proto.AppMsg.adc_data)
 }
 
 void AppMsg_adc_data::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_adc_data_AppMsg_2eproto.base);
   data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&sample_card_num_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_) -
-      reinterpret_cast<char*>(&sample_card_num_)) + sizeof(time_));
+  ::memset(&platform_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sample_number_) -
+      reinterpret_cast<char*>(&platform_id_)) + sizeof(sample_number_));
 }
 
 AppMsg_adc_data::~AppMsg_adc_data() {
@@ -5257,8 +5233,6 @@ AppMsg_adc_data::~AppMsg_adc_data() {
 
 void AppMsg_adc_data::SharedDtor() {
   data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete sample_card_num_;
-  if (this != internal_default_instance()) delete sample_frequency_;
   if (this != internal_default_instance()) delete platform_id_;
   if (this != internal_default_instance()) delete station_id_;
   if (this != internal_default_instance()) delete turnout_id_;
@@ -5281,14 +5255,6 @@ void AppMsg_adc_data::Clear() {
   (void) cached_has_bits;
 
   data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && sample_card_num_ != nullptr) {
-    delete sample_card_num_;
-  }
-  sample_card_num_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && sample_frequency_ != nullptr) {
-    delete sample_frequency_;
-  }
-  sample_frequency_ = nullptr;
   if (GetArenaNoVirtual() == nullptr && platform_id_ != nullptr) {
     delete platform_id_;
   }
@@ -5305,7 +5271,9 @@ void AppMsg_adc_data::Clear() {
     delete item_id_;
   }
   item_id_ = nullptr;
-  time_ = 0u;
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sample_number_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(sample_number_));
   _internal_metadata_.Clear();
 }
 
@@ -5324,17 +5292,24 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.sample_card_num sample_card_num = 2;
+      // uint32 sample_card_num = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_sample_card_num(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sample_card_num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.sample_frequency sample_frequency = 3;
+      // uint32 sample_frequency = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_sample_frequency(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          sample_frequency_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 sample_number = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          sample_number_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5416,22 +5391,39 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.sample_card_num sample_card_num = 2;
+      // uint32 sample_card_num = 2;
       case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_sample_card_num()));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &sample_card_num_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .proto.AppMsg.sample_frequency sample_frequency = 3;
+      // uint32 sample_frequency = 3;
       case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_sample_frequency()));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &sample_frequency_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 sample_number = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &sample_number_)));
         } else {
           goto handle_unusual;
         }
@@ -5525,16 +5517,19 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->time(), output);
   }
 
-  // .proto.AppMsg.sample_card_num sample_card_num = 2;
-  if (this->has_sample_card_num()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::sample_card_num(this), output);
+  // uint32 sample_card_num = 2;
+  if (this->sample_card_num() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->sample_card_num(), output);
   }
 
-  // .proto.AppMsg.sample_frequency sample_frequency = 3;
-  if (this->has_sample_frequency()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::sample_frequency(this), output);
+  // uint32 sample_frequency = 3;
+  if (this->sample_frequency() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->sample_frequency(), output);
+  }
+
+  // uint32 sample_number = 4;
+  if (this->sample_number() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->sample_number(), output);
   }
 
   // bytes data = 9;
@@ -5585,18 +5580,19 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->time(), target);
   }
 
-  // .proto.AppMsg.sample_card_num sample_card_num = 2;
-  if (this->has_sample_card_num()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::sample_card_num(this), target);
+  // uint32 sample_card_num = 2;
+  if (this->sample_card_num() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->sample_card_num(), target);
   }
 
-  // .proto.AppMsg.sample_frequency sample_frequency = 3;
-  if (this->has_sample_frequency()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::sample_frequency(this), target);
+  // uint32 sample_frequency = 3;
+  if (this->sample_frequency() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->sample_frequency(), target);
+  }
+
+  // uint32 sample_number = 4;
+  if (this->sample_number() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->sample_number(), target);
   }
 
   // bytes data = 9;
@@ -5662,20 +5658,6 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
         this->data());
   }
 
-  // .proto.AppMsg.sample_card_num sample_card_num = 2;
-  if (this->has_sample_card_num()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *sample_card_num_);
-  }
-
-  // .proto.AppMsg.sample_frequency sample_frequency = 3;
-  if (this->has_sample_frequency()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *sample_frequency_);
-  }
-
   // .proto.AppMsg.platform_id platform_id = 10;
   if (this->has_platform_id()) {
     total_size += 1 +
@@ -5711,6 +5693,27 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
         this->time());
   }
 
+  // uint32 sample_card_num = 2;
+  if (this->sample_card_num() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->sample_card_num());
+  }
+
+  // uint32 sample_frequency = 3;
+  if (this->sample_frequency() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->sample_frequency());
+  }
+
+  // uint32 sample_number = 4;
+  if (this->sample_number() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->sample_number());
+  }
+
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5742,12 +5745,6 @@ void AppMsg_adc_data::MergeFrom(const AppMsg_adc_data& from) {
 
     data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
   }
-  if (from.has_sample_card_num()) {
-    mutable_sample_card_num()->::proto::AppMsg_sample_card_num::MergeFrom(from.sample_card_num());
-  }
-  if (from.has_sample_frequency()) {
-    mutable_sample_frequency()->::proto::AppMsg_sample_frequency::MergeFrom(from.sample_frequency());
-  }
   if (from.has_platform_id()) {
     mutable_platform_id()->::proto::AppMsg_platform_id::MergeFrom(from.platform_id());
   }
@@ -5762,6 +5759,15 @@ void AppMsg_adc_data::MergeFrom(const AppMsg_adc_data& from) {
   }
   if (from.time() != 0) {
     set_time(from.time());
+  }
+  if (from.sample_card_num() != 0) {
+    set_sample_card_num(from.sample_card_num());
+  }
+  if (from.sample_frequency() != 0) {
+    set_sample_frequency(from.sample_frequency());
+  }
+  if (from.sample_number() != 0) {
+    set_sample_number(from.sample_number());
   }
 }
 
@@ -5788,13 +5794,14 @@ void AppMsg_adc_data::InternalSwap(AppMsg_adc_data* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(sample_card_num_, other->sample_card_num_);
-  swap(sample_frequency_, other->sample_frequency_);
   swap(platform_id_, other->platform_id_);
   swap(station_id_, other->station_id_);
   swap(turnout_id_, other->turnout_id_);
   swap(item_id_, other->item_id_);
   swap(time_, other->time_);
+  swap(sample_card_num_, other->sample_card_num_);
+  swap(sample_frequency_, other->sample_frequency_);
+  swap(sample_number_, other->sample_number_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_adc_data::GetMetadata() const {

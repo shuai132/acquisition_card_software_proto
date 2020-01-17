@@ -127,7 +127,7 @@ message AppMsg {
     }
 
     message pzltrct_param {
-        double threshold = 1;
+        uint32 threshold = 1;
         uint32 duration = 2;
     }
 
@@ -141,8 +141,9 @@ message AppMsg {
 
     message adc_data {
         uint32 time = 1;
-        sample_card_num sample_card_num = 2;
-        sample_frequency sample_frequency = 3;
+        uint32 sample_card_num = 2;
+        uint32 sample_frequency = 3;
+        uint32 sample_number = 4;
         bytes data = 9;
         platform_id platform_id = 10;
         station_id station_id = 11;
