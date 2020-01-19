@@ -140,7 +140,7 @@ message AppMsg {
     }
 
     message adc_data {
-        uint32 time = 1;
+        uint64 time = 1;
         uint32 sample_card_num = 2;
         uint32 sample_frequency = 3;
         uint32 sample_number = 4;

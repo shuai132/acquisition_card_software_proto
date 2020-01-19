@@ -2545,10 +2545,10 @@ class AppMsg_adc_data :
   ::proto::AppMsg_item_id* mutable_item_id();
   void set_allocated_item_id(::proto::AppMsg_item_id* item_id);
 
-  // uint32 time = 1;
+  // uint64 time = 1;
   void clear_time();
-  ::PROTOBUF_NAMESPACE_ID::uint32 time() const;
-  void set_time(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::uint64 time() const;
+  void set_time(::PROTOBUF_NAMESPACE_ID::uint64 value);
 
   // uint32 sample_card_num = 2;
   void clear_sample_card_num();
@@ -2575,7 +2575,7 @@ class AppMsg_adc_data :
   ::proto::AppMsg_station_id* station_id_;
   ::proto::AppMsg_turnout_id* turnout_id_;
   ::proto::AppMsg_item_id* item_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 time_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 time_;
   ::PROTOBUF_NAMESPACE_ID::uint32 sample_card_num_;
   ::PROTOBUF_NAMESPACE_ID::uint32 sample_frequency_;
   ::PROTOBUF_NAMESPACE_ID::uint32 sample_number_;
@@ -3422,15 +3422,15 @@ inline void AppMsg_sample_card_num::set_num(::PROTOBUF_NAMESPACE_ID::uint32 valu
 
 // AppMsg_adc_data
 
-// uint32 time = 1;
+// uint64 time = 1;
 inline void AppMsg_adc_data::clear_time() {
-  time_ = 0u;
+  time_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_adc_data::time() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AppMsg_adc_data::time() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.time)
   return time_;
 }
-inline void AppMsg_adc_data::set_time(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_adc_data::set_time(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
   time_ = value;
   // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.time)

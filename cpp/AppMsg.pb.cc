@@ -537,7 +537,7 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   " \001(\t\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001(\r"
   "\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_para"
   "m\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num\022\013"
-  "\n\003num\030\001 \001(\r\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\r\022\027"
+  "\n\003num\030\001 \001(\r\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\004\022\027"
   "\n\017sample_card_num\030\002 \001(\r\022\030\n\020sample_freque"
   "ncy\030\003 \001(\r\022\025\n\rsample_number\030\004 \001(\r\022\014\n\004data"
   "\030\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppM"
@@ -5285,7 +5285,7 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // uint32 time = 1;
+      // uint64 time = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
@@ -5378,12 +5378,12 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 time = 1;
+      // uint64 time = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
                  input, &time_)));
         } else {
           goto handle_unusual;
@@ -5512,9 +5512,9 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 time = 1;
+  // uint64 time = 1;
   if (this->time() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->time(), output);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(1, this->time(), output);
   }
 
   // uint32 sample_card_num = 2;
@@ -5575,9 +5575,9 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 time = 1;
+  // uint64 time = 1;
   if (this->time() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->time(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->time(), target);
   }
 
   // uint32 sample_card_num = 2;
@@ -5686,10 +5686,10 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
         *item_id_);
   }
 
-  // uint32 time = 1;
+  // uint64 time = 1;
   if (this->time() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
         this->time());
   }
 
