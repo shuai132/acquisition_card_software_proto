@@ -48,7 +48,7 @@ struct TableStruct_AlarmMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -62,15 +62,6 @@ extern AlarmMsgDefaultTypeInternal _AlarmMsg_default_instance_;
 class AlarmMsg_AlarmReport;
 class AlarmMsg_AlarmReportDefaultTypeInternal;
 extern AlarmMsg_AlarmReportDefaultTypeInternal _AlarmMsg_AlarmReport_default_instance_;
-class AlarmMsg_ChannelStates;
-class AlarmMsg_ChannelStatesDefaultTypeInternal;
-extern AlarmMsg_ChannelStatesDefaultTypeInternal _AlarmMsg_ChannelStates_default_instance_;
-class AlarmMsg_ChannelStates_ChannelState;
-class AlarmMsg_ChannelStates_ChannelStateDefaultTypeInternal;
-extern AlarmMsg_ChannelStates_ChannelStateDefaultTypeInternal _AlarmMsg_ChannelStates_ChannelState_default_instance_;
-class AlarmMsg_DeviceAddr;
-class AlarmMsg_DeviceAddrDefaultTypeInternal;
-extern AlarmMsg_DeviceAddrDefaultTypeInternal _AlarmMsg_DeviceAddr_default_instance_;
 class AlarmMsg_DiskState;
 class AlarmMsg_DiskStateDefaultTypeInternal;
 extern AlarmMsg_DiskStateDefaultTypeInternal _AlarmMsg_DiskState_default_instance_;
@@ -81,40 +72,11 @@ extern AlarmMsg_TimeDefaultTypeInternal _AlarmMsg_Time_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::AlarmMsg* Arena::CreateMaybeMessage<::proto::AlarmMsg>(Arena*);
 template<> ::proto::AlarmMsg_AlarmReport* Arena::CreateMaybeMessage<::proto::AlarmMsg_AlarmReport>(Arena*);
-template<> ::proto::AlarmMsg_ChannelStates* Arena::CreateMaybeMessage<::proto::AlarmMsg_ChannelStates>(Arena*);
-template<> ::proto::AlarmMsg_ChannelStates_ChannelState* Arena::CreateMaybeMessage<::proto::AlarmMsg_ChannelStates_ChannelState>(Arena*);
-template<> ::proto::AlarmMsg_DeviceAddr* Arena::CreateMaybeMessage<::proto::AlarmMsg_DeviceAddr>(Arena*);
 template<> ::proto::AlarmMsg_DiskState* Arena::CreateMaybeMessage<::proto::AlarmMsg_DiskState>(Arena*);
 template<> ::proto::AlarmMsg_Time* Arena::CreateMaybeMessage<::proto::AlarmMsg_Time>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace proto {
 
-enum AlarmMsg_ChannelStates_State : int {
-  AlarmMsg_ChannelStates_State_Normal = 0,
-  AlarmMsg_ChannelStates_State_SensorError = 1,
-  AlarmMsg_ChannelStates_State_ChannelError = 2,
-  AlarmMsg_ChannelStates_State_AlarmMsg_ChannelStates_State_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  AlarmMsg_ChannelStates_State_AlarmMsg_ChannelStates_State_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool AlarmMsg_ChannelStates_State_IsValid(int value);
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates_State_State_MIN = AlarmMsg_ChannelStates_State_Normal;
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates_State_State_MAX = AlarmMsg_ChannelStates_State_ChannelError;
-constexpr int AlarmMsg_ChannelStates_State_State_ARRAYSIZE = AlarmMsg_ChannelStates_State_State_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_ChannelStates_State_descriptor();
-template<typename T>
-inline const std::string& AlarmMsg_ChannelStates_State_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, AlarmMsg_ChannelStates_State>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function AlarmMsg_ChannelStates_State_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    AlarmMsg_ChannelStates_State_descriptor(), enum_t_value);
-}
-inline bool AlarmMsg_ChannelStates_State_Parse(
-    const std::string& name, AlarmMsg_ChannelStates_State* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AlarmMsg_ChannelStates_State>(
-    AlarmMsg_ChannelStates_State_descriptor(), name, value);
-}
 enum AlarmMsg_AlarmReport_Alarm : int {
   AlarmMsg_AlarmReport_Alarm_Normal = 0,
   AlarmMsg_AlarmReport_Alarm_Warning = 1,
@@ -199,491 +161,6 @@ inline bool AlarmMsg_Cmd_Parse(
 }
 // ===================================================================
 
-class AlarmMsg_DeviceAddr :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AlarmMsg.DeviceAddr) */ {
- public:
-  AlarmMsg_DeviceAddr();
-  virtual ~AlarmMsg_DeviceAddr();
-
-  AlarmMsg_DeviceAddr(const AlarmMsg_DeviceAddr& from);
-  AlarmMsg_DeviceAddr(AlarmMsg_DeviceAddr&& from) noexcept
-    : AlarmMsg_DeviceAddr() {
-    *this = ::std::move(from);
-  }
-
-  inline AlarmMsg_DeviceAddr& operator=(const AlarmMsg_DeviceAddr& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AlarmMsg_DeviceAddr& operator=(AlarmMsg_DeviceAddr&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AlarmMsg_DeviceAddr& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AlarmMsg_DeviceAddr* internal_default_instance() {
-    return reinterpret_cast<const AlarmMsg_DeviceAddr*>(
-               &_AlarmMsg_DeviceAddr_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  friend void swap(AlarmMsg_DeviceAddr& a, AlarmMsg_DeviceAddr& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AlarmMsg_DeviceAddr* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AlarmMsg_DeviceAddr* New() const final {
-    return CreateMaybeMessage<AlarmMsg_DeviceAddr>(nullptr);
-  }
-
-  AlarmMsg_DeviceAddr* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AlarmMsg_DeviceAddr>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AlarmMsg_DeviceAddr& from);
-  void MergeFrom(const AlarmMsg_DeviceAddr& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AlarmMsg_DeviceAddr* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AlarmMsg.DeviceAddr";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AlarmMsg_2eproto);
-    return ::descriptor_table_AlarmMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kPlatformIdFieldNumber = 1,
-    kChezhanzhujiIdFieldNumber = 2,
-    kDaochaIdFieldNumber = 3,
-    kJiancexiangmuIdFieldNumber = 4,
-    kSensorIdFieldNumber = 5,
-  };
-  // uint32 platform_id = 1;
-  void clear_platform_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 platform_id() const;
-  void set_platform_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 chezhanzhuji_id = 2;
-  void clear_chezhanzhuji_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 chezhanzhuji_id() const;
-  void set_chezhanzhuji_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 daocha_id = 3;
-  void clear_daocha_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 daocha_id() const;
-  void set_daocha_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 jiancexiangmu_id = 4;
-  void clear_jiancexiangmu_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 jiancexiangmu_id() const;
-  void set_jiancexiangmu_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 sensor_id = 5;
-  void clear_sensor_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 sensor_id() const;
-  void set_sensor_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.AlarmMsg.DeviceAddr)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 platform_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 chezhanzhuji_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 daocha_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 jiancexiangmu_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 sensor_id_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AlarmMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AlarmMsg_ChannelStates_ChannelState :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AlarmMsg.ChannelStates.ChannelState) */ {
- public:
-  AlarmMsg_ChannelStates_ChannelState();
-  virtual ~AlarmMsg_ChannelStates_ChannelState();
-
-  AlarmMsg_ChannelStates_ChannelState(const AlarmMsg_ChannelStates_ChannelState& from);
-  AlarmMsg_ChannelStates_ChannelState(AlarmMsg_ChannelStates_ChannelState&& from) noexcept
-    : AlarmMsg_ChannelStates_ChannelState() {
-    *this = ::std::move(from);
-  }
-
-  inline AlarmMsg_ChannelStates_ChannelState& operator=(const AlarmMsg_ChannelStates_ChannelState& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AlarmMsg_ChannelStates_ChannelState& operator=(AlarmMsg_ChannelStates_ChannelState&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AlarmMsg_ChannelStates_ChannelState& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AlarmMsg_ChannelStates_ChannelState* internal_default_instance() {
-    return reinterpret_cast<const AlarmMsg_ChannelStates_ChannelState*>(
-               &_AlarmMsg_ChannelStates_ChannelState_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  friend void swap(AlarmMsg_ChannelStates_ChannelState& a, AlarmMsg_ChannelStates_ChannelState& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AlarmMsg_ChannelStates_ChannelState* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AlarmMsg_ChannelStates_ChannelState* New() const final {
-    return CreateMaybeMessage<AlarmMsg_ChannelStates_ChannelState>(nullptr);
-  }
-
-  AlarmMsg_ChannelStates_ChannelState* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AlarmMsg_ChannelStates_ChannelState>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AlarmMsg_ChannelStates_ChannelState& from);
-  void MergeFrom(const AlarmMsg_ChannelStates_ChannelState& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AlarmMsg_ChannelStates_ChannelState* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AlarmMsg.ChannelStates.ChannelState";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AlarmMsg_2eproto);
-    return ::descriptor_table_AlarmMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSensorIdFieldNumber = 1,
-    kStateFieldNumber = 2,
-    kTimeFieldNumber = 3,
-  };
-  // uint32 sensor_id = 1;
-  void clear_sensor_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 sensor_id() const;
-  void set_sensor_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // .proto.AlarmMsg.ChannelStates.State state = 2;
-  void clear_state();
-  ::proto::AlarmMsg_ChannelStates_State state() const;
-  void set_state(::proto::AlarmMsg_ChannelStates_State value);
-
-  // uint64 time = 3;
-  void clear_time();
-  ::PROTOBUF_NAMESPACE_ID::uint64 time() const;
-  void set_time(::PROTOBUF_NAMESPACE_ID::uint64 value);
-
-  // @@protoc_insertion_point(class_scope:proto.AlarmMsg.ChannelStates.ChannelState)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 sensor_id_;
-  int state_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 time_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AlarmMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AlarmMsg_ChannelStates :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AlarmMsg.ChannelStates) */ {
- public:
-  AlarmMsg_ChannelStates();
-  virtual ~AlarmMsg_ChannelStates();
-
-  AlarmMsg_ChannelStates(const AlarmMsg_ChannelStates& from);
-  AlarmMsg_ChannelStates(AlarmMsg_ChannelStates&& from) noexcept
-    : AlarmMsg_ChannelStates() {
-    *this = ::std::move(from);
-  }
-
-  inline AlarmMsg_ChannelStates& operator=(const AlarmMsg_ChannelStates& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AlarmMsg_ChannelStates& operator=(AlarmMsg_ChannelStates&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AlarmMsg_ChannelStates& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AlarmMsg_ChannelStates* internal_default_instance() {
-    return reinterpret_cast<const AlarmMsg_ChannelStates*>(
-               &_AlarmMsg_ChannelStates_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    2;
-
-  friend void swap(AlarmMsg_ChannelStates& a, AlarmMsg_ChannelStates& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AlarmMsg_ChannelStates* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AlarmMsg_ChannelStates* New() const final {
-    return CreateMaybeMessage<AlarmMsg_ChannelStates>(nullptr);
-  }
-
-  AlarmMsg_ChannelStates* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AlarmMsg_ChannelStates>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AlarmMsg_ChannelStates& from);
-  void MergeFrom(const AlarmMsg_ChannelStates& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AlarmMsg_ChannelStates* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AlarmMsg.ChannelStates";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AlarmMsg_2eproto);
-    return ::descriptor_table_AlarmMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  typedef AlarmMsg_ChannelStates_ChannelState ChannelState;
-
-  typedef AlarmMsg_ChannelStates_State State;
-  static constexpr State Normal =
-    AlarmMsg_ChannelStates_State_Normal;
-  static constexpr State SensorError =
-    AlarmMsg_ChannelStates_State_SensorError;
-  static constexpr State ChannelError =
-    AlarmMsg_ChannelStates_State_ChannelError;
-  static inline bool State_IsValid(int value) {
-    return AlarmMsg_ChannelStates_State_IsValid(value);
-  }
-  static constexpr State State_MIN =
-    AlarmMsg_ChannelStates_State_State_MIN;
-  static constexpr State State_MAX =
-    AlarmMsg_ChannelStates_State_State_MAX;
-  static constexpr int State_ARRAYSIZE =
-    AlarmMsg_ChannelStates_State_State_ARRAYSIZE;
-  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  State_descriptor() {
-    return AlarmMsg_ChannelStates_State_descriptor();
-  }
-  template<typename T>
-  static inline const std::string& State_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, State>::value ||
-      ::std::is_integral<T>::value,
-      "Incorrect type passed to function State_Name.");
-    return AlarmMsg_ChannelStates_State_Name(enum_t_value);
-  }
-  static inline bool State_Parse(const std::string& name,
-      State* value) {
-    return AlarmMsg_ChannelStates_State_Parse(name, value);
-  }
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kChannelStateFieldNumber = 2,
-    kDeviceAddrFieldNumber = 1,
-  };
-  // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-  int channel_state_size() const;
-  void clear_channel_state();
-  ::proto::AlarmMsg_ChannelStates_ChannelState* mutable_channel_state(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AlarmMsg_ChannelStates_ChannelState >*
-      mutable_channel_state();
-  const ::proto::AlarmMsg_ChannelStates_ChannelState& channel_state(int index) const;
-  ::proto::AlarmMsg_ChannelStates_ChannelState* add_channel_state();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AlarmMsg_ChannelStates_ChannelState >&
-      channel_state() const;
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  bool has_device_addr() const;
-  void clear_device_addr();
-  const ::proto::AlarmMsg_DeviceAddr& device_addr() const;
-  ::proto::AlarmMsg_DeviceAddr* release_device_addr();
-  ::proto::AlarmMsg_DeviceAddr* mutable_device_addr();
-  void set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr);
-
-  // @@protoc_insertion_point(class_scope:proto.AlarmMsg.ChannelStates)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AlarmMsg_ChannelStates_ChannelState > channel_state_;
-  ::proto::AlarmMsg_DeviceAddr* device_addr_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AlarmMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
 class AlarmMsg_AlarmReport :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AlarmMsg.AlarmReport) */ {
  public:
@@ -726,7 +203,7 @@ class AlarmMsg_AlarmReport :
                &_AlarmMsg_AlarmReport_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    0;
 
   friend void swap(AlarmMsg_AlarmReport& a, AlarmMsg_AlarmReport& b) {
     a.Swap(&b);
@@ -829,26 +306,8 @@ class AlarmMsg_AlarmReport :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceAddrFieldNumber = 1,
-    kChannelStateFieldNumber = 2,
     kAlarmFieldNumber = 3,
   };
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  bool has_device_addr() const;
-  void clear_device_addr();
-  const ::proto::AlarmMsg_DeviceAddr& device_addr() const;
-  ::proto::AlarmMsg_DeviceAddr* release_device_addr();
-  ::proto::AlarmMsg_DeviceAddr* mutable_device_addr();
-  void set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr);
-
-  // .proto.AlarmMsg.ChannelStates channel_state = 2;
-  bool has_channel_state() const;
-  void clear_channel_state();
-  const ::proto::AlarmMsg_ChannelStates& channel_state() const;
-  ::proto::AlarmMsg_ChannelStates* release_channel_state();
-  ::proto::AlarmMsg_ChannelStates* mutable_channel_state();
-  void set_allocated_channel_state(::proto::AlarmMsg_ChannelStates* channel_state);
-
   // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
   void clear_alarm();
   ::proto::AlarmMsg_AlarmReport_Alarm alarm() const;
@@ -859,8 +318,6 @@ class AlarmMsg_AlarmReport :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::AlarmMsg_DeviceAddr* device_addr_;
-  ::proto::AlarmMsg_ChannelStates* channel_state_;
   int alarm_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AlarmMsg_2eproto;
@@ -909,7 +366,7 @@ class AlarmMsg_DiskState :
                &_AlarmMsg_DiskState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    1;
 
   friend void swap(AlarmMsg_DiskState& a, AlarmMsg_DiskState& b) {
     a.Swap(&b);
@@ -1010,18 +467,9 @@ class AlarmMsg_DiskState :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDeviceAddrFieldNumber = 1,
-    kStateFieldNumber = 2,
+    kStateFieldNumber = 1,
   };
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  bool has_device_addr() const;
-  void clear_device_addr();
-  const ::proto::AlarmMsg_DeviceAddr& device_addr() const;
-  ::proto::AlarmMsg_DeviceAddr* release_device_addr();
-  ::proto::AlarmMsg_DeviceAddr* mutable_device_addr();
-  void set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr);
-
-  // .proto.AlarmMsg.DiskState.State state = 2;
+  // .proto.AlarmMsg.DiskState.State state = 1;
   void clear_state();
   ::proto::AlarmMsg_DiskState_State state() const;
   void set_state(::proto::AlarmMsg_DiskState_State value);
@@ -1031,7 +479,6 @@ class AlarmMsg_DiskState :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::AlarmMsg_DeviceAddr* device_addr_;
   int state_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AlarmMsg_2eproto;
@@ -1080,7 +527,7 @@ class AlarmMsg_Time :
                &_AlarmMsg_Time_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    2;
 
   friend void swap(AlarmMsg_Time& a, AlarmMsg_Time& b) {
     a.Swap(&b);
@@ -1211,7 +658,7 @@ class AlarmMsg :
                &_AlarmMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    3;
 
   friend void swap(AlarmMsg& a, AlarmMsg& b) {
     a.Swap(&b);
@@ -1279,8 +726,6 @@ class AlarmMsg :
 
   // nested types ----------------------------------------------------
 
-  typedef AlarmMsg_DeviceAddr DeviceAddr;
-  typedef AlarmMsg_ChannelStates ChannelStates;
   typedef AlarmMsg_AlarmReport AlarmReport;
   typedef AlarmMsg_DiskState DiskState;
   typedef AlarmMsg_Time Time;
@@ -1346,314 +791,7 @@ class AlarmMsg :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// AlarmMsg_DeviceAddr
-
-// uint32 platform_id = 1;
-inline void AlarmMsg_DeviceAddr::clear_platform_id() {
-  platform_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_DeviceAddr::platform_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DeviceAddr.platform_id)
-  return platform_id_;
-}
-inline void AlarmMsg_DeviceAddr::set_platform_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  platform_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DeviceAddr.platform_id)
-}
-
-// uint32 chezhanzhuji_id = 2;
-inline void AlarmMsg_DeviceAddr::clear_chezhanzhuji_id() {
-  chezhanzhuji_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_DeviceAddr::chezhanzhuji_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DeviceAddr.chezhanzhuji_id)
-  return chezhanzhuji_id_;
-}
-inline void AlarmMsg_DeviceAddr::set_chezhanzhuji_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  chezhanzhuji_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DeviceAddr.chezhanzhuji_id)
-}
-
-// uint32 daocha_id = 3;
-inline void AlarmMsg_DeviceAddr::clear_daocha_id() {
-  daocha_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_DeviceAddr::daocha_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DeviceAddr.daocha_id)
-  return daocha_id_;
-}
-inline void AlarmMsg_DeviceAddr::set_daocha_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  daocha_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DeviceAddr.daocha_id)
-}
-
-// uint32 jiancexiangmu_id = 4;
-inline void AlarmMsg_DeviceAddr::clear_jiancexiangmu_id() {
-  jiancexiangmu_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_DeviceAddr::jiancexiangmu_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DeviceAddr.jiancexiangmu_id)
-  return jiancexiangmu_id_;
-}
-inline void AlarmMsg_DeviceAddr::set_jiancexiangmu_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  jiancexiangmu_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DeviceAddr.jiancexiangmu_id)
-}
-
-// uint32 sensor_id = 5;
-inline void AlarmMsg_DeviceAddr::clear_sensor_id() {
-  sensor_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_DeviceAddr::sensor_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DeviceAddr.sensor_id)
-  return sensor_id_;
-}
-inline void AlarmMsg_DeviceAddr::set_sensor_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  sensor_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DeviceAddr.sensor_id)
-}
-
-// -------------------------------------------------------------------
-
-// AlarmMsg_ChannelStates_ChannelState
-
-// uint32 sensor_id = 1;
-inline void AlarmMsg_ChannelStates_ChannelState::clear_sensor_id() {
-  sensor_id_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AlarmMsg_ChannelStates_ChannelState::sensor_id() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelStates.ChannelState.sensor_id)
-  return sensor_id_;
-}
-inline void AlarmMsg_ChannelStates_ChannelState::set_sensor_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  sensor_id_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.ChannelStates.ChannelState.sensor_id)
-}
-
-// .proto.AlarmMsg.ChannelStates.State state = 2;
-inline void AlarmMsg_ChannelStates_ChannelState::clear_state() {
-  state_ = 0;
-}
-inline ::proto::AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates_ChannelState::state() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelStates.ChannelState.state)
-  return static_cast< ::proto::AlarmMsg_ChannelStates_State >(state_);
-}
-inline void AlarmMsg_ChannelStates_ChannelState::set_state(::proto::AlarmMsg_ChannelStates_State value) {
-  
-  state_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.ChannelStates.ChannelState.state)
-}
-
-// uint64 time = 3;
-inline void AlarmMsg_ChannelStates_ChannelState::clear_time() {
-  time_ = PROTOBUF_ULONGLONG(0);
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint64 AlarmMsg_ChannelStates_ChannelState::time() const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelStates.ChannelState.time)
-  return time_;
-}
-inline void AlarmMsg_ChannelStates_ChannelState::set_time(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  
-  time_ = value;
-  // @@protoc_insertion_point(field_set:proto.AlarmMsg.ChannelStates.ChannelState.time)
-}
-
-// -------------------------------------------------------------------
-
-// AlarmMsg_ChannelStates
-
-// .proto.AlarmMsg.DeviceAddr device_addr = 1;
-inline bool AlarmMsg_ChannelStates::has_device_addr() const {
-  return this != internal_default_instance() && device_addr_ != nullptr;
-}
-inline void AlarmMsg_ChannelStates::clear_device_addr() {
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
-}
-inline const ::proto::AlarmMsg_DeviceAddr& AlarmMsg_ChannelStates::device_addr() const {
-  const ::proto::AlarmMsg_DeviceAddr* p = device_addr_;
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelStates.device_addr)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AlarmMsg_DeviceAddr*>(
-      &::proto::_AlarmMsg_DeviceAddr_default_instance_);
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_ChannelStates::release_device_addr() {
-  // @@protoc_insertion_point(field_release:proto.AlarmMsg.ChannelStates.device_addr)
-  
-  ::proto::AlarmMsg_DeviceAddr* temp = device_addr_;
-  device_addr_ = nullptr;
-  return temp;
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_ChannelStates::mutable_device_addr() {
-  
-  if (device_addr_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AlarmMsg_DeviceAddr>(GetArenaNoVirtual());
-    device_addr_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.ChannelStates.device_addr)
-  return device_addr_;
-}
-inline void AlarmMsg_ChannelStates::set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete device_addr_;
-  }
-  if (device_addr) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      device_addr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, device_addr, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  device_addr_ = device_addr;
-  // @@protoc_insertion_point(field_set_allocated:proto.AlarmMsg.ChannelStates.device_addr)
-}
-
-// repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-inline int AlarmMsg_ChannelStates::channel_state_size() const {
-  return channel_state_.size();
-}
-inline void AlarmMsg_ChannelStates::clear_channel_state() {
-  channel_state_.Clear();
-}
-inline ::proto::AlarmMsg_ChannelStates_ChannelState* AlarmMsg_ChannelStates::mutable_channel_state(int index) {
-  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.ChannelStates.channel_state)
-  return channel_state_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AlarmMsg_ChannelStates_ChannelState >*
-AlarmMsg_ChannelStates::mutable_channel_state() {
-  // @@protoc_insertion_point(field_mutable_list:proto.AlarmMsg.ChannelStates.channel_state)
-  return &channel_state_;
-}
-inline const ::proto::AlarmMsg_ChannelStates_ChannelState& AlarmMsg_ChannelStates::channel_state(int index) const {
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelStates.channel_state)
-  return channel_state_.Get(index);
-}
-inline ::proto::AlarmMsg_ChannelStates_ChannelState* AlarmMsg_ChannelStates::add_channel_state() {
-  // @@protoc_insertion_point(field_add:proto.AlarmMsg.ChannelStates.channel_state)
-  return channel_state_.Add();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AlarmMsg_ChannelStates_ChannelState >&
-AlarmMsg_ChannelStates::channel_state() const {
-  // @@protoc_insertion_point(field_list:proto.AlarmMsg.ChannelStates.channel_state)
-  return channel_state_;
-}
-
-// -------------------------------------------------------------------
-
 // AlarmMsg_AlarmReport
-
-// .proto.AlarmMsg.DeviceAddr device_addr = 1;
-inline bool AlarmMsg_AlarmReport::has_device_addr() const {
-  return this != internal_default_instance() && device_addr_ != nullptr;
-}
-inline void AlarmMsg_AlarmReport::clear_device_addr() {
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
-}
-inline const ::proto::AlarmMsg_DeviceAddr& AlarmMsg_AlarmReport::device_addr() const {
-  const ::proto::AlarmMsg_DeviceAddr* p = device_addr_;
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.AlarmReport.device_addr)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AlarmMsg_DeviceAddr*>(
-      &::proto::_AlarmMsg_DeviceAddr_default_instance_);
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_AlarmReport::release_device_addr() {
-  // @@protoc_insertion_point(field_release:proto.AlarmMsg.AlarmReport.device_addr)
-  
-  ::proto::AlarmMsg_DeviceAddr* temp = device_addr_;
-  device_addr_ = nullptr;
-  return temp;
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_AlarmReport::mutable_device_addr() {
-  
-  if (device_addr_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AlarmMsg_DeviceAddr>(GetArenaNoVirtual());
-    device_addr_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.AlarmReport.device_addr)
-  return device_addr_;
-}
-inline void AlarmMsg_AlarmReport::set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete device_addr_;
-  }
-  if (device_addr) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      device_addr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, device_addr, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  device_addr_ = device_addr;
-  // @@protoc_insertion_point(field_set_allocated:proto.AlarmMsg.AlarmReport.device_addr)
-}
-
-// .proto.AlarmMsg.ChannelStates channel_state = 2;
-inline bool AlarmMsg_AlarmReport::has_channel_state() const {
-  return this != internal_default_instance() && channel_state_ != nullptr;
-}
-inline void AlarmMsg_AlarmReport::clear_channel_state() {
-  if (GetArenaNoVirtual() == nullptr && channel_state_ != nullptr) {
-    delete channel_state_;
-  }
-  channel_state_ = nullptr;
-}
-inline const ::proto::AlarmMsg_ChannelStates& AlarmMsg_AlarmReport::channel_state() const {
-  const ::proto::AlarmMsg_ChannelStates* p = channel_state_;
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.AlarmReport.channel_state)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AlarmMsg_ChannelStates*>(
-      &::proto::_AlarmMsg_ChannelStates_default_instance_);
-}
-inline ::proto::AlarmMsg_ChannelStates* AlarmMsg_AlarmReport::release_channel_state() {
-  // @@protoc_insertion_point(field_release:proto.AlarmMsg.AlarmReport.channel_state)
-  
-  ::proto::AlarmMsg_ChannelStates* temp = channel_state_;
-  channel_state_ = nullptr;
-  return temp;
-}
-inline ::proto::AlarmMsg_ChannelStates* AlarmMsg_AlarmReport::mutable_channel_state() {
-  
-  if (channel_state_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AlarmMsg_ChannelStates>(GetArenaNoVirtual());
-    channel_state_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.AlarmReport.channel_state)
-  return channel_state_;
-}
-inline void AlarmMsg_AlarmReport::set_allocated_channel_state(::proto::AlarmMsg_ChannelStates* channel_state) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete channel_state_;
-  }
-  if (channel_state) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      channel_state = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, channel_state, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  channel_state_ = channel_state;
-  // @@protoc_insertion_point(field_set_allocated:proto.AlarmMsg.AlarmReport.channel_state)
-}
 
 // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
 inline void AlarmMsg_AlarmReport::clear_alarm() {
@@ -1673,58 +811,7 @@ inline void AlarmMsg_AlarmReport::set_alarm(::proto::AlarmMsg_AlarmReport_Alarm 
 
 // AlarmMsg_DiskState
 
-// .proto.AlarmMsg.DeviceAddr device_addr = 1;
-inline bool AlarmMsg_DiskState::has_device_addr() const {
-  return this != internal_default_instance() && device_addr_ != nullptr;
-}
-inline void AlarmMsg_DiskState::clear_device_addr() {
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
-}
-inline const ::proto::AlarmMsg_DeviceAddr& AlarmMsg_DiskState::device_addr() const {
-  const ::proto::AlarmMsg_DeviceAddr* p = device_addr_;
-  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DiskState.device_addr)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AlarmMsg_DeviceAddr*>(
-      &::proto::_AlarmMsg_DeviceAddr_default_instance_);
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_DiskState::release_device_addr() {
-  // @@protoc_insertion_point(field_release:proto.AlarmMsg.DiskState.device_addr)
-  
-  ::proto::AlarmMsg_DeviceAddr* temp = device_addr_;
-  device_addr_ = nullptr;
-  return temp;
-}
-inline ::proto::AlarmMsg_DeviceAddr* AlarmMsg_DiskState::mutable_device_addr() {
-  
-  if (device_addr_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AlarmMsg_DeviceAddr>(GetArenaNoVirtual());
-    device_addr_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.DiskState.device_addr)
-  return device_addr_;
-}
-inline void AlarmMsg_DiskState::set_allocated_device_addr(::proto::AlarmMsg_DeviceAddr* device_addr) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete device_addr_;
-  }
-  if (device_addr) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      device_addr = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, device_addr, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  device_addr_ = device_addr;
-  // @@protoc_insertion_point(field_set_allocated:proto.AlarmMsg.DiskState.device_addr)
-}
-
-// .proto.AlarmMsg.DiskState.State state = 2;
+// .proto.AlarmMsg.DiskState.State state = 1;
 inline void AlarmMsg_DiskState::clear_state() {
   state_ = 0;
 }
@@ -1769,12 +856,6 @@ inline void AlarmMsg_Time::set_time(::PROTOBUF_NAMESPACE_ID::uint64 value) {
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -1782,11 +863,6 @@ inline void AlarmMsg_Time::set_time(::PROTOBUF_NAMESPACE_ID::uint64 value) {
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::proto::AlarmMsg_ChannelStates_State> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::proto::AlarmMsg_ChannelStates_State>() {
-  return ::proto::AlarmMsg_ChannelStates_State_descriptor();
-}
 template <> struct is_proto_enum< ::proto::AlarmMsg_AlarmReport_Alarm> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::AlarmMsg_AlarmReport_Alarm>() {

@@ -15,22 +15,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_AlarmMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AlarmMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AlarmMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto;
 namespace proto {
-class AlarmMsg_DeviceAddrDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_DeviceAddr> _instance;
-} _AlarmMsg_DeviceAddr_default_instance_;
-class AlarmMsg_ChannelStates_ChannelStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_ChannelStates_ChannelState> _instance;
-} _AlarmMsg_ChannelStates_ChannelState_default_instance_;
-class AlarmMsg_ChannelStatesDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_ChannelStates> _instance;
-} _AlarmMsg_ChannelStates_default_instance_;
 class AlarmMsg_AlarmReportDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_AlarmReport> _instance;
@@ -73,54 +58,8 @@ static void InitDefaultsscc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto() {
   ::proto::AlarmMsg_AlarmReport::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto}, {
-      &scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto.base,
-      &scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto.base,}};
-
-static void InitDefaultsscc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AlarmMsg_ChannelStates_default_instance_;
-    new (ptr) ::proto::AlarmMsg_ChannelStates();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AlarmMsg_ChannelStates::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto}, {
-      &scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto.base,
-      &scc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto.base,}};
-
-static void InitDefaultsscc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AlarmMsg_ChannelStates_ChannelState_default_instance_;
-    new (ptr) ::proto::AlarmMsg_ChannelStates_ChannelState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AlarmMsg_ChannelStates_ChannelState::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto}, {}};
-
-static void InitDefaultsscc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AlarmMsg_DeviceAddr_default_instance_;
-    new (ptr) ::proto::AlarmMsg_DeviceAddr();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AlarmMsg_DeviceAddr::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto}, {}};
 
 static void InitDefaultsscc_info_AlarmMsg_DiskState_AlarmMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -133,9 +72,8 @@ static void InitDefaultsscc_info_AlarmMsg_DiskState_AlarmMsg_2eproto() {
   ::proto::AlarmMsg_DiskState::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AlarmMsg_DiskState_AlarmMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_AlarmMsg_DiskState_AlarmMsg_2eproto}, {
-      &scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_DiskState_AlarmMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_DiskState_AlarmMsg_2eproto}, {}};
 
 static void InitDefaultsscc_info_AlarmMsg_Time_AlarmMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -151,50 +89,22 @@ static void InitDefaultsscc_info_AlarmMsg_Time_AlarmMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_Time_AlarmMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_Time_AlarmMsg_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AlarmMsg_2eproto[7];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AlarmMsg_2eproto[4];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AlarmMsg_2eproto[4];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AlarmMsg_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AlarmMsg_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, platform_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, chezhanzhuji_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, daocha_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, jiancexiangmu_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DeviceAddr, sensor_id_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates_ChannelState, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates_ChannelState, sensor_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates_ChannelState, state_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates_ChannelState, time_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates, device_addr_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelStates, channel_state_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_AlarmReport, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_AlarmReport, device_addr_),
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_AlarmReport, channel_state_),
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_AlarmReport, alarm_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, device_addr_),
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, state_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_Time, _internal_metadata_),
@@ -209,19 +119,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PR
   ~0u,  // no _weak_field_map_
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::proto::AlarmMsg_DeviceAddr)},
-  { 10, -1, sizeof(::proto::AlarmMsg_ChannelStates_ChannelState)},
-  { 18, -1, sizeof(::proto::AlarmMsg_ChannelStates)},
-  { 25, -1, sizeof(::proto::AlarmMsg_AlarmReport)},
-  { 33, -1, sizeof(::proto::AlarmMsg_DiskState)},
-  { 40, -1, sizeof(::proto::AlarmMsg_Time)},
-  { 46, -1, sizeof(::proto::AlarmMsg)},
+  { 0, -1, sizeof(::proto::AlarmMsg_AlarmReport)},
+  { 6, -1, sizeof(::proto::AlarmMsg_DiskState)},
+  { 12, -1, sizeof(::proto::AlarmMsg_Time)},
+  { 18, -1, sizeof(::proto::AlarmMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_DeviceAddr_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_ChannelStates_ChannelState_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_ChannelStates_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_AlarmReport_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_DiskState_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_Time_default_instance_),
@@ -229,81 +133,41 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AlarmMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016AlarmMsg.proto\022\005proto\"\272\007\n\010AlarmMsg\032z\n\n"
-  "DeviceAddr\022\023\n\013platform_id\030\001 \001(\r\022\027\n\017chezh"
-  "anzhuji_id\030\002 \001(\r\022\021\n\tdaocha_id\030\003 \001(\r\022\030\n\020j"
-  "iancexiangmu_id\030\004 \001(\r\022\021\n\tsensor_id\030\005 \001(\r"
-  "\032\240\002\n\rChannelStates\022/\n\013device_addr\030\001 \001(\0132"
-  "\032.proto.AlarmMsg.DeviceAddr\022A\n\rchannel_s"
-  "tate\030\002 \003(\0132*.proto.AlarmMsg.ChannelState"
-  "s.ChannelState\032c\n\014ChannelState\022\021\n\tsensor"
-  "_id\030\001 \001(\r\0222\n\005state\030\002 \001(\0162#.proto.AlarmMs"
-  "g.ChannelStates.State\022\014\n\004time\030\003 \001(\004\"6\n\005S"
-  "tate\022\n\n\006Normal\020\000\022\017\n\013SensorError\020\001\022\020\n\014Cha"
-  "nnelError\020\002\032\327\001\n\013AlarmReport\022/\n\013device_ad"
-  "dr\030\001 \001(\0132\032.proto.AlarmMsg.DeviceAddr\0224\n\r"
-  "channel_state\030\002 \001(\0132\035.proto.AlarmMsg.Cha"
-  "nnelStates\0220\n\005alarm\030\003 \001(\0162!.proto.AlarmM"
-  "sg.AlarmReport.Alarm\"/\n\005Alarm\022\n\n\006Normal\020"
-  "\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032\213\001\n\tDiskSt"
-  "ate\022/\n\013device_addr\030\001 \001(\0132\032.proto.AlarmMs"
-  "g.DeviceAddr\022.\n\005state\030\002 \001(\0162\037.proto.Alar"
-  "mMsg.DiskState.State\"\035\n\005State\022\n\n\006Normal\020"
-  "\000\022\010\n\004Full\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\"\220\001\n\003Cm"
-  "d\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014alarm"
-  "_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_time\020"
-  "\264\020\022\023\n\016set_heart_beat\020\265\020\022\021\n\014start_repair\020"
-  "\266\020\022\020\n\013stop_repair\020\267\020b\006proto3"
+  "\n\016AlarmMsg.proto\022\005proto\"\201\003\n\010AlarmMsg\032p\n\013"
+  "AlarmReport\0220\n\005alarm\030\003 \001(\0162!.proto.Alarm"
+  "Msg.AlarmReport.Alarm\"/\n\005Alarm\022\n\n\006Normal"
+  "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032Z\n\tDiskSt"
+  "ate\022.\n\005state\030\001 \001(\0162\037.proto.AlarmMsg.Disk"
+  "State.State\"\035\n\005State\022\n\n\006Normal\020\000\022\010\n\004Full"
+  "\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\"\220\001\n\003Cmd\022\010\n\004NONE"
+  "\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014alarm_report\020\321"
+  "\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_time\020\264\020\022\023\n\016set"
+  "_heart_beat\020\265\020\022\021\n\014start_repair\020\266\020\022\020\n\013sto"
+  "p_repair\020\267\020b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AlarmMsg_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AlarmMsg_2eproto_sccs[7] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AlarmMsg_2eproto_sccs[4] = {
   &scc_info_AlarmMsg_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto.base,
-  &scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto.base,
-  &scc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto.base,
-  &scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_DiskState_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_Time_AlarmMsg_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AlarmMsg_2eproto_once;
 static bool descriptor_table_AlarmMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AlarmMsg_2eproto = {
-  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 988,
-  &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 7, 0,
+  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 419,
+  &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_AlarmMsg_2eproto::offsets,
-  file_level_metadata_AlarmMsg_2eproto, 7, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
+  file_level_metadata_AlarmMsg_2eproto, 4, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_AlarmMsg_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_AlarmMsg_2eproto), true);
 namespace proto {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_ChannelStates_State_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
-  return file_level_enum_descriptors_AlarmMsg_2eproto[0];
-}
-bool AlarmMsg_ChannelStates_State_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-      return true;
-    default:
-      return false;
-  }
-}
-
-#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates::Normal;
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates::SensorError;
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates::ChannelError;
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates::State_MIN;
-constexpr AlarmMsg_ChannelStates_State AlarmMsg_ChannelStates::State_MAX;
-constexpr int AlarmMsg_ChannelStates::State_ARRAYSIZE;
-#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_AlarmReport_Alarm_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
-  return file_level_enum_descriptors_AlarmMsg_2eproto[1];
+  return file_level_enum_descriptors_AlarmMsg_2eproto[0];
 }
 bool AlarmMsg_AlarmReport_Alarm_IsValid(int value) {
   switch (value) {
@@ -326,7 +190,7 @@ constexpr int AlarmMsg_AlarmReport::Alarm_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_DiskState_State_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
-  return file_level_enum_descriptors_AlarmMsg_2eproto[2];
+  return file_level_enum_descriptors_AlarmMsg_2eproto[1];
 }
 bool AlarmMsg_DiskState_State_IsValid(int value) {
   switch (value) {
@@ -347,7 +211,7 @@ constexpr int AlarmMsg_DiskState::State_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_Cmd_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
-  return file_level_enum_descriptors_AlarmMsg_2eproto[3];
+  return file_level_enum_descriptors_AlarmMsg_2eproto[2];
 }
 bool AlarmMsg_Cmd_IsValid(int value) {
   switch (value) {
@@ -381,1106 +245,12 @@ constexpr int AlarmMsg::Cmd_ARRAYSIZE;
 
 // ===================================================================
 
-void AlarmMsg_DeviceAddr::InitAsDefaultInstance() {
-}
-class AlarmMsg_DeviceAddr::_Internal {
- public:
-};
-
-AlarmMsg_DeviceAddr::AlarmMsg_DeviceAddr()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AlarmMsg.DeviceAddr)
-}
-AlarmMsg_DeviceAddr::AlarmMsg_DeviceAddr(const AlarmMsg_DeviceAddr& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&platform_id_, &from.platform_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&sensor_id_) -
-    reinterpret_cast<char*>(&platform_id_)) + sizeof(sensor_id_));
-  // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.DeviceAddr)
-}
-
-void AlarmMsg_DeviceAddr::SharedCtor() {
-  ::memset(&platform_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sensor_id_) -
-      reinterpret_cast<char*>(&platform_id_)) + sizeof(sensor_id_));
-}
-
-AlarmMsg_DeviceAddr::~AlarmMsg_DeviceAddr() {
-  // @@protoc_insertion_point(destructor:proto.AlarmMsg.DeviceAddr)
-  SharedDtor();
-}
-
-void AlarmMsg_DeviceAddr::SharedDtor() {
-}
-
-void AlarmMsg_DeviceAddr::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AlarmMsg_DeviceAddr& AlarmMsg_DeviceAddr::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AlarmMsg_DeviceAddr_AlarmMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AlarmMsg_DeviceAddr::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AlarmMsg.DeviceAddr)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&platform_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&sensor_id_) -
-      reinterpret_cast<char*>(&platform_id_)) + sizeof(sensor_id_));
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AlarmMsg_DeviceAddr::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // uint32 platform_id = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          platform_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 chezhanzhuji_id = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          chezhanzhuji_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 daocha_id = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          daocha_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 jiancexiangmu_id = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          jiancexiangmu_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 sensor_id = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          sensor_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AlarmMsg_DeviceAddr::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AlarmMsg.DeviceAddr)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 platform_id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &platform_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 chezhanzhuji_id = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &chezhanzhuji_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 daocha_id = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &daocha_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 jiancexiangmu_id = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &jiancexiangmu_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 sensor_id = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &sensor_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AlarmMsg.DeviceAddr)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AlarmMsg.DeviceAddr)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AlarmMsg_DeviceAddr::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AlarmMsg.DeviceAddr)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 platform_id = 1;
-  if (this->platform_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->platform_id(), output);
-  }
-
-  // uint32 chezhanzhuji_id = 2;
-  if (this->chezhanzhuji_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->chezhanzhuji_id(), output);
-  }
-
-  // uint32 daocha_id = 3;
-  if (this->daocha_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->daocha_id(), output);
-  }
-
-  // uint32 jiancexiangmu_id = 4;
-  if (this->jiancexiangmu_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->jiancexiangmu_id(), output);
-  }
-
-  // uint32 sensor_id = 5;
-  if (this->sensor_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(5, this->sensor_id(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AlarmMsg.DeviceAddr)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AlarmMsg_DeviceAddr::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AlarmMsg.DeviceAddr)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 platform_id = 1;
-  if (this->platform_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->platform_id(), target);
-  }
-
-  // uint32 chezhanzhuji_id = 2;
-  if (this->chezhanzhuji_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->chezhanzhuji_id(), target);
-  }
-
-  // uint32 daocha_id = 3;
-  if (this->daocha_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->daocha_id(), target);
-  }
-
-  // uint32 jiancexiangmu_id = 4;
-  if (this->jiancexiangmu_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->jiancexiangmu_id(), target);
-  }
-
-  // uint32 sensor_id = 5;
-  if (this->sensor_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(5, this->sensor_id(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AlarmMsg.DeviceAddr)
-  return target;
-}
-
-size_t AlarmMsg_DeviceAddr::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AlarmMsg.DeviceAddr)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // uint32 platform_id = 1;
-  if (this->platform_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->platform_id());
-  }
-
-  // uint32 chezhanzhuji_id = 2;
-  if (this->chezhanzhuji_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->chezhanzhuji_id());
-  }
-
-  // uint32 daocha_id = 3;
-  if (this->daocha_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->daocha_id());
-  }
-
-  // uint32 jiancexiangmu_id = 4;
-  if (this->jiancexiangmu_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->jiancexiangmu_id());
-  }
-
-  // uint32 sensor_id = 5;
-  if (this->sensor_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->sensor_id());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AlarmMsg_DeviceAddr::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AlarmMsg.DeviceAddr)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AlarmMsg_DeviceAddr* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AlarmMsg_DeviceAddr>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AlarmMsg.DeviceAddr)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AlarmMsg.DeviceAddr)
-    MergeFrom(*source);
-  }
-}
-
-void AlarmMsg_DeviceAddr::MergeFrom(const AlarmMsg_DeviceAddr& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AlarmMsg.DeviceAddr)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.platform_id() != 0) {
-    set_platform_id(from.platform_id());
-  }
-  if (from.chezhanzhuji_id() != 0) {
-    set_chezhanzhuji_id(from.chezhanzhuji_id());
-  }
-  if (from.daocha_id() != 0) {
-    set_daocha_id(from.daocha_id());
-  }
-  if (from.jiancexiangmu_id() != 0) {
-    set_jiancexiangmu_id(from.jiancexiangmu_id());
-  }
-  if (from.sensor_id() != 0) {
-    set_sensor_id(from.sensor_id());
-  }
-}
-
-void AlarmMsg_DeviceAddr::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AlarmMsg.DeviceAddr)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AlarmMsg_DeviceAddr::CopyFrom(const AlarmMsg_DeviceAddr& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AlarmMsg.DeviceAddr)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AlarmMsg_DeviceAddr::IsInitialized() const {
-  return true;
-}
-
-void AlarmMsg_DeviceAddr::InternalSwap(AlarmMsg_DeviceAddr* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(platform_id_, other->platform_id_);
-  swap(chezhanzhuji_id_, other->chezhanzhuji_id_);
-  swap(daocha_id_, other->daocha_id_);
-  swap(jiancexiangmu_id_, other->jiancexiangmu_id_);
-  swap(sensor_id_, other->sensor_id_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AlarmMsg_DeviceAddr::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void AlarmMsg_ChannelStates_ChannelState::InitAsDefaultInstance() {
-}
-class AlarmMsg_ChannelStates_ChannelState::_Internal {
- public:
-};
-
-AlarmMsg_ChannelStates_ChannelState::AlarmMsg_ChannelStates_ChannelState()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AlarmMsg.ChannelStates.ChannelState)
-}
-AlarmMsg_ChannelStates_ChannelState::AlarmMsg_ChannelStates_ChannelState(const AlarmMsg_ChannelStates_ChannelState& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&sensor_id_, &from.sensor_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&time_) -
-    reinterpret_cast<char*>(&sensor_id_)) + sizeof(time_));
-  // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.ChannelStates.ChannelState)
-}
-
-void AlarmMsg_ChannelStates_ChannelState::SharedCtor() {
-  ::memset(&sensor_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_) -
-      reinterpret_cast<char*>(&sensor_id_)) + sizeof(time_));
-}
-
-AlarmMsg_ChannelStates_ChannelState::~AlarmMsg_ChannelStates_ChannelState() {
-  // @@protoc_insertion_point(destructor:proto.AlarmMsg.ChannelStates.ChannelState)
-  SharedDtor();
-}
-
-void AlarmMsg_ChannelStates_ChannelState::SharedDtor() {
-}
-
-void AlarmMsg_ChannelStates_ChannelState::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AlarmMsg_ChannelStates_ChannelState& AlarmMsg_ChannelStates_ChannelState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AlarmMsg_ChannelStates_ChannelState_AlarmMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AlarmMsg_ChannelStates_ChannelState::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&sensor_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&time_) -
-      reinterpret_cast<char*>(&sensor_id_)) + sizeof(time_));
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AlarmMsg_ChannelStates_ChannelState::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // uint32 sensor_id = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          sensor_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AlarmMsg.ChannelStates.State state = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-          set_state(static_cast<::proto::AlarmMsg_ChannelStates_State>(val));
-        } else goto handle_unusual;
-        continue;
-      // uint64 time = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AlarmMsg_ChannelStates_ChannelState::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 sensor_id = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &sensor_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AlarmMsg.ChannelStates.State state = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-          int value = 0;
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_state(static_cast< ::proto::AlarmMsg_ChannelStates_State >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint64 time = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &time_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AlarmMsg.ChannelStates.ChannelState)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AlarmMsg.ChannelStates.ChannelState)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AlarmMsg_ChannelStates_ChannelState::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 sensor_id = 1;
-  if (this->sensor_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->sensor_id(), output);
-  }
-
-  // .proto.AlarmMsg.ChannelStates.State state = 2;
-  if (this->state() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      2, this->state(), output);
-  }
-
-  // uint64 time = 3;
-  if (this->time() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(3, this->time(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AlarmMsg.ChannelStates.ChannelState)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AlarmMsg_ChannelStates_ChannelState::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 sensor_id = 1;
-  if (this->sensor_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->sensor_id(), target);
-  }
-
-  // .proto.AlarmMsg.ChannelStates.State state = 2;
-  if (this->state() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->state(), target);
-  }
-
-  // uint64 time = 3;
-  if (this->time() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->time(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AlarmMsg.ChannelStates.ChannelState)
-  return target;
-}
-
-size_t AlarmMsg_ChannelStates_ChannelState::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // uint32 sensor_id = 1;
-  if (this->sensor_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->sensor_id());
-  }
-
-  // .proto.AlarmMsg.ChannelStates.State state = 2;
-  if (this->state() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->state());
-  }
-
-  // uint64 time = 3;
-  if (this->time() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->time());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AlarmMsg_ChannelStates_ChannelState::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AlarmMsg_ChannelStates_ChannelState* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AlarmMsg_ChannelStates_ChannelState>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AlarmMsg.ChannelStates.ChannelState)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AlarmMsg.ChannelStates.ChannelState)
-    MergeFrom(*source);
-  }
-}
-
-void AlarmMsg_ChannelStates_ChannelState::MergeFrom(const AlarmMsg_ChannelStates_ChannelState& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.sensor_id() != 0) {
-    set_sensor_id(from.sensor_id());
-  }
-  if (from.state() != 0) {
-    set_state(from.state());
-  }
-  if (from.time() != 0) {
-    set_time(from.time());
-  }
-}
-
-void AlarmMsg_ChannelStates_ChannelState::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AlarmMsg_ChannelStates_ChannelState::CopyFrom(const AlarmMsg_ChannelStates_ChannelState& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AlarmMsg.ChannelStates.ChannelState)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AlarmMsg_ChannelStates_ChannelState::IsInitialized() const {
-  return true;
-}
-
-void AlarmMsg_ChannelStates_ChannelState::InternalSwap(AlarmMsg_ChannelStates_ChannelState* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(sensor_id_, other->sensor_id_);
-  swap(state_, other->state_);
-  swap(time_, other->time_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AlarmMsg_ChannelStates_ChannelState::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void AlarmMsg_ChannelStates::InitAsDefaultInstance() {
-  ::proto::_AlarmMsg_ChannelStates_default_instance_._instance.get_mutable()->device_addr_ = const_cast< ::proto::AlarmMsg_DeviceAddr*>(
-      ::proto::AlarmMsg_DeviceAddr::internal_default_instance());
-}
-class AlarmMsg_ChannelStates::_Internal {
- public:
-  static const ::proto::AlarmMsg_DeviceAddr& device_addr(const AlarmMsg_ChannelStates* msg);
-};
-
-const ::proto::AlarmMsg_DeviceAddr&
-AlarmMsg_ChannelStates::_Internal::device_addr(const AlarmMsg_ChannelStates* msg) {
-  return *msg->device_addr_;
-}
-AlarmMsg_ChannelStates::AlarmMsg_ChannelStates()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AlarmMsg.ChannelStates)
-}
-AlarmMsg_ChannelStates::AlarmMsg_ChannelStates(const AlarmMsg_ChannelStates& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      channel_state_(from.channel_state_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_device_addr()) {
-    device_addr_ = new ::proto::AlarmMsg_DeviceAddr(*from.device_addr_);
-  } else {
-    device_addr_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.ChannelStates)
-}
-
-void AlarmMsg_ChannelStates::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto.base);
-  device_addr_ = nullptr;
-}
-
-AlarmMsg_ChannelStates::~AlarmMsg_ChannelStates() {
-  // @@protoc_insertion_point(destructor:proto.AlarmMsg.ChannelStates)
-  SharedDtor();
-}
-
-void AlarmMsg_ChannelStates::SharedDtor() {
-  if (this != internal_default_instance()) delete device_addr_;
-}
-
-void AlarmMsg_ChannelStates::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AlarmMsg_ChannelStates& AlarmMsg_ChannelStates::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AlarmMsg_ChannelStates_AlarmMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AlarmMsg_ChannelStates::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AlarmMsg.ChannelStates)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  channel_state_.Clear();
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AlarmMsg_ChannelStates::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_device_addr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(add_channel_state(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AlarmMsg_ChannelStates::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AlarmMsg.ChannelStates)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_device_addr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_channel_state()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AlarmMsg.ChannelStates)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AlarmMsg.ChannelStates)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AlarmMsg_ChannelStates::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AlarmMsg.ChannelStates)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::device_addr(this), output);
-  }
-
-  // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->channel_state_size()); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->channel_state(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AlarmMsg.ChannelStates)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AlarmMsg_ChannelStates::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AlarmMsg.ChannelStates)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::device_addr(this), target);
-  }
-
-  // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->channel_state_size()); i < n; i++) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->channel_state(static_cast<int>(i)), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AlarmMsg.ChannelStates)
-  return target;
-}
-
-size_t AlarmMsg_ChannelStates::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AlarmMsg.ChannelStates)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .proto.AlarmMsg.ChannelStates.ChannelState channel_state = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->channel_state_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          this->channel_state(static_cast<int>(i)));
-    }
-  }
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *device_addr_);
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AlarmMsg_ChannelStates::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AlarmMsg.ChannelStates)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AlarmMsg_ChannelStates* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AlarmMsg_ChannelStates>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AlarmMsg.ChannelStates)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AlarmMsg.ChannelStates)
-    MergeFrom(*source);
-  }
-}
-
-void AlarmMsg_ChannelStates::MergeFrom(const AlarmMsg_ChannelStates& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AlarmMsg.ChannelStates)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  channel_state_.MergeFrom(from.channel_state_);
-  if (from.has_device_addr()) {
-    mutable_device_addr()->::proto::AlarmMsg_DeviceAddr::MergeFrom(from.device_addr());
-  }
-}
-
-void AlarmMsg_ChannelStates::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AlarmMsg.ChannelStates)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AlarmMsg_ChannelStates::CopyFrom(const AlarmMsg_ChannelStates& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AlarmMsg.ChannelStates)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AlarmMsg_ChannelStates::IsInitialized() const {
-  return true;
-}
-
-void AlarmMsg_ChannelStates::InternalSwap(AlarmMsg_ChannelStates* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&channel_state_)->InternalSwap(CastToBase(&other->channel_state_));
-  swap(device_addr_, other->device_addr_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AlarmMsg_ChannelStates::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 void AlarmMsg_AlarmReport::InitAsDefaultInstance() {
-  ::proto::_AlarmMsg_AlarmReport_default_instance_._instance.get_mutable()->device_addr_ = const_cast< ::proto::AlarmMsg_DeviceAddr*>(
-      ::proto::AlarmMsg_DeviceAddr::internal_default_instance());
-  ::proto::_AlarmMsg_AlarmReport_default_instance_._instance.get_mutable()->channel_state_ = const_cast< ::proto::AlarmMsg_ChannelStates*>(
-      ::proto::AlarmMsg_ChannelStates::internal_default_instance());
 }
 class AlarmMsg_AlarmReport::_Internal {
  public:
-  static const ::proto::AlarmMsg_DeviceAddr& device_addr(const AlarmMsg_AlarmReport* msg);
-  static const ::proto::AlarmMsg_ChannelStates& channel_state(const AlarmMsg_AlarmReport* msg);
 };
 
-const ::proto::AlarmMsg_DeviceAddr&
-AlarmMsg_AlarmReport::_Internal::device_addr(const AlarmMsg_AlarmReport* msg) {
-  return *msg->device_addr_;
-}
-const ::proto::AlarmMsg_ChannelStates&
-AlarmMsg_AlarmReport::_Internal::channel_state(const AlarmMsg_AlarmReport* msg) {
-  return *msg->channel_state_;
-}
 AlarmMsg_AlarmReport::AlarmMsg_AlarmReport()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -1490,25 +260,12 @@ AlarmMsg_AlarmReport::AlarmMsg_AlarmReport(const AlarmMsg_AlarmReport& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_device_addr()) {
-    device_addr_ = new ::proto::AlarmMsg_DeviceAddr(*from.device_addr_);
-  } else {
-    device_addr_ = nullptr;
-  }
-  if (from.has_channel_state()) {
-    channel_state_ = new ::proto::AlarmMsg_ChannelStates(*from.channel_state_);
-  } else {
-    channel_state_ = nullptr;
-  }
   alarm_ = from.alarm_;
   // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.AlarmReport)
 }
 
 void AlarmMsg_AlarmReport::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto.base);
-  ::memset(&device_addr_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&alarm_) -
-      reinterpret_cast<char*>(&device_addr_)) + sizeof(alarm_));
+  alarm_ = 0;
 }
 
 AlarmMsg_AlarmReport::~AlarmMsg_AlarmReport() {
@@ -1517,8 +274,6 @@ AlarmMsg_AlarmReport::~AlarmMsg_AlarmReport() {
 }
 
 void AlarmMsg_AlarmReport::SharedDtor() {
-  if (this != internal_default_instance()) delete device_addr_;
-  if (this != internal_default_instance()) delete channel_state_;
 }
 
 void AlarmMsg_AlarmReport::SetCachedSize(int size) const {
@@ -1536,14 +291,6 @@ void AlarmMsg_AlarmReport::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && channel_state_ != nullptr) {
-    delete channel_state_;
-  }
-  channel_state_ = nullptr;
   alarm_ = 0;
   _internal_metadata_.Clear();
 }
@@ -1556,20 +303,6 @@ const char* AlarmMsg_AlarmReport::_InternalParse(const char* ptr, ::PROTOBUF_NAM
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_device_addr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AlarmMsg.ChannelStates channel_state = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_channel_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
       // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
@@ -1608,28 +341,6 @@ bool AlarmMsg_AlarmReport::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_device_addr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AlarmMsg.ChannelStates channel_state = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_channel_state()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
       case 3: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
@@ -1671,18 +382,6 @@ void AlarmMsg_AlarmReport::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::device_addr(this), output);
-  }
-
-  // .proto.AlarmMsg.ChannelStates channel_state = 2;
-  if (this->has_channel_state()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::channel_state(this), output);
-  }
-
   // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
   if (this->alarm() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
@@ -1701,20 +400,6 @@ void AlarmMsg_AlarmReport::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:proto.AlarmMsg.AlarmReport)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::device_addr(this), target);
-  }
-
-  // .proto.AlarmMsg.ChannelStates channel_state = 2;
-  if (this->has_channel_state()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::channel_state(this), target);
-  }
 
   // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
   if (this->alarm() != 0) {
@@ -1742,20 +427,6 @@ size_t AlarmMsg_AlarmReport::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *device_addr_);
-  }
-
-  // .proto.AlarmMsg.ChannelStates channel_state = 2;
-  if (this->has_channel_state()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *channel_state_);
-  }
 
   // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
   if (this->alarm() != 0) {
@@ -1790,12 +461,6 @@ void AlarmMsg_AlarmReport::MergeFrom(const AlarmMsg_AlarmReport& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_device_addr()) {
-    mutable_device_addr()->::proto::AlarmMsg_DeviceAddr::MergeFrom(from.device_addr());
-  }
-  if (from.has_channel_state()) {
-    mutable_channel_state()->::proto::AlarmMsg_ChannelStates::MergeFrom(from.channel_state());
-  }
   if (from.alarm() != 0) {
     set_alarm(from.alarm());
   }
@@ -1822,8 +487,6 @@ bool AlarmMsg_AlarmReport::IsInitialized() const {
 void AlarmMsg_AlarmReport::InternalSwap(AlarmMsg_AlarmReport* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(device_addr_, other->device_addr_);
-  swap(channel_state_, other->channel_state_);
   swap(alarm_, other->alarm_);
 }
 
@@ -1835,18 +498,11 @@ void AlarmMsg_AlarmReport::InternalSwap(AlarmMsg_AlarmReport* other) {
 // ===================================================================
 
 void AlarmMsg_DiskState::InitAsDefaultInstance() {
-  ::proto::_AlarmMsg_DiskState_default_instance_._instance.get_mutable()->device_addr_ = const_cast< ::proto::AlarmMsg_DeviceAddr*>(
-      ::proto::AlarmMsg_DeviceAddr::internal_default_instance());
 }
 class AlarmMsg_DiskState::_Internal {
  public:
-  static const ::proto::AlarmMsg_DeviceAddr& device_addr(const AlarmMsg_DiskState* msg);
 };
 
-const ::proto::AlarmMsg_DeviceAddr&
-AlarmMsg_DiskState::_Internal::device_addr(const AlarmMsg_DiskState* msg) {
-  return *msg->device_addr_;
-}
 AlarmMsg_DiskState::AlarmMsg_DiskState()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -1856,20 +512,12 @@ AlarmMsg_DiskState::AlarmMsg_DiskState(const AlarmMsg_DiskState& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_device_addr()) {
-    device_addr_ = new ::proto::AlarmMsg_DeviceAddr(*from.device_addr_);
-  } else {
-    device_addr_ = nullptr;
-  }
   state_ = from.state_;
   // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.DiskState)
 }
 
 void AlarmMsg_DiskState::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AlarmMsg_DiskState_AlarmMsg_2eproto.base);
-  ::memset(&device_addr_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&state_) -
-      reinterpret_cast<char*>(&device_addr_)) + sizeof(state_));
+  state_ = 0;
 }
 
 AlarmMsg_DiskState::~AlarmMsg_DiskState() {
@@ -1878,7 +526,6 @@ AlarmMsg_DiskState::~AlarmMsg_DiskState() {
 }
 
 void AlarmMsg_DiskState::SharedDtor() {
-  if (this != internal_default_instance()) delete device_addr_;
 }
 
 void AlarmMsg_DiskState::SetCachedSize(int size) const {
@@ -1896,10 +543,6 @@ void AlarmMsg_DiskState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && device_addr_ != nullptr) {
-    delete device_addr_;
-  }
-  device_addr_ = nullptr;
   state_ = 0;
   _internal_metadata_.Clear();
 }
@@ -1912,16 +555,9 @@ const char* AlarmMsg_DiskState::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
+      // .proto.AlarmMsg.DiskState.State state = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(mutable_device_addr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AlarmMsg.DiskState.State state = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           set_state(static_cast<::proto::AlarmMsg_DiskState_State>(val));
@@ -1957,20 +593,9 @@ bool AlarmMsg_DiskState::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .proto.AlarmMsg.DeviceAddr device_addr = 1;
+      // .proto.AlarmMsg.DiskState.State state = 1;
       case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_device_addr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AlarmMsg.DiskState.State state = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
           int value = 0;
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
@@ -2009,16 +634,10 @@ void AlarmMsg_DiskState::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, _Internal::device_addr(this), output);
-  }
-
-  // .proto.AlarmMsg.DiskState.State state = 2;
+  // .proto.AlarmMsg.DiskState.State state = 1;
   if (this->state() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      2, this->state(), output);
+      1, this->state(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2034,17 +653,10 @@ void AlarmMsg_DiskState::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, _Internal::device_addr(this), target);
-  }
-
-  // .proto.AlarmMsg.DiskState.State state = 2;
+  // .proto.AlarmMsg.DiskState.State state = 1;
   if (this->state() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->state(), target);
+      1, this->state(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2068,14 +680,7 @@ size_t AlarmMsg_DiskState::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.DeviceAddr device_addr = 1;
-  if (this->has_device_addr()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *device_addr_);
-  }
-
-  // .proto.AlarmMsg.DiskState.State state = 2;
+  // .proto.AlarmMsg.DiskState.State state = 1;
   if (this->state() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->state());
@@ -2108,9 +713,6 @@ void AlarmMsg_DiskState::MergeFrom(const AlarmMsg_DiskState& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_device_addr()) {
-    mutable_device_addr()->::proto::AlarmMsg_DeviceAddr::MergeFrom(from.device_addr());
-  }
   if (from.state() != 0) {
     set_state(from.state());
   }
@@ -2137,7 +739,6 @@ bool AlarmMsg_DiskState::IsInitialized() const {
 void AlarmMsg_DiskState::InternalSwap(AlarmMsg_DiskState* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(device_addr_, other->device_addr_);
   swap(state_, other->state_);
 }
 
@@ -2597,15 +1198,6 @@ void AlarmMsg::InternalSwap(AlarmMsg* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_DeviceAddr* Arena::CreateMaybeMessage< ::proto::AlarmMsg_DeviceAddr >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AlarmMsg_DeviceAddr >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_ChannelStates_ChannelState* Arena::CreateMaybeMessage< ::proto::AlarmMsg_ChannelStates_ChannelState >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AlarmMsg_ChannelStates_ChannelState >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_ChannelStates* Arena::CreateMaybeMessage< ::proto::AlarmMsg_ChannelStates >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AlarmMsg_ChannelStates >(arena);
-}
 template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_AlarmReport* Arena::CreateMaybeMessage< ::proto::AlarmMsg_AlarmReport >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AlarmMsg_AlarmReport >(arena);
 }
