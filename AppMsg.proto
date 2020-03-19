@@ -61,6 +61,9 @@ message AppMsg {
         set_capture_auto_state = 44;    // 采集ADC数据    消息类型: BoolValue 开始/停止
         get_capture_auto_state = 45;
 
+        set_channel_info = 46;
+        get_channel_info = 47;          // 通道信息
+
         // 工控板对上位机命令
         auto_adc_data = 1000;           // 自动采集的ADC数据
 
@@ -149,5 +152,16 @@ message AppMsg {
         station_id station_id = 11;
         turnout_id turnout_id = 12;
         item_id item_id = 13;
+    }
+
+    message channel_info {
+        uint32 channel = 1;
+        zero_offset zero_offset = 2;
+        fault_voltage fault_voltage = 3;
+        abnormal_param abnormal_param = 4;
+        full_scale full_scale = 5;
+        judgement_mode judgement_mode = 6;
+        pzltrct_param pzltrct_param = 7;
+        axis_counting_param axis_counting_param = 8;
     }
 }

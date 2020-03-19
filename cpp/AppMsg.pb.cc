@@ -15,10 +15,17 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_abnormal_param_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_axis_counting_param_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_fault_voltage_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_full_scale_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_judgement_mode_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_platform_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_pzltrct_param_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_turnout_id_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_zero_offset_AppMsg_2eproto;
 namespace proto {
 class AppMsg_device_addDefaultTypeInternal {
  public:
@@ -88,6 +95,10 @@ class AppMsg_adc_dataDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_adc_data> _instance;
 } _AppMsg_adc_data_default_instance_;
+class AppMsg_channel_infoDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_channel_info> _instance;
+} _AppMsg_channel_info_default_instance_;
 class AppMsgDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg> _instance;
@@ -152,6 +163,27 @@ static void InitDefaultsscc_info_AppMsg_axis_counting_param_AppMsg_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_axis_counting_param_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_axis_counting_param_AppMsg_2eproto}, {}};
+
+static void InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::proto::_AppMsg_channel_info_default_instance_;
+    new (ptr) ::proto::AppMsg_channel_info();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::proto::AppMsg_channel_info::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<7> scc_info_AppMsg_channel_info_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 7, InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto}, {
+      &scc_info_AppMsg_zero_offset_AppMsg_2eproto.base,
+      &scc_info_AppMsg_fault_voltage_AppMsg_2eproto.base,
+      &scc_info_AppMsg_abnormal_param_AppMsg_2eproto.base,
+      &scc_info_AppMsg_full_scale_AppMsg_2eproto.base,
+      &scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base,
+      &scc_info_AppMsg_pzltrct_param_AppMsg_2eproto.base,
+      &scc_info_AppMsg_axis_counting_param_AppMsg_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppMsg_device_add_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -349,7 +381,7 @@ static void InitDefaultsscc_info_AppMsg_zero_offset_AppMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_zero_offset_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_zero_offset_AppMsg_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AppMsg_2eproto[18];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AppMsg_2eproto[19];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AppMsg_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AppMsg_2eproto = nullptr;
 
@@ -473,6 +505,19 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, turnout_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, item_id_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, channel_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, zero_offset_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, fault_voltage_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, abnormal_param_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, full_scale_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, judgement_mode_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, pzltrct_param_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, axis_counting_param_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -496,7 +541,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 92, -1, sizeof(::proto::AppMsg_axis_counting_param)},
   { 98, -1, sizeof(::proto::AppMsg_sample_card_num)},
   { 104, -1, sizeof(::proto::AppMsg_adc_data)},
-  { 118, -1, sizeof(::proto::AppMsg)},
+  { 118, -1, sizeof(::proto::AppMsg_channel_info)},
+  { 131, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -517,11 +563,12 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_axis_counting_param_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_sample_card_num_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_adc_data_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_channel_info_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_default_instance_),
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\354\r\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\254\021\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -544,37 +591,49 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "sg.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.pro"
   "to.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\013"
   "2\030.proto.AppMsg.turnout_id\022&\n\007item_id\030\r "
-  "\001(\0132\025.proto.AppMsg.item_id\"\317\006\n\003Cmd\022\010\n\004NO"
-  "NE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_add\020\013\022\022"
-  "\n\016get_device_add\020\014\022\022\n\016set_server_add\020\r\022\022"
-  "\n\016get_server_add\020\016\022\023\n\017set_platform_id\020\017\022"
-  "\023\n\017get_platform_id\020\020\022\022\n\016set_station_id\020\021"
-  "\022\022\n\016get_station_id\020\022\022\022\n\016set_turnout_id\020\023"
-  "\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_id\020\025\022\017\n"
-  "\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022\021\n\rget"
-  "_sensor_id\020\030\022\030\n\024set_sample_frequency\020\031\022\030"
-  "\n\024get_sample_frequency\020\032\022\023\n\017set_zero_off"
-  "set\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021set_fault_"
-  "voltage\020\035\022\025\n\021get_fault_voltage\020\036\022\026\n\022set_"
-  "abnormal_param\020\037\022\026\n\022get_abnormal_param\020 "
-  "\022\022\n\016set_full_scale\020!\022\022\n\016get_full_scale\020\""
-  "\022\026\n\022set_judgement_mode\020#\022\026\n\022get_judgemen"
-  "t_mode\020$\022\025\n\021set_pzltrct_param\020%\022\025\n\021get_p"
-  "zltrct_param\020&\022\033\n\027set_axis_counting_para"
-  "m\020\'\022\033\n\027get_axis_counting_param\020(\022\027\n\023set_"
-  "sample_card_num\020)\022\027\n\023get_sample_card_num"
-  "\020*\022\024\n\020capture_adc_data\020+\022\032\n\026set_capture_"
-  "auto_state\020,\022\032\n\026get_capture_auto_state\020-"
-  "\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020\351\007b\006pr"
-  "oto3"
+  "\001(\0132\025.proto.AppMsg.item_id\032\221\003\n\014channel_i"
+  "nfo\022\017\n\007channel\030\001 \001(\r\022.\n\013zero_offset\030\002 \001("
+  "\0132\031.proto.AppMsg.zero_offset\0222\n\rfault_vo"
+  "ltage\030\003 \001(\0132\033.proto.AppMsg.fault_voltage"
+  "\0224\n\016abnormal_param\030\004 \001(\0132\034.proto.AppMsg."
+  "abnormal_param\022,\n\nfull_scale\030\005 \001(\0132\030.pro"
+  "to.AppMsg.full_scale\0224\n\016judgement_mode\030\006"
+  " \001(\0132\034.proto.AppMsg.judgement_mode\0222\n\rpz"
+  "ltrct_param\030\007 \001(\0132\033.proto.AppMsg.pzltrct"
+  "_param\022>\n\023axis_counting_param\030\010 \001(\0132!.pr"
+  "oto.AppMsg.axis_counting_param\"\373\006\n\003Cmd\022\010"
+  "\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_add"
+  "\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_server_add"
+  "\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platform_i"
+  "d\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016set_station_"
+  "id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016set_turnout_"
+  "id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_id\020"
+  "\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022\021\n"
+  "\rget_sensor_id\020\030\022\030\n\024set_sample_frequency"
+  "\020\031\022\030\n\024get_sample_frequency\020\032\022\023\n\017set_zero"
+  "_offset\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021set_fa"
+  "ult_voltage\020\035\022\025\n\021get_fault_voltage\020\036\022\026\n\022"
+  "set_abnormal_param\020\037\022\026\n\022get_abnormal_par"
+  "am\020 \022\022\n\016set_full_scale\020!\022\022\n\016get_full_sca"
+  "le\020\"\022\026\n\022set_judgement_mode\020#\022\026\n\022get_judg"
+  "ement_mode\020$\022\025\n\021set_pzltrct_param\020%\022\025\n\021g"
+  "et_pzltrct_param\020&\022\033\n\027set_axis_counting_"
+  "param\020\'\022\033\n\027get_axis_counting_param\020(\022\027\n\023"
+  "set_sample_card_num\020)\022\027\n\023get_sample_card"
+  "_num\020*\022\024\n\020capture_adc_data\020+\022\032\n\026set_capt"
+  "ure_auto_state\020,\022\032\n\026get_capture_auto_sta"
+  "te\020-\022\024\n\020set_channel_info\020.\022\024\n\020get_channe"
+  "l_info\020/\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_ms"
+  "g\020\351\007b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AppMsg_2eproto_sccs[18] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AppMsg_2eproto_sccs[19] = {
   &scc_info_AppMsg_AppMsg_2eproto.base,
   &scc_info_AppMsg_abnormal_param_AppMsg_2eproto.base,
   &scc_info_AppMsg_adc_data_AppMsg_2eproto.base,
   &scc_info_AppMsg_axis_counting_param_AppMsg_2eproto.base,
+  &scc_info_AppMsg_channel_info_AppMsg_2eproto.base,
   &scc_info_AppMsg_device_add_AppMsg_2eproto.base,
   &scc_info_AppMsg_fault_voltage_AppMsg_2eproto.base,
   &scc_info_AppMsg_full_scale_AppMsg_2eproto.base,
@@ -593,10 +652,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1804,
-  &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 18, 0,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 2252,
+  &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 19, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
-  file_level_metadata_AppMsg_2eproto, 18, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
+  file_level_metadata_AppMsg_2eproto, 19, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -645,6 +704,8 @@ bool AppMsg_Cmd_IsValid(int value) {
     case 43:
     case 44:
     case 45:
+    case 46:
+    case 47:
     case 1000:
     case 1001:
       return true;
@@ -691,6 +752,8 @@ constexpr AppMsg_Cmd AppMsg::get_sample_card_num;
 constexpr AppMsg_Cmd AppMsg::capture_adc_data;
 constexpr AppMsg_Cmd AppMsg::set_capture_auto_state;
 constexpr AppMsg_Cmd AppMsg::get_capture_auto_state;
+constexpr AppMsg_Cmd AppMsg::set_channel_info;
+constexpr AppMsg_Cmd AppMsg::get_channel_info;
 constexpr AppMsg_Cmd AppMsg::auto_adc_data;
 constexpr AppMsg_Cmd AppMsg::error_msg;
 constexpr AppMsg_Cmd AppMsg::Cmd_MIN;
@@ -5811,6 +5874,671 @@ void AppMsg_adc_data::InternalSwap(AppMsg_adc_data* other) {
 
 // ===================================================================
 
+void AppMsg_channel_info::InitAsDefaultInstance() {
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->zero_offset_ = const_cast< ::proto::AppMsg_zero_offset*>(
+      ::proto::AppMsg_zero_offset::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->fault_voltage_ = const_cast< ::proto::AppMsg_fault_voltage*>(
+      ::proto::AppMsg_fault_voltage::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->abnormal_param_ = const_cast< ::proto::AppMsg_abnormal_param*>(
+      ::proto::AppMsg_abnormal_param::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->full_scale_ = const_cast< ::proto::AppMsg_full_scale*>(
+      ::proto::AppMsg_full_scale::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->judgement_mode_ = const_cast< ::proto::AppMsg_judgement_mode*>(
+      ::proto::AppMsg_judgement_mode::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->pzltrct_param_ = const_cast< ::proto::AppMsg_pzltrct_param*>(
+      ::proto::AppMsg_pzltrct_param::internal_default_instance());
+  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->axis_counting_param_ = const_cast< ::proto::AppMsg_axis_counting_param*>(
+      ::proto::AppMsg_axis_counting_param::internal_default_instance());
+}
+class AppMsg_channel_info::_Internal {
+ public:
+  static const ::proto::AppMsg_zero_offset& zero_offset(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_fault_voltage& fault_voltage(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_abnormal_param& abnormal_param(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_full_scale& full_scale(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_judgement_mode& judgement_mode(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_pzltrct_param& pzltrct_param(const AppMsg_channel_info* msg);
+  static const ::proto::AppMsg_axis_counting_param& axis_counting_param(const AppMsg_channel_info* msg);
+};
+
+const ::proto::AppMsg_zero_offset&
+AppMsg_channel_info::_Internal::zero_offset(const AppMsg_channel_info* msg) {
+  return *msg->zero_offset_;
+}
+const ::proto::AppMsg_fault_voltage&
+AppMsg_channel_info::_Internal::fault_voltage(const AppMsg_channel_info* msg) {
+  return *msg->fault_voltage_;
+}
+const ::proto::AppMsg_abnormal_param&
+AppMsg_channel_info::_Internal::abnormal_param(const AppMsg_channel_info* msg) {
+  return *msg->abnormal_param_;
+}
+const ::proto::AppMsg_full_scale&
+AppMsg_channel_info::_Internal::full_scale(const AppMsg_channel_info* msg) {
+  return *msg->full_scale_;
+}
+const ::proto::AppMsg_judgement_mode&
+AppMsg_channel_info::_Internal::judgement_mode(const AppMsg_channel_info* msg) {
+  return *msg->judgement_mode_;
+}
+const ::proto::AppMsg_pzltrct_param&
+AppMsg_channel_info::_Internal::pzltrct_param(const AppMsg_channel_info* msg) {
+  return *msg->pzltrct_param_;
+}
+const ::proto::AppMsg_axis_counting_param&
+AppMsg_channel_info::_Internal::axis_counting_param(const AppMsg_channel_info* msg) {
+  return *msg->axis_counting_param_;
+}
+AppMsg_channel_info::AppMsg_channel_info()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.AppMsg.channel_info)
+}
+AppMsg_channel_info::AppMsg_channel_info(const AppMsg_channel_info& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_zero_offset()) {
+    zero_offset_ = new ::proto::AppMsg_zero_offset(*from.zero_offset_);
+  } else {
+    zero_offset_ = nullptr;
+  }
+  if (from.has_fault_voltage()) {
+    fault_voltage_ = new ::proto::AppMsg_fault_voltage(*from.fault_voltage_);
+  } else {
+    fault_voltage_ = nullptr;
+  }
+  if (from.has_abnormal_param()) {
+    abnormal_param_ = new ::proto::AppMsg_abnormal_param(*from.abnormal_param_);
+  } else {
+    abnormal_param_ = nullptr;
+  }
+  if (from.has_full_scale()) {
+    full_scale_ = new ::proto::AppMsg_full_scale(*from.full_scale_);
+  } else {
+    full_scale_ = nullptr;
+  }
+  if (from.has_judgement_mode()) {
+    judgement_mode_ = new ::proto::AppMsg_judgement_mode(*from.judgement_mode_);
+  } else {
+    judgement_mode_ = nullptr;
+  }
+  if (from.has_pzltrct_param()) {
+    pzltrct_param_ = new ::proto::AppMsg_pzltrct_param(*from.pzltrct_param_);
+  } else {
+    pzltrct_param_ = nullptr;
+  }
+  if (from.has_axis_counting_param()) {
+    axis_counting_param_ = new ::proto::AppMsg_axis_counting_param(*from.axis_counting_param_);
+  } else {
+    axis_counting_param_ = nullptr;
+  }
+  channel_ = from.channel_;
+  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.channel_info)
+}
+
+void AppMsg_channel_info::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_channel_info_AppMsg_2eproto.base);
+  ::memset(&zero_offset_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&channel_) -
+      reinterpret_cast<char*>(&zero_offset_)) + sizeof(channel_));
+}
+
+AppMsg_channel_info::~AppMsg_channel_info() {
+  // @@protoc_insertion_point(destructor:proto.AppMsg.channel_info)
+  SharedDtor();
+}
+
+void AppMsg_channel_info::SharedDtor() {
+  if (this != internal_default_instance()) delete zero_offset_;
+  if (this != internal_default_instance()) delete fault_voltage_;
+  if (this != internal_default_instance()) delete abnormal_param_;
+  if (this != internal_default_instance()) delete full_scale_;
+  if (this != internal_default_instance()) delete judgement_mode_;
+  if (this != internal_default_instance()) delete pzltrct_param_;
+  if (this != internal_default_instance()) delete axis_counting_param_;
+}
+
+void AppMsg_channel_info::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AppMsg_channel_info& AppMsg_channel_info::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_channel_info_AppMsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AppMsg_channel_info::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.AppMsg.channel_info)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && zero_offset_ != nullptr) {
+    delete zero_offset_;
+  }
+  zero_offset_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && fault_voltage_ != nullptr) {
+    delete fault_voltage_;
+  }
+  fault_voltage_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && abnormal_param_ != nullptr) {
+    delete abnormal_param_;
+  }
+  abnormal_param_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && full_scale_ != nullptr) {
+    delete full_scale_;
+  }
+  full_scale_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && judgement_mode_ != nullptr) {
+    delete judgement_mode_;
+  }
+  judgement_mode_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && pzltrct_param_ != nullptr) {
+    delete pzltrct_param_;
+  }
+  pzltrct_param_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && axis_counting_param_ != nullptr) {
+    delete axis_counting_param_;
+  }
+  axis_counting_param_ = nullptr;
+  channel_ = 0u;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AppMsg_channel_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint32 channel = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.zero_offset zero_offset = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(mutable_zero_offset(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.fault_voltage fault_voltage = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(mutable_fault_voltage(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.abnormal_param abnormal_param = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(mutable_abnormal_param(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.full_scale full_scale = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(mutable_full_scale(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.judgement_mode judgement_mode = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(mutable_judgement_mode(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(mutable_pzltrct_param(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(mutable_axis_counting_param(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AppMsg_channel_info::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.AppMsg.channel_info)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // uint32 channel = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &channel_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.zero_offset zero_offset = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_zero_offset()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.fault_voltage fault_voltage = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_fault_voltage()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.abnormal_param abnormal_param = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_abnormal_param()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.full_scale full_scale = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_full_scale()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.judgement_mode judgement_mode = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_judgement_mode()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+      case 7: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_pzltrct_param()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+      case 8: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_axis_counting_param()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.AppMsg.channel_info)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.AppMsg.channel_info)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AppMsg_channel_info::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.AppMsg.channel_info)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 channel = 1;
+  if (this->channel() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
+  }
+
+  // .proto.AppMsg.zero_offset zero_offset = 2;
+  if (this->has_zero_offset()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, _Internal::zero_offset(this), output);
+  }
+
+  // .proto.AppMsg.fault_voltage fault_voltage = 3;
+  if (this->has_fault_voltage()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, _Internal::fault_voltage(this), output);
+  }
+
+  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  if (this->has_abnormal_param()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, _Internal::abnormal_param(this), output);
+  }
+
+  // .proto.AppMsg.full_scale full_scale = 5;
+  if (this->has_full_scale()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, _Internal::full_scale(this), output);
+  }
+
+  // .proto.AppMsg.judgement_mode judgement_mode = 6;
+  if (this->has_judgement_mode()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, _Internal::judgement_mode(this), output);
+  }
+
+  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+  if (this->has_pzltrct_param()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, _Internal::pzltrct_param(this), output);
+  }
+
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  if (this->has_axis_counting_param()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, _Internal::axis_counting_param(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.AppMsg.channel_info)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_channel_info::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.channel_info)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 channel = 1;
+  if (this->channel() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
+  }
+
+  // .proto.AppMsg.zero_offset zero_offset = 2;
+  if (this->has_zero_offset()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, _Internal::zero_offset(this), target);
+  }
+
+  // .proto.AppMsg.fault_voltage fault_voltage = 3;
+  if (this->has_fault_voltage()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, _Internal::fault_voltage(this), target);
+  }
+
+  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  if (this->has_abnormal_param()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, _Internal::abnormal_param(this), target);
+  }
+
+  // .proto.AppMsg.full_scale full_scale = 5;
+  if (this->has_full_scale()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, _Internal::full_scale(this), target);
+  }
+
+  // .proto.AppMsg.judgement_mode judgement_mode = 6;
+  if (this->has_judgement_mode()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, _Internal::judgement_mode(this), target);
+  }
+
+  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+  if (this->has_pzltrct_param()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, _Internal::pzltrct_param(this), target);
+  }
+
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  if (this->has_axis_counting_param()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, _Internal::axis_counting_param(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.channel_info)
+  return target;
+}
+
+size_t AppMsg_channel_info::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.channel_info)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .proto.AppMsg.zero_offset zero_offset = 2;
+  if (this->has_zero_offset()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *zero_offset_);
+  }
+
+  // .proto.AppMsg.fault_voltage fault_voltage = 3;
+  if (this->has_fault_voltage()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *fault_voltage_);
+  }
+
+  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  if (this->has_abnormal_param()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *abnormal_param_);
+  }
+
+  // .proto.AppMsg.full_scale full_scale = 5;
+  if (this->has_full_scale()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *full_scale_);
+  }
+
+  // .proto.AppMsg.judgement_mode judgement_mode = 6;
+  if (this->has_judgement_mode()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *judgement_mode_);
+  }
+
+  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+  if (this->has_pzltrct_param()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *pzltrct_param_);
+  }
+
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  if (this->has_axis_counting_param()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *axis_counting_param_);
+  }
+
+  // uint32 channel = 1;
+  if (this->channel() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->channel());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AppMsg_channel_info::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.channel_info)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AppMsg_channel_info* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_channel_info>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.channel_info)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.channel_info)
+    MergeFrom(*source);
+  }
+}
+
+void AppMsg_channel_info::MergeFrom(const AppMsg_channel_info& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.channel_info)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_zero_offset()) {
+    mutable_zero_offset()->::proto::AppMsg_zero_offset::MergeFrom(from.zero_offset());
+  }
+  if (from.has_fault_voltage()) {
+    mutable_fault_voltage()->::proto::AppMsg_fault_voltage::MergeFrom(from.fault_voltage());
+  }
+  if (from.has_abnormal_param()) {
+    mutable_abnormal_param()->::proto::AppMsg_abnormal_param::MergeFrom(from.abnormal_param());
+  }
+  if (from.has_full_scale()) {
+    mutable_full_scale()->::proto::AppMsg_full_scale::MergeFrom(from.full_scale());
+  }
+  if (from.has_judgement_mode()) {
+    mutable_judgement_mode()->::proto::AppMsg_judgement_mode::MergeFrom(from.judgement_mode());
+  }
+  if (from.has_pzltrct_param()) {
+    mutable_pzltrct_param()->::proto::AppMsg_pzltrct_param::MergeFrom(from.pzltrct_param());
+  }
+  if (from.has_axis_counting_param()) {
+    mutable_axis_counting_param()->::proto::AppMsg_axis_counting_param::MergeFrom(from.axis_counting_param());
+  }
+  if (from.channel() != 0) {
+    set_channel(from.channel());
+  }
+}
+
+void AppMsg_channel_info::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.channel_info)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AppMsg_channel_info::CopyFrom(const AppMsg_channel_info& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.channel_info)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AppMsg_channel_info::IsInitialized() const {
+  return true;
+}
+
+void AppMsg_channel_info::InternalSwap(AppMsg_channel_info* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(zero_offset_, other->zero_offset_);
+  swap(fault_voltage_, other->fault_voltage_);
+  swap(abnormal_param_, other->abnormal_param_);
+  swap(full_scale_, other->full_scale_);
+  swap(judgement_mode_, other->judgement_mode_);
+  swap(pzltrct_param_, other->pzltrct_param_);
+  swap(axis_counting_param_, other->axis_counting_param_);
+  swap(channel_, other->channel_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_channel_info::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void AppMsg::InitAsDefaultInstance() {
 }
 class AppMsg::_Internal {
@@ -6061,6 +6789,9 @@ template<> PROTOBUF_NOINLINE ::proto::AppMsg_sample_card_num* Arena::CreateMaybe
 }
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage< ::proto::AppMsg_adc_data >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_adc_data >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::AppMsg_channel_info* Arena::CreateMaybeMessage< ::proto::AppMsg_channel_info >(Arena* arena) {
+  return Arena::CreateInternal< ::proto::AppMsg_channel_info >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::AppMsg* Arena::CreateMaybeMessage< ::proto::AppMsg >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg >(arena);

@@ -48,7 +48,7 @@ struct TableStruct_AppMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[18]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[19]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -68,6 +68,9 @@ extern AppMsg_adc_dataDefaultTypeInternal _AppMsg_adc_data_default_instance_;
 class AppMsg_axis_counting_param;
 class AppMsg_axis_counting_paramDefaultTypeInternal;
 extern AppMsg_axis_counting_paramDefaultTypeInternal _AppMsg_axis_counting_param_default_instance_;
+class AppMsg_channel_info;
+class AppMsg_channel_infoDefaultTypeInternal;
+extern AppMsg_channel_infoDefaultTypeInternal _AppMsg_channel_info_default_instance_;
 class AppMsg_device_add;
 class AppMsg_device_addDefaultTypeInternal;
 extern AppMsg_device_addDefaultTypeInternal _AppMsg_device_add_default_instance_;
@@ -116,6 +119,7 @@ template<> ::proto::AppMsg* Arena::CreateMaybeMessage<::proto::AppMsg>(Arena*);
 template<> ::proto::AppMsg_abnormal_param* Arena::CreateMaybeMessage<::proto::AppMsg_abnormal_param>(Arena*);
 template<> ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage<::proto::AppMsg_adc_data>(Arena*);
 template<> ::proto::AppMsg_axis_counting_param* Arena::CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(Arena*);
+template<> ::proto::AppMsg_channel_info* Arena::CreateMaybeMessage<::proto::AppMsg_channel_info>(Arena*);
 template<> ::proto::AppMsg_device_add* Arena::CreateMaybeMessage<::proto::AppMsg_device_add>(Arena*);
 template<> ::proto::AppMsg_fault_voltage* Arena::CreateMaybeMessage<::proto::AppMsg_fault_voltage>(Arena*);
 template<> ::proto::AppMsg_full_scale* Arena::CreateMaybeMessage<::proto::AppMsg_full_scale>(Arena*);
@@ -171,6 +175,8 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_capture_adc_data = 43,
   AppMsg_Cmd_set_capture_auto_state = 44,
   AppMsg_Cmd_get_capture_auto_state = 45,
+  AppMsg_Cmd_set_channel_info = 46,
+  AppMsg_Cmd_get_channel_info = 47,
   AppMsg_Cmd_auto_adc_data = 1000,
   AppMsg_Cmd_error_msg = 1001,
   AppMsg_Cmd_AppMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
@@ -2584,6 +2590,207 @@ class AppMsg_adc_data :
 };
 // -------------------------------------------------------------------
 
+class AppMsg_channel_info :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.channel_info) */ {
+ public:
+  AppMsg_channel_info();
+  virtual ~AppMsg_channel_info();
+
+  AppMsg_channel_info(const AppMsg_channel_info& from);
+  AppMsg_channel_info(AppMsg_channel_info&& from) noexcept
+    : AppMsg_channel_info() {
+    *this = ::std::move(from);
+  }
+
+  inline AppMsg_channel_info& operator=(const AppMsg_channel_info& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppMsg_channel_info& operator=(AppMsg_channel_info&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppMsg_channel_info& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AppMsg_channel_info* internal_default_instance() {
+    return reinterpret_cast<const AppMsg_channel_info*>(
+               &_AppMsg_channel_info_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(AppMsg_channel_info& a, AppMsg_channel_info& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppMsg_channel_info* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppMsg_channel_info* New() const final {
+    return CreateMaybeMessage<AppMsg_channel_info>(nullptr);
+  }
+
+  AppMsg_channel_info* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMsg_channel_info>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppMsg_channel_info& from);
+  void MergeFrom(const AppMsg_channel_info& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppMsg_channel_info* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.AppMsg.channel_info";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
+    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kZeroOffsetFieldNumber = 2,
+    kFaultVoltageFieldNumber = 3,
+    kAbnormalParamFieldNumber = 4,
+    kFullScaleFieldNumber = 5,
+    kJudgementModeFieldNumber = 6,
+    kPzltrctParamFieldNumber = 7,
+    kAxisCountingParamFieldNumber = 8,
+    kChannelFieldNumber = 1,
+  };
+  // .proto.AppMsg.zero_offset zero_offset = 2;
+  bool has_zero_offset() const;
+  void clear_zero_offset();
+  const ::proto::AppMsg_zero_offset& zero_offset() const;
+  ::proto::AppMsg_zero_offset* release_zero_offset();
+  ::proto::AppMsg_zero_offset* mutable_zero_offset();
+  void set_allocated_zero_offset(::proto::AppMsg_zero_offset* zero_offset);
+
+  // .proto.AppMsg.fault_voltage fault_voltage = 3;
+  bool has_fault_voltage() const;
+  void clear_fault_voltage();
+  const ::proto::AppMsg_fault_voltage& fault_voltage() const;
+  ::proto::AppMsg_fault_voltage* release_fault_voltage();
+  ::proto::AppMsg_fault_voltage* mutable_fault_voltage();
+  void set_allocated_fault_voltage(::proto::AppMsg_fault_voltage* fault_voltage);
+
+  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  bool has_abnormal_param() const;
+  void clear_abnormal_param();
+  const ::proto::AppMsg_abnormal_param& abnormal_param() const;
+  ::proto::AppMsg_abnormal_param* release_abnormal_param();
+  ::proto::AppMsg_abnormal_param* mutable_abnormal_param();
+  void set_allocated_abnormal_param(::proto::AppMsg_abnormal_param* abnormal_param);
+
+  // .proto.AppMsg.full_scale full_scale = 5;
+  bool has_full_scale() const;
+  void clear_full_scale();
+  const ::proto::AppMsg_full_scale& full_scale() const;
+  ::proto::AppMsg_full_scale* release_full_scale();
+  ::proto::AppMsg_full_scale* mutable_full_scale();
+  void set_allocated_full_scale(::proto::AppMsg_full_scale* full_scale);
+
+  // .proto.AppMsg.judgement_mode judgement_mode = 6;
+  bool has_judgement_mode() const;
+  void clear_judgement_mode();
+  const ::proto::AppMsg_judgement_mode& judgement_mode() const;
+  ::proto::AppMsg_judgement_mode* release_judgement_mode();
+  ::proto::AppMsg_judgement_mode* mutable_judgement_mode();
+  void set_allocated_judgement_mode(::proto::AppMsg_judgement_mode* judgement_mode);
+
+  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+  bool has_pzltrct_param() const;
+  void clear_pzltrct_param();
+  const ::proto::AppMsg_pzltrct_param& pzltrct_param() const;
+  ::proto::AppMsg_pzltrct_param* release_pzltrct_param();
+  ::proto::AppMsg_pzltrct_param* mutable_pzltrct_param();
+  void set_allocated_pzltrct_param(::proto::AppMsg_pzltrct_param* pzltrct_param);
+
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  bool has_axis_counting_param() const;
+  void clear_axis_counting_param();
+  const ::proto::AppMsg_axis_counting_param& axis_counting_param() const;
+  ::proto::AppMsg_axis_counting_param* release_axis_counting_param();
+  ::proto::AppMsg_axis_counting_param* mutable_axis_counting_param();
+  void set_allocated_axis_counting_param(::proto::AppMsg_axis_counting_param* axis_counting_param);
+
+  // uint32 channel = 1;
+  void clear_channel();
+  ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
+  void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:proto.AppMsg.channel_info)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::proto::AppMsg_zero_offset* zero_offset_;
+  ::proto::AppMsg_fault_voltage* fault_voltage_;
+  ::proto::AppMsg_abnormal_param* abnormal_param_;
+  ::proto::AppMsg_full_scale* full_scale_;
+  ::proto::AppMsg_judgement_mode* judgement_mode_;
+  ::proto::AppMsg_pzltrct_param* pzltrct_param_;
+  ::proto::AppMsg_axis_counting_param* axis_counting_param_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_AppMsg_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AppMsg :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg) */ {
  public:
@@ -2626,7 +2833,7 @@ class AppMsg :
                &_AppMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    18;
 
   friend void swap(AppMsg& a, AppMsg& b) {
     a.Swap(&b);
@@ -2711,6 +2918,7 @@ class AppMsg :
   typedef AppMsg_axis_counting_param axis_counting_param;
   typedef AppMsg_sample_card_num sample_card_num;
   typedef AppMsg_adc_data adc_data;
+  typedef AppMsg_channel_info channel_info;
 
   typedef AppMsg_Cmd Cmd;
   static constexpr Cmd NONE =
@@ -2787,6 +2995,10 @@ class AppMsg :
     AppMsg_Cmd_set_capture_auto_state;
   static constexpr Cmd get_capture_auto_state =
     AppMsg_Cmd_get_capture_auto_state;
+  static constexpr Cmd set_channel_info =
+    AppMsg_Cmd_set_channel_info;
+  static constexpr Cmd get_channel_info =
+    AppMsg_Cmd_get_channel_info;
   static constexpr Cmd auto_adc_data =
     AppMsg_Cmd_auto_adc_data;
   static constexpr Cmd error_msg =
@@ -3735,11 +3947,388 @@ inline void AppMsg_adc_data::set_allocated_item_id(::proto::AppMsg_item_id* item
 
 // -------------------------------------------------------------------
 
+// AppMsg_channel_info
+
+// uint32 channel = 1;
+inline void AppMsg_channel_info::clear_channel() {
+  channel_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::channel() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.channel)
+  return channel_;
+}
+inline void AppMsg_channel_info::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  channel_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.channel)
+}
+
+// .proto.AppMsg.zero_offset zero_offset = 2;
+inline bool AppMsg_channel_info::has_zero_offset() const {
+  return this != internal_default_instance() && zero_offset_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_zero_offset() {
+  if (GetArenaNoVirtual() == nullptr && zero_offset_ != nullptr) {
+    delete zero_offset_;
+  }
+  zero_offset_ = nullptr;
+}
+inline const ::proto::AppMsg_zero_offset& AppMsg_channel_info::zero_offset() const {
+  const ::proto::AppMsg_zero_offset* p = zero_offset_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.zero_offset)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_zero_offset*>(
+      &::proto::_AppMsg_zero_offset_default_instance_);
+}
+inline ::proto::AppMsg_zero_offset* AppMsg_channel_info::release_zero_offset() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.zero_offset)
+  
+  ::proto::AppMsg_zero_offset* temp = zero_offset_;
+  zero_offset_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_zero_offset* AppMsg_channel_info::mutable_zero_offset() {
+  
+  if (zero_offset_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_zero_offset>(GetArenaNoVirtual());
+    zero_offset_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.zero_offset)
+  return zero_offset_;
+}
+inline void AppMsg_channel_info::set_allocated_zero_offset(::proto::AppMsg_zero_offset* zero_offset) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete zero_offset_;
+  }
+  if (zero_offset) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      zero_offset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, zero_offset, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  zero_offset_ = zero_offset;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.zero_offset)
+}
+
+// .proto.AppMsg.fault_voltage fault_voltage = 3;
+inline bool AppMsg_channel_info::has_fault_voltage() const {
+  return this != internal_default_instance() && fault_voltage_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_fault_voltage() {
+  if (GetArenaNoVirtual() == nullptr && fault_voltage_ != nullptr) {
+    delete fault_voltage_;
+  }
+  fault_voltage_ = nullptr;
+}
+inline const ::proto::AppMsg_fault_voltage& AppMsg_channel_info::fault_voltage() const {
+  const ::proto::AppMsg_fault_voltage* p = fault_voltage_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.fault_voltage)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_fault_voltage*>(
+      &::proto::_AppMsg_fault_voltage_default_instance_);
+}
+inline ::proto::AppMsg_fault_voltage* AppMsg_channel_info::release_fault_voltage() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.fault_voltage)
+  
+  ::proto::AppMsg_fault_voltage* temp = fault_voltage_;
+  fault_voltage_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_fault_voltage* AppMsg_channel_info::mutable_fault_voltage() {
+  
+  if (fault_voltage_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_fault_voltage>(GetArenaNoVirtual());
+    fault_voltage_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.fault_voltage)
+  return fault_voltage_;
+}
+inline void AppMsg_channel_info::set_allocated_fault_voltage(::proto::AppMsg_fault_voltage* fault_voltage) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete fault_voltage_;
+  }
+  if (fault_voltage) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      fault_voltage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, fault_voltage, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  fault_voltage_ = fault_voltage;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.fault_voltage)
+}
+
+// .proto.AppMsg.abnormal_param abnormal_param = 4;
+inline bool AppMsg_channel_info::has_abnormal_param() const {
+  return this != internal_default_instance() && abnormal_param_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_abnormal_param() {
+  if (GetArenaNoVirtual() == nullptr && abnormal_param_ != nullptr) {
+    delete abnormal_param_;
+  }
+  abnormal_param_ = nullptr;
+}
+inline const ::proto::AppMsg_abnormal_param& AppMsg_channel_info::abnormal_param() const {
+  const ::proto::AppMsg_abnormal_param* p = abnormal_param_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.abnormal_param)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_abnormal_param*>(
+      &::proto::_AppMsg_abnormal_param_default_instance_);
+}
+inline ::proto::AppMsg_abnormal_param* AppMsg_channel_info::release_abnormal_param() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.abnormal_param)
+  
+  ::proto::AppMsg_abnormal_param* temp = abnormal_param_;
+  abnormal_param_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_abnormal_param* AppMsg_channel_info::mutable_abnormal_param() {
+  
+  if (abnormal_param_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_abnormal_param>(GetArenaNoVirtual());
+    abnormal_param_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.abnormal_param)
+  return abnormal_param_;
+}
+inline void AppMsg_channel_info::set_allocated_abnormal_param(::proto::AppMsg_abnormal_param* abnormal_param) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete abnormal_param_;
+  }
+  if (abnormal_param) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      abnormal_param = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, abnormal_param, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  abnormal_param_ = abnormal_param;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.abnormal_param)
+}
+
+// .proto.AppMsg.full_scale full_scale = 5;
+inline bool AppMsg_channel_info::has_full_scale() const {
+  return this != internal_default_instance() && full_scale_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_full_scale() {
+  if (GetArenaNoVirtual() == nullptr && full_scale_ != nullptr) {
+    delete full_scale_;
+  }
+  full_scale_ = nullptr;
+}
+inline const ::proto::AppMsg_full_scale& AppMsg_channel_info::full_scale() const {
+  const ::proto::AppMsg_full_scale* p = full_scale_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.full_scale)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_full_scale*>(
+      &::proto::_AppMsg_full_scale_default_instance_);
+}
+inline ::proto::AppMsg_full_scale* AppMsg_channel_info::release_full_scale() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.full_scale)
+  
+  ::proto::AppMsg_full_scale* temp = full_scale_;
+  full_scale_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_full_scale* AppMsg_channel_info::mutable_full_scale() {
+  
+  if (full_scale_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_full_scale>(GetArenaNoVirtual());
+    full_scale_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.full_scale)
+  return full_scale_;
+}
+inline void AppMsg_channel_info::set_allocated_full_scale(::proto::AppMsg_full_scale* full_scale) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete full_scale_;
+  }
+  if (full_scale) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      full_scale = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, full_scale, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  full_scale_ = full_scale;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.full_scale)
+}
+
+// .proto.AppMsg.judgement_mode judgement_mode = 6;
+inline bool AppMsg_channel_info::has_judgement_mode() const {
+  return this != internal_default_instance() && judgement_mode_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_judgement_mode() {
+  if (GetArenaNoVirtual() == nullptr && judgement_mode_ != nullptr) {
+    delete judgement_mode_;
+  }
+  judgement_mode_ = nullptr;
+}
+inline const ::proto::AppMsg_judgement_mode& AppMsg_channel_info::judgement_mode() const {
+  const ::proto::AppMsg_judgement_mode* p = judgement_mode_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.judgement_mode)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_judgement_mode*>(
+      &::proto::_AppMsg_judgement_mode_default_instance_);
+}
+inline ::proto::AppMsg_judgement_mode* AppMsg_channel_info::release_judgement_mode() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.judgement_mode)
+  
+  ::proto::AppMsg_judgement_mode* temp = judgement_mode_;
+  judgement_mode_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_judgement_mode* AppMsg_channel_info::mutable_judgement_mode() {
+  
+  if (judgement_mode_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_judgement_mode>(GetArenaNoVirtual());
+    judgement_mode_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.judgement_mode)
+  return judgement_mode_;
+}
+inline void AppMsg_channel_info::set_allocated_judgement_mode(::proto::AppMsg_judgement_mode* judgement_mode) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete judgement_mode_;
+  }
+  if (judgement_mode) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      judgement_mode = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, judgement_mode, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  judgement_mode_ = judgement_mode;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.judgement_mode)
+}
+
+// .proto.AppMsg.pzltrct_param pzltrct_param = 7;
+inline bool AppMsg_channel_info::has_pzltrct_param() const {
+  return this != internal_default_instance() && pzltrct_param_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_pzltrct_param() {
+  if (GetArenaNoVirtual() == nullptr && pzltrct_param_ != nullptr) {
+    delete pzltrct_param_;
+  }
+  pzltrct_param_ = nullptr;
+}
+inline const ::proto::AppMsg_pzltrct_param& AppMsg_channel_info::pzltrct_param() const {
+  const ::proto::AppMsg_pzltrct_param* p = pzltrct_param_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.pzltrct_param)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_pzltrct_param*>(
+      &::proto::_AppMsg_pzltrct_param_default_instance_);
+}
+inline ::proto::AppMsg_pzltrct_param* AppMsg_channel_info::release_pzltrct_param() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.pzltrct_param)
+  
+  ::proto::AppMsg_pzltrct_param* temp = pzltrct_param_;
+  pzltrct_param_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_pzltrct_param* AppMsg_channel_info::mutable_pzltrct_param() {
+  
+  if (pzltrct_param_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(GetArenaNoVirtual());
+    pzltrct_param_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.pzltrct_param)
+  return pzltrct_param_;
+}
+inline void AppMsg_channel_info::set_allocated_pzltrct_param(::proto::AppMsg_pzltrct_param* pzltrct_param) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete pzltrct_param_;
+  }
+  if (pzltrct_param) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      pzltrct_param = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, pzltrct_param, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  pzltrct_param_ = pzltrct_param;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.pzltrct_param)
+}
+
+// .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+inline bool AppMsg_channel_info::has_axis_counting_param() const {
+  return this != internal_default_instance() && axis_counting_param_ != nullptr;
+}
+inline void AppMsg_channel_info::clear_axis_counting_param() {
+  if (GetArenaNoVirtual() == nullptr && axis_counting_param_ != nullptr) {
+    delete axis_counting_param_;
+  }
+  axis_counting_param_ = nullptr;
+}
+inline const ::proto::AppMsg_axis_counting_param& AppMsg_channel_info::axis_counting_param() const {
+  const ::proto::AppMsg_axis_counting_param* p = axis_counting_param_;
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.axis_counting_param)
+  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_axis_counting_param*>(
+      &::proto::_AppMsg_axis_counting_param_default_instance_);
+}
+inline ::proto::AppMsg_axis_counting_param* AppMsg_channel_info::release_axis_counting_param() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.axis_counting_param)
+  
+  ::proto::AppMsg_axis_counting_param* temp = axis_counting_param_;
+  axis_counting_param_ = nullptr;
+  return temp;
+}
+inline ::proto::AppMsg_axis_counting_param* AppMsg_channel_info::mutable_axis_counting_param() {
+  
+  if (axis_counting_param_ == nullptr) {
+    auto* p = CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(GetArenaNoVirtual());
+    axis_counting_param_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.axis_counting_param)
+  return axis_counting_param_;
+}
+inline void AppMsg_channel_info::set_allocated_axis_counting_param(::proto::AppMsg_axis_counting_param* axis_counting_param) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete axis_counting_param_;
+  }
+  if (axis_counting_param) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      axis_counting_param = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, axis_counting_param, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  axis_counting_param_ = axis_counting_param;
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.axis_counting_param)
+}
+
+// -------------------------------------------------------------------
+
 // AppMsg
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
