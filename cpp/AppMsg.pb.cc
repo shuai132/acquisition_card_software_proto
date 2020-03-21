@@ -568,7 +568,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\254\021\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\307\021\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -601,7 +601,7 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   " \001(\0132\034.proto.AppMsg.judgement_mode\0222\n\rpz"
   "ltrct_param\030\007 \001(\0132\033.proto.AppMsg.pzltrct"
   "_param\022>\n\023axis_counting_param\030\010 \001(\0132!.pr"
-  "oto.AppMsg.axis_counting_param\"\373\006\n\003Cmd\022\010"
+  "oto.AppMsg.axis_counting_param\"\226\007\n\003Cmd\022\010"
   "\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_add"
   "\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_server_add"
   "\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platform_i"
@@ -624,7 +624,7 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "ure_auto_state\020,\022\032\n\026get_capture_auto_sta"
   "te\020-\022\024\n\020set_channel_info\020.\022\024\n\020get_channe"
   "l_info\020/\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_ms"
-  "g\020\351\007b\006proto3"
+  "g\020\351\007\022\031\n\024ready_received_cache\020\352\007b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
@@ -652,7 +652,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 2252,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 2279,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 19, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 19, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -708,6 +708,7 @@ bool AppMsg_Cmd_IsValid(int value) {
     case 47:
     case 1000:
     case 1001:
+    case 1002:
       return true;
     default:
       return false;
@@ -756,6 +757,7 @@ constexpr AppMsg_Cmd AppMsg::set_channel_info;
 constexpr AppMsg_Cmd AppMsg::get_channel_info;
 constexpr AppMsg_Cmd AppMsg::auto_adc_data;
 constexpr AppMsg_Cmd AppMsg::error_msg;
+constexpr AppMsg_Cmd AppMsg::ready_received_cache;
 constexpr AppMsg_Cmd AppMsg::Cmd_MIN;
 constexpr AppMsg_Cmd AppMsg::Cmd_MAX;
 constexpr int AppMsg::Cmd_ARRAYSIZE;

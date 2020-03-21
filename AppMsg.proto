@@ -68,6 +68,8 @@ message AppMsg {
         auto_adc_data = 1000;           // 自动采集的ADC数据
 
         error_msg = 1001;               // 错误消息
+
+        ready_received_cache = 1002;    // 返回是否准备好接收缓存数据
     }
 
     message device_add {
