@@ -467,8 +467,26 @@ class AlarmMsg_DiskState :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kAvailableFieldNumber = 2,
+    kFreeFieldNumber = 3,
+    kTotalFieldNumber = 4,
     kStateFieldNumber = 1,
   };
+  // uint64 available = 2;
+  void clear_available();
+  ::PROTOBUF_NAMESPACE_ID::uint64 available() const;
+  void set_available(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
+  // uint64 free = 3;
+  void clear_free();
+  ::PROTOBUF_NAMESPACE_ID::uint64 free() const;
+  void set_free(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
+  // uint64 total = 4;
+  void clear_total();
+  ::PROTOBUF_NAMESPACE_ID::uint64 total() const;
+  void set_total(::PROTOBUF_NAMESPACE_ID::uint64 value);
+
   // .proto.AlarmMsg.DiskState.State state = 1;
   void clear_state();
   ::proto::AlarmMsg_DiskState_State state() const;
@@ -479,6 +497,9 @@ class AlarmMsg_DiskState :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 available_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 free_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 total_;
   int state_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AlarmMsg_2eproto;
@@ -823,6 +844,48 @@ inline void AlarmMsg_DiskState::set_state(::proto::AlarmMsg_DiskState_State valu
   
   state_ = value;
   // @@protoc_insertion_point(field_set:proto.AlarmMsg.DiskState.state)
+}
+
+// uint64 available = 2;
+inline void AlarmMsg_DiskState::clear_available() {
+  available_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AlarmMsg_DiskState::available() const {
+  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DiskState.available)
+  return available_;
+}
+inline void AlarmMsg_DiskState::set_available(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  available_ = value;
+  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DiskState.available)
+}
+
+// uint64 free = 3;
+inline void AlarmMsg_DiskState::clear_free() {
+  free_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AlarmMsg_DiskState::free() const {
+  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DiskState.free)
+  return free_;
+}
+inline void AlarmMsg_DiskState::set_free(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  free_ = value;
+  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DiskState.free)
+}
+
+// uint64 total = 4;
+inline void AlarmMsg_DiskState::clear_total() {
+  total_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 AlarmMsg_DiskState::total() const {
+  // @@protoc_insertion_point(field_get:proto.AlarmMsg.DiskState.total)
+  return total_;
+}
+inline void AlarmMsg_DiskState::set_total(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  total_ = value;
+  // @@protoc_insertion_point(field_set:proto.AlarmMsg.DiskState.total)
 }
 
 // -------------------------------------------------------------------

@@ -32,6 +32,10 @@ message AlarmMsg {
         // 采集卡空间状态
         State state = 1;
 
+        uint64 available = 2;   // MByte
+        uint64 free = 3;        // MByte
+        uint64 total = 4;       // MByte
+
         enum State {
             Normal = 0;     // 正常
             Full = 1;       // 已满

@@ -106,6 +106,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PR
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, state_),
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, available_),
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, free_),
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, total_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_Time, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -121,8 +124,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PR
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::proto::AlarmMsg_AlarmReport)},
   { 6, -1, sizeof(::proto::AlarmMsg_DiskState)},
-  { 12, -1, sizeof(::proto::AlarmMsg_Time)},
-  { 18, -1, sizeof(::proto::AlarmMsg)},
+  { 15, -1, sizeof(::proto::AlarmMsg_Time)},
+  { 21, -1, sizeof(::proto::AlarmMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -133,17 +136,18 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AlarmMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016AlarmMsg.proto\022\005proto\"\201\003\n\010AlarmMsg\032p\n\013"
+  "\n\016AlarmMsg.proto\022\005proto\"\262\003\n\010AlarmMsg\032p\n\013"
   "AlarmReport\0220\n\005alarm\030\003 \001(\0162!.proto.Alarm"
   "Msg.AlarmReport.Alarm\"/\n\005Alarm\022\n\n\006Normal"
-  "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032Z\n\tDiskSt"
-  "ate\022.\n\005state\030\001 \001(\0162\037.proto.AlarmMsg.Disk"
-  "State.State\"\035\n\005State\022\n\n\006Normal\020\000\022\010\n\004Full"
-  "\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\"\220\001\n\003Cmd\022\010\n\004NONE"
-  "\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014alarm_report\020\321"
-  "\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_time\020\264\020\022\023\n\016set"
-  "_heart_beat\020\265\020\022\021\n\014start_repair\020\266\020\022\020\n\013sto"
-  "p_repair\020\267\020b\006proto3"
+  "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032\212\001\n\tDiskS"
+  "tate\022.\n\005state\030\001 \001(\0162\037.proto.AlarmMsg.Dis"
+  "kState.State\022\021\n\tavailable\030\002 \001(\004\022\014\n\004free\030"
+  "\003 \001(\004\022\r\n\005total\030\004 \001(\004\"\035\n\005State\022\n\n\006Normal\020"
+  "\000\022\010\n\004Full\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\"\220\001\n\003Cm"
+  "d\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014alarm"
+  "_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_time\020"
+  "\264\020\022\023\n\016set_heart_beat\020\265\020\022\021\n\014start_repair\020"
+  "\266\020\022\020\n\013stop_repair\020\267\020b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AlarmMsg_2eproto_deps[1] = {
 };
@@ -156,7 +160,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Ala
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AlarmMsg_2eproto_once;
 static bool descriptor_table_AlarmMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AlarmMsg_2eproto = {
-  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 419,
+  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 468,
   &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_AlarmMsg_2eproto::offsets,
   file_level_metadata_AlarmMsg_2eproto, 4, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
@@ -512,12 +516,16 @@ AlarmMsg_DiskState::AlarmMsg_DiskState(const AlarmMsg_DiskState& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  state_ = from.state_;
+  ::memcpy(&available_, &from.available_,
+    static_cast<size_t>(reinterpret_cast<char*>(&state_) -
+    reinterpret_cast<char*>(&available_)) + sizeof(state_));
   // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.DiskState)
 }
 
 void AlarmMsg_DiskState::SharedCtor() {
-  state_ = 0;
+  ::memset(&available_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&state_) -
+      reinterpret_cast<char*>(&available_)) + sizeof(state_));
 }
 
 AlarmMsg_DiskState::~AlarmMsg_DiskState() {
@@ -543,7 +551,9 @@ void AlarmMsg_DiskState::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  state_ = 0;
+  ::memset(&available_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&state_) -
+      reinterpret_cast<char*>(&available_)) + sizeof(state_));
   _internal_metadata_.Clear();
 }
 
@@ -561,6 +571,27 @@ const char* AlarmMsg_DiskState::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           set_state(static_cast<::proto::AlarmMsg_DiskState_State>(val));
+        } else goto handle_unusual;
+        continue;
+      // uint64 available = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          available_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint64 free = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          free_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint64 total = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          total_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -607,6 +638,45 @@ bool AlarmMsg_DiskState::MergePartialFromCodedStream(
         break;
       }
 
+      // uint64 available = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &available_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 free = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &free_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 total = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint64, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &total_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -640,6 +710,21 @@ void AlarmMsg_DiskState::SerializeWithCachedSizes(
       1, this->state(), output);
   }
 
+  // uint64 available = 2;
+  if (this->available() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(2, this->available(), output);
+  }
+
+  // uint64 free = 3;
+  if (this->free() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(3, this->free(), output);
+  }
+
+  // uint64 total = 4;
+  if (this->total() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64(4, this->total(), output);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
@@ -657,6 +742,21 @@ void AlarmMsg_DiskState::SerializeWithCachedSizes(
   if (this->state() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->state(), target);
+  }
+
+  // uint64 available = 2;
+  if (this->available() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->available(), target);
+  }
+
+  // uint64 free = 3;
+  if (this->free() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->free(), target);
+  }
+
+  // uint64 total = 4;
+  if (this->total() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(4, this->total(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -679,6 +779,27 @@ size_t AlarmMsg_DiskState::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // uint64 available = 2;
+  if (this->available() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->available());
+  }
+
+  // uint64 free = 3;
+  if (this->free() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->free());
+  }
+
+  // uint64 total = 4;
+  if (this->total() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->total());
+  }
 
   // .proto.AlarmMsg.DiskState.State state = 1;
   if (this->state() != 0) {
@@ -713,6 +834,15 @@ void AlarmMsg_DiskState::MergeFrom(const AlarmMsg_DiskState& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.available() != 0) {
+    set_available(from.available());
+  }
+  if (from.free() != 0) {
+    set_free(from.free());
+  }
+  if (from.total() != 0) {
+    set_total(from.total());
+  }
   if (from.state() != 0) {
     set_state(from.state());
   }
@@ -739,6 +869,9 @@ bool AlarmMsg_DiskState::IsInitialized() const {
 void AlarmMsg_DiskState::InternalSwap(AlarmMsg_DiskState* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(available_, other->available_);
+  swap(free_, other->free_);
+  swap(total_, other->total_);
   swap(state_, other->state_);
 }
 
