@@ -17,6 +17,7 @@
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_abnormal_param_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_axis_counting_param_AppMsg_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AppMsg_channel_info_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_platform_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto;
@@ -126,12 +127,13 @@ static void InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto() {
   ::proto::AppMsg_adc_data::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_AppMsg_adc_data_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_AppMsg_adc_data_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
       &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
-      &scc_info_AppMsg_item_id_AppMsg_2eproto.base,}};
+      &scc_info_AppMsg_item_id_AppMsg_2eproto.base,
+      &scc_info_AppMsg_channel_info_AppMsg_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppMsg_axis_counting_param_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -420,6 +422,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, station_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, turnout_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, item_id_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, channel_info_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -453,8 +456,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 72, -1, sizeof(::proto::AppMsg_sample_card_num)},
   { 78, -1, sizeof(::proto::AppMsg_file_cache_enable)},
   { 84, -1, sizeof(::proto::AppMsg_adc_data)},
-  { 98, -1, sizeof(::proto::AppMsg_channel_info)},
-  { 110, -1, sizeof(::proto::AppMsg)},
+  { 99, -1, sizeof(::proto::AppMsg_channel_info)},
+  { 111, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -477,7 +480,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\225\r\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\307\r\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -490,36 +493,38 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "(\r\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_pa"
   "ram\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num"
   "\022\013\n\003num\030\001 \001(\r\032#\n\021file_cache_enable\022\016\n\006en"
-  "able\030\001 \001(\010\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\004\022\027\n"
+  "able\030\001 \001(\010\032\326\002\n\010adc_data\022\014\n\004time\030\001 \001(\004\022\027\n"
   "\017sample_card_num\030\002 \001(\r\022\030\n\020sample_frequen"
   "cy\030\003 \001(\r\022\025\n\rsample_number\030\004 \001(\r\022\014\n\004data\030"
-  "\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppMs"
+  "\t \003(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppMs"
   "g.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.prot"
   "o.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\0132"
   "\030.proto.AppMsg.turnout_id\022&\n\007item_id\030\r \001"
-  "(\0132\025.proto.AppMsg.item_id\032\364\001\n\014channel_in"
-  "fo\022\017\n\007channel\030\001 \001(\r\022\023\n\013offset_zero\030\002 \001(\r"
-  "\022\026\n\016offset_max_vol\030\003 \001(\r\022\031\n\021offset_max_v"
-  "ol_ad\030\004 \001(\r\022\025\n\rfault_voltage\030\n \001(\r\0224\n\016ab"
-  "normal_param\030\013 \001(\0132\034.proto.AppMsg.abnorm"
-  "al_param\022>\n\023axis_counting_param\030\014 \001(\0132!."
-  "proto.AppMsg.axis_counting_param\"\372\004\n\003Cmd"
-  "\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_a"
-  "dd\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_server_a"
-  "dd\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platform"
-  "_id\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016set_statio"
-  "n_id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016set_turnou"
-  "t_id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_i"
-  "d\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022"
-  "\021\n\rget_sensor_id\020\030\022\030\n\024set_sample_frequen"
-  "cy\020\031\022\030\n\024get_sample_frequency\020\032\022\025\n\021set_pz"
-  "ltrct_param\020%\022\025\n\021get_pzltrct_param\020&\022\027\n\023"
-  "set_sample_card_num\020)\022\027\n\023get_sample_card"
-  "_num\020*\022\024\n\020capture_adc_data\020+\022\024\n\020set_chan"
-  "nel_info\020.\022\024\n\020get_channel_info\020/\022\031\n\025set_"
-  "file_cache_enable\0201\022\031\n\025get_file_cache_en"
-  "able\0202\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020"
-  "\351\007\022\031\n\024ready_received_cache\020\352\007b\006proto3"
+  "(\0132\025.proto.AppMsg.item_id\0220\n\014channel_inf"
+  "o\030\016 \003(\0132\032.proto.AppMsg.channel_info\032\364\001\n\014"
+  "channel_info\022\017\n\007channel\030\001 \001(\r\022\023\n\013offset_"
+  "zero\030\002 \001(\r\022\026\n\016offset_max_vol\030\003 \001(\r\022\031\n\021of"
+  "fset_max_vol_ad\030\004 \001(\r\022\025\n\rfault_voltage\030\n"
+  " \001(\r\0224\n\016abnormal_param\030\013 \001(\0132\034.proto.App"
+  "Msg.abnormal_param\022>\n\023axis_counting_para"
+  "m\030\014 \001(\0132!.proto.AppMsg.axis_counting_par"
+  "am\"\372\004\n\003Cmd\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016se"
+  "t_device_add\020\013\022\022\n\016get_device_add\020\014\022\022\n\016se"
+  "t_server_add\020\r\022\022\n\016get_server_add\020\016\022\023\n\017se"
+  "t_platform_id\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016"
+  "set_station_id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016"
+  "set_turnout_id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013"
+  "set_item_id\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_se"
+  "nsor_id\020\027\022\021\n\rget_sensor_id\020\030\022\030\n\024set_samp"
+  "le_frequency\020\031\022\030\n\024get_sample_frequency\020\032"
+  "\022\025\n\021set_pzltrct_param\020%\022\025\n\021get_pzltrct_p"
+  "aram\020&\022\027\n\023set_sample_card_num\020)\022\027\n\023get_s"
+  "ample_card_num\020*\022\024\n\020capture_adc_data\020+\022\024"
+  "\n\020set_channel_info\020.\022\024\n\020get_channel_info"
+  "\020/\022\031\n\025set_file_cache_enable\0201\022\031\n\025get_fil"
+  "e_cache_enable\0202\022\022\n\rauto_adc_data\020\350\007\022\016\n\t"
+  "error_msg\020\351\007\022\031\n\024ready_received_cache\020\352\007b"
+  "\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
@@ -544,7 +549,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1717,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1767,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 16, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 16, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -4258,12 +4263,10 @@ AppMsg_adc_data::AppMsg_adc_data()
 }
 AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      data_(from.data_),
+      channel_info_(from.channel_info_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.data().empty()) {
-    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
   if (from.has_platform_id()) {
     platform_id_ = new ::proto::AppMsg_platform_id(*from.platform_id_);
   } else {
@@ -4292,7 +4295,6 @@ AppMsg_adc_data::AppMsg_adc_data(const AppMsg_adc_data& from)
 
 void AppMsg_adc_data::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_adc_data_AppMsg_2eproto.base);
-  data_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&platform_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&sample_number_) -
       reinterpret_cast<char*>(&platform_id_)) + sizeof(sample_number_));
@@ -4304,7 +4306,6 @@ AppMsg_adc_data::~AppMsg_adc_data() {
 }
 
 void AppMsg_adc_data::SharedDtor() {
-  data_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete platform_id_;
   if (this != internal_default_instance()) delete station_id_;
   if (this != internal_default_instance()) delete turnout_id_;
@@ -4326,7 +4327,8 @@ void AppMsg_adc_data::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  data_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  data_.Clear();
+  channel_info_.Clear();
   if (GetArenaNoVirtual() == nullptr && platform_id_ != nullptr) {
     delete platform_id_;
   }
@@ -4385,11 +4387,16 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bytes data = 9;
+      // repeated bytes data = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(mutable_data(), ptr, ctx);
-          CHK_(ptr);
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(add_data(), ptr, ctx);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 74);
         } else goto handle_unusual;
         continue;
       // .proto.AppMsg.platform_id platform_id = 10;
@@ -4418,6 +4425,18 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
           ptr = ctx->ParseMessage(mutable_item_id(), ptr);
           CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .proto.AppMsg.channel_info channel_info = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(add_channel_info(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 114);
         } else goto handle_unusual;
         continue;
       default: {
@@ -4502,11 +4521,11 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // bytes data = 9;
+      // repeated bytes data = 9;
       case 9: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_data()));
+                input, this->add_data()));
         } else {
           goto handle_unusual;
         }
@@ -4551,6 +4570,17 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_item_id()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .proto.AppMsg.channel_info channel_info = 14;
+      case 14: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (114 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_channel_info()));
         } else {
           goto handle_unusual;
         }
@@ -4604,10 +4634,10 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->sample_number(), output);
   }
 
-  // bytes data = 9;
-  if (this->data().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesMaybeAliased(
-      9, this->data(), output);
+  // repeated bytes data = 9;
+  for (int i = 0, n = this->data_size(); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytes(
+      9, this->data(i), output);
   }
 
   // .proto.AppMsg.platform_id platform_id = 10;
@@ -4632,6 +4662,15 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
   if (this->has_item_id()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       13, _Internal::item_id(this), output);
+  }
+
+  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->channel_info_size()); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      14,
+      this->channel_info(static_cast<int>(i)),
+      output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4667,11 +4706,10 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->sample_number(), target);
   }
 
-  // bytes data = 9;
-  if (this->data().size() > 0) {
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytesToArray(
-        9, this->data(), target);
+  // repeated bytes data = 9;
+  for (int i = 0, n = this->data_size(); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      WriteBytesToArray(9, this->data(i), target);
   }
 
   // .proto.AppMsg.platform_id platform_id = 10;
@@ -4702,6 +4740,14 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
         13, _Internal::item_id(this), target);
   }
 
+  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->channel_info_size()); i < n; i++) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        14, this->channel_info(static_cast<int>(i)), target);
+  }
+
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
@@ -4723,11 +4769,23 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // bytes data = 9;
-  if (this->data().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
-        this->data());
+  // repeated bytes data = 9;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->data_size());
+  for (int i = 0, n = this->data_size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      this->data(i));
+  }
+
+  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  {
+    unsigned int count = static_cast<unsigned int>(this->channel_info_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          this->channel_info(static_cast<int>(i)));
+    }
   }
 
   // .proto.AppMsg.platform_id platform_id = 10;
@@ -4813,10 +4871,8 @@ void AppMsg_adc_data::MergeFrom(const AppMsg_adc_data& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.data().size() > 0) {
-
-    data_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.data_);
-  }
+  data_.MergeFrom(from.data_);
+  channel_info_.MergeFrom(from.channel_info_);
   if (from.has_platform_id()) {
     mutable_platform_id()->::proto::AppMsg_platform_id::MergeFrom(from.platform_id());
   }
@@ -4864,8 +4920,8 @@ bool AppMsg_adc_data::IsInitialized() const {
 void AppMsg_adc_data::InternalSwap(AppMsg_adc_data* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  data_.Swap(&other->data_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  data_.InternalSwap(CastToBase(&other->data_));
+  CastToBase(&channel_info_)->InternalSwap(CastToBase(&other->channel_info_));
   swap(platform_id_, other->platform_id_);
   swap(station_id_, other->station_id_);
   swap(turnout_id_, other->turnout_id_);
