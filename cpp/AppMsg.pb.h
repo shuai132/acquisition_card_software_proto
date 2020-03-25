@@ -48,7 +48,7 @@ struct TableStruct_AppMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[16]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -74,6 +74,9 @@ extern AppMsg_channel_infoDefaultTypeInternal _AppMsg_channel_info_default_insta
 class AppMsg_device_add;
 class AppMsg_device_addDefaultTypeInternal;
 extern AppMsg_device_addDefaultTypeInternal _AppMsg_device_add_default_instance_;
+class AppMsg_file_cache_enable;
+class AppMsg_file_cache_enableDefaultTypeInternal;
+extern AppMsg_file_cache_enableDefaultTypeInternal _AppMsg_file_cache_enable_default_instance_;
 class AppMsg_item_id;
 class AppMsg_item_idDefaultTypeInternal;
 extern AppMsg_item_idDefaultTypeInternal _AppMsg_item_id_default_instance_;
@@ -109,6 +112,7 @@ template<> ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage<::proto::AppMsg_a
 template<> ::proto::AppMsg_axis_counting_param* Arena::CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(Arena*);
 template<> ::proto::AppMsg_channel_info* Arena::CreateMaybeMessage<::proto::AppMsg_channel_info>(Arena*);
 template<> ::proto::AppMsg_device_add* Arena::CreateMaybeMessage<::proto::AppMsg_device_add>(Arena*);
+template<> ::proto::AppMsg_file_cache_enable* Arena::CreateMaybeMessage<::proto::AppMsg_file_cache_enable>(Arena*);
 template<> ::proto::AppMsg_item_id* Arena::CreateMaybeMessage<::proto::AppMsg_item_id>(Arena*);
 template<> ::proto::AppMsg_platform_id* Arena::CreateMaybeMessage<::proto::AppMsg_platform_id>(Arena*);
 template<> ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(Arena*);
@@ -147,17 +151,17 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_capture_adc_data = 43,
   AppMsg_Cmd_set_channel_info = 46,
   AppMsg_Cmd_get_channel_info = 47,
-  AppMsg_Cmd_ready_received_cache = 48,
   AppMsg_Cmd_set_file_cache_enable = 49,
   AppMsg_Cmd_get_file_cache_enable = 50,
   AppMsg_Cmd_auto_adc_data = 1000,
   AppMsg_Cmd_error_msg = 1001,
+  AppMsg_Cmd_ready_received_cache = 1002,
   AppMsg_Cmd_AppMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   AppMsg_Cmd_AppMsg_Cmd_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool AppMsg_Cmd_IsValid(int value);
 constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MIN = AppMsg_Cmd_NONE;
-constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_error_msg;
+constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_ready_received_cache;
 constexpr int AppMsg_Cmd_Cmd_ARRAYSIZE = AppMsg_Cmd_Cmd_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMsg_Cmd_descriptor();
@@ -1814,6 +1818,137 @@ class AppMsg_sample_card_num :
 };
 // -------------------------------------------------------------------
 
+class AppMsg_file_cache_enable :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.file_cache_enable) */ {
+ public:
+  AppMsg_file_cache_enable();
+  virtual ~AppMsg_file_cache_enable();
+
+  AppMsg_file_cache_enable(const AppMsg_file_cache_enable& from);
+  AppMsg_file_cache_enable(AppMsg_file_cache_enable&& from) noexcept
+    : AppMsg_file_cache_enable() {
+    *this = ::std::move(from);
+  }
+
+  inline AppMsg_file_cache_enable& operator=(const AppMsg_file_cache_enable& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppMsg_file_cache_enable& operator=(AppMsg_file_cache_enable&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppMsg_file_cache_enable& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AppMsg_file_cache_enable* internal_default_instance() {
+    return reinterpret_cast<const AppMsg_file_cache_enable*>(
+               &_AppMsg_file_cache_enable_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  friend void swap(AppMsg_file_cache_enable& a, AppMsg_file_cache_enable& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppMsg_file_cache_enable* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppMsg_file_cache_enable* New() const final {
+    return CreateMaybeMessage<AppMsg_file_cache_enable>(nullptr);
+  }
+
+  AppMsg_file_cache_enable* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMsg_file_cache_enable>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppMsg_file_cache_enable& from);
+  void MergeFrom(const AppMsg_file_cache_enable& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppMsg_file_cache_enable* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.AppMsg.file_cache_enable";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
+    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kEnableFieldNumber = 1,
+  };
+  // bool enable = 1;
+  void clear_enable();
+  bool enable() const;
+  void set_enable(bool value);
+
+  // @@protoc_insertion_point(class_scope:proto.AppMsg.file_cache_enable)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  bool enable_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_AppMsg_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AppMsg_adc_data :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.adc_data) */ {
  public:
@@ -1856,7 +1991,7 @@ class AppMsg_adc_data :
                &_AppMsg_adc_data_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   friend void swap(AppMsg_adc_data& a, AppMsg_adc_data& b) {
     a.Swap(&b);
@@ -2061,7 +2196,7 @@ class AppMsg_channel_info :
                &_AppMsg_channel_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    14;
 
   friend void swap(AppMsg_channel_info& a, AppMsg_channel_info& b) {
     a.Swap(&b);
@@ -2233,7 +2368,7 @@ class AppMsg :
                &_AppMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    15;
 
   friend void swap(AppMsg& a, AppMsg& b) {
     a.Swap(&b);
@@ -2313,6 +2448,7 @@ class AppMsg :
   typedef AppMsg_pzltrct_param pzltrct_param;
   typedef AppMsg_axis_counting_param axis_counting_param;
   typedef AppMsg_sample_card_num sample_card_num;
+  typedef AppMsg_file_cache_enable file_cache_enable;
   typedef AppMsg_adc_data adc_data;
   typedef AppMsg_channel_info channel_info;
 
@@ -2367,8 +2503,6 @@ class AppMsg :
     AppMsg_Cmd_set_channel_info;
   static constexpr Cmd get_channel_info =
     AppMsg_Cmd_get_channel_info;
-  static constexpr Cmd ready_received_cache =
-    AppMsg_Cmd_ready_received_cache;
   static constexpr Cmd set_file_cache_enable =
     AppMsg_Cmd_set_file_cache_enable;
   static constexpr Cmd get_file_cache_enable =
@@ -2377,6 +2511,8 @@ class AppMsg :
     AppMsg_Cmd_auto_adc_data;
   static constexpr Cmd error_msg =
     AppMsg_Cmd_error_msg;
+  static constexpr Cmd ready_received_cache =
+    AppMsg_Cmd_ready_received_cache;
   static inline bool Cmd_IsValid(int value) {
     return AppMsg_Cmd_IsValid(value);
   }
@@ -2869,6 +3005,24 @@ inline void AppMsg_sample_card_num::set_num(::PROTOBUF_NAMESPACE_ID::uint32 valu
 
 // -------------------------------------------------------------------
 
+// AppMsg_file_cache_enable
+
+// bool enable = 1;
+inline void AppMsg_file_cache_enable::clear_enable() {
+  enable_ = false;
+}
+inline bool AppMsg_file_cache_enable::enable() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.file_cache_enable.enable)
+  return enable_;
+}
+inline void AppMsg_file_cache_enable::set_enable(bool value) {
+  
+  enable_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.file_cache_enable.enable)
+}
+
+// -------------------------------------------------------------------
+
 // AppMsg_adc_data
 
 // uint64 time = 1;
@@ -3351,6 +3505,8 @@ inline void AppMsg_channel_info::set_allocated_axis_counting_param(::proto::AppM
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
