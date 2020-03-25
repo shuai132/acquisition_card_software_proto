@@ -426,10 +426,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, channel_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, zero_offset_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, offset_zero_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, offset_max_vol_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, offset_max_vol_ad_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, fault_voltage_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, abnormal_param_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, full_scale_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, axis_counting_param_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg, _internal_metadata_),
@@ -453,7 +454,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 78, -1, sizeof(::proto::AppMsg_file_cache_enable)},
   { 84, -1, sizeof(::proto::AppMsg_adc_data)},
   { 98, -1, sizeof(::proto::AppMsg_channel_info)},
-  { 109, -1, sizeof(::proto::AppMsg)},
+  { 110, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -476,7 +477,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\366\014\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\225\r\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
@@ -496,29 +497,29 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "g.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.prot"
   "o.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\0132"
   "\030.proto.AppMsg.turnout_id\022&\n\007item_id\030\r \001"
-  "(\0132\025.proto.AppMsg.item_id\032\325\001\n\014channel_in"
-  "fo\022\017\n\007channel\030\001 \001(\r\022\023\n\013zero_offset\030\002 \001(\r"
-  "\022\025\n\rfault_voltage\030\003 \001(\r\0224\n\016abnormal_para"
-  "m\030\004 \001(\0132\034.proto.AppMsg.abnormal_param\022\022\n"
-  "\nfull_scale\030\005 \001(\r\022>\n\023axis_counting_param"
-  "\030\006 \001(\0132!.proto.AppMsg.axis_counting_para"
-  "m\"\372\004\n\003Cmd\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set"
-  "_device_add\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set"
-  "_server_add\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set"
-  "_platform_id\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016s"
-  "et_station_id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016s"
-  "et_turnout_id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013s"
-  "et_item_id\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sen"
-  "sor_id\020\027\022\021\n\rget_sensor_id\020\030\022\030\n\024set_sampl"
-  "e_frequency\020\031\022\030\n\024get_sample_frequency\020\032\022"
-  "\025\n\021set_pzltrct_param\020%\022\025\n\021get_pzltrct_pa"
-  "ram\020&\022\027\n\023set_sample_card_num\020)\022\027\n\023get_sa"
-  "mple_card_num\020*\022\024\n\020capture_adc_data\020+\022\024\n"
-  "\020set_channel_info\020.\022\024\n\020get_channel_info\020"
-  "/\022\031\n\025set_file_cache_enable\0201\022\031\n\025get_file"
-  "_cache_enable\0202\022\022\n\rauto_adc_data\020\350\007\022\016\n\te"
-  "rror_msg\020\351\007\022\031\n\024ready_received_cache\020\352\007b\006"
-  "proto3"
+  "(\0132\025.proto.AppMsg.item_id\032\364\001\n\014channel_in"
+  "fo\022\017\n\007channel\030\001 \001(\r\022\023\n\013offset_zero\030\002 \001(\r"
+  "\022\026\n\016offset_max_vol\030\003 \001(\r\022\031\n\021offset_max_v"
+  "ol_ad\030\004 \001(\r\022\025\n\rfault_voltage\030\n \001(\r\0224\n\016ab"
+  "normal_param\030\013 \001(\0132\034.proto.AppMsg.abnorm"
+  "al_param\022>\n\023axis_counting_param\030\014 \001(\0132!."
+  "proto.AppMsg.axis_counting_param\"\372\004\n\003Cmd"
+  "\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_a"
+  "dd\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_server_a"
+  "dd\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platform"
+  "_id\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016set_statio"
+  "n_id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016set_turnou"
+  "t_id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_i"
+  "d\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022"
+  "\021\n\rget_sensor_id\020\030\022\030\n\024set_sample_frequen"
+  "cy\020\031\022\030\n\024get_sample_frequency\020\032\022\025\n\021set_pz"
+  "ltrct_param\020%\022\025\n\021get_pzltrct_param\020&\022\027\n\023"
+  "set_sample_card_num\020)\022\027\n\023get_sample_card"
+  "_num\020*\022\024\n\020capture_adc_data\020+\022\024\n\020set_chan"
+  "nel_info\020.\022\024\n\020get_channel_info\020/\022\031\n\025set_"
+  "file_cache_enable\0201\022\031\n\025get_file_cache_en"
+  "able\0202\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020"
+  "\351\007\022\031\n\024ready_received_cache\020\352\007b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
@@ -543,7 +544,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1686,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1717,
   &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 16, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
   file_level_metadata_AppMsg_2eproto, 16, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
@@ -4922,16 +4923,16 @@ AppMsg_channel_info::AppMsg_channel_info(const AppMsg_channel_info& from)
     axis_counting_param_ = nullptr;
   }
   ::memcpy(&channel_, &from.channel_,
-    static_cast<size_t>(reinterpret_cast<char*>(&full_scale_) -
-    reinterpret_cast<char*>(&channel_)) + sizeof(full_scale_));
+    static_cast<size_t>(reinterpret_cast<char*>(&fault_voltage_) -
+    reinterpret_cast<char*>(&channel_)) + sizeof(fault_voltage_));
   // @@protoc_insertion_point(copy_constructor:proto.AppMsg.channel_info)
 }
 
 void AppMsg_channel_info::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_channel_info_AppMsg_2eproto.base);
   ::memset(&abnormal_param_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&full_scale_) -
-      reinterpret_cast<char*>(&abnormal_param_)) + sizeof(full_scale_));
+      reinterpret_cast<char*>(&fault_voltage_) -
+      reinterpret_cast<char*>(&abnormal_param_)) + sizeof(fault_voltage_));
 }
 
 AppMsg_channel_info::~AppMsg_channel_info() {
@@ -4968,8 +4969,8 @@ void AppMsg_channel_info::Clear() {
   }
   axis_counting_param_ = nullptr;
   ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&full_scale_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(full_scale_));
+      reinterpret_cast<char*>(&fault_voltage_) -
+      reinterpret_cast<char*>(&channel_)) + sizeof(fault_voltage_));
   _internal_metadata_.Clear();
 }
 
@@ -4988,37 +4989,44 @@ const char* AppMsg_channel_info::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 zero_offset = 2;
+      // uint32 offset_zero = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          zero_offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          offset_zero_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 fault_voltage = 3;
+      // uint32 offset_max_vol = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          offset_max_vol_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 offset_max_vol_ad = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          offset_max_vol_ad_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 fault_voltage = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
           fault_voltage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.abnormal_param abnormal_param = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+      // .proto.AppMsg.abnormal_param abnormal_param = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           ptr = ctx->ParseMessage(mutable_abnormal_param(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 full_scale = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          full_scale_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           ptr = ctx->ParseMessage(mutable_axis_counting_param(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -5066,22 +5074,48 @@ bool AppMsg_channel_info::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 zero_offset = 2;
+      // uint32 offset_zero = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &zero_offset_)));
+                 input, &offset_zero_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 fault_voltage = 3;
+      // uint32 offset_max_vol = 3;
       case 3: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &offset_max_vol_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 offset_max_vol_ad = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &offset_max_vol_ad_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 fault_voltage = 10;
+      case 10: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
@@ -5092,9 +5126,9 @@ bool AppMsg_channel_info::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.abnormal_param abnormal_param = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+      // .proto.AppMsg.abnormal_param abnormal_param = 11;
+      case 11: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_abnormal_param()));
         } else {
@@ -5103,22 +5137,9 @@ bool AppMsg_channel_info::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 full_scale = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &full_scale_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
+      case 12: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_axis_counting_param()));
         } else {
@@ -5159,31 +5180,36 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
   }
 
-  // uint32 zero_offset = 2;
-  if (this->zero_offset() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->zero_offset(), output);
+  // uint32 offset_zero = 2;
+  if (this->offset_zero() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->offset_zero(), output);
   }
 
-  // uint32 fault_voltage = 3;
+  // uint32 offset_max_vol = 3;
+  if (this->offset_max_vol() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->offset_max_vol(), output);
+  }
+
+  // uint32 offset_max_vol_ad = 4;
+  if (this->offset_max_vol_ad() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->offset_max_vol_ad(), output);
+  }
+
+  // uint32 fault_voltage = 10;
   if (this->fault_voltage() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->fault_voltage(), output);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(10, this->fault_voltage(), output);
   }
 
-  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  // .proto.AppMsg.abnormal_param abnormal_param = 11;
   if (this->has_abnormal_param()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, _Internal::abnormal_param(this), output);
+      11, _Internal::abnormal_param(this), output);
   }
 
-  // uint32 full_scale = 5;
-  if (this->full_scale() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(5, this->full_scale(), output);
-  }
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
   if (this->has_axis_counting_param()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::axis_counting_param(this), output);
+      12, _Internal::axis_counting_param(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -5204,33 +5230,38 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
   }
 
-  // uint32 zero_offset = 2;
-  if (this->zero_offset() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->zero_offset(), target);
+  // uint32 offset_zero = 2;
+  if (this->offset_zero() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->offset_zero(), target);
   }
 
-  // uint32 fault_voltage = 3;
+  // uint32 offset_max_vol = 3;
+  if (this->offset_max_vol() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->offset_max_vol(), target);
+  }
+
+  // uint32 offset_max_vol_ad = 4;
+  if (this->offset_max_vol_ad() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->offset_max_vol_ad(), target);
+  }
+
+  // uint32 fault_voltage = 10;
   if (this->fault_voltage() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->fault_voltage(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(10, this->fault_voltage(), target);
   }
 
-  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  // .proto.AppMsg.abnormal_param abnormal_param = 11;
   if (this->has_abnormal_param()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, _Internal::abnormal_param(this), target);
+        11, _Internal::abnormal_param(this), target);
   }
 
-  // uint32 full_scale = 5;
-  if (this->full_scale() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(5, this->full_scale(), target);
-  }
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
   if (this->has_axis_counting_param()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, _Internal::axis_counting_param(this), target);
+        12, _Internal::axis_counting_param(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -5254,14 +5285,14 @@ size_t AppMsg_channel_info::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  // .proto.AppMsg.abnormal_param abnormal_param = 11;
   if (this->has_abnormal_param()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *abnormal_param_);
   }
 
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
   if (this->has_axis_counting_param()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5275,25 +5306,32 @@ size_t AppMsg_channel_info::ByteSizeLong() const {
         this->channel());
   }
 
-  // uint32 zero_offset = 2;
-  if (this->zero_offset() != 0) {
+  // uint32 offset_zero = 2;
+  if (this->offset_zero() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->zero_offset());
+        this->offset_zero());
   }
 
-  // uint32 fault_voltage = 3;
+  // uint32 offset_max_vol = 3;
+  if (this->offset_max_vol() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->offset_max_vol());
+  }
+
+  // uint32 offset_max_vol_ad = 4;
+  if (this->offset_max_vol_ad() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->offset_max_vol_ad());
+  }
+
+  // uint32 fault_voltage = 10;
   if (this->fault_voltage() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->fault_voltage());
-  }
-
-  // uint32 full_scale = 5;
-  if (this->full_scale() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->full_scale());
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -5332,14 +5370,17 @@ void AppMsg_channel_info::MergeFrom(const AppMsg_channel_info& from) {
   if (from.channel() != 0) {
     set_channel(from.channel());
   }
-  if (from.zero_offset() != 0) {
-    set_zero_offset(from.zero_offset());
+  if (from.offset_zero() != 0) {
+    set_offset_zero(from.offset_zero());
+  }
+  if (from.offset_max_vol() != 0) {
+    set_offset_max_vol(from.offset_max_vol());
+  }
+  if (from.offset_max_vol_ad() != 0) {
+    set_offset_max_vol_ad(from.offset_max_vol_ad());
   }
   if (from.fault_voltage() != 0) {
     set_fault_voltage(from.fault_voltage());
-  }
-  if (from.full_scale() != 0) {
-    set_full_scale(from.full_scale());
   }
 }
 
@@ -5367,9 +5408,10 @@ void AppMsg_channel_info::InternalSwap(AppMsg_channel_info* other) {
   swap(abnormal_param_, other->abnormal_param_);
   swap(axis_counting_param_, other->axis_counting_param_);
   swap(channel_, other->channel_);
-  swap(zero_offset_, other->zero_offset_);
+  swap(offset_zero_, other->offset_zero_);
+  swap(offset_max_vol_, other->offset_max_vol_);
+  swap(offset_max_vol_ad_, other->offset_max_vol_ad_);
   swap(fault_voltage_, other->fault_voltage_);
-  swap(full_scale_, other->full_scale_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_channel_info::GetMetadata() const {

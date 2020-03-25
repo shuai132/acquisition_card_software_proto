@@ -125,11 +125,12 @@ message AppMsg {
     }
 
     message channel_info {
-        uint32 channel = 1;
-        uint32 zero_offset = 2;
-        uint32 fault_voltage = 3;
-        abnormal_param abnormal_param = 4;
-        uint32 full_scale = 5;
-        axis_counting_param axis_counting_param = 6;
+        uint32 channel = 1;                         // 通道ID(0~15)
+        uint32 offset_zero = 2;                     // 零点AD值
+        uint32 offset_max_vol = 3;                  // 最大采集电压值/mV
+        uint32 offset_max_vol_ad = 4;               // 最大采集电压时的AD值
+        uint32 fault_voltage = 10;
+        abnormal_param abnormal_param = 11;
+        axis_counting_param axis_counting_param = 12;
     }
 }

@@ -2267,14 +2267,15 @@ class AppMsg_channel_info :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAbnormalParamFieldNumber = 4,
-    kAxisCountingParamFieldNumber = 6,
+    kAbnormalParamFieldNumber = 11,
+    kAxisCountingParamFieldNumber = 12,
     kChannelFieldNumber = 1,
-    kZeroOffsetFieldNumber = 2,
-    kFaultVoltageFieldNumber = 3,
-    kFullScaleFieldNumber = 5,
+    kOffsetZeroFieldNumber = 2,
+    kOffsetMaxVolFieldNumber = 3,
+    kOffsetMaxVolAdFieldNumber = 4,
+    kFaultVoltageFieldNumber = 10,
   };
-  // .proto.AppMsg.abnormal_param abnormal_param = 4;
+  // .proto.AppMsg.abnormal_param abnormal_param = 11;
   bool has_abnormal_param() const;
   void clear_abnormal_param();
   const ::proto::AppMsg_abnormal_param& abnormal_param() const;
@@ -2282,7 +2283,7 @@ class AppMsg_channel_info :
   ::proto::AppMsg_abnormal_param* mutable_abnormal_param();
   void set_allocated_abnormal_param(::proto::AppMsg_abnormal_param* abnormal_param);
 
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
   bool has_axis_counting_param() const;
   void clear_axis_counting_param();
   const ::proto::AppMsg_axis_counting_param& axis_counting_param() const;
@@ -2295,20 +2296,25 @@ class AppMsg_channel_info :
   ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
   void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // uint32 zero_offset = 2;
-  void clear_zero_offset();
-  ::PROTOBUF_NAMESPACE_ID::uint32 zero_offset() const;
-  void set_zero_offset(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 offset_zero = 2;
+  void clear_offset_zero();
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_zero() const;
+  void set_offset_zero(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // uint32 fault_voltage = 3;
+  // uint32 offset_max_vol = 3;
+  void clear_offset_max_vol();
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol() const;
+  void set_offset_max_vol(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 offset_max_vol_ad = 4;
+  void clear_offset_max_vol_ad();
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol_ad() const;
+  void set_offset_max_vol_ad(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 fault_voltage = 10;
   void clear_fault_voltage();
   ::PROTOBUF_NAMESPACE_ID::uint32 fault_voltage() const;
   void set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 full_scale = 5;
-  void clear_full_scale();
-  ::PROTOBUF_NAMESPACE_ID::uint32 full_scale() const;
-  void set_full_scale(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.channel_info)
  private:
@@ -2318,9 +2324,10 @@ class AppMsg_channel_info :
   ::proto::AppMsg_abnormal_param* abnormal_param_;
   ::proto::AppMsg_axis_counting_param* axis_counting_param_;
   ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 zero_offset_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_zero_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol_ad_;
   ::PROTOBUF_NAMESPACE_ID::uint32 fault_voltage_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 full_scale_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -3354,21 +3361,49 @@ inline void AppMsg_channel_info::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 val
   // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.channel)
 }
 
-// uint32 zero_offset = 2;
-inline void AppMsg_channel_info::clear_zero_offset() {
-  zero_offset_ = 0u;
+// uint32 offset_zero = 2;
+inline void AppMsg_channel_info::clear_offset_zero() {
+  offset_zero_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::zero_offset() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.zero_offset)
-  return zero_offset_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::offset_zero() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.offset_zero)
+  return offset_zero_;
 }
-inline void AppMsg_channel_info::set_zero_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_channel_info::set_offset_zero(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  zero_offset_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.zero_offset)
+  offset_zero_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.offset_zero)
 }
 
-// uint32 fault_voltage = 3;
+// uint32 offset_max_vol = 3;
+inline void AppMsg_channel_info::clear_offset_max_vol() {
+  offset_max_vol_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::offset_max_vol() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.offset_max_vol)
+  return offset_max_vol_;
+}
+inline void AppMsg_channel_info::set_offset_max_vol(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  offset_max_vol_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.offset_max_vol)
+}
+
+// uint32 offset_max_vol_ad = 4;
+inline void AppMsg_channel_info::clear_offset_max_vol_ad() {
+  offset_max_vol_ad_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::offset_max_vol_ad() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.offset_max_vol_ad)
+  return offset_max_vol_ad_;
+}
+inline void AppMsg_channel_info::set_offset_max_vol_ad(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  offset_max_vol_ad_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.offset_max_vol_ad)
+}
+
+// uint32 fault_voltage = 10;
 inline void AppMsg_channel_info::clear_fault_voltage() {
   fault_voltage_ = 0u;
 }
@@ -3382,7 +3417,7 @@ inline void AppMsg_channel_info::set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint
   // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.fault_voltage)
 }
 
-// .proto.AppMsg.abnormal_param abnormal_param = 4;
+// .proto.AppMsg.abnormal_param abnormal_param = 11;
 inline bool AppMsg_channel_info::has_abnormal_param() const {
   return this != internal_default_instance() && abnormal_param_ != nullptr;
 }
@@ -3433,21 +3468,7 @@ inline void AppMsg_channel_info::set_allocated_abnormal_param(::proto::AppMsg_ab
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.abnormal_param)
 }
 
-// uint32 full_scale = 5;
-inline void AppMsg_channel_info::clear_full_scale() {
-  full_scale_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::full_scale() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.full_scale)
-  return full_scale_;
-}
-inline void AppMsg_channel_info::set_full_scale(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  full_scale_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.full_scale)
-}
-
-// .proto.AppMsg.axis_counting_param axis_counting_param = 6;
+// .proto.AppMsg.axis_counting_param axis_counting_param = 12;
 inline bool AppMsg_channel_info::has_axis_counting_param() const {
   return this != internal_default_instance() && axis_counting_param_ != nullptr;
 }
