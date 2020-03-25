@@ -48,7 +48,7 @@ struct TableStruct_AppMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[19]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -74,18 +74,9 @@ extern AppMsg_channel_infoDefaultTypeInternal _AppMsg_channel_info_default_insta
 class AppMsg_device_add;
 class AppMsg_device_addDefaultTypeInternal;
 extern AppMsg_device_addDefaultTypeInternal _AppMsg_device_add_default_instance_;
-class AppMsg_fault_voltage;
-class AppMsg_fault_voltageDefaultTypeInternal;
-extern AppMsg_fault_voltageDefaultTypeInternal _AppMsg_fault_voltage_default_instance_;
-class AppMsg_full_scale;
-class AppMsg_full_scaleDefaultTypeInternal;
-extern AppMsg_full_scaleDefaultTypeInternal _AppMsg_full_scale_default_instance_;
 class AppMsg_item_id;
 class AppMsg_item_idDefaultTypeInternal;
 extern AppMsg_item_idDefaultTypeInternal _AppMsg_item_id_default_instance_;
-class AppMsg_judgement_mode;
-class AppMsg_judgement_modeDefaultTypeInternal;
-extern AppMsg_judgement_modeDefaultTypeInternal _AppMsg_judgement_mode_default_instance_;
 class AppMsg_platform_id;
 class AppMsg_platform_idDefaultTypeInternal;
 extern AppMsg_platform_idDefaultTypeInternal _AppMsg_platform_id_default_instance_;
@@ -110,9 +101,6 @@ extern AppMsg_station_idDefaultTypeInternal _AppMsg_station_id_default_instance_
 class AppMsg_turnout_id;
 class AppMsg_turnout_idDefaultTypeInternal;
 extern AppMsg_turnout_idDefaultTypeInternal _AppMsg_turnout_id_default_instance_;
-class AppMsg_zero_offset;
-class AppMsg_zero_offsetDefaultTypeInternal;
-extern AppMsg_zero_offsetDefaultTypeInternal _AppMsg_zero_offset_default_instance_;
 }  // namespace proto
 PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::AppMsg* Arena::CreateMaybeMessage<::proto::AppMsg>(Arena*);
@@ -121,10 +109,7 @@ template<> ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage<::proto::AppMsg_a
 template<> ::proto::AppMsg_axis_counting_param* Arena::CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(Arena*);
 template<> ::proto::AppMsg_channel_info* Arena::CreateMaybeMessage<::proto::AppMsg_channel_info>(Arena*);
 template<> ::proto::AppMsg_device_add* Arena::CreateMaybeMessage<::proto::AppMsg_device_add>(Arena*);
-template<> ::proto::AppMsg_fault_voltage* Arena::CreateMaybeMessage<::proto::AppMsg_fault_voltage>(Arena*);
-template<> ::proto::AppMsg_full_scale* Arena::CreateMaybeMessage<::proto::AppMsg_full_scale>(Arena*);
 template<> ::proto::AppMsg_item_id* Arena::CreateMaybeMessage<::proto::AppMsg_item_id>(Arena*);
-template<> ::proto::AppMsg_judgement_mode* Arena::CreateMaybeMessage<::proto::AppMsg_judgement_mode>(Arena*);
 template<> ::proto::AppMsg_platform_id* Arena::CreateMaybeMessage<::proto::AppMsg_platform_id>(Arena*);
 template<> ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(Arena*);
 template<> ::proto::AppMsg_sample_card_num* Arena::CreateMaybeMessage<::proto::AppMsg_sample_card_num>(Arena*);
@@ -133,7 +118,6 @@ template<> ::proto::AppMsg_sensor_id* Arena::CreateMaybeMessage<::proto::AppMsg_
 template<> ::proto::AppMsg_server_add* Arena::CreateMaybeMessage<::proto::AppMsg_server_add>(Arena*);
 template<> ::proto::AppMsg_station_id* Arena::CreateMaybeMessage<::proto::AppMsg_station_id>(Arena*);
 template<> ::proto::AppMsg_turnout_id* Arena::CreateMaybeMessage<::proto::AppMsg_turnout_id>(Arena*);
-template<> ::proto::AppMsg_zero_offset* Arena::CreateMaybeMessage<::proto::AppMsg_zero_offset>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace proto {
 
@@ -156,36 +140,24 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_get_sensor_id = 24,
   AppMsg_Cmd_set_sample_frequency = 25,
   AppMsg_Cmd_get_sample_frequency = 26,
-  AppMsg_Cmd_set_zero_offset = 27,
-  AppMsg_Cmd_get_zero_offset = 28,
-  AppMsg_Cmd_set_fault_voltage = 29,
-  AppMsg_Cmd_get_fault_voltage = 30,
-  AppMsg_Cmd_set_abnormal_param = 31,
-  AppMsg_Cmd_get_abnormal_param = 32,
-  AppMsg_Cmd_set_full_scale = 33,
-  AppMsg_Cmd_get_full_scale = 34,
-  AppMsg_Cmd_set_judgement_mode = 35,
-  AppMsg_Cmd_get_judgement_mode = 36,
   AppMsg_Cmd_set_pzltrct_param = 37,
   AppMsg_Cmd_get_pzltrct_param = 38,
-  AppMsg_Cmd_set_axis_counting_param = 39,
-  AppMsg_Cmd_get_axis_counting_param = 40,
   AppMsg_Cmd_set_sample_card_num = 41,
   AppMsg_Cmd_get_sample_card_num = 42,
   AppMsg_Cmd_capture_adc_data = 43,
-  AppMsg_Cmd_set_capture_auto_state = 44,
-  AppMsg_Cmd_get_capture_auto_state = 45,
   AppMsg_Cmd_set_channel_info = 46,
   AppMsg_Cmd_get_channel_info = 47,
+  AppMsg_Cmd_ready_received_cache = 48,
+  AppMsg_Cmd_set_file_cache_enable = 49,
+  AppMsg_Cmd_get_file_cache_enable = 50,
   AppMsg_Cmd_auto_adc_data = 1000,
   AppMsg_Cmd_error_msg = 1001,
-  AppMsg_Cmd_ready_received_cache = 1002,
   AppMsg_Cmd_AppMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   AppMsg_Cmd_AppMsg_Cmd_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool AppMsg_Cmd_IsValid(int value);
 constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MIN = AppMsg_Cmd_NONE;
-constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_ready_received_cache;
+constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_error_msg;
 constexpr int AppMsg_Cmd_Cmd_ARRAYSIZE = AppMsg_Cmd_Cmd_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMsg_Cmd_descriptor();
@@ -1304,275 +1276,6 @@ class AppMsg_sample_frequency :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_zero_offset :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.zero_offset) */ {
- public:
-  AppMsg_zero_offset();
-  virtual ~AppMsg_zero_offset();
-
-  AppMsg_zero_offset(const AppMsg_zero_offset& from);
-  AppMsg_zero_offset(AppMsg_zero_offset&& from) noexcept
-    : AppMsg_zero_offset() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_zero_offset& operator=(const AppMsg_zero_offset& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_zero_offset& operator=(AppMsg_zero_offset&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_zero_offset& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_zero_offset* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_zero_offset*>(
-               &_AppMsg_zero_offset_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    8;
-
-  friend void swap(AppMsg_zero_offset& a, AppMsg_zero_offset& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_zero_offset* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_zero_offset* New() const final {
-    return CreateMaybeMessage<AppMsg_zero_offset>(nullptr);
-  }
-
-  AppMsg_zero_offset* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_zero_offset>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_zero_offset& from);
-  void MergeFrom(const AppMsg_zero_offset& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_zero_offset* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.zero_offset";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kChannelFieldNumber = 1,
-    kOffsetFieldNumber = 2,
-  };
-  // uint32 channel = 1;
-  void clear_channel();
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
-  void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 offset = 2;
-  void clear_offset();
-  ::PROTOBUF_NAMESPACE_ID::uint32 offset() const;
-  void set_offset(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.zero_offset)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 offset_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppMsg_fault_voltage :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.fault_voltage) */ {
- public:
-  AppMsg_fault_voltage();
-  virtual ~AppMsg_fault_voltage();
-
-  AppMsg_fault_voltage(const AppMsg_fault_voltage& from);
-  AppMsg_fault_voltage(AppMsg_fault_voltage&& from) noexcept
-    : AppMsg_fault_voltage() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_fault_voltage& operator=(const AppMsg_fault_voltage& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_fault_voltage& operator=(AppMsg_fault_voltage&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_fault_voltage& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_fault_voltage* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_fault_voltage*>(
-               &_AppMsg_fault_voltage_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    9;
-
-  friend void swap(AppMsg_fault_voltage& a, AppMsg_fault_voltage& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_fault_voltage* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_fault_voltage* New() const final {
-    return CreateMaybeMessage<AppMsg_fault_voltage>(nullptr);
-  }
-
-  AppMsg_fault_voltage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_fault_voltage>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_fault_voltage& from);
-  void MergeFrom(const AppMsg_fault_voltage& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_fault_voltage* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.fault_voltage";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kLevelFieldNumber = 1,
-  };
-  // double level = 1;
-  void clear_level();
-  double level() const;
-  void set_level(double value);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.fault_voltage)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  double level_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
 class AppMsg_abnormal_param :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.abnormal_param) */ {
  public:
@@ -1615,7 +1318,7 @@ class AppMsg_abnormal_param :
                &_AppMsg_abnormal_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    8;
 
   friend void swap(AppMsg_abnormal_param& a, AppMsg_abnormal_param& b) {
     a.Swap(&b);
@@ -1711,281 +1414,6 @@ class AppMsg_abnormal_param :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_full_scale :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.full_scale) */ {
- public:
-  AppMsg_full_scale();
-  virtual ~AppMsg_full_scale();
-
-  AppMsg_full_scale(const AppMsg_full_scale& from);
-  AppMsg_full_scale(AppMsg_full_scale&& from) noexcept
-    : AppMsg_full_scale() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_full_scale& operator=(const AppMsg_full_scale& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_full_scale& operator=(AppMsg_full_scale&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_full_scale& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_full_scale* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_full_scale*>(
-               &_AppMsg_full_scale_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    11;
-
-  friend void swap(AppMsg_full_scale& a, AppMsg_full_scale& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_full_scale* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_full_scale* New() const final {
-    return CreateMaybeMessage<AppMsg_full_scale>(nullptr);
-  }
-
-  AppMsg_full_scale* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_full_scale>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_full_scale& from);
-  void MergeFrom(const AppMsg_full_scale& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_full_scale* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.full_scale";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kChannelFieldNumber = 1,
-    kScaleFieldNumber = 2,
-  };
-  // uint32 channel = 1;
-  void clear_channel();
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
-  void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // int32 scale = 2;
-  void clear_scale();
-  ::PROTOBUF_NAMESPACE_ID::int32 scale() const;
-  void set_scale(::PROTOBUF_NAMESPACE_ID::int32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.full_scale)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
-  ::PROTOBUF_NAMESPACE_ID::int32 scale_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppMsg_judgement_mode :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.judgement_mode) */ {
- public:
-  AppMsg_judgement_mode();
-  virtual ~AppMsg_judgement_mode();
-
-  AppMsg_judgement_mode(const AppMsg_judgement_mode& from);
-  AppMsg_judgement_mode(AppMsg_judgement_mode&& from) noexcept
-    : AppMsg_judgement_mode() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_judgement_mode& operator=(const AppMsg_judgement_mode& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_judgement_mode& operator=(AppMsg_judgement_mode&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_judgement_mode& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_judgement_mode* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_judgement_mode*>(
-               &_AppMsg_judgement_mode_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    12;
-
-  friend void swap(AppMsg_judgement_mode& a, AppMsg_judgement_mode& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_judgement_mode* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_judgement_mode* New() const final {
-    return CreateMaybeMessage<AppMsg_judgement_mode>(nullptr);
-  }
-
-  AppMsg_judgement_mode* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_judgement_mode>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_judgement_mode& from);
-  void MergeFrom(const AppMsg_judgement_mode& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_judgement_mode* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.judgement_mode";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kModeFieldNumber = 1,
-  };
-  // string mode = 1;
-  void clear_mode();
-  const std::string& mode() const;
-  void set_mode(const std::string& value);
-  void set_mode(std::string&& value);
-  void set_mode(const char* value);
-  void set_mode(const char* value, size_t size);
-  std::string* mutable_mode();
-  std::string* release_mode();
-  void set_allocated_mode(std::string* mode);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.judgement_mode)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mode_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
 class AppMsg_pzltrct_param :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.pzltrct_param) */ {
  public:
@@ -2028,7 +1456,7 @@ class AppMsg_pzltrct_param :
                &_AppMsg_pzltrct_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    9;
 
   friend void swap(AppMsg_pzltrct_param& a, AppMsg_pzltrct_param& b) {
     a.Swap(&b);
@@ -2166,7 +1594,7 @@ class AppMsg_axis_counting_param :
                &_AppMsg_axis_counting_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    10;
 
   friend void swap(AppMsg_axis_counting_param& a, AppMsg_axis_counting_param& b) {
     a.Swap(&b);
@@ -2297,7 +1725,7 @@ class AppMsg_sample_card_num :
                &_AppMsg_sample_card_num_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    11;
 
   friend void swap(AppMsg_sample_card_num& a, AppMsg_sample_card_num& b) {
     a.Swap(&b);
@@ -2428,7 +1856,7 @@ class AppMsg_adc_data :
                &_AppMsg_adc_data_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    12;
 
   friend void swap(AppMsg_adc_data& a, AppMsg_adc_data& b) {
     a.Swap(&b);
@@ -2633,7 +2061,7 @@ class AppMsg_channel_info :
                &_AppMsg_channel_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    13;
 
   friend void swap(AppMsg_channel_info& a, AppMsg_channel_info& b) {
     a.Swap(&b);
@@ -2704,31 +2132,13 @@ class AppMsg_channel_info :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kAbnormalParamFieldNumber = 4,
+    kAxisCountingParamFieldNumber = 6,
+    kChannelFieldNumber = 1,
     kZeroOffsetFieldNumber = 2,
     kFaultVoltageFieldNumber = 3,
-    kAbnormalParamFieldNumber = 4,
     kFullScaleFieldNumber = 5,
-    kJudgementModeFieldNumber = 6,
-    kPzltrctParamFieldNumber = 7,
-    kAxisCountingParamFieldNumber = 8,
-    kChannelFieldNumber = 1,
   };
-  // .proto.AppMsg.zero_offset zero_offset = 2;
-  bool has_zero_offset() const;
-  void clear_zero_offset();
-  const ::proto::AppMsg_zero_offset& zero_offset() const;
-  ::proto::AppMsg_zero_offset* release_zero_offset();
-  ::proto::AppMsg_zero_offset* mutable_zero_offset();
-  void set_allocated_zero_offset(::proto::AppMsg_zero_offset* zero_offset);
-
-  // .proto.AppMsg.fault_voltage fault_voltage = 3;
-  bool has_fault_voltage() const;
-  void clear_fault_voltage();
-  const ::proto::AppMsg_fault_voltage& fault_voltage() const;
-  ::proto::AppMsg_fault_voltage* release_fault_voltage();
-  ::proto::AppMsg_fault_voltage* mutable_fault_voltage();
-  void set_allocated_fault_voltage(::proto::AppMsg_fault_voltage* fault_voltage);
-
   // .proto.AppMsg.abnormal_param abnormal_param = 4;
   bool has_abnormal_param() const;
   void clear_abnormal_param();
@@ -2737,31 +2147,7 @@ class AppMsg_channel_info :
   ::proto::AppMsg_abnormal_param* mutable_abnormal_param();
   void set_allocated_abnormal_param(::proto::AppMsg_abnormal_param* abnormal_param);
 
-  // .proto.AppMsg.full_scale full_scale = 5;
-  bool has_full_scale() const;
-  void clear_full_scale();
-  const ::proto::AppMsg_full_scale& full_scale() const;
-  ::proto::AppMsg_full_scale* release_full_scale();
-  ::proto::AppMsg_full_scale* mutable_full_scale();
-  void set_allocated_full_scale(::proto::AppMsg_full_scale* full_scale);
-
-  // .proto.AppMsg.judgement_mode judgement_mode = 6;
-  bool has_judgement_mode() const;
-  void clear_judgement_mode();
-  const ::proto::AppMsg_judgement_mode& judgement_mode() const;
-  ::proto::AppMsg_judgement_mode* release_judgement_mode();
-  ::proto::AppMsg_judgement_mode* mutable_judgement_mode();
-  void set_allocated_judgement_mode(::proto::AppMsg_judgement_mode* judgement_mode);
-
-  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-  bool has_pzltrct_param() const;
-  void clear_pzltrct_param();
-  const ::proto::AppMsg_pzltrct_param& pzltrct_param() const;
-  ::proto::AppMsg_pzltrct_param* release_pzltrct_param();
-  ::proto::AppMsg_pzltrct_param* mutable_pzltrct_param();
-  void set_allocated_pzltrct_param(::proto::AppMsg_pzltrct_param* pzltrct_param);
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
   bool has_axis_counting_param() const;
   void clear_axis_counting_param();
   const ::proto::AppMsg_axis_counting_param& axis_counting_param() const;
@@ -2774,19 +2160,32 @@ class AppMsg_channel_info :
   ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
   void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
+  // uint32 zero_offset = 2;
+  void clear_zero_offset();
+  ::PROTOBUF_NAMESPACE_ID::uint32 zero_offset() const;
+  void set_zero_offset(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 fault_voltage = 3;
+  void clear_fault_voltage();
+  ::PROTOBUF_NAMESPACE_ID::uint32 fault_voltage() const;
+  void set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
+  // uint32 full_scale = 5;
+  void clear_full_scale();
+  ::PROTOBUF_NAMESPACE_ID::uint32 full_scale() const;
+  void set_full_scale(::PROTOBUF_NAMESPACE_ID::uint32 value);
+
   // @@protoc_insertion_point(class_scope:proto.AppMsg.channel_info)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::proto::AppMsg_zero_offset* zero_offset_;
-  ::proto::AppMsg_fault_voltage* fault_voltage_;
   ::proto::AppMsg_abnormal_param* abnormal_param_;
-  ::proto::AppMsg_full_scale* full_scale_;
-  ::proto::AppMsg_judgement_mode* judgement_mode_;
-  ::proto::AppMsg_pzltrct_param* pzltrct_param_;
   ::proto::AppMsg_axis_counting_param* axis_counting_param_;
   ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 zero_offset_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 fault_voltage_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 full_scale_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -2834,7 +2233,7 @@ class AppMsg :
                &_AppMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    14;
 
   friend void swap(AppMsg& a, AppMsg& b) {
     a.Swap(&b);
@@ -2910,11 +2309,7 @@ class AppMsg :
   typedef AppMsg_item_id item_id;
   typedef AppMsg_sensor_id sensor_id;
   typedef AppMsg_sample_frequency sample_frequency;
-  typedef AppMsg_zero_offset zero_offset;
-  typedef AppMsg_fault_voltage fault_voltage;
   typedef AppMsg_abnormal_param abnormal_param;
-  typedef AppMsg_full_scale full_scale;
-  typedef AppMsg_judgement_mode judgement_mode;
   typedef AppMsg_pzltrct_param pzltrct_param;
   typedef AppMsg_axis_counting_param axis_counting_param;
   typedef AppMsg_sample_card_num sample_card_num;
@@ -2958,54 +2353,30 @@ class AppMsg :
     AppMsg_Cmd_set_sample_frequency;
   static constexpr Cmd get_sample_frequency =
     AppMsg_Cmd_get_sample_frequency;
-  static constexpr Cmd set_zero_offset =
-    AppMsg_Cmd_set_zero_offset;
-  static constexpr Cmd get_zero_offset =
-    AppMsg_Cmd_get_zero_offset;
-  static constexpr Cmd set_fault_voltage =
-    AppMsg_Cmd_set_fault_voltage;
-  static constexpr Cmd get_fault_voltage =
-    AppMsg_Cmd_get_fault_voltage;
-  static constexpr Cmd set_abnormal_param =
-    AppMsg_Cmd_set_abnormal_param;
-  static constexpr Cmd get_abnormal_param =
-    AppMsg_Cmd_get_abnormal_param;
-  static constexpr Cmd set_full_scale =
-    AppMsg_Cmd_set_full_scale;
-  static constexpr Cmd get_full_scale =
-    AppMsg_Cmd_get_full_scale;
-  static constexpr Cmd set_judgement_mode =
-    AppMsg_Cmd_set_judgement_mode;
-  static constexpr Cmd get_judgement_mode =
-    AppMsg_Cmd_get_judgement_mode;
   static constexpr Cmd set_pzltrct_param =
     AppMsg_Cmd_set_pzltrct_param;
   static constexpr Cmd get_pzltrct_param =
     AppMsg_Cmd_get_pzltrct_param;
-  static constexpr Cmd set_axis_counting_param =
-    AppMsg_Cmd_set_axis_counting_param;
-  static constexpr Cmd get_axis_counting_param =
-    AppMsg_Cmd_get_axis_counting_param;
   static constexpr Cmd set_sample_card_num =
     AppMsg_Cmd_set_sample_card_num;
   static constexpr Cmd get_sample_card_num =
     AppMsg_Cmd_get_sample_card_num;
   static constexpr Cmd capture_adc_data =
     AppMsg_Cmd_capture_adc_data;
-  static constexpr Cmd set_capture_auto_state =
-    AppMsg_Cmd_set_capture_auto_state;
-  static constexpr Cmd get_capture_auto_state =
-    AppMsg_Cmd_get_capture_auto_state;
   static constexpr Cmd set_channel_info =
     AppMsg_Cmd_set_channel_info;
   static constexpr Cmd get_channel_info =
     AppMsg_Cmd_get_channel_info;
+  static constexpr Cmd ready_received_cache =
+    AppMsg_Cmd_ready_received_cache;
+  static constexpr Cmd set_file_cache_enable =
+    AppMsg_Cmd_set_file_cache_enable;
+  static constexpr Cmd get_file_cache_enable =
+    AppMsg_Cmd_get_file_cache_enable;
   static constexpr Cmd auto_adc_data =
     AppMsg_Cmd_auto_adc_data;
   static constexpr Cmd error_msg =
     AppMsg_Cmd_error_msg;
-  static constexpr Cmd ready_received_cache =
-    AppMsg_Cmd_ready_received_cache;
   static inline bool Cmd_IsValid(int value) {
     return AppMsg_Cmd_IsValid(value);
   }
@@ -3398,56 +2769,6 @@ inline void AppMsg_sample_frequency::set_frequency(::PROTOBUF_NAMESPACE_ID::uint
 
 // -------------------------------------------------------------------
 
-// AppMsg_zero_offset
-
-// uint32 channel = 1;
-inline void AppMsg_zero_offset::clear_channel() {
-  channel_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offset::channel() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offset.channel)
-  return channel_;
-}
-inline void AppMsg_zero_offset::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  channel_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offset.channel)
-}
-
-// uint32 offset = 2;
-inline void AppMsg_zero_offset::clear_offset() {
-  offset_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_zero_offset::offset() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.zero_offset.offset)
-  return offset_;
-}
-inline void AppMsg_zero_offset::set_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  offset_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.zero_offset.offset)
-}
-
-// -------------------------------------------------------------------
-
-// AppMsg_fault_voltage
-
-// double level = 1;
-inline void AppMsg_fault_voltage::clear_level() {
-  level_ = 0;
-}
-inline double AppMsg_fault_voltage::level() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.fault_voltage.level)
-  return level_;
-}
-inline void AppMsg_fault_voltage::set_level(double value) {
-  
-  level_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.fault_voltage.level)
-}
-
-// -------------------------------------------------------------------
-
 // AppMsg_abnormal_param
 
 // double level = 1;
@@ -3476,93 +2797,6 @@ inline void AppMsg_abnormal_param::set_duration(::PROTOBUF_NAMESPACE_ID::uint32 
   
   duration_ = value;
   // @@protoc_insertion_point(field_set:proto.AppMsg.abnormal_param.duration)
-}
-
-// -------------------------------------------------------------------
-
-// AppMsg_full_scale
-
-// uint32 channel = 1;
-inline void AppMsg_full_scale::clear_channel() {
-  channel_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_full_scale::channel() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.full_scale.channel)
-  return channel_;
-}
-inline void AppMsg_full_scale::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  channel_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.full_scale.channel)
-}
-
-// int32 scale = 2;
-inline void AppMsg_full_scale::clear_scale() {
-  scale_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 AppMsg_full_scale::scale() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.full_scale.scale)
-  return scale_;
-}
-inline void AppMsg_full_scale::set_scale(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  scale_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.full_scale.scale)
-}
-
-// -------------------------------------------------------------------
-
-// AppMsg_judgement_mode
-
-// string mode = 1;
-inline void AppMsg_judgement_mode::clear_mode() {
-  mode_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& AppMsg_judgement_mode::mode() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.judgement_mode.mode)
-  return mode_.GetNoArena();
-}
-inline void AppMsg_judgement_mode::set_mode(const std::string& value) {
-  
-  mode_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:proto.AppMsg.judgement_mode.mode)
-}
-inline void AppMsg_judgement_mode::set_mode(std::string&& value) {
-  
-  mode_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.judgement_mode.mode)
-}
-inline void AppMsg_judgement_mode::set_mode(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  mode_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:proto.AppMsg.judgement_mode.mode)
-}
-inline void AppMsg_judgement_mode::set_mode(const char* value, size_t size) {
-  
-  mode_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.judgement_mode.mode)
-}
-inline std::string* AppMsg_judgement_mode::mutable_mode() {
-  
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.judgement_mode.mode)
-  return mode_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* AppMsg_judgement_mode::release_mode() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.judgement_mode.mode)
-  
-  return mode_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void AppMsg_judgement_mode::set_allocated_mode(std::string* mode) {
-  if (mode != nullptr) {
-    
-  } else {
-    
-  }
-  mode_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mode);
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.judgement_mode.mode)
 }
 
 // -------------------------------------------------------------------
@@ -3966,106 +3200,32 @@ inline void AppMsg_channel_info::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 val
   // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.channel)
 }
 
-// .proto.AppMsg.zero_offset zero_offset = 2;
-inline bool AppMsg_channel_info::has_zero_offset() const {
-  return this != internal_default_instance() && zero_offset_ != nullptr;
-}
+// uint32 zero_offset = 2;
 inline void AppMsg_channel_info::clear_zero_offset() {
-  if (GetArenaNoVirtual() == nullptr && zero_offset_ != nullptr) {
-    delete zero_offset_;
-  }
-  zero_offset_ = nullptr;
+  zero_offset_ = 0u;
 }
-inline const ::proto::AppMsg_zero_offset& AppMsg_channel_info::zero_offset() const {
-  const ::proto::AppMsg_zero_offset* p = zero_offset_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::zero_offset() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.zero_offset)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_zero_offset*>(
-      &::proto::_AppMsg_zero_offset_default_instance_);
-}
-inline ::proto::AppMsg_zero_offset* AppMsg_channel_info::release_zero_offset() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.zero_offset)
-  
-  ::proto::AppMsg_zero_offset* temp = zero_offset_;
-  zero_offset_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_zero_offset* AppMsg_channel_info::mutable_zero_offset() {
-  
-  if (zero_offset_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_zero_offset>(GetArenaNoVirtual());
-    zero_offset_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.zero_offset)
   return zero_offset_;
 }
-inline void AppMsg_channel_info::set_allocated_zero_offset(::proto::AppMsg_zero_offset* zero_offset) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete zero_offset_;
-  }
-  if (zero_offset) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      zero_offset = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, zero_offset, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  zero_offset_ = zero_offset;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.zero_offset)
+inline void AppMsg_channel_info::set_zero_offset(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  zero_offset_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.zero_offset)
 }
 
-// .proto.AppMsg.fault_voltage fault_voltage = 3;
-inline bool AppMsg_channel_info::has_fault_voltage() const {
-  return this != internal_default_instance() && fault_voltage_ != nullptr;
-}
+// uint32 fault_voltage = 3;
 inline void AppMsg_channel_info::clear_fault_voltage() {
-  if (GetArenaNoVirtual() == nullptr && fault_voltage_ != nullptr) {
-    delete fault_voltage_;
-  }
-  fault_voltage_ = nullptr;
+  fault_voltage_ = 0u;
 }
-inline const ::proto::AppMsg_fault_voltage& AppMsg_channel_info::fault_voltage() const {
-  const ::proto::AppMsg_fault_voltage* p = fault_voltage_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::fault_voltage() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.fault_voltage)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_fault_voltage*>(
-      &::proto::_AppMsg_fault_voltage_default_instance_);
-}
-inline ::proto::AppMsg_fault_voltage* AppMsg_channel_info::release_fault_voltage() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.fault_voltage)
-  
-  ::proto::AppMsg_fault_voltage* temp = fault_voltage_;
-  fault_voltage_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_fault_voltage* AppMsg_channel_info::mutable_fault_voltage() {
-  
-  if (fault_voltage_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_fault_voltage>(GetArenaNoVirtual());
-    fault_voltage_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.fault_voltage)
   return fault_voltage_;
 }
-inline void AppMsg_channel_info::set_allocated_fault_voltage(::proto::AppMsg_fault_voltage* fault_voltage) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete fault_voltage_;
-  }
-  if (fault_voltage) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      fault_voltage = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, fault_voltage, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  fault_voltage_ = fault_voltage;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.fault_voltage)
+inline void AppMsg_channel_info::set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  fault_voltage_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.fault_voltage)
 }
 
 // .proto.AppMsg.abnormal_param abnormal_param = 4;
@@ -4119,160 +3279,21 @@ inline void AppMsg_channel_info::set_allocated_abnormal_param(::proto::AppMsg_ab
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.abnormal_param)
 }
 
-// .proto.AppMsg.full_scale full_scale = 5;
-inline bool AppMsg_channel_info::has_full_scale() const {
-  return this != internal_default_instance() && full_scale_ != nullptr;
-}
+// uint32 full_scale = 5;
 inline void AppMsg_channel_info::clear_full_scale() {
-  if (GetArenaNoVirtual() == nullptr && full_scale_ != nullptr) {
-    delete full_scale_;
-  }
-  full_scale_ = nullptr;
+  full_scale_ = 0u;
 }
-inline const ::proto::AppMsg_full_scale& AppMsg_channel_info::full_scale() const {
-  const ::proto::AppMsg_full_scale* p = full_scale_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_channel_info::full_scale() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.full_scale)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_full_scale*>(
-      &::proto::_AppMsg_full_scale_default_instance_);
-}
-inline ::proto::AppMsg_full_scale* AppMsg_channel_info::release_full_scale() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.full_scale)
-  
-  ::proto::AppMsg_full_scale* temp = full_scale_;
-  full_scale_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_full_scale* AppMsg_channel_info::mutable_full_scale() {
-  
-  if (full_scale_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_full_scale>(GetArenaNoVirtual());
-    full_scale_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.full_scale)
   return full_scale_;
 }
-inline void AppMsg_channel_info::set_allocated_full_scale(::proto::AppMsg_full_scale* full_scale) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete full_scale_;
-  }
-  if (full_scale) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      full_scale = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, full_scale, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  full_scale_ = full_scale;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.full_scale)
+inline void AppMsg_channel_info::set_full_scale(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  full_scale_ = value;
+  // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.full_scale)
 }
 
-// .proto.AppMsg.judgement_mode judgement_mode = 6;
-inline bool AppMsg_channel_info::has_judgement_mode() const {
-  return this != internal_default_instance() && judgement_mode_ != nullptr;
-}
-inline void AppMsg_channel_info::clear_judgement_mode() {
-  if (GetArenaNoVirtual() == nullptr && judgement_mode_ != nullptr) {
-    delete judgement_mode_;
-  }
-  judgement_mode_ = nullptr;
-}
-inline const ::proto::AppMsg_judgement_mode& AppMsg_channel_info::judgement_mode() const {
-  const ::proto::AppMsg_judgement_mode* p = judgement_mode_;
-  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.judgement_mode)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_judgement_mode*>(
-      &::proto::_AppMsg_judgement_mode_default_instance_);
-}
-inline ::proto::AppMsg_judgement_mode* AppMsg_channel_info::release_judgement_mode() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.judgement_mode)
-  
-  ::proto::AppMsg_judgement_mode* temp = judgement_mode_;
-  judgement_mode_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_judgement_mode* AppMsg_channel_info::mutable_judgement_mode() {
-  
-  if (judgement_mode_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_judgement_mode>(GetArenaNoVirtual());
-    judgement_mode_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.judgement_mode)
-  return judgement_mode_;
-}
-inline void AppMsg_channel_info::set_allocated_judgement_mode(::proto::AppMsg_judgement_mode* judgement_mode) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete judgement_mode_;
-  }
-  if (judgement_mode) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      judgement_mode = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, judgement_mode, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  judgement_mode_ = judgement_mode;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.judgement_mode)
-}
-
-// .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-inline bool AppMsg_channel_info::has_pzltrct_param() const {
-  return this != internal_default_instance() && pzltrct_param_ != nullptr;
-}
-inline void AppMsg_channel_info::clear_pzltrct_param() {
-  if (GetArenaNoVirtual() == nullptr && pzltrct_param_ != nullptr) {
-    delete pzltrct_param_;
-  }
-  pzltrct_param_ = nullptr;
-}
-inline const ::proto::AppMsg_pzltrct_param& AppMsg_channel_info::pzltrct_param() const {
-  const ::proto::AppMsg_pzltrct_param* p = pzltrct_param_;
-  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.pzltrct_param)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_pzltrct_param*>(
-      &::proto::_AppMsg_pzltrct_param_default_instance_);
-}
-inline ::proto::AppMsg_pzltrct_param* AppMsg_channel_info::release_pzltrct_param() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.pzltrct_param)
-  
-  ::proto::AppMsg_pzltrct_param* temp = pzltrct_param_;
-  pzltrct_param_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_pzltrct_param* AppMsg_channel_info::mutable_pzltrct_param() {
-  
-  if (pzltrct_param_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(GetArenaNoVirtual());
-    pzltrct_param_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.pzltrct_param)
-  return pzltrct_param_;
-}
-inline void AppMsg_channel_info::set_allocated_pzltrct_param(::proto::AppMsg_pzltrct_param* pzltrct_param) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete pzltrct_param_;
-  }
-  if (pzltrct_param) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      pzltrct_param = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, pzltrct_param, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  pzltrct_param_ = pzltrct_param;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.pzltrct_param)
-}
-
-// .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+// .proto.AppMsg.axis_counting_param axis_counting_param = 6;
 inline bool AppMsg_channel_info::has_axis_counting_param() const {
   return this != internal_default_instance() && axis_counting_param_ != nullptr;
 }
@@ -4330,14 +3351,6 @@ inline void AppMsg_channel_info::set_allocated_axis_counting_param(::proto::AppM
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

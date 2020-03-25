@@ -17,15 +17,10 @@
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_abnormal_param_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_axis_counting_param_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_fault_voltage_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_full_scale_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_judgement_mode_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_platform_id_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_pzltrct_param_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_station_id_AppMsg_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_turnout_id_AppMsg_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_AppMsg_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_zero_offset_AppMsg_2eproto;
 namespace proto {
 class AppMsg_device_addDefaultTypeInternal {
  public:
@@ -59,26 +54,10 @@ class AppMsg_sample_frequencyDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_sample_frequency> _instance;
 } _AppMsg_sample_frequency_default_instance_;
-class AppMsg_zero_offsetDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_zero_offset> _instance;
-} _AppMsg_zero_offset_default_instance_;
-class AppMsg_fault_voltageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_fault_voltage> _instance;
-} _AppMsg_fault_voltage_default_instance_;
 class AppMsg_abnormal_paramDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_abnormal_param> _instance;
 } _AppMsg_abnormal_param_default_instance_;
-class AppMsg_full_scaleDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_full_scale> _instance;
-} _AppMsg_full_scale_default_instance_;
-class AppMsg_judgement_modeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_judgement_mode> _instance;
-} _AppMsg_judgement_mode_default_instance_;
 class AppMsg_pzltrct_paramDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AppMsg_pzltrct_param> _instance;
@@ -175,14 +154,9 @@ static void InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto() {
   ::proto::AppMsg_channel_info::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<7> scc_info_AppMsg_channel_info_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 7, InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto}, {
-      &scc_info_AppMsg_zero_offset_AppMsg_2eproto.base,
-      &scc_info_AppMsg_fault_voltage_AppMsg_2eproto.base,
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_AppMsg_channel_info_AppMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto}, {
       &scc_info_AppMsg_abnormal_param_AppMsg_2eproto.base,
-      &scc_info_AppMsg_full_scale_AppMsg_2eproto.base,
-      &scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base,
-      &scc_info_AppMsg_pzltrct_param_AppMsg_2eproto.base,
       &scc_info_AppMsg_axis_counting_param_AppMsg_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppMsg_device_add_AppMsg_2eproto() {
@@ -199,34 +173,6 @@ static void InitDefaultsscc_info_AppMsg_device_add_AppMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_device_add_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_device_add_AppMsg_2eproto}, {}};
 
-static void InitDefaultsscc_info_AppMsg_fault_voltage_AppMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AppMsg_fault_voltage_default_instance_;
-    new (ptr) ::proto::AppMsg_fault_voltage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AppMsg_fault_voltage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_fault_voltage_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_fault_voltage_AppMsg_2eproto}, {}};
-
-static void InitDefaultsscc_info_AppMsg_full_scale_AppMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AppMsg_full_scale_default_instance_;
-    new (ptr) ::proto::AppMsg_full_scale();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AppMsg_full_scale::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_full_scale_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_full_scale_AppMsg_2eproto}, {}};
-
 static void InitDefaultsscc_info_AppMsg_item_id_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -240,20 +186,6 @@ static void InitDefaultsscc_info_AppMsg_item_id_AppMsg_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_item_id_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_item_id_AppMsg_2eproto}, {}};
-
-static void InitDefaultsscc_info_AppMsg_judgement_mode_AppMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AppMsg_judgement_mode_default_instance_;
-    new (ptr) ::proto::AppMsg_judgement_mode();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AppMsg_judgement_mode::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_judgement_mode_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_judgement_mode_AppMsg_2eproto}, {}};
 
 static void InitDefaultsscc_info_AppMsg_platform_id_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -367,21 +299,7 @@ static void InitDefaultsscc_info_AppMsg_turnout_id_AppMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_turnout_id_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_turnout_id_AppMsg_2eproto}, {}};
 
-static void InitDefaultsscc_info_AppMsg_zero_offset_AppMsg_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::proto::_AppMsg_zero_offset_default_instance_;
-    new (ptr) ::proto::AppMsg_zero_offset();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::proto::AppMsg_zero_offset::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AppMsg_zero_offset_AppMsg_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AppMsg_zero_offset_AppMsg_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AppMsg_2eproto[19];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AppMsg_2eproto[15];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AppMsg_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AppMsg_2eproto = nullptr;
 
@@ -439,38 +357,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_sample_frequency, frequency_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_zero_offset, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_zero_offset, channel_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_zero_offset, offset_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_fault_voltage, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_fault_voltage, level_),
-  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_abnormal_param, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_abnormal_param, level_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_abnormal_param, duration_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_full_scale, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_full_scale, channel_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_full_scale, scale_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_judgement_mode, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_judgement_mode, mode_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_pzltrct_param, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -514,8 +406,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, fault_voltage_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, abnormal_param_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, full_scale_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, judgement_mode_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, pzltrct_param_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, axis_counting_param_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg, _internal_metadata_),
@@ -532,17 +422,13 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 33, -1, sizeof(::proto::AppMsg_item_id)},
   { 39, -1, sizeof(::proto::AppMsg_sensor_id)},
   { 46, -1, sizeof(::proto::AppMsg_sample_frequency)},
-  { 52, -1, sizeof(::proto::AppMsg_zero_offset)},
-  { 59, -1, sizeof(::proto::AppMsg_fault_voltage)},
-  { 65, -1, sizeof(::proto::AppMsg_abnormal_param)},
-  { 72, -1, sizeof(::proto::AppMsg_full_scale)},
-  { 79, -1, sizeof(::proto::AppMsg_judgement_mode)},
-  { 85, -1, sizeof(::proto::AppMsg_pzltrct_param)},
-  { 92, -1, sizeof(::proto::AppMsg_axis_counting_param)},
-  { 98, -1, sizeof(::proto::AppMsg_sample_card_num)},
-  { 104, -1, sizeof(::proto::AppMsg_adc_data)},
-  { 118, -1, sizeof(::proto::AppMsg_channel_info)},
-  { 131, -1, sizeof(::proto::AppMsg)},
+  { 52, -1, sizeof(::proto::AppMsg_abnormal_param)},
+  { 59, -1, sizeof(::proto::AppMsg_pzltrct_param)},
+  { 66, -1, sizeof(::proto::AppMsg_axis_counting_param)},
+  { 72, -1, sizeof(::proto::AppMsg_sample_card_num)},
+  { 78, -1, sizeof(::proto::AppMsg_adc_data)},
+  { 92, -1, sizeof(::proto::AppMsg_channel_info)},
+  { 103, -1, sizeof(::proto::AppMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -554,11 +440,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_item_id_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_sensor_id_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_sample_frequency_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_zero_offset_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_fault_voltage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_abnormal_param_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_full_scale_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_judgement_mode_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_pzltrct_param_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_axis_counting_param_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AppMsg_sample_card_num_default_instance_),
@@ -568,77 +450,59 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014AppMsg.proto\022\005proto\"\307\021\n\006AppMsg\032:\n\ndevi"
+  "\n\014AppMsg.proto\022\005proto\"\320\014\n\006AppMsg\032:\n\ndevi"
   "ce_add\022\n\n\002ip\030\001 \001(\t\022\017\n\007netmask\030\002 \001(\t\022\017\n\007g"
   "ateway\030\003 \001(\t\032&\n\nserver_add\022\n\n\002ip\030\001 \001(\t\022\014"
   "\n\004port\030\002 \001(\r\032\031\n\013platform_id\022\n\n\002id\030\001 \001(\r\032"
   "\030\n\nstation_id\022\n\n\002id\030\001 \001(\r\032\030\n\nturnout_id\022"
   "\n\n\002id\030\001 \001(\r\032\025\n\007item_id\022\n\n\002id\030\001 \001(\r\032(\n\tse"
   "nsor_id\022\017\n\007channel\030\001 \001(\r\022\n\n\002id\030\002 \001(\r\032%\n\020"
-  "sample_frequency\022\021\n\tfrequency\030\001 \001(\r\032.\n\013z"
-  "ero_offset\022\017\n\007channel\030\001 \001(\r\022\016\n\006offset\030\002 "
-  "\001(\r\032\036\n\rfault_voltage\022\r\n\005level\030\001 \001(\001\0321\n\016a"
+  "sample_frequency\022\021\n\tfrequency\030\001 \001(\r\0321\n\016a"
   "bnormal_param\022\r\n\005level\030\001 \001(\001\022\020\n\010duration"
-  "\030\002 \001(\r\032,\n\nfull_scale\022\017\n\007channel\030\001 \001(\r\022\r\n"
-  "\005scale\030\002 \001(\005\032\036\n\016judgement_mode\022\014\n\004mode\030\001"
-  " \001(\t\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001(\r"
-  "\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_para"
-  "m\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num\022\013"
-  "\n\003num\030\001 \001(\r\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\004\022\027"
-  "\n\017sample_card_num\030\002 \001(\r\022\030\n\020sample_freque"
-  "ncy\030\003 \001(\r\022\025\n\rsample_number\030\004 \001(\r\022\014\n\004data"
-  "\030\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.AppM"
-  "sg.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.pro"
-  "to.AppMsg.station_id\022,\n\nturnout_id\030\014 \001(\013"
-  "2\030.proto.AppMsg.turnout_id\022&\n\007item_id\030\r "
-  "\001(\0132\025.proto.AppMsg.item_id\032\221\003\n\014channel_i"
-  "nfo\022\017\n\007channel\030\001 \001(\r\022.\n\013zero_offset\030\002 \001("
-  "\0132\031.proto.AppMsg.zero_offset\0222\n\rfault_vo"
-  "ltage\030\003 \001(\0132\033.proto.AppMsg.fault_voltage"
-  "\0224\n\016abnormal_param\030\004 \001(\0132\034.proto.AppMsg."
-  "abnormal_param\022,\n\nfull_scale\030\005 \001(\0132\030.pro"
-  "to.AppMsg.full_scale\0224\n\016judgement_mode\030\006"
-  " \001(\0132\034.proto.AppMsg.judgement_mode\0222\n\rpz"
-  "ltrct_param\030\007 \001(\0132\033.proto.AppMsg.pzltrct"
-  "_param\022>\n\023axis_counting_param\030\010 \001(\0132!.pr"
-  "oto.AppMsg.axis_counting_param\"\226\007\n\003Cmd\022\010"
-  "\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016set_device_add"
-  "\020\013\022\022\n\016get_device_add\020\014\022\022\n\016set_server_add"
-  "\020\r\022\022\n\016get_server_add\020\016\022\023\n\017set_platform_i"
-  "d\020\017\022\023\n\017get_platform_id\020\020\022\022\n\016set_station_"
-  "id\020\021\022\022\n\016get_station_id\020\022\022\022\n\016set_turnout_"
-  "id\020\023\022\022\n\016get_turnout_id\020\024\022\017\n\013set_item_id\020"
-  "\025\022\017\n\013get_item_id\020\026\022\021\n\rset_sensor_id\020\027\022\021\n"
-  "\rget_sensor_id\020\030\022\030\n\024set_sample_frequency"
-  "\020\031\022\030\n\024get_sample_frequency\020\032\022\023\n\017set_zero"
-  "_offset\020\033\022\023\n\017get_zero_offset\020\034\022\025\n\021set_fa"
-  "ult_voltage\020\035\022\025\n\021get_fault_voltage\020\036\022\026\n\022"
-  "set_abnormal_param\020\037\022\026\n\022get_abnormal_par"
-  "am\020 \022\022\n\016set_full_scale\020!\022\022\n\016get_full_sca"
-  "le\020\"\022\026\n\022set_judgement_mode\020#\022\026\n\022get_judg"
-  "ement_mode\020$\022\025\n\021set_pzltrct_param\020%\022\025\n\021g"
-  "et_pzltrct_param\020&\022\033\n\027set_axis_counting_"
-  "param\020\'\022\033\n\027get_axis_counting_param\020(\022\027\n\023"
-  "set_sample_card_num\020)\022\027\n\023get_sample_card"
-  "_num\020*\022\024\n\020capture_adc_data\020+\022\032\n\026set_capt"
-  "ure_auto_state\020,\022\032\n\026get_capture_auto_sta"
-  "te\020-\022\024\n\020set_channel_info\020.\022\024\n\020get_channe"
-  "l_info\020/\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_ms"
-  "g\020\351\007\022\031\n\024ready_received_cache\020\352\007b\006proto3"
+  "\030\002 \001(\r\0324\n\rpzltrct_param\022\021\n\tthreshold\030\001 \001"
+  "(\r\022\020\n\010duration\030\002 \001(\r\032\'\n\023axis_counting_pa"
+  "ram\022\020\n\010duration\030\001 \001(\r\032\036\n\017sample_card_num"
+  "\022\013\n\003num\030\001 \001(\r\032\244\002\n\010adc_data\022\014\n\004time\030\001 \001(\004"
+  "\022\027\n\017sample_card_num\030\002 \001(\r\022\030\n\020sample_freq"
+  "uency\030\003 \001(\r\022\025\n\rsample_number\030\004 \001(\r\022\014\n\004da"
+  "ta\030\t \001(\014\022.\n\013platform_id\030\n \001(\0132\031.proto.Ap"
+  "pMsg.platform_id\022,\n\nstation_id\030\013 \001(\0132\030.p"
+  "roto.AppMsg.station_id\022,\n\nturnout_id\030\014 \001"
+  "(\0132\030.proto.AppMsg.turnout_id\022&\n\007item_id\030"
+  "\r \001(\0132\025.proto.AppMsg.item_id\032\325\001\n\014channel"
+  "_info\022\017\n\007channel\030\001 \001(\r\022\023\n\013zero_offset\030\002 "
+  "\001(\r\022\025\n\rfault_voltage\030\003 \001(\r\0224\n\016abnormal_p"
+  "aram\030\004 \001(\0132\034.proto.AppMsg.abnormal_param"
+  "\022\022\n\nfull_scale\030\005 \001(\r\022>\n\023axis_counting_pa"
+  "ram\030\006 \001(\0132!.proto.AppMsg.axis_counting_p"
+  "aram\"\371\004\n\003Cmd\022\010\n\004NONE\020\000\022\014\n\010RESERVED\020\n\022\022\n\016"
+  "set_device_add\020\013\022\022\n\016get_device_add\020\014\022\022\n\016"
+  "set_server_add\020\r\022\022\n\016get_server_add\020\016\022\023\n\017"
+  "set_platform_id\020\017\022\023\n\017get_platform_id\020\020\022\022"
+  "\n\016set_station_id\020\021\022\022\n\016get_station_id\020\022\022\022"
+  "\n\016set_turnout_id\020\023\022\022\n\016get_turnout_id\020\024\022\017"
+  "\n\013set_item_id\020\025\022\017\n\013get_item_id\020\026\022\021\n\rset_"
+  "sensor_id\020\027\022\021\n\rget_sensor_id\020\030\022\030\n\024set_sa"
+  "mple_frequency\020\031\022\030\n\024get_sample_frequency"
+  "\020\032\022\025\n\021set_pzltrct_param\020%\022\025\n\021get_pzltrct"
+  "_param\020&\022\027\n\023set_sample_card_num\020)\022\027\n\023get"
+  "_sample_card_num\020*\022\024\n\020capture_adc_data\020+"
+  "\022\024\n\020set_channel_info\020.\022\024\n\020get_channel_in"
+  "fo\020/\022\030\n\024ready_received_cache\0200\022\031\n\025set_fi"
+  "le_cache_enable\0201\022\031\n\025get_file_cache_enab"
+  "le\0202\022\022\n\rauto_adc_data\020\350\007\022\016\n\terror_msg\020\351\007"
+  "b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AppMsg_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AppMsg_2eproto_sccs[19] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AppMsg_2eproto_sccs[15] = {
   &scc_info_AppMsg_AppMsg_2eproto.base,
   &scc_info_AppMsg_abnormal_param_AppMsg_2eproto.base,
   &scc_info_AppMsg_adc_data_AppMsg_2eproto.base,
   &scc_info_AppMsg_axis_counting_param_AppMsg_2eproto.base,
   &scc_info_AppMsg_channel_info_AppMsg_2eproto.base,
   &scc_info_AppMsg_device_add_AppMsg_2eproto.base,
-  &scc_info_AppMsg_fault_voltage_AppMsg_2eproto.base,
-  &scc_info_AppMsg_full_scale_AppMsg_2eproto.base,
   &scc_info_AppMsg_item_id_AppMsg_2eproto.base,
-  &scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base,
   &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
   &scc_info_AppMsg_pzltrct_param_AppMsg_2eproto.base,
   &scc_info_AppMsg_sample_card_num_AppMsg_2eproto.base,
@@ -647,15 +511,14 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_App
   &scc_info_AppMsg_server_add_AppMsg_2eproto.base,
   &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
   &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
-  &scc_info_AppMsg_zero_offset_AppMsg_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AppMsg_2eproto_once;
 static bool descriptor_table_AppMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AppMsg_2eproto = {
-  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 2279,
-  &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 19, 0,
+  &descriptor_table_AppMsg_2eproto_initialized, descriptor_table_protodef_AppMsg_2eproto, "AppMsg.proto", 1648,
+  &descriptor_table_AppMsg_2eproto_once, descriptor_table_AppMsg_2eproto_sccs, descriptor_table_AppMsg_2eproto_deps, 15, 0,
   schemas, file_default_instances, TableStruct_AppMsg_2eproto::offsets,
-  file_level_metadata_AppMsg_2eproto, 19, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
+  file_level_metadata_AppMsg_2eproto, 15, file_level_enum_descriptors_AppMsg_2eproto, file_level_service_descriptors_AppMsg_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -685,30 +548,18 @@ bool AppMsg_Cmd_IsValid(int value) {
     case 24:
     case 25:
     case 26:
-    case 27:
-    case 28:
-    case 29:
-    case 30:
-    case 31:
-    case 32:
-    case 33:
-    case 34:
-    case 35:
-    case 36:
     case 37:
     case 38:
-    case 39:
-    case 40:
     case 41:
     case 42:
     case 43:
-    case 44:
-    case 45:
     case 46:
     case 47:
+    case 48:
+    case 49:
+    case 50:
     case 1000:
     case 1001:
-    case 1002:
       return true;
     default:
       return false;
@@ -734,30 +585,18 @@ constexpr AppMsg_Cmd AppMsg::set_sensor_id;
 constexpr AppMsg_Cmd AppMsg::get_sensor_id;
 constexpr AppMsg_Cmd AppMsg::set_sample_frequency;
 constexpr AppMsg_Cmd AppMsg::get_sample_frequency;
-constexpr AppMsg_Cmd AppMsg::set_zero_offset;
-constexpr AppMsg_Cmd AppMsg::get_zero_offset;
-constexpr AppMsg_Cmd AppMsg::set_fault_voltage;
-constexpr AppMsg_Cmd AppMsg::get_fault_voltage;
-constexpr AppMsg_Cmd AppMsg::set_abnormal_param;
-constexpr AppMsg_Cmd AppMsg::get_abnormal_param;
-constexpr AppMsg_Cmd AppMsg::set_full_scale;
-constexpr AppMsg_Cmd AppMsg::get_full_scale;
-constexpr AppMsg_Cmd AppMsg::set_judgement_mode;
-constexpr AppMsg_Cmd AppMsg::get_judgement_mode;
 constexpr AppMsg_Cmd AppMsg::set_pzltrct_param;
 constexpr AppMsg_Cmd AppMsg::get_pzltrct_param;
-constexpr AppMsg_Cmd AppMsg::set_axis_counting_param;
-constexpr AppMsg_Cmd AppMsg::get_axis_counting_param;
 constexpr AppMsg_Cmd AppMsg::set_sample_card_num;
 constexpr AppMsg_Cmd AppMsg::get_sample_card_num;
 constexpr AppMsg_Cmd AppMsg::capture_adc_data;
-constexpr AppMsg_Cmd AppMsg::set_capture_auto_state;
-constexpr AppMsg_Cmd AppMsg::get_capture_auto_state;
 constexpr AppMsg_Cmd AppMsg::set_channel_info;
 constexpr AppMsg_Cmd AppMsg::get_channel_info;
+constexpr AppMsg_Cmd AppMsg::ready_received_cache;
+constexpr AppMsg_Cmd AppMsg::set_file_cache_enable;
+constexpr AppMsg_Cmd AppMsg::get_file_cache_enable;
 constexpr AppMsg_Cmd AppMsg::auto_adc_data;
 constexpr AppMsg_Cmd AppMsg::error_msg;
-constexpr AppMsg_Cmd AppMsg::ready_received_cache;
 constexpr AppMsg_Cmd AppMsg::Cmd_MIN;
 constexpr AppMsg_Cmd AppMsg::Cmd_MAX;
 constexpr int AppMsg::Cmd_ARRAYSIZE;
@@ -3014,549 +2853,6 @@ void AppMsg_sample_frequency::InternalSwap(AppMsg_sample_frequency* other) {
 
 // ===================================================================
 
-void AppMsg_zero_offset::InitAsDefaultInstance() {
-}
-class AppMsg_zero_offset::_Internal {
- public:
-};
-
-AppMsg_zero_offset::AppMsg_zero_offset()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AppMsg.zero_offset)
-}
-AppMsg_zero_offset::AppMsg_zero_offset(const AppMsg_zero_offset& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&channel_, &from.channel_,
-    static_cast<size_t>(reinterpret_cast<char*>(&offset_) -
-    reinterpret_cast<char*>(&channel_)) + sizeof(offset_));
-  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.zero_offset)
-}
-
-void AppMsg_zero_offset::SharedCtor() {
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&offset_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(offset_));
-}
-
-AppMsg_zero_offset::~AppMsg_zero_offset() {
-  // @@protoc_insertion_point(destructor:proto.AppMsg.zero_offset)
-  SharedDtor();
-}
-
-void AppMsg_zero_offset::SharedDtor() {
-}
-
-void AppMsg_zero_offset::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AppMsg_zero_offset& AppMsg_zero_offset::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_zero_offset_AppMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AppMsg_zero_offset::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AppMsg.zero_offset)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&offset_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(offset_));
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AppMsg_zero_offset::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // uint32 channel = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // uint32 offset = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AppMsg_zero_offset::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AppMsg.zero_offset)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 channel = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &channel_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 offset = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &offset_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AppMsg.zero_offset)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AppMsg.zero_offset)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AppMsg_zero_offset::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AppMsg.zero_offset)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
-  }
-
-  // uint32 offset = 2;
-  if (this->offset() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->offset(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AppMsg.zero_offset)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_zero_offset::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.zero_offset)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
-  }
-
-  // uint32 offset = 2;
-  if (this->offset() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->offset(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.zero_offset)
-  return target;
-}
-
-size_t AppMsg_zero_offset::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.zero_offset)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->channel());
-  }
-
-  // uint32 offset = 2;
-  if (this->offset() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->offset());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AppMsg_zero_offset::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.zero_offset)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AppMsg_zero_offset* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_zero_offset>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.zero_offset)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.zero_offset)
-    MergeFrom(*source);
-  }
-}
-
-void AppMsg_zero_offset::MergeFrom(const AppMsg_zero_offset& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.zero_offset)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.channel() != 0) {
-    set_channel(from.channel());
-  }
-  if (from.offset() != 0) {
-    set_offset(from.offset());
-  }
-}
-
-void AppMsg_zero_offset::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.zero_offset)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AppMsg_zero_offset::CopyFrom(const AppMsg_zero_offset& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.zero_offset)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AppMsg_zero_offset::IsInitialized() const {
-  return true;
-}
-
-void AppMsg_zero_offset::InternalSwap(AppMsg_zero_offset* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(channel_, other->channel_);
-  swap(offset_, other->offset_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_zero_offset::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void AppMsg_fault_voltage::InitAsDefaultInstance() {
-}
-class AppMsg_fault_voltage::_Internal {
- public:
-};
-
-AppMsg_fault_voltage::AppMsg_fault_voltage()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AppMsg.fault_voltage)
-}
-AppMsg_fault_voltage::AppMsg_fault_voltage(const AppMsg_fault_voltage& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  level_ = from.level_;
-  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.fault_voltage)
-}
-
-void AppMsg_fault_voltage::SharedCtor() {
-  level_ = 0;
-}
-
-AppMsg_fault_voltage::~AppMsg_fault_voltage() {
-  // @@protoc_insertion_point(destructor:proto.AppMsg.fault_voltage)
-  SharedDtor();
-}
-
-void AppMsg_fault_voltage::SharedDtor() {
-}
-
-void AppMsg_fault_voltage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AppMsg_fault_voltage& AppMsg_fault_voltage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_fault_voltage_AppMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AppMsg_fault_voltage::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AppMsg.fault_voltage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  level_ = 0;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AppMsg_fault_voltage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // double level = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
-          level_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AppMsg_fault_voltage::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AppMsg.fault_voltage)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double level = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (9 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &level_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AppMsg.fault_voltage)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AppMsg.fault_voltage)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AppMsg_fault_voltage::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AppMsg.fault_voltage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(1, this->level(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AppMsg.fault_voltage)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_fault_voltage::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.fault_voltage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->level(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.fault_voltage)
-  return target;
-}
-
-size_t AppMsg_fault_voltage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.fault_voltage)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    total_size += 1 + 8;
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AppMsg_fault_voltage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.fault_voltage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AppMsg_fault_voltage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_fault_voltage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.fault_voltage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.fault_voltage)
-    MergeFrom(*source);
-  }
-}
-
-void AppMsg_fault_voltage::MergeFrom(const AppMsg_fault_voltage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.fault_voltage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (!(from.level() <= 0 && from.level() >= 0)) {
-    set_level(from.level());
-  }
-}
-
-void AppMsg_fault_voltage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.fault_voltage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AppMsg_fault_voltage::CopyFrom(const AppMsg_fault_voltage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.fault_voltage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AppMsg_fault_voltage::IsInitialized() const {
-  return true;
-}
-
-void AppMsg_fault_voltage::InternalSwap(AppMsg_fault_voltage* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(level_, other->level_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_fault_voltage::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 void AppMsg_abnormal_param::InitAsDefaultInstance() {
 }
 class AppMsg_abnormal_param::_Internal {
@@ -3845,571 +3141,6 @@ void AppMsg_abnormal_param::InternalSwap(AppMsg_abnormal_param* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_abnormal_param::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void AppMsg_full_scale::InitAsDefaultInstance() {
-}
-class AppMsg_full_scale::_Internal {
- public:
-};
-
-AppMsg_full_scale::AppMsg_full_scale()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AppMsg.full_scale)
-}
-AppMsg_full_scale::AppMsg_full_scale(const AppMsg_full_scale& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&channel_, &from.channel_,
-    static_cast<size_t>(reinterpret_cast<char*>(&scale_) -
-    reinterpret_cast<char*>(&channel_)) + sizeof(scale_));
-  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.full_scale)
-}
-
-void AppMsg_full_scale::SharedCtor() {
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&scale_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(scale_));
-}
-
-AppMsg_full_scale::~AppMsg_full_scale() {
-  // @@protoc_insertion_point(destructor:proto.AppMsg.full_scale)
-  SharedDtor();
-}
-
-void AppMsg_full_scale::SharedDtor() {
-}
-
-void AppMsg_full_scale::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AppMsg_full_scale& AppMsg_full_scale::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_full_scale_AppMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AppMsg_full_scale::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AppMsg.full_scale)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&channel_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&scale_) -
-      reinterpret_cast<char*>(&channel_)) + sizeof(scale_));
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AppMsg_full_scale::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // uint32 channel = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 scale = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          scale_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AppMsg_full_scale::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AppMsg.full_scale)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 channel = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &channel_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 scale = 2;
-      case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &scale_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AppMsg.full_scale)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AppMsg.full_scale)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AppMsg_full_scale::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AppMsg.full_scale)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
-  }
-
-  // int32 scale = 2;
-  if (this->scale() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->scale(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AppMsg.full_scale)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_full_scale::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.full_scale)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
-  }
-
-  // int32 scale = 2;
-  if (this->scale() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->scale(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.full_scale)
-  return target;
-}
-
-size_t AppMsg_full_scale::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.full_scale)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // uint32 channel = 1;
-  if (this->channel() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->channel());
-  }
-
-  // int32 scale = 2;
-  if (this->scale() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->scale());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AppMsg_full_scale::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.full_scale)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AppMsg_full_scale* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_full_scale>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.full_scale)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.full_scale)
-    MergeFrom(*source);
-  }
-}
-
-void AppMsg_full_scale::MergeFrom(const AppMsg_full_scale& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.full_scale)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.channel() != 0) {
-    set_channel(from.channel());
-  }
-  if (from.scale() != 0) {
-    set_scale(from.scale());
-  }
-}
-
-void AppMsg_full_scale::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.full_scale)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AppMsg_full_scale::CopyFrom(const AppMsg_full_scale& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.full_scale)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AppMsg_full_scale::IsInitialized() const {
-  return true;
-}
-
-void AppMsg_full_scale::InternalSwap(AppMsg_full_scale* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(channel_, other->channel_);
-  swap(scale_, other->scale_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_full_scale::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-void AppMsg_judgement_mode::InitAsDefaultInstance() {
-}
-class AppMsg_judgement_mode::_Internal {
- public:
-};
-
-AppMsg_judgement_mode::AppMsg_judgement_mode()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:proto.AppMsg.judgement_mode)
-}
-AppMsg_judgement_mode::AppMsg_judgement_mode(const AppMsg_judgement_mode& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  mode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from.mode().empty()) {
-    mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
-  }
-  // @@protoc_insertion_point(copy_constructor:proto.AppMsg.judgement_mode)
-}
-
-void AppMsg_judgement_mode::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base);
-  mode_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-AppMsg_judgement_mode::~AppMsg_judgement_mode() {
-  // @@protoc_insertion_point(destructor:proto.AppMsg.judgement_mode)
-  SharedDtor();
-}
-
-void AppMsg_judgement_mode::SharedDtor() {
-  mode_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void AppMsg_judgement_mode::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const AppMsg_judgement_mode& AppMsg_judgement_mode::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AppMsg_judgement_mode_AppMsg_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void AppMsg_judgement_mode::Clear() {
-// @@protoc_insertion_point(message_clear_start:proto.AppMsg.judgement_mode)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  mode_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AppMsg_judgement_mode::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // string mode = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_mode(), ptr, ctx, "proto.AppMsg.judgement_mode.mode");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AppMsg_judgement_mode::MergePartialFromCodedStream(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:proto.AppMsg.judgement_mode)
-  for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string mode = 1;
-      case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_mode()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->mode().data(), static_cast<int>(this->mode().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "proto.AppMsg.judgement_mode.mode"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:proto.AppMsg.judgement_mode)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:proto.AppMsg.judgement_mode)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void AppMsg_judgement_mode::SerializeWithCachedSizes(
-    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:proto.AppMsg.judgement_mode)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string mode = 1;
-  if (this->mode().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.AppMsg.judgement_mode.mode");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->mode(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:proto.AppMsg.judgement_mode)
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* AppMsg_judgement_mode::InternalSerializeWithCachedSizesToArray(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:proto.AppMsg.judgement_mode)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string mode = 1;
-  if (this->mode().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->mode().data(), static_cast<int>(this->mode().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "proto.AppMsg.judgement_mode.mode");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        1, this->mode(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:proto.AppMsg.judgement_mode)
-  return target;
-}
-
-size_t AppMsg_judgement_mode::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:proto.AppMsg.judgement_mode)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string mode = 1;
-  if (this->mode().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->mode());
-  }
-
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void AppMsg_judgement_mode::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:proto.AppMsg.judgement_mode)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AppMsg_judgement_mode* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppMsg_judgement_mode>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AppMsg.judgement_mode)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AppMsg.judgement_mode)
-    MergeFrom(*source);
-  }
-}
-
-void AppMsg_judgement_mode::MergeFrom(const AppMsg_judgement_mode& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:proto.AppMsg.judgement_mode)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.mode().size() > 0) {
-
-    mode_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.mode_);
-  }
-}
-
-void AppMsg_judgement_mode::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:proto.AppMsg.judgement_mode)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void AppMsg_judgement_mode::CopyFrom(const AppMsg_judgement_mode& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:proto.AppMsg.judgement_mode)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool AppMsg_judgement_mode::IsInitialized() const {
-  return true;
-}
-
-void AppMsg_judgement_mode::InternalSwap(AppMsg_judgement_mode* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  mode_.Swap(&other->mode_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_judgement_mode::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -5877,55 +4608,20 @@ void AppMsg_adc_data::InternalSwap(AppMsg_adc_data* other) {
 // ===================================================================
 
 void AppMsg_channel_info::InitAsDefaultInstance() {
-  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->zero_offset_ = const_cast< ::proto::AppMsg_zero_offset*>(
-      ::proto::AppMsg_zero_offset::internal_default_instance());
-  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->fault_voltage_ = const_cast< ::proto::AppMsg_fault_voltage*>(
-      ::proto::AppMsg_fault_voltage::internal_default_instance());
   ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->abnormal_param_ = const_cast< ::proto::AppMsg_abnormal_param*>(
       ::proto::AppMsg_abnormal_param::internal_default_instance());
-  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->full_scale_ = const_cast< ::proto::AppMsg_full_scale*>(
-      ::proto::AppMsg_full_scale::internal_default_instance());
-  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->judgement_mode_ = const_cast< ::proto::AppMsg_judgement_mode*>(
-      ::proto::AppMsg_judgement_mode::internal_default_instance());
-  ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->pzltrct_param_ = const_cast< ::proto::AppMsg_pzltrct_param*>(
-      ::proto::AppMsg_pzltrct_param::internal_default_instance());
   ::proto::_AppMsg_channel_info_default_instance_._instance.get_mutable()->axis_counting_param_ = const_cast< ::proto::AppMsg_axis_counting_param*>(
       ::proto::AppMsg_axis_counting_param::internal_default_instance());
 }
 class AppMsg_channel_info::_Internal {
  public:
-  static const ::proto::AppMsg_zero_offset& zero_offset(const AppMsg_channel_info* msg);
-  static const ::proto::AppMsg_fault_voltage& fault_voltage(const AppMsg_channel_info* msg);
   static const ::proto::AppMsg_abnormal_param& abnormal_param(const AppMsg_channel_info* msg);
-  static const ::proto::AppMsg_full_scale& full_scale(const AppMsg_channel_info* msg);
-  static const ::proto::AppMsg_judgement_mode& judgement_mode(const AppMsg_channel_info* msg);
-  static const ::proto::AppMsg_pzltrct_param& pzltrct_param(const AppMsg_channel_info* msg);
   static const ::proto::AppMsg_axis_counting_param& axis_counting_param(const AppMsg_channel_info* msg);
 };
 
-const ::proto::AppMsg_zero_offset&
-AppMsg_channel_info::_Internal::zero_offset(const AppMsg_channel_info* msg) {
-  return *msg->zero_offset_;
-}
-const ::proto::AppMsg_fault_voltage&
-AppMsg_channel_info::_Internal::fault_voltage(const AppMsg_channel_info* msg) {
-  return *msg->fault_voltage_;
-}
 const ::proto::AppMsg_abnormal_param&
 AppMsg_channel_info::_Internal::abnormal_param(const AppMsg_channel_info* msg) {
   return *msg->abnormal_param_;
-}
-const ::proto::AppMsg_full_scale&
-AppMsg_channel_info::_Internal::full_scale(const AppMsg_channel_info* msg) {
-  return *msg->full_scale_;
-}
-const ::proto::AppMsg_judgement_mode&
-AppMsg_channel_info::_Internal::judgement_mode(const AppMsg_channel_info* msg) {
-  return *msg->judgement_mode_;
-}
-const ::proto::AppMsg_pzltrct_param&
-AppMsg_channel_info::_Internal::pzltrct_param(const AppMsg_channel_info* msg) {
-  return *msg->pzltrct_param_;
 }
 const ::proto::AppMsg_axis_counting_param&
 AppMsg_channel_info::_Internal::axis_counting_param(const AppMsg_channel_info* msg) {
@@ -5940,50 +4636,27 @@ AppMsg_channel_info::AppMsg_channel_info(const AppMsg_channel_info& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_zero_offset()) {
-    zero_offset_ = new ::proto::AppMsg_zero_offset(*from.zero_offset_);
-  } else {
-    zero_offset_ = nullptr;
-  }
-  if (from.has_fault_voltage()) {
-    fault_voltage_ = new ::proto::AppMsg_fault_voltage(*from.fault_voltage_);
-  } else {
-    fault_voltage_ = nullptr;
-  }
   if (from.has_abnormal_param()) {
     abnormal_param_ = new ::proto::AppMsg_abnormal_param(*from.abnormal_param_);
   } else {
     abnormal_param_ = nullptr;
-  }
-  if (from.has_full_scale()) {
-    full_scale_ = new ::proto::AppMsg_full_scale(*from.full_scale_);
-  } else {
-    full_scale_ = nullptr;
-  }
-  if (from.has_judgement_mode()) {
-    judgement_mode_ = new ::proto::AppMsg_judgement_mode(*from.judgement_mode_);
-  } else {
-    judgement_mode_ = nullptr;
-  }
-  if (from.has_pzltrct_param()) {
-    pzltrct_param_ = new ::proto::AppMsg_pzltrct_param(*from.pzltrct_param_);
-  } else {
-    pzltrct_param_ = nullptr;
   }
   if (from.has_axis_counting_param()) {
     axis_counting_param_ = new ::proto::AppMsg_axis_counting_param(*from.axis_counting_param_);
   } else {
     axis_counting_param_ = nullptr;
   }
-  channel_ = from.channel_;
+  ::memcpy(&channel_, &from.channel_,
+    static_cast<size_t>(reinterpret_cast<char*>(&full_scale_) -
+    reinterpret_cast<char*>(&channel_)) + sizeof(full_scale_));
   // @@protoc_insertion_point(copy_constructor:proto.AppMsg.channel_info)
 }
 
 void AppMsg_channel_info::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AppMsg_channel_info_AppMsg_2eproto.base);
-  ::memset(&zero_offset_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&channel_) -
-      reinterpret_cast<char*>(&zero_offset_)) + sizeof(channel_));
+  ::memset(&abnormal_param_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&full_scale_) -
+      reinterpret_cast<char*>(&abnormal_param_)) + sizeof(full_scale_));
 }
 
 AppMsg_channel_info::~AppMsg_channel_info() {
@@ -5992,12 +4665,7 @@ AppMsg_channel_info::~AppMsg_channel_info() {
 }
 
 void AppMsg_channel_info::SharedDtor() {
-  if (this != internal_default_instance()) delete zero_offset_;
-  if (this != internal_default_instance()) delete fault_voltage_;
   if (this != internal_default_instance()) delete abnormal_param_;
-  if (this != internal_default_instance()) delete full_scale_;
-  if (this != internal_default_instance()) delete judgement_mode_;
-  if (this != internal_default_instance()) delete pzltrct_param_;
   if (this != internal_default_instance()) delete axis_counting_param_;
 }
 
@@ -6016,35 +4684,17 @@ void AppMsg_channel_info::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && zero_offset_ != nullptr) {
-    delete zero_offset_;
-  }
-  zero_offset_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && fault_voltage_ != nullptr) {
-    delete fault_voltage_;
-  }
-  fault_voltage_ = nullptr;
   if (GetArenaNoVirtual() == nullptr && abnormal_param_ != nullptr) {
     delete abnormal_param_;
   }
   abnormal_param_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && full_scale_ != nullptr) {
-    delete full_scale_;
-  }
-  full_scale_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && judgement_mode_ != nullptr) {
-    delete judgement_mode_;
-  }
-  judgement_mode_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pzltrct_param_ != nullptr) {
-    delete pzltrct_param_;
-  }
-  pzltrct_param_ = nullptr;
   if (GetArenaNoVirtual() == nullptr && axis_counting_param_ != nullptr) {
     delete axis_counting_param_;
   }
   axis_counting_param_ = nullptr;
-  channel_ = 0u;
+  ::memset(&channel_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&full_scale_) -
+      reinterpret_cast<char*>(&channel_)) + sizeof(full_scale_));
   _internal_metadata_.Clear();
 }
 
@@ -6063,17 +4713,17 @@ const char* AppMsg_channel_info::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.zero_offset zero_offset = 2;
+      // uint32 zero_offset = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(mutable_zero_offset(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          zero_offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.fault_voltage fault_voltage = 3;
+      // uint32 fault_voltage = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(mutable_fault_voltage(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          fault_voltage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6084,30 +4734,16 @@ const char* AppMsg_channel_info::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.full_scale full_scale = 5;
+      // uint32 full_scale = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(mutable_full_scale(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          full_scale_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.judgement_mode judgement_mode = 6;
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(mutable_judgement_mode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(mutable_pzltrct_param(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           ptr = ctx->ParseMessage(mutable_axis_counting_param(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -6155,22 +4791,26 @@ bool AppMsg_channel_info::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.zero_offset zero_offset = 2;
+      // uint32 zero_offset = 2;
       case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_zero_offset()));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &zero_offset_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .proto.AppMsg.fault_voltage fault_voltage = 3;
+      // uint32 fault_voltage = 3;
       case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_fault_voltage()));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &fault_voltage_)));
         } else {
           goto handle_unusual;
         }
@@ -6188,42 +4828,22 @@ bool AppMsg_channel_info::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.full_scale full_scale = 5;
+      // uint32 full_scale = 5;
       case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_full_scale()));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &full_scale_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .proto.AppMsg.judgement_mode judgement_mode = 6;
+      // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
       case 6: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_judgement_mode()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-               input, mutable_pzltrct_param()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_axis_counting_param()));
         } else {
@@ -6264,16 +4884,14 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->channel(), output);
   }
 
-  // .proto.AppMsg.zero_offset zero_offset = 2;
-  if (this->has_zero_offset()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, _Internal::zero_offset(this), output);
+  // uint32 zero_offset = 2;
+  if (this->zero_offset() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(2, this->zero_offset(), output);
   }
 
-  // .proto.AppMsg.fault_voltage fault_voltage = 3;
-  if (this->has_fault_voltage()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, _Internal::fault_voltage(this), output);
+  // uint32 fault_voltage = 3;
+  if (this->fault_voltage() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(3, this->fault_voltage(), output);
   }
 
   // .proto.AppMsg.abnormal_param abnormal_param = 4;
@@ -6282,28 +4900,15 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
       4, _Internal::abnormal_param(this), output);
   }
 
-  // .proto.AppMsg.full_scale full_scale = 5;
-  if (this->has_full_scale()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, _Internal::full_scale(this), output);
+  // uint32 full_scale = 5;
+  if (this->full_scale() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(5, this->full_scale(), output);
   }
 
-  // .proto.AppMsg.judgement_mode judgement_mode = 6;
-  if (this->has_judgement_mode()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, _Internal::judgement_mode(this), output);
-  }
-
-  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-  if (this->has_pzltrct_param()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, _Internal::pzltrct_param(this), output);
-  }
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
   if (this->has_axis_counting_param()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, _Internal::axis_counting_param(this), output);
+      6, _Internal::axis_counting_param(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6324,18 +4929,14 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->channel(), target);
   }
 
-  // .proto.AppMsg.zero_offset zero_offset = 2;
-  if (this->has_zero_offset()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, _Internal::zero_offset(this), target);
+  // uint32 zero_offset = 2;
+  if (this->zero_offset() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->zero_offset(), target);
   }
 
-  // .proto.AppMsg.fault_voltage fault_voltage = 3;
-  if (this->has_fault_voltage()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, _Internal::fault_voltage(this), target);
+  // uint32 fault_voltage = 3;
+  if (this->fault_voltage() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->fault_voltage(), target);
   }
 
   // .proto.AppMsg.abnormal_param abnormal_param = 4;
@@ -6345,32 +4946,16 @@ void AppMsg_channel_info::SerializeWithCachedSizes(
         4, _Internal::abnormal_param(this), target);
   }
 
-  // .proto.AppMsg.full_scale full_scale = 5;
-  if (this->has_full_scale()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, _Internal::full_scale(this), target);
+  // uint32 full_scale = 5;
+  if (this->full_scale() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(5, this->full_scale(), target);
   }
 
-  // .proto.AppMsg.judgement_mode judgement_mode = 6;
-  if (this->has_judgement_mode()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, _Internal::judgement_mode(this), target);
-  }
-
-  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-  if (this->has_pzltrct_param()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, _Internal::pzltrct_param(this), target);
-  }
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
   if (this->has_axis_counting_param()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        8, _Internal::axis_counting_param(this), target);
+        6, _Internal::axis_counting_param(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -6394,20 +4979,6 @@ size_t AppMsg_channel_info::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.AppMsg.zero_offset zero_offset = 2;
-  if (this->has_zero_offset()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *zero_offset_);
-  }
-
-  // .proto.AppMsg.fault_voltage fault_voltage = 3;
-  if (this->has_fault_voltage()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *fault_voltage_);
-  }
-
   // .proto.AppMsg.abnormal_param abnormal_param = 4;
   if (this->has_abnormal_param()) {
     total_size += 1 +
@@ -6415,28 +4986,7 @@ size_t AppMsg_channel_info::ByteSizeLong() const {
         *abnormal_param_);
   }
 
-  // .proto.AppMsg.full_scale full_scale = 5;
-  if (this->has_full_scale()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *full_scale_);
-  }
-
-  // .proto.AppMsg.judgement_mode judgement_mode = 6;
-  if (this->has_judgement_mode()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *judgement_mode_);
-  }
-
-  // .proto.AppMsg.pzltrct_param pzltrct_param = 7;
-  if (this->has_pzltrct_param()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pzltrct_param_);
-  }
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 8;
+  // .proto.AppMsg.axis_counting_param axis_counting_param = 6;
   if (this->has_axis_counting_param()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6448,6 +4998,27 @@ size_t AppMsg_channel_info::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->channel());
+  }
+
+  // uint32 zero_offset = 2;
+  if (this->zero_offset() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->zero_offset());
+  }
+
+  // uint32 fault_voltage = 3;
+  if (this->fault_voltage() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->fault_voltage());
+  }
+
+  // uint32 full_scale = 5;
+  if (this->full_scale() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->full_scale());
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -6477,29 +5048,23 @@ void AppMsg_channel_info::MergeFrom(const AppMsg_channel_info& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_zero_offset()) {
-    mutable_zero_offset()->::proto::AppMsg_zero_offset::MergeFrom(from.zero_offset());
-  }
-  if (from.has_fault_voltage()) {
-    mutable_fault_voltage()->::proto::AppMsg_fault_voltage::MergeFrom(from.fault_voltage());
-  }
   if (from.has_abnormal_param()) {
     mutable_abnormal_param()->::proto::AppMsg_abnormal_param::MergeFrom(from.abnormal_param());
-  }
-  if (from.has_full_scale()) {
-    mutable_full_scale()->::proto::AppMsg_full_scale::MergeFrom(from.full_scale());
-  }
-  if (from.has_judgement_mode()) {
-    mutable_judgement_mode()->::proto::AppMsg_judgement_mode::MergeFrom(from.judgement_mode());
-  }
-  if (from.has_pzltrct_param()) {
-    mutable_pzltrct_param()->::proto::AppMsg_pzltrct_param::MergeFrom(from.pzltrct_param());
   }
   if (from.has_axis_counting_param()) {
     mutable_axis_counting_param()->::proto::AppMsg_axis_counting_param::MergeFrom(from.axis_counting_param());
   }
   if (from.channel() != 0) {
     set_channel(from.channel());
+  }
+  if (from.zero_offset() != 0) {
+    set_zero_offset(from.zero_offset());
+  }
+  if (from.fault_voltage() != 0) {
+    set_fault_voltage(from.fault_voltage());
+  }
+  if (from.full_scale() != 0) {
+    set_full_scale(from.full_scale());
   }
 }
 
@@ -6524,14 +5089,12 @@ bool AppMsg_channel_info::IsInitialized() const {
 void AppMsg_channel_info::InternalSwap(AppMsg_channel_info* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(zero_offset_, other->zero_offset_);
-  swap(fault_voltage_, other->fault_voltage_);
   swap(abnormal_param_, other->abnormal_param_);
-  swap(full_scale_, other->full_scale_);
-  swap(judgement_mode_, other->judgement_mode_);
-  swap(pzltrct_param_, other->pzltrct_param_);
   swap(axis_counting_param_, other->axis_counting_param_);
   swap(channel_, other->channel_);
+  swap(zero_offset_, other->zero_offset_);
+  swap(fault_voltage_, other->fault_voltage_);
+  swap(full_scale_, other->full_scale_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppMsg_channel_info::GetMetadata() const {
@@ -6765,20 +5328,8 @@ template<> PROTOBUF_NOINLINE ::proto::AppMsg_sensor_id* Arena::CreateMaybeMessag
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_sample_frequency* Arena::CreateMaybeMessage< ::proto::AppMsg_sample_frequency >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_sample_frequency >(arena);
 }
-template<> PROTOBUF_NOINLINE ::proto::AppMsg_zero_offset* Arena::CreateMaybeMessage< ::proto::AppMsg_zero_offset >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AppMsg_zero_offset >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::AppMsg_fault_voltage* Arena::CreateMaybeMessage< ::proto::AppMsg_fault_voltage >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AppMsg_fault_voltage >(arena);
-}
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_abnormal_param* Arena::CreateMaybeMessage< ::proto::AppMsg_abnormal_param >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_abnormal_param >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::AppMsg_full_scale* Arena::CreateMaybeMessage< ::proto::AppMsg_full_scale >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AppMsg_full_scale >(arena);
-}
-template<> PROTOBUF_NOINLINE ::proto::AppMsg_judgement_mode* Arena::CreateMaybeMessage< ::proto::AppMsg_judgement_mode >(Arena* arena) {
-  return Arena::CreateInternal< ::proto::AppMsg_judgement_mode >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMessage< ::proto::AppMsg_pzltrct_param >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AppMsg_pzltrct_param >(arena);
