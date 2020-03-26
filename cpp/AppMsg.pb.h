@@ -48,7 +48,7 @@ struct TableStruct_AppMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[16]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -65,9 +65,6 @@ extern AppMsg_abnormal_paramDefaultTypeInternal _AppMsg_abnormal_param_default_i
 class AppMsg_adc_data;
 class AppMsg_adc_dataDefaultTypeInternal;
 extern AppMsg_adc_dataDefaultTypeInternal _AppMsg_adc_data_default_instance_;
-class AppMsg_axis_counting_param;
-class AppMsg_axis_counting_paramDefaultTypeInternal;
-extern AppMsg_axis_counting_paramDefaultTypeInternal _AppMsg_axis_counting_param_default_instance_;
 class AppMsg_channel_info;
 class AppMsg_channel_infoDefaultTypeInternal;
 extern AppMsg_channel_infoDefaultTypeInternal _AppMsg_channel_info_default_instance_;
@@ -80,12 +77,12 @@ extern AppMsg_file_cache_enableDefaultTypeInternal _AppMsg_file_cache_enable_def
 class AppMsg_item_id;
 class AppMsg_item_idDefaultTypeInternal;
 extern AppMsg_item_idDefaultTypeInternal _AppMsg_item_id_default_instance_;
+class AppMsg_pass_param;
+class AppMsg_pass_paramDefaultTypeInternal;
+extern AppMsg_pass_paramDefaultTypeInternal _AppMsg_pass_param_default_instance_;
 class AppMsg_platform_id;
 class AppMsg_platform_idDefaultTypeInternal;
 extern AppMsg_platform_idDefaultTypeInternal _AppMsg_platform_id_default_instance_;
-class AppMsg_pzltrct_param;
-class AppMsg_pzltrct_paramDefaultTypeInternal;
-extern AppMsg_pzltrct_paramDefaultTypeInternal _AppMsg_pzltrct_param_default_instance_;
 class AppMsg_sample_card_num;
 class AppMsg_sample_card_numDefaultTypeInternal;
 extern AppMsg_sample_card_numDefaultTypeInternal _AppMsg_sample_card_num_default_instance_;
@@ -109,13 +106,12 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::AppMsg* Arena::CreateMaybeMessage<::proto::AppMsg>(Arena*);
 template<> ::proto::AppMsg_abnormal_param* Arena::CreateMaybeMessage<::proto::AppMsg_abnormal_param>(Arena*);
 template<> ::proto::AppMsg_adc_data* Arena::CreateMaybeMessage<::proto::AppMsg_adc_data>(Arena*);
-template<> ::proto::AppMsg_axis_counting_param* Arena::CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(Arena*);
 template<> ::proto::AppMsg_channel_info* Arena::CreateMaybeMessage<::proto::AppMsg_channel_info>(Arena*);
 template<> ::proto::AppMsg_device_add* Arena::CreateMaybeMessage<::proto::AppMsg_device_add>(Arena*);
 template<> ::proto::AppMsg_file_cache_enable* Arena::CreateMaybeMessage<::proto::AppMsg_file_cache_enable>(Arena*);
 template<> ::proto::AppMsg_item_id* Arena::CreateMaybeMessage<::proto::AppMsg_item_id>(Arena*);
+template<> ::proto::AppMsg_pass_param* Arena::CreateMaybeMessage<::proto::AppMsg_pass_param>(Arena*);
 template<> ::proto::AppMsg_platform_id* Arena::CreateMaybeMessage<::proto::AppMsg_platform_id>(Arena*);
-template<> ::proto::AppMsg_pzltrct_param* Arena::CreateMaybeMessage<::proto::AppMsg_pzltrct_param>(Arena*);
 template<> ::proto::AppMsg_sample_card_num* Arena::CreateMaybeMessage<::proto::AppMsg_sample_card_num>(Arena*);
 template<> ::proto::AppMsg_sample_frequency* Arena::CreateMaybeMessage<::proto::AppMsg_sample_frequency>(Arena*);
 template<> ::proto::AppMsg_sensor_id* Arena::CreateMaybeMessage<::proto::AppMsg_sensor_id>(Arena*);
@@ -144,8 +140,8 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_get_sensor_id = 24,
   AppMsg_Cmd_set_sample_frequency = 25,
   AppMsg_Cmd_get_sample_frequency = 26,
-  AppMsg_Cmd_set_pzltrct_param = 37,
-  AppMsg_Cmd_get_pzltrct_param = 38,
+  AppMsg_Cmd_set_pass_param = 37,
+  AppMsg_Cmd_get_pass_param = 38,
   AppMsg_Cmd_set_sample_card_num = 41,
   AppMsg_Cmd_get_sample_card_num = 42,
   AppMsg_Cmd_capture_adc_data = 43,
@@ -156,12 +152,13 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_auto_adc_data = 1000,
   AppMsg_Cmd_error_msg = 1001,
   AppMsg_Cmd_ready_received_cache = 1002,
+  AppMsg_Cmd_pass_duration_trigger = 1003,
   AppMsg_Cmd_AppMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   AppMsg_Cmd_AppMsg_Cmd_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool AppMsg_Cmd_IsValid(int value);
 constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MIN = AppMsg_Cmd_NONE;
-constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_ready_received_cache;
+constexpr AppMsg_Cmd AppMsg_Cmd_Cmd_MAX = AppMsg_Cmd_pass_duration_trigger;
 constexpr int AppMsg_Cmd_Cmd_ARRAYSIZE = AppMsg_Cmd_Cmd_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AppMsg_Cmd_descriptor();
@@ -602,17 +599,23 @@ class AppMsg_platform_id :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // uint32 id = 1;
+  // string id = 1;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.platform_id)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -733,17 +736,23 @@ class AppMsg_station_id :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // uint32 id = 1;
+  // string id = 1;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.station_id)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -864,17 +873,23 @@ class AppMsg_turnout_id :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // uint32 id = 1;
+  // string id = 1;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.turnout_id)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -995,17 +1010,23 @@ class AppMsg_item_id :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // uint32 id = 1;
+  // string id = 1;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.item_id)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -1124,26 +1145,25 @@ class AppMsg_sensor_id :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kChannelFieldNumber = 1,
     kIdFieldNumber = 2,
   };
-  // uint32 channel = 1;
-  void clear_channel();
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel() const;
-  void set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // uint32 id = 2;
+  // string id = 2;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
 
   // @@protoc_insertion_point(class_scope:proto.AppMsg.sensor_id)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
 };
@@ -1418,23 +1438,23 @@ class AppMsg_abnormal_param :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_pzltrct_param :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.pzltrct_param) */ {
+class AppMsg_pass_param :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.pass_param) */ {
  public:
-  AppMsg_pzltrct_param();
-  virtual ~AppMsg_pzltrct_param();
+  AppMsg_pass_param();
+  virtual ~AppMsg_pass_param();
 
-  AppMsg_pzltrct_param(const AppMsg_pzltrct_param& from);
-  AppMsg_pzltrct_param(AppMsg_pzltrct_param&& from) noexcept
-    : AppMsg_pzltrct_param() {
+  AppMsg_pass_param(const AppMsg_pass_param& from);
+  AppMsg_pass_param(AppMsg_pass_param&& from) noexcept
+    : AppMsg_pass_param() {
     *this = ::std::move(from);
   }
 
-  inline AppMsg_pzltrct_param& operator=(const AppMsg_pzltrct_param& from) {
+  inline AppMsg_pass_param& operator=(const AppMsg_pass_param& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AppMsg_pzltrct_param& operator=(AppMsg_pzltrct_param&& from) noexcept {
+  inline AppMsg_pass_param& operator=(AppMsg_pass_param&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -1452,37 +1472,37 @@ class AppMsg_pzltrct_param :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AppMsg_pzltrct_param& default_instance();
+  static const AppMsg_pass_param& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_pzltrct_param* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_pzltrct_param*>(
-               &_AppMsg_pzltrct_param_default_instance_);
+  static inline const AppMsg_pass_param* internal_default_instance() {
+    return reinterpret_cast<const AppMsg_pass_param*>(
+               &_AppMsg_pass_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(AppMsg_pzltrct_param& a, AppMsg_pzltrct_param& b) {
+  friend void swap(AppMsg_pass_param& a, AppMsg_pass_param& b) {
     a.Swap(&b);
   }
-  inline void Swap(AppMsg_pzltrct_param* other) {
+  inline void Swap(AppMsg_pass_param* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AppMsg_pzltrct_param* New() const final {
-    return CreateMaybeMessage<AppMsg_pzltrct_param>(nullptr);
+  inline AppMsg_pass_param* New() const final {
+    return CreateMaybeMessage<AppMsg_pass_param>(nullptr);
   }
 
-  AppMsg_pzltrct_param* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_pzltrct_param>(arena);
+  AppMsg_pass_param* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppMsg_pass_param>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_pzltrct_param& from);
-  void MergeFrom(const AppMsg_pzltrct_param& from);
+  void CopyFrom(const AppMsg_pass_param& from);
+  void MergeFrom(const AppMsg_pass_param& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -1503,10 +1523,10 @@ class AppMsg_pzltrct_param :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_pzltrct_param* other);
+  void InternalSwap(AppMsg_pass_param* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.pzltrct_param";
+    return "proto.AppMsg.pass_param";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -1544,143 +1564,12 @@ class AppMsg_pzltrct_param :
   ::PROTOBUF_NAMESPACE_ID::uint32 duration() const;
   void set_duration(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.pzltrct_param)
+  // @@protoc_insertion_point(class_scope:proto.AppMsg.pass_param)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::uint32 threshold_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 duration_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class AppMsg_axis_counting_param :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.axis_counting_param) */ {
- public:
-  AppMsg_axis_counting_param();
-  virtual ~AppMsg_axis_counting_param();
-
-  AppMsg_axis_counting_param(const AppMsg_axis_counting_param& from);
-  AppMsg_axis_counting_param(AppMsg_axis_counting_param&& from) noexcept
-    : AppMsg_axis_counting_param() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_axis_counting_param& operator=(const AppMsg_axis_counting_param& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_axis_counting_param& operator=(AppMsg_axis_counting_param&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_axis_counting_param& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_axis_counting_param* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_axis_counting_param*>(
-               &_AppMsg_axis_counting_param_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(AppMsg_axis_counting_param& a, AppMsg_axis_counting_param& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_axis_counting_param* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_axis_counting_param* New() const final {
-    return CreateMaybeMessage<AppMsg_axis_counting_param>(nullptr);
-  }
-
-  AppMsg_axis_counting_param* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_axis_counting_param>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_axis_counting_param& from);
-  void MergeFrom(const AppMsg_axis_counting_param& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_axis_counting_param* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.axis_counting_param";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kDurationFieldNumber = 1,
-  };
-  // uint32 duration = 1;
-  void clear_duration();
-  ::PROTOBUF_NAMESPACE_ID::uint32 duration() const;
-  void set_duration(::PROTOBUF_NAMESPACE_ID::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.axis_counting_param)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::uint32 duration_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
@@ -1729,7 +1618,7 @@ class AppMsg_sample_card_num :
                &_AppMsg_sample_card_num_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(AppMsg_sample_card_num& a, AppMsg_sample_card_num& b) {
     a.Swap(&b);
@@ -1860,7 +1749,7 @@ class AppMsg_file_cache_enable :
                &_AppMsg_file_cache_enable_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
   friend void swap(AppMsg_file_cache_enable& a, AppMsg_file_cache_enable& b) {
     a.Swap(&b);
@@ -1991,7 +1880,7 @@ class AppMsg_adc_data :
                &_AppMsg_adc_data_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    12;
 
   friend void swap(AppMsg_adc_data& a, AppMsg_adc_data& b) {
     a.Swap(&b);
@@ -2215,7 +2104,7 @@ class AppMsg_channel_info :
                &_AppMsg_channel_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    13;
 
   friend void swap(AppMsg_channel_info& a, AppMsg_channel_info& b) {
     a.Swap(&b);
@@ -2286,29 +2175,20 @@ class AppMsg_channel_info :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAbnormalParamFieldNumber = 11,
-    kAxisCountingParamFieldNumber = 12,
+    kAbnormalParamFieldNumber = 6,
     kChannelFieldNumber = 1,
     kOffsetZeroFieldNumber = 2,
     kOffsetMaxVolFieldNumber = 3,
     kOffsetMaxVolAdFieldNumber = 4,
-    kFaultVoltageFieldNumber = 10,
+    kFaultVoltageFieldNumber = 5,
   };
-  // .proto.AppMsg.abnormal_param abnormal_param = 11;
+  // .proto.AppMsg.abnormal_param abnormal_param = 6;
   bool has_abnormal_param() const;
   void clear_abnormal_param();
   const ::proto::AppMsg_abnormal_param& abnormal_param() const;
   ::proto::AppMsg_abnormal_param* release_abnormal_param();
   ::proto::AppMsg_abnormal_param* mutable_abnormal_param();
   void set_allocated_abnormal_param(::proto::AppMsg_abnormal_param* abnormal_param);
-
-  // .proto.AppMsg.axis_counting_param axis_counting_param = 12;
-  bool has_axis_counting_param() const;
-  void clear_axis_counting_param();
-  const ::proto::AppMsg_axis_counting_param& axis_counting_param() const;
-  ::proto::AppMsg_axis_counting_param* release_axis_counting_param();
-  ::proto::AppMsg_axis_counting_param* mutable_axis_counting_param();
-  void set_allocated_axis_counting_param(::proto::AppMsg_axis_counting_param* axis_counting_param);
 
   // uint32 channel = 1;
   void clear_channel();
@@ -2330,7 +2210,7 @@ class AppMsg_channel_info :
   ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol_ad() const;
   void set_offset_max_vol_ad(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
-  // uint32 fault_voltage = 10;
+  // uint32 fault_voltage = 5;
   void clear_fault_voltage();
   ::PROTOBUF_NAMESPACE_ID::uint32 fault_voltage() const;
   void set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint32 value);
@@ -2341,7 +2221,6 @@ class AppMsg_channel_info :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::proto::AppMsg_abnormal_param* abnormal_param_;
-  ::proto::AppMsg_axis_counting_param* axis_counting_param_;
   ::PROTOBUF_NAMESPACE_ID::uint32 channel_;
   ::PROTOBUF_NAMESPACE_ID::uint32 offset_zero_;
   ::PROTOBUF_NAMESPACE_ID::uint32 offset_max_vol_;
@@ -2394,7 +2273,7 @@ class AppMsg :
                &_AppMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    14;
 
   friend void swap(AppMsg& a, AppMsg& b) {
     a.Swap(&b);
@@ -2471,8 +2350,7 @@ class AppMsg :
   typedef AppMsg_sensor_id sensor_id;
   typedef AppMsg_sample_frequency sample_frequency;
   typedef AppMsg_abnormal_param abnormal_param;
-  typedef AppMsg_pzltrct_param pzltrct_param;
-  typedef AppMsg_axis_counting_param axis_counting_param;
+  typedef AppMsg_pass_param pass_param;
   typedef AppMsg_sample_card_num sample_card_num;
   typedef AppMsg_file_cache_enable file_cache_enable;
   typedef AppMsg_adc_data adc_data;
@@ -2515,10 +2393,10 @@ class AppMsg :
     AppMsg_Cmd_set_sample_frequency;
   static constexpr Cmd get_sample_frequency =
     AppMsg_Cmd_get_sample_frequency;
-  static constexpr Cmd set_pzltrct_param =
-    AppMsg_Cmd_set_pzltrct_param;
-  static constexpr Cmd get_pzltrct_param =
-    AppMsg_Cmd_get_pzltrct_param;
+  static constexpr Cmd set_pass_param =
+    AppMsg_Cmd_set_pass_param;
+  static constexpr Cmd get_pass_param =
+    AppMsg_Cmd_get_pass_param;
   static constexpr Cmd set_sample_card_num =
     AppMsg_Cmd_set_sample_card_num;
   static constexpr Cmd get_sample_card_num =
@@ -2539,6 +2417,8 @@ class AppMsg :
     AppMsg_Cmd_error_msg;
   static constexpr Cmd ready_received_cache =
     AppMsg_Cmd_ready_received_cache;
+  static constexpr Cmd pass_duration_trigger =
+    AppMsg_Cmd_pass_duration_trigger;
   static inline bool Cmd_IsValid(int value) {
     return AppMsg_Cmd_IsValid(value);
   }
@@ -2811,104 +2691,275 @@ inline void AppMsg_server_add::set_port(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // AppMsg_platform_id
 
-// uint32 id = 1;
+// string id = 1;
 inline void AppMsg_platform_id::clear_id() {
-  id_ = 0u;
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_platform_id::id() const {
+inline const std::string& AppMsg_platform_id::id() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.platform_id.id)
-  return id_;
+  return id_.GetNoArena();
 }
-inline void AppMsg_platform_id::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_platform_id::set_id(const std::string& value) {
   
-  id_ = value;
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:proto.AppMsg.platform_id.id)
+}
+inline void AppMsg_platform_id::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.platform_id.id)
+}
+inline void AppMsg_platform_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AppMsg.platform_id.id)
+}
+inline void AppMsg_platform_id::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.platform_id.id)
+}
+inline std::string* AppMsg_platform_id::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.platform_id.id)
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AppMsg_platform_id::release_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.platform_id.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AppMsg_platform_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.platform_id.id)
 }
 
 // -------------------------------------------------------------------
 
 // AppMsg_station_id
 
-// uint32 id = 1;
+// string id = 1;
 inline void AppMsg_station_id::clear_id() {
-  id_ = 0u;
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_station_id::id() const {
+inline const std::string& AppMsg_station_id::id() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.station_id.id)
-  return id_;
+  return id_.GetNoArena();
 }
-inline void AppMsg_station_id::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_station_id::set_id(const std::string& value) {
   
-  id_ = value;
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:proto.AppMsg.station_id.id)
+}
+inline void AppMsg_station_id::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.station_id.id)
+}
+inline void AppMsg_station_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AppMsg.station_id.id)
+}
+inline void AppMsg_station_id::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.station_id.id)
+}
+inline std::string* AppMsg_station_id::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.station_id.id)
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AppMsg_station_id::release_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.station_id.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AppMsg_station_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.station_id.id)
 }
 
 // -------------------------------------------------------------------
 
 // AppMsg_turnout_id
 
-// uint32 id = 1;
+// string id = 1;
 inline void AppMsg_turnout_id::clear_id() {
-  id_ = 0u;
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_turnout_id::id() const {
+inline const std::string& AppMsg_turnout_id::id() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.turnout_id.id)
-  return id_;
+  return id_.GetNoArena();
 }
-inline void AppMsg_turnout_id::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_turnout_id::set_id(const std::string& value) {
   
-  id_ = value;
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:proto.AppMsg.turnout_id.id)
+}
+inline void AppMsg_turnout_id::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.turnout_id.id)
+}
+inline void AppMsg_turnout_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AppMsg.turnout_id.id)
+}
+inline void AppMsg_turnout_id::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.turnout_id.id)
+}
+inline std::string* AppMsg_turnout_id::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.turnout_id.id)
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AppMsg_turnout_id::release_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.turnout_id.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AppMsg_turnout_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.turnout_id.id)
 }
 
 // -------------------------------------------------------------------
 
 // AppMsg_item_id
 
-// uint32 id = 1;
+// string id = 1;
 inline void AppMsg_item_id::clear_id() {
-  id_ = 0u;
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_item_id::id() const {
+inline const std::string& AppMsg_item_id::id() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.item_id.id)
-  return id_;
+  return id_.GetNoArena();
 }
-inline void AppMsg_item_id::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_item_id::set_id(const std::string& value) {
   
-  id_ = value;
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:proto.AppMsg.item_id.id)
+}
+inline void AppMsg_item_id::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.item_id.id)
+}
+inline void AppMsg_item_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AppMsg.item_id.id)
+}
+inline void AppMsg_item_id::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.item_id.id)
+}
+inline std::string* AppMsg_item_id::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.item_id.id)
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AppMsg_item_id::release_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.item_id.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AppMsg_item_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.item_id.id)
 }
 
 // -------------------------------------------------------------------
 
 // AppMsg_sensor_id
 
-// uint32 channel = 1;
-inline void AppMsg_sensor_id::clear_channel() {
-  channel_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_sensor_id::channel() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.sensor_id.channel)
-  return channel_;
-}
-inline void AppMsg_sensor_id::set_channel(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  channel_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.sensor_id.channel)
-}
-
-// uint32 id = 2;
+// string id = 2;
 inline void AppMsg_sensor_id::clear_id() {
-  id_ = 0u;
+  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_sensor_id::id() const {
+inline const std::string& AppMsg_sensor_id::id() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.sensor_id.id)
-  return id_;
+  return id_.GetNoArena();
 }
-inline void AppMsg_sensor_id::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_sensor_id::set_id(const std::string& value) {
   
-  id_ = value;
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:proto.AppMsg.sensor_id.id)
+}
+inline void AppMsg_sensor_id::set_id(std::string&& value) {
+  
+  id_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.sensor_id.id)
+}
+inline void AppMsg_sensor_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AppMsg.sensor_id.id)
+}
+inline void AppMsg_sensor_id::set_id(const char* value, size_t size) {
+  
+  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.sensor_id.id)
+}
+inline std::string* AppMsg_sensor_id::mutable_id() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.sensor_id.id)
+  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AppMsg_sensor_id::release_id() {
+  // @@protoc_insertion_point(field_release:proto.AppMsg.sensor_id.id)
+  
+  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AppMsg_sensor_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
+  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.sensor_id.id)
 }
 
 // -------------------------------------------------------------------
@@ -2963,52 +3014,34 @@ inline void AppMsg_abnormal_param::set_duration(::PROTOBUF_NAMESPACE_ID::uint32 
 
 // -------------------------------------------------------------------
 
-// AppMsg_pzltrct_param
+// AppMsg_pass_param
 
 // uint32 threshold = 1;
-inline void AppMsg_pzltrct_param::clear_threshold() {
+inline void AppMsg_pass_param::clear_threshold() {
   threshold_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_pzltrct_param::threshold() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.pzltrct_param.threshold)
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_pass_param::threshold() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.pass_param.threshold)
   return threshold_;
 }
-inline void AppMsg_pzltrct_param::set_threshold(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_pass_param::set_threshold(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   threshold_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.pzltrct_param.threshold)
+  // @@protoc_insertion_point(field_set:proto.AppMsg.pass_param.threshold)
 }
 
 // uint32 duration = 2;
-inline void AppMsg_pzltrct_param::clear_duration() {
+inline void AppMsg_pass_param::clear_duration() {
   duration_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_pzltrct_param::duration() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.pzltrct_param.duration)
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_pass_param::duration() const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.pass_param.duration)
   return duration_;
 }
-inline void AppMsg_pzltrct_param::set_duration(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void AppMsg_pass_param::set_duration(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   duration_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.pzltrct_param.duration)
-}
-
-// -------------------------------------------------------------------
-
-// AppMsg_axis_counting_param
-
-// uint32 duration = 1;
-inline void AppMsg_axis_counting_param::clear_duration() {
-  duration_ = 0u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_axis_counting_param::duration() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.axis_counting_param.duration)
-  return duration_;
-}
-inline void AppMsg_axis_counting_param::set_duration(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  duration_ = value;
-  // @@protoc_insertion_point(field_set:proto.AppMsg.axis_counting_param.duration)
+  // @@protoc_insertion_point(field_set:proto.AppMsg.pass_param.duration)
 }
 
 // -------------------------------------------------------------------
@@ -3466,7 +3499,7 @@ inline void AppMsg_channel_info::set_offset_max_vol_ad(::PROTOBUF_NAMESPACE_ID::
   // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.offset_max_vol_ad)
 }
 
-// uint32 fault_voltage = 10;
+// uint32 fault_voltage = 5;
 inline void AppMsg_channel_info::clear_fault_voltage() {
   fault_voltage_ = 0u;
 }
@@ -3480,7 +3513,7 @@ inline void AppMsg_channel_info::set_fault_voltage(::PROTOBUF_NAMESPACE_ID::uint
   // @@protoc_insertion_point(field_set:proto.AppMsg.channel_info.fault_voltage)
 }
 
-// .proto.AppMsg.abnormal_param abnormal_param = 11;
+// .proto.AppMsg.abnormal_param abnormal_param = 6;
 inline bool AppMsg_channel_info::has_abnormal_param() const {
   return this != internal_default_instance() && abnormal_param_ != nullptr;
 }
@@ -3531,57 +3564,6 @@ inline void AppMsg_channel_info::set_allocated_abnormal_param(::proto::AppMsg_ab
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.abnormal_param)
 }
 
-// .proto.AppMsg.axis_counting_param axis_counting_param = 12;
-inline bool AppMsg_channel_info::has_axis_counting_param() const {
-  return this != internal_default_instance() && axis_counting_param_ != nullptr;
-}
-inline void AppMsg_channel_info::clear_axis_counting_param() {
-  if (GetArenaNoVirtual() == nullptr && axis_counting_param_ != nullptr) {
-    delete axis_counting_param_;
-  }
-  axis_counting_param_ = nullptr;
-}
-inline const ::proto::AppMsg_axis_counting_param& AppMsg_channel_info::axis_counting_param() const {
-  const ::proto::AppMsg_axis_counting_param* p = axis_counting_param_;
-  // @@protoc_insertion_point(field_get:proto.AppMsg.channel_info.axis_counting_param)
-  return p != nullptr ? *p : *reinterpret_cast<const ::proto::AppMsg_axis_counting_param*>(
-      &::proto::_AppMsg_axis_counting_param_default_instance_);
-}
-inline ::proto::AppMsg_axis_counting_param* AppMsg_channel_info::release_axis_counting_param() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.channel_info.axis_counting_param)
-  
-  ::proto::AppMsg_axis_counting_param* temp = axis_counting_param_;
-  axis_counting_param_ = nullptr;
-  return temp;
-}
-inline ::proto::AppMsg_axis_counting_param* AppMsg_channel_info::mutable_axis_counting_param() {
-  
-  if (axis_counting_param_ == nullptr) {
-    auto* p = CreateMaybeMessage<::proto::AppMsg_axis_counting_param>(GetArenaNoVirtual());
-    axis_counting_param_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.channel_info.axis_counting_param)
-  return axis_counting_param_;
-}
-inline void AppMsg_channel_info::set_allocated_axis_counting_param(::proto::AppMsg_axis_counting_param* axis_counting_param) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete axis_counting_param_;
-  }
-  if (axis_counting_param) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      axis_counting_param = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, axis_counting_param, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  axis_counting_param_ = axis_counting_param;
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.channel_info.axis_counting_param)
-}
-
 // -------------------------------------------------------------------
 
 // AppMsg
@@ -3589,8 +3571,6 @@ inline void AppMsg_channel_info::set_allocated_axis_counting_param(::proto::AppM
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -32,8 +32,8 @@ message AppMsg {
         set_sample_frequency = 25;  // 设置数据采集模块的低速采样频率
         get_sample_frequency = 26;
 
-        set_pzltrct_param = 37;     // 设置压电传感器判断过车算法使用的参数：过车电压阀值和过车时长阀值。Threshold:以伏为单位的电压值。Duration:以毫秒为单位的时间。
-        get_pzltrct_param = 38;
+        set_pass_param = 37;        // 设置压电传感器判断过车算法使用的参数：过车电压阀值和过车时长阀值。Threshold:以伏为单位的电压值。Duration:以毫秒为单位的时间。
+        get_pass_param = 38;
 
         set_sample_card_num = 41;   // 设置启用的采集卡数量
         get_sample_card_num = 42;
@@ -52,6 +52,8 @@ message AppMsg {
         error_msg = 1001;               // 错误消息
 
         ready_received_cache = 1002;    // 返回是否准备好接收缓存数据
+
+        pass_duration_trigger = 1003;   // 过车时长阈值触发
     }
 
     message device_add {
@@ -66,42 +68,40 @@ message AppMsg {
     }
 
     message platform_id {
-        uint32 id = 1;
+        string id = 1;
     }
 
     message station_id {
-        uint32 id = 1;
+        string id = 1;
     }
 
     message turnout_id {
-        uint32 id = 1;
+        string id = 1;
     }
 
     message item_id {
-        uint32 id = 1;
+        string id = 1;
     }
 
     message sensor_id {
-        uint32 channel = 1;
-        uint32 id = 2;
+        string id = 2;
     }
 
+    // 低速采用频率
     message sample_frequency {
         uint32 frequency = 1;
     }
 
+    // 异常参数 每个通道独立
     message abnormal_param {
         double level = 1;
         uint32 duration = 2;
     }
 
-    message pzltrct_param {
+    // 过车参数 所有通道公用
+    message pass_param {
         uint32 threshold = 1;
         uint32 duration = 2;
-    }
-
-    message axis_counting_param {
-        uint32 duration = 1;
     }
 
     message sample_card_num {
@@ -112,6 +112,7 @@ message AppMsg {
         bool enable = 1;
     }
 
+    // 采样数据包
     message adc_data {
         uint64 time = 1;
         uint32 sample_card_num = 2;
@@ -130,8 +131,7 @@ message AppMsg {
         uint32 offset_zero = 2;                     // 零点AD值
         uint32 offset_max_vol = 3;                  // 最大采集电压值/mV
         uint32 offset_max_vol_ad = 4;               // 最大采集电压时的AD值
-        uint32 fault_voltage = 10;
-        abnormal_param abnormal_param = 11;
-        axis_counting_param axis_counting_param = 12;
+        uint32 fault_voltage = 5;                   // 故障电压/mV
+        abnormal_param abnormal_param = 6;          // 异常参数
     }
 }
