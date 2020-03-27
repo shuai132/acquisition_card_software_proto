@@ -48,7 +48,7 @@ struct TableStruct_AlarmMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -62,6 +62,9 @@ extern AlarmMsgDefaultTypeInternal _AlarmMsg_default_instance_;
 class AlarmMsg_AlarmReport;
 class AlarmMsg_AlarmReportDefaultTypeInternal;
 extern AlarmMsg_AlarmReportDefaultTypeInternal _AlarmMsg_AlarmReport_default_instance_;
+class AlarmMsg_ChannelState;
+class AlarmMsg_ChannelStateDefaultTypeInternal;
+extern AlarmMsg_ChannelStateDefaultTypeInternal _AlarmMsg_ChannelState_default_instance_;
 class AlarmMsg_DiskState;
 class AlarmMsg_DiskStateDefaultTypeInternal;
 extern AlarmMsg_DiskStateDefaultTypeInternal _AlarmMsg_DiskState_default_instance_;
@@ -72,6 +75,7 @@ extern AlarmMsg_TimeDefaultTypeInternal _AlarmMsg_Time_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::proto::AlarmMsg* Arena::CreateMaybeMessage<::proto::AlarmMsg>(Arena*);
 template<> ::proto::AlarmMsg_AlarmReport* Arena::CreateMaybeMessage<::proto::AlarmMsg_AlarmReport>(Arena*);
+template<> ::proto::AlarmMsg_ChannelState* Arena::CreateMaybeMessage<::proto::AlarmMsg_ChannelState>(Arena*);
 template<> ::proto::AlarmMsg_DiskState* Arena::CreateMaybeMessage<::proto::AlarmMsg_DiskState>(Arena*);
 template<> ::proto::AlarmMsg_Time* Arena::CreateMaybeMessage<::proto::AlarmMsg_Time>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -102,6 +106,32 @@ inline bool AlarmMsg_AlarmReport_Alarm_Parse(
     const std::string& name, AlarmMsg_AlarmReport_Alarm* value) {
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AlarmMsg_AlarmReport_Alarm>(
     AlarmMsg_AlarmReport_Alarm_descriptor(), name, value);
+}
+enum AlarmMsg_ChannelState_State : int {
+  AlarmMsg_ChannelState_State_Normal = 0,
+  AlarmMsg_ChannelState_State_Lost = 1,
+  AlarmMsg_ChannelState_State_Error = 2,
+  AlarmMsg_ChannelState_State_AlarmMsg_ChannelState_State_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  AlarmMsg_ChannelState_State_AlarmMsg_ChannelState_State_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool AlarmMsg_ChannelState_State_IsValid(int value);
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState_State_State_MIN = AlarmMsg_ChannelState_State_Normal;
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState_State_State_MAX = AlarmMsg_ChannelState_State_Error;
+constexpr int AlarmMsg_ChannelState_State_State_ARRAYSIZE = AlarmMsg_ChannelState_State_State_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_ChannelState_State_descriptor();
+template<typename T>
+inline const std::string& AlarmMsg_ChannelState_State_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, AlarmMsg_ChannelState_State>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function AlarmMsg_ChannelState_State_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    AlarmMsg_ChannelState_State_descriptor(), enum_t_value);
+}
+inline bool AlarmMsg_ChannelState_State_Parse(
+    const std::string& name, AlarmMsg_ChannelState_State* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<AlarmMsg_ChannelState_State>(
+    AlarmMsg_ChannelState_State_descriptor(), name, value);
 }
 enum AlarmMsg_DiskState_State : int {
   AlarmMsg_DiskState_State_Normal = 0,
@@ -306,9 +336,9 @@ class AlarmMsg_AlarmReport :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAlarmFieldNumber = 3,
+    kAlarmFieldNumber = 1,
   };
-  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
+  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
   void clear_alarm();
   ::proto::AlarmMsg_AlarmReport_Alarm alarm() const;
   void set_alarm(::proto::AlarmMsg_AlarmReport_Alarm value);
@@ -319,6 +349,182 @@ class AlarmMsg_AlarmReport :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   int alarm_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_AlarmMsg_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AlarmMsg_ChannelState :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AlarmMsg.ChannelState) */ {
+ public:
+  AlarmMsg_ChannelState();
+  virtual ~AlarmMsg_ChannelState();
+
+  AlarmMsg_ChannelState(const AlarmMsg_ChannelState& from);
+  AlarmMsg_ChannelState(AlarmMsg_ChannelState&& from) noexcept
+    : AlarmMsg_ChannelState() {
+    *this = ::std::move(from);
+  }
+
+  inline AlarmMsg_ChannelState& operator=(const AlarmMsg_ChannelState& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AlarmMsg_ChannelState& operator=(AlarmMsg_ChannelState&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AlarmMsg_ChannelState& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AlarmMsg_ChannelState* internal_default_instance() {
+    return reinterpret_cast<const AlarmMsg_ChannelState*>(
+               &_AlarmMsg_ChannelState_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(AlarmMsg_ChannelState& a, AlarmMsg_ChannelState& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AlarmMsg_ChannelState* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AlarmMsg_ChannelState* New() const final {
+    return CreateMaybeMessage<AlarmMsg_ChannelState>(nullptr);
+  }
+
+  AlarmMsg_ChannelState* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AlarmMsg_ChannelState>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AlarmMsg_ChannelState& from);
+  void MergeFrom(const AlarmMsg_ChannelState& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AlarmMsg_ChannelState* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "proto.AlarmMsg.ChannelState";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AlarmMsg_2eproto);
+    return ::descriptor_table_AlarmMsg_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef AlarmMsg_ChannelState_State State;
+  static constexpr State Normal =
+    AlarmMsg_ChannelState_State_Normal;
+  static constexpr State Lost =
+    AlarmMsg_ChannelState_State_Lost;
+  static constexpr State Error =
+    AlarmMsg_ChannelState_State_Error;
+  static inline bool State_IsValid(int value) {
+    return AlarmMsg_ChannelState_State_IsValid(value);
+  }
+  static constexpr State State_MIN =
+    AlarmMsg_ChannelState_State_State_MIN;
+  static constexpr State State_MAX =
+    AlarmMsg_ChannelState_State_State_MAX;
+  static constexpr int State_ARRAYSIZE =
+    AlarmMsg_ChannelState_State_State_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  State_descriptor() {
+    return AlarmMsg_ChannelState_State_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& State_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, State>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function State_Name.");
+    return AlarmMsg_ChannelState_State_Name(enum_t_value);
+  }
+  static inline bool State_Parse(const std::string& name,
+      State* value) {
+    return AlarmMsg_ChannelState_State_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMessageFieldNumber = 2,
+    kStateFieldNumber = 1,
+  };
+  // string message = 2;
+  void clear_message();
+  const std::string& message() const;
+  void set_message(const std::string& value);
+  void set_message(std::string&& value);
+  void set_message(const char* value);
+  void set_message(const char* value, size_t size);
+  std::string* mutable_message();
+  std::string* release_message();
+  void set_allocated_message(std::string* message);
+
+  // .proto.AlarmMsg.ChannelState.State state = 1;
+  void clear_state();
+  ::proto::AlarmMsg_ChannelState_State state() const;
+  void set_state(::proto::AlarmMsg_ChannelState_State value);
+
+  // @@protoc_insertion_point(class_scope:proto.AlarmMsg.ChannelState)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  int state_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AlarmMsg_2eproto;
 };
@@ -366,7 +572,7 @@ class AlarmMsg_DiskState :
                &_AlarmMsg_DiskState_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(AlarmMsg_DiskState& a, AlarmMsg_DiskState& b) {
     a.Swap(&b);
@@ -548,7 +754,7 @@ class AlarmMsg_Time :
                &_AlarmMsg_Time_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(AlarmMsg_Time& a, AlarmMsg_Time& b) {
     a.Swap(&b);
@@ -679,7 +885,7 @@ class AlarmMsg :
                &_AlarmMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(AlarmMsg& a, AlarmMsg& b) {
     a.Swap(&b);
@@ -748,6 +954,7 @@ class AlarmMsg :
   // nested types ----------------------------------------------------
 
   typedef AlarmMsg_AlarmReport AlarmReport;
+  typedef AlarmMsg_ChannelState ChannelState;
   typedef AlarmMsg_DiskState DiskState;
   typedef AlarmMsg_Time Time;
 
@@ -814,7 +1021,7 @@ class AlarmMsg :
 #endif  // __GNUC__
 // AlarmMsg_AlarmReport
 
-// .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
+// .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
 inline void AlarmMsg_AlarmReport::clear_alarm() {
   alarm_ = 0;
 }
@@ -826,6 +1033,75 @@ inline void AlarmMsg_AlarmReport::set_alarm(::proto::AlarmMsg_AlarmReport_Alarm 
   
   alarm_ = value;
   // @@protoc_insertion_point(field_set:proto.AlarmMsg.AlarmReport.alarm)
+}
+
+// -------------------------------------------------------------------
+
+// AlarmMsg_ChannelState
+
+// .proto.AlarmMsg.ChannelState.State state = 1;
+inline void AlarmMsg_ChannelState::clear_state() {
+  state_ = 0;
+}
+inline ::proto::AlarmMsg_ChannelState_State AlarmMsg_ChannelState::state() const {
+  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelState.state)
+  return static_cast< ::proto::AlarmMsg_ChannelState_State >(state_);
+}
+inline void AlarmMsg_ChannelState::set_state(::proto::AlarmMsg_ChannelState_State value) {
+  
+  state_ = value;
+  // @@protoc_insertion_point(field_set:proto.AlarmMsg.ChannelState.state)
+}
+
+// string message = 2;
+inline void AlarmMsg_ChannelState::clear_message() {
+  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& AlarmMsg_ChannelState::message() const {
+  // @@protoc_insertion_point(field_get:proto.AlarmMsg.ChannelState.message)
+  return message_.GetNoArena();
+}
+inline void AlarmMsg_ChannelState::set_message(const std::string& value) {
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:proto.AlarmMsg.ChannelState.message)
+}
+inline void AlarmMsg_ChannelState::set_message(std::string&& value) {
+  
+  message_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:proto.AlarmMsg.ChannelState.message)
+}
+inline void AlarmMsg_ChannelState::set_message(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:proto.AlarmMsg.ChannelState.message)
+}
+inline void AlarmMsg_ChannelState::set_message(const char* value, size_t size) {
+  
+  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:proto.AlarmMsg.ChannelState.message)
+}
+inline std::string* AlarmMsg_ChannelState::mutable_message() {
+  
+  // @@protoc_insertion_point(field_mutable:proto.AlarmMsg.ChannelState.message)
+  return message_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* AlarmMsg_ChannelState::release_message() {
+  // @@protoc_insertion_point(field_release:proto.AlarmMsg.ChannelState.message)
+  
+  return message_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void AlarmMsg_ChannelState::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  message_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message);
+  // @@protoc_insertion_point(field_set_allocated:proto.AlarmMsg.ChannelState.message)
 }
 
 // -------------------------------------------------------------------
@@ -919,6 +1195,8 @@ inline void AlarmMsg_Time::set_time(::PROTOBUF_NAMESPACE_ID::uint64 value) {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -930,6 +1208,11 @@ template <> struct is_proto_enum< ::proto::AlarmMsg_AlarmReport_Alarm> : ::std::
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::proto::AlarmMsg_AlarmReport_Alarm>() {
   return ::proto::AlarmMsg_AlarmReport_Alarm_descriptor();
+}
+template <> struct is_proto_enum< ::proto::AlarmMsg_ChannelState_State> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::proto::AlarmMsg_ChannelState_State>() {
+  return ::proto::AlarmMsg_ChannelState_State_descriptor();
 }
 template <> struct is_proto_enum< ::proto::AlarmMsg_DiskState_State> : ::std::true_type {};
 template <>

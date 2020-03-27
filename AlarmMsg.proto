@@ -19,12 +19,24 @@ message AlarmMsg {
 
     message AlarmReport {
         // 报警
-        Alarm alarm = 3;
-        
+        Alarm alarm = 1;
+
         enum Alarm {
             Normal = 0;     // 正常
             Warning = 1;    // 预警
             Emergency = 2;  // 报警
+        }
+    }
+
+    message ChannelState {
+        // 状态
+        State state = 1;
+        string message = 2;
+
+        enum State {
+            Normal = 0;     // 正常
+            Lost = 1;       // 缺失
+            Error = 2;      // 错误
         }
     }
 

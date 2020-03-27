@@ -20,6 +20,10 @@ class AlarmMsg_AlarmReportDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_AlarmReport> _instance;
 } _AlarmMsg_AlarmReport_default_instance_;
+class AlarmMsg_ChannelStateDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_ChannelState> _instance;
+} _AlarmMsg_ChannelState_default_instance_;
 class AlarmMsg_DiskStateDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AlarmMsg_DiskState> _instance;
@@ -61,6 +65,20 @@ static void InitDefaultsscc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto}, {}};
 
+static void InitDefaultsscc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::proto::_AlarmMsg_ChannelState_default_instance_;
+    new (ptr) ::proto::AlarmMsg_ChannelState();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::proto::AlarmMsg_ChannelState::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto}, {}};
+
 static void InitDefaultsscc_info_AlarmMsg_DiskState_AlarmMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -89,8 +107,8 @@ static void InitDefaultsscc_info_AlarmMsg_Time_AlarmMsg_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AlarmMsg_Time_AlarmMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AlarmMsg_Time_AlarmMsg_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AlarmMsg_2eproto[4];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AlarmMsg_2eproto[3];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AlarmMsg_2eproto[5];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_AlarmMsg_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_AlarmMsg_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -100,6 +118,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PR
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_AlarmReport, alarm_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelState, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelState, state_),
+  PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_ChannelState, message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AlarmMsg_DiskState, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -123,47 +148,53 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AlarmMsg_2eproto::offsets[] PR
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::proto::AlarmMsg_AlarmReport)},
-  { 6, -1, sizeof(::proto::AlarmMsg_DiskState)},
-  { 15, -1, sizeof(::proto::AlarmMsg_Time)},
-  { 21, -1, sizeof(::proto::AlarmMsg)},
+  { 6, -1, sizeof(::proto::AlarmMsg_ChannelState)},
+  { 13, -1, sizeof(::proto::AlarmMsg_DiskState)},
+  { 22, -1, sizeof(::proto::AlarmMsg_Time)},
+  { 28, -1, sizeof(::proto::AlarmMsg)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_AlarmReport_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_ChannelState_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_DiskState_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_Time_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::proto::_AlarmMsg_default_instance_),
 };
 
 const char descriptor_table_protodef_AlarmMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016AlarmMsg.proto\022\005proto\"\262\003\n\010AlarmMsg\032p\n\013"
-  "AlarmReport\0220\n\005alarm\030\003 \001(\0162!.proto.Alarm"
+  "\n\016AlarmMsg.proto\022\005proto\"\260\004\n\010AlarmMsg\032p\n\013"
+  "AlarmReport\0220\n\005alarm\030\001 \001(\0162!.proto.Alarm"
   "Msg.AlarmReport.Alarm\"/\n\005Alarm\022\n\n\006Normal"
-  "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032\212\001\n\tDiskS"
-  "tate\022.\n\005state\030\001 \001(\0162\037.proto.AlarmMsg.Dis"
-  "kState.State\022\021\n\tavailable\030\002 \001(\004\022\014\n\004free\030"
-  "\003 \001(\004\022\r\n\005total\030\004 \001(\004\"\035\n\005State\022\n\n\006Normal\020"
-  "\000\022\010\n\004Full\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\"\220\001\n\003Cm"
-  "d\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014alarm"
-  "_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_time\020"
-  "\264\020\022\023\n\016set_heart_beat\020\265\020\022\021\n\014start_repair\020"
-  "\266\020\022\020\n\013stop_repair\020\267\020b\006proto3"
+  "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032|\n\014Channe"
+  "lState\0221\n\005state\030\001 \001(\0162\".proto.AlarmMsg.C"
+  "hannelState.State\022\017\n\007message\030\002 \001(\t\"(\n\005St"
+  "ate\022\n\n\006Normal\020\000\022\010\n\004Lost\020\001\022\t\n\005Error\020\002\032\212\001\n"
+  "\tDiskState\022.\n\005state\030\001 \001(\0162\037.proto.AlarmM"
+  "sg.DiskState.State\022\021\n\tavailable\030\002 \001(\004\022\014\n"
+  "\004free\030\003 \001(\004\022\r\n\005total\030\004 \001(\004\"\035\n\005State\022\n\n\006N"
+  "ormal\020\000\022\010\n\004Full\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\""
+  "\220\001\n\003Cmd\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n"
+  "\014alarm_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set"
+  "_time\020\264\020\022\023\n\016set_heart_beat\020\265\020\022\021\n\014start_r"
+  "epair\020\266\020\022\020\n\013stop_repair\020\267\020b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AlarmMsg_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AlarmMsg_2eproto_sccs[4] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AlarmMsg_2eproto_sccs[5] = {
   &scc_info_AlarmMsg_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_AlarmReport_AlarmMsg_2eproto.base,
+  &scc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_DiskState_AlarmMsg_2eproto.base,
   &scc_info_AlarmMsg_Time_AlarmMsg_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AlarmMsg_2eproto_once;
 static bool descriptor_table_AlarmMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AlarmMsg_2eproto = {
-  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 468,
-  &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 4, 0,
+  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 594,
+  &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 5, 0,
   schemas, file_default_instances, TableStruct_AlarmMsg_2eproto::offsets,
-  file_level_metadata_AlarmMsg_2eproto, 4, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
+  file_level_metadata_AlarmMsg_2eproto, 5, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -192,9 +223,32 @@ constexpr AlarmMsg_AlarmReport_Alarm AlarmMsg_AlarmReport::Alarm_MIN;
 constexpr AlarmMsg_AlarmReport_Alarm AlarmMsg_AlarmReport::Alarm_MAX;
 constexpr int AlarmMsg_AlarmReport::Alarm_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_DiskState_State_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_ChannelState_State_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
   return file_level_enum_descriptors_AlarmMsg_2eproto[1];
+}
+bool AlarmMsg_ChannelState_State_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState::Normal;
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState::Lost;
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState::Error;
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState::State_MIN;
+constexpr AlarmMsg_ChannelState_State AlarmMsg_ChannelState::State_MAX;
+constexpr int AlarmMsg_ChannelState::State_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_DiskState_State_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
+  return file_level_enum_descriptors_AlarmMsg_2eproto[2];
 }
 bool AlarmMsg_DiskState_State_IsValid(int value) {
   switch (value) {
@@ -215,7 +269,7 @@ constexpr int AlarmMsg_DiskState::State_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_Cmd_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_AlarmMsg_2eproto);
-  return file_level_enum_descriptors_AlarmMsg_2eproto[2];
+  return file_level_enum_descriptors_AlarmMsg_2eproto[3];
 }
 bool AlarmMsg_Cmd_IsValid(int value) {
   switch (value) {
@@ -307,9 +361,9 @@ const char* AlarmMsg_AlarmReport::_InternalParse(const char* ptr, ::PROTOBUF_NAM
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+      // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           set_alarm(static_cast<::proto::AlarmMsg_AlarmReport_Alarm>(val));
@@ -345,9 +399,9 @@ bool AlarmMsg_AlarmReport::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+      // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
           int value = 0;
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
@@ -386,10 +440,10 @@ void AlarmMsg_AlarmReport::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
+  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
   if (this->alarm() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
-      3, this->alarm(), output);
+      1, this->alarm(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -405,10 +459,10 @@ void AlarmMsg_AlarmReport::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
+  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
   if (this->alarm() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      3, this->alarm(), target);
+      1, this->alarm(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -432,7 +486,7 @@ size_t AlarmMsg_AlarmReport::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 3;
+  // .proto.AlarmMsg.AlarmReport.Alarm alarm = 1;
   if (this->alarm() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->alarm());
@@ -495,6 +549,322 @@ void AlarmMsg_AlarmReport::InternalSwap(AlarmMsg_AlarmReport* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AlarmMsg_AlarmReport::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void AlarmMsg_ChannelState::InitAsDefaultInstance() {
+}
+class AlarmMsg_ChannelState::_Internal {
+ public:
+};
+
+AlarmMsg_ChannelState::AlarmMsg_ChannelState()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:proto.AlarmMsg.ChannelState)
+}
+AlarmMsg_ChannelState::AlarmMsg_ChannelState(const AlarmMsg_ChannelState& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from.message().empty()) {
+    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  }
+  state_ = from.state_;
+  // @@protoc_insertion_point(copy_constructor:proto.AlarmMsg.ChannelState)
+}
+
+void AlarmMsg_ChannelState::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  state_ = 0;
+}
+
+AlarmMsg_ChannelState::~AlarmMsg_ChannelState() {
+  // @@protoc_insertion_point(destructor:proto.AlarmMsg.ChannelState)
+  SharedDtor();
+}
+
+void AlarmMsg_ChannelState::SharedDtor() {
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void AlarmMsg_ChannelState::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AlarmMsg_ChannelState& AlarmMsg_ChannelState::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AlarmMsg_ChannelState_AlarmMsg_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AlarmMsg_ChannelState::Clear() {
+// @@protoc_insertion_point(message_clear_start:proto.AlarmMsg.ChannelState)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  state_ = 0;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* AlarmMsg_ChannelState::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .proto.AlarmMsg.ChannelState.State state = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+          set_state(static_cast<::proto::AlarmMsg_ChannelState_State>(val));
+        } else goto handle_unusual;
+        continue;
+      // string message = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_message(), ptr, ctx, "proto.AlarmMsg.ChannelState.message");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool AlarmMsg_ChannelState::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:proto.AlarmMsg.ChannelState)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .proto.AlarmMsg.ChannelState.State state = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
+          int value = 0;
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   int, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_state(static_cast< ::proto::AlarmMsg_ChannelState_State >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string message = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
+                input, this->mutable_message()));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            this->message().data(), static_cast<int>(this->message().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "proto.AlarmMsg.ChannelState.message"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:proto.AlarmMsg.ChannelState)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:proto.AlarmMsg.ChannelState)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void AlarmMsg_ChannelState::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:proto.AlarmMsg.ChannelState)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.AlarmMsg.ChannelState.State state = 1;
+  if (this->state() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnum(
+      1, this->state(), output);
+  }
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->message().data(), static_cast<int>(this->message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.AlarmMsg.ChannelState.message");
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->message(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:proto.AlarmMsg.ChannelState)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AlarmMsg_ChannelState::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:proto.AlarmMsg.ChannelState)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .proto.AlarmMsg.ChannelState.State state = 1;
+  if (this->state() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->state(), target);
+  }
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->message().data(), static_cast<int>(this->message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "proto.AlarmMsg.ChannelState.message");
+    target =
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
+        2, this->message(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:proto.AlarmMsg.ChannelState)
+  return target;
+}
+
+size_t AlarmMsg_ChannelState::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:proto.AlarmMsg.ChannelState)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->message());
+  }
+
+  // .proto.AlarmMsg.ChannelState.State state = 1;
+  if (this->state() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->state());
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AlarmMsg_ChannelState::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:proto.AlarmMsg.ChannelState)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AlarmMsg_ChannelState* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AlarmMsg_ChannelState>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:proto.AlarmMsg.ChannelState)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:proto.AlarmMsg.ChannelState)
+    MergeFrom(*source);
+  }
+}
+
+void AlarmMsg_ChannelState::MergeFrom(const AlarmMsg_ChannelState& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:proto.AlarmMsg.ChannelState)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.message().size() > 0) {
+
+    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+  }
+  if (from.state() != 0) {
+    set_state(from.state());
+  }
+}
+
+void AlarmMsg_ChannelState::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:proto.AlarmMsg.ChannelState)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AlarmMsg_ChannelState::CopyFrom(const AlarmMsg_ChannelState& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:proto.AlarmMsg.ChannelState)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AlarmMsg_ChannelState::IsInitialized() const {
+  return true;
+}
+
+void AlarmMsg_ChannelState::InternalSwap(AlarmMsg_ChannelState* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(state_, other->state_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AlarmMsg_ChannelState::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1333,6 +1703,9 @@ void AlarmMsg::InternalSwap(AlarmMsg* other) {
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_AlarmReport* Arena::CreateMaybeMessage< ::proto::AlarmMsg_AlarmReport >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AlarmMsg_AlarmReport >(arena);
+}
+template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_ChannelState* Arena::CreateMaybeMessage< ::proto::AlarmMsg_ChannelState >(Arena* arena) {
+  return Arena::CreateInternal< ::proto::AlarmMsg_ChannelState >(arena);
 }
 template<> PROTOBUF_NOINLINE ::proto::AlarmMsg_DiskState* Arena::CreateMaybeMessage< ::proto::AlarmMsg_DiskState >(Arena* arena) {
   return Arena::CreateInternal< ::proto::AlarmMsg_DiskState >(arena);
