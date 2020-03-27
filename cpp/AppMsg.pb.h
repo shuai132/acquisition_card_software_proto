@@ -1416,10 +1416,10 @@ class AppMsg_abnormal_param :
     kLevelFieldNumber = 1,
     kDurationFieldNumber = 2,
   };
-  // double level = 1;
+  // uint32 level = 1;
   void clear_level();
-  double level() const;
-  void set_level(double value);
+  ::PROTOBUF_NAMESPACE_ID::uint32 level() const;
+  void set_level(::PROTOBUF_NAMESPACE_ID::uint32 value);
 
   // uint32 duration = 2;
   void clear_duration();
@@ -1431,7 +1431,7 @@ class AppMsg_abnormal_param :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  double level_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 level_;
   ::PROTOBUF_NAMESPACE_ID::uint32 duration_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AppMsg_2eproto;
@@ -2984,15 +2984,15 @@ inline void AppMsg_sample_frequency::set_frequency(::PROTOBUF_NAMESPACE_ID::uint
 
 // AppMsg_abnormal_param
 
-// double level = 1;
+// uint32 level = 1;
 inline void AppMsg_abnormal_param::clear_level() {
-  level_ = 0;
+  level_ = 0u;
 }
-inline double AppMsg_abnormal_param::level() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppMsg_abnormal_param::level() const {
   // @@protoc_insertion_point(field_get:proto.AppMsg.abnormal_param.level)
   return level_;
 }
-inline void AppMsg_abnormal_param::set_level(double value) {
+inline void AppMsg_abnormal_param::set_level(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
   level_ = value;
   // @@protoc_insertion_point(field_set:proto.AppMsg.abnormal_param.level)

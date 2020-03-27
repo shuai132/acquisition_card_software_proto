@@ -41,7 +41,7 @@ message AppMsg {
         capture_adc_data = 43;          // 主动采集一次ADC数据
 
         set_channel_info = 46;
-        get_channel_info = 47;          // 通道信息
+        get_channel_info = 47;          // 通道信息 参数Int32Value
 
         set_file_cache_enable = 49;     // 设置开启/关闭文件缓存
         get_file_cache_enable = 50;
@@ -94,7 +94,7 @@ message AppMsg {
 
     // 异常参数 每个通道独立
     message abnormal_param {
-        double level = 1;
+        uint32 level = 1;
         uint32 duration = 2;
     }
 

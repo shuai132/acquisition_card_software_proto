@@ -458,7 +458,7 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "\n\n\002id\030\001 \001(\t\032\025\n\007item_id\022\n\n\002id\030\001 \001(\t\032\027\n\tse"
   "nsor_id\022\n\n\002id\030\002 \001(\t\032%\n\020sample_frequency\022"
   "\021\n\tfrequency\030\001 \001(\r\0321\n\016abnormal_param\022\r\n\005"
-  "level\030\001 \001(\001\022\020\n\010duration\030\002 \001(\r\0321\n\npass_pa"
+  "level\030\001 \001(\r\022\020\n\010duration\030\002 \001(\r\0321\n\npass_pa"
   "ram\022\021\n\tthreshold\030\001 \001(\r\022\020\n\010duration\030\002 \001(\r"
   "\032\036\n\017sample_card_num\022\013\n\003num\030\001 \001(\r\032#\n\021file"
   "_cache_enable\022\016\n\006enable\030\001 \001(\010\032\326\002\n\010adc_da"
@@ -2972,11 +2972,11 @@ const char* AppMsg_abnormal_param::_InternalParse(const char* ptr, ::PROTOBUF_NA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // double level = 1;
+      // uint32 level = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 9)) {
-          level_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          level_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       // uint32 duration = 2;
@@ -3016,12 +3016,12 @@ bool AppMsg_abnormal_param::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double level = 1;
+      // uint32 level = 1;
       case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (9 & 0xFF)) {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   double, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE>(
+                   ::PROTOBUF_NAMESPACE_ID::uint32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_UINT32>(
                  input, &level_)));
         } else {
           goto handle_unusual;
@@ -3069,9 +3069,9 @@ void AppMsg_abnormal_param::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDouble(1, this->level(), output);
+  // uint32 level = 1;
+  if (this->level() != 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(1, this->level(), output);
   }
 
   // uint32 duration = 2;
@@ -3092,9 +3092,9 @@ void AppMsg_abnormal_param::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(1, this->level(), target);
+  // uint32 level = 1;
+  if (this->level() != 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->level(), target);
   }
 
   // uint32 duration = 2;
@@ -3123,9 +3123,11 @@ size_t AppMsg_abnormal_param::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // double level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
-    total_size += 1 + 8;
+  // uint32 level = 1;
+  if (this->level() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->level());
   }
 
   // uint32 duration = 2;
@@ -3162,7 +3164,7 @@ void AppMsg_abnormal_param::MergeFrom(const AppMsg_abnormal_param& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!(from.level() <= 0 && from.level() >= 0)) {
+  if (from.level() != 0) {
     set_level(from.level());
   }
   if (from.duration() != 0) {
