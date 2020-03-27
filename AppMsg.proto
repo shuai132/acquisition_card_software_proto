@@ -114,16 +114,16 @@ message AppMsg {
 
     // 采样数据包
     message adc_data {
-        uint64 time = 1;
-        uint32 sample_card_num = 2;
-        uint32 sample_frequency = 3;
-        uint32 sample_number = 4;
-        repeated bytes data = 9;                    // 根据sample_card_num 每个通道占一个下标 如data[0]是通道0的数据
-        platform_id platform_id = 10;
-        station_id station_id = 11;
-        turnout_id turnout_id = 12;
-        item_id item_id = 13;
-        repeated channel_info channel_info = 14;    // 根据sample_card_num 每个通道占一个下标
+        uint64 time = 1;                            // 数据采样时间ms
+        uint32 sample_card_num = 2;                 // 采集板数量 每个4通道
+        uint32 sample_frequency = 3;                // 采样频率Hz
+        uint32 sample_number = 4;                   // 采样点数
+        repeated bytes data = 5;                    // 根据sample_card_num 每个通道占一个下标 如data[0]是通道0的数据
+        repeated channel_info channel_info = 6;     // 根据sample_card_num 每个通道占一个下标
+        platform_id platform_id = 7;
+        station_id station_id = 8;
+        turnout_id turnout_id = 9;
+        item_id item_id = 10;
     }
 
     message channel_info {

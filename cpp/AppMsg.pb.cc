@@ -124,11 +124,11 @@ static void InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_AppMsg_adc_data_AppMsg_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsscc_info_AppMsg_adc_data_AppMsg_2eproto}, {
+      &scc_info_AppMsg_channel_info_AppMsg_2eproto.base,
       &scc_info_AppMsg_platform_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_station_id_AppMsg_2eproto.base,
       &scc_info_AppMsg_turnout_id_AppMsg_2eproto.base,
-      &scc_info_AppMsg_item_id_AppMsg_2eproto.base,
-      &scc_info_AppMsg_channel_info_AppMsg_2eproto.base,}};
+      &scc_info_AppMsg_item_id_AppMsg_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppMsg_channel_info_AppMsg_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -391,11 +391,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AppMsg_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_frequency_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, sample_number_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, data_),
+  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, channel_info_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, platform_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, station_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, turnout_id_),
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, item_id_),
-  PROTOBUF_FIELD_OFFSET(::proto::AppMsg_adc_data, channel_info_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::proto::AppMsg_channel_info, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -464,13 +464,13 @@ const char descriptor_table_protodef_AppMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "_cache_enable\022\016\n\006enable\030\001 \001(\010\032\326\002\n\010adc_da"
   "ta\022\014\n\004time\030\001 \001(\004\022\027\n\017sample_card_num\030\002 \001("
   "\r\022\030\n\020sample_frequency\030\003 \001(\r\022\025\n\rsample_nu"
-  "mber\030\004 \001(\r\022\014\n\004data\030\t \003(\014\022.\n\013platform_id\030"
-  "\n \001(\0132\031.proto.AppMsg.platform_id\022,\n\nstat"
-  "ion_id\030\013 \001(\0132\030.proto.AppMsg.station_id\022,"
-  "\n\nturnout_id\030\014 \001(\0132\030.proto.AppMsg.turnou"
-  "t_id\022&\n\007item_id\030\r \001(\0132\025.proto.AppMsg.ite"
-  "m_id\0220\n\014channel_info\030\016 \003(\0132\032.proto.AppMs"
-  "g.channel_info\032\264\001\n\014channel_info\022\017\n\007chann"
+  "mber\030\004 \001(\r\022\014\n\004data\030\005 \003(\014\0220\n\014channel_info"
+  "\030\006 \003(\0132\032.proto.AppMsg.channel_info\022.\n\013pl"
+  "atform_id\030\007 \001(\0132\031.proto.AppMsg.platform_"
+  "id\022,\n\nstation_id\030\010 \001(\0132\030.proto.AppMsg.st"
+  "ation_id\022,\n\nturnout_id\030\t \001(\0132\030.proto.App"
+  "Msg.turnout_id\022&\n\007item_id\030\n \001(\0132\025.proto."
+  "AppMsg.item_id\032\264\001\n\014channel_info\022\017\n\007chann"
   "el\030\001 \001(\r\022\023\n\013offset_zero\030\002 \001(\r\022\026\n\016offset_"
   "max_vol\030\003 \001(\r\022\031\n\021offset_max_vol_ad\030\004 \001(\r"
   "\022\025\n\rfault_voltage\030\005 \001(\r\0224\n\016abnormal_para"
@@ -4159,56 +4159,56 @@ const char* AppMsg_adc_data::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated bytes data = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+      // repeated bytes data = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(add_data(), ptr, ctx);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 74);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 42);
         } else goto handle_unusual;
         continue;
-      // .proto.AppMsg.platform_id platform_id = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(mutable_platform_id(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.station_id station_id = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(mutable_station_id(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.turnout_id turnout_id = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(mutable_turnout_id(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .proto.AppMsg.item_id item_id = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(mutable_item_id(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated .proto.AppMsg.channel_info channel_info = 14;
-      case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+      // repeated .proto.AppMsg.channel_info channel_info = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(add_channel_info(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 114);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 50);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.platform_id platform_id = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(mutable_platform_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.station_id station_id = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(mutable_station_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.turnout_id turnout_id = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ctx->ParseMessage(mutable_turnout_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .proto.AppMsg.item_id item_id = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr = ctx->ParseMessage(mutable_item_id(), ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -4293,9 +4293,9 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated bytes data = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
+      // repeated bytes data = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadBytes(
                 input, this->add_data()));
         } else {
@@ -4304,9 +4304,20 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.platform_id platform_id = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
+      // repeated .proto.AppMsg.channel_info channel_info = 6;
+      case 6: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+                input, add_channel_info()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .proto.AppMsg.platform_id platform_id = 7;
+      case 7: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (58 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_platform_id()));
         } else {
@@ -4315,9 +4326,9 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.station_id station_id = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
+      // .proto.AppMsg.station_id station_id = 8;
+      case 8: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (66 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_station_id()));
         } else {
@@ -4326,9 +4337,9 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.turnout_id turnout_id = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
+      // .proto.AppMsg.turnout_id turnout_id = 9;
+      case 9: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_turnout_id()));
         } else {
@@ -4337,22 +4348,11 @@ bool AppMsg_adc_data::MergePartialFromCodedStream(
         break;
       }
 
-      // .proto.AppMsg.item_id item_id = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
+      // .proto.AppMsg.item_id item_id = 10;
+      case 10: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (82 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_item_id()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .proto.AppMsg.channel_info channel_info = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (114 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
-                input, add_channel_info()));
         } else {
           goto handle_unusual;
         }
@@ -4406,43 +4406,43 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32(4, this->sample_number(), output);
   }
 
-  // repeated bytes data = 9;
+  // repeated bytes data = 5;
   for (int i = 0, n = this->data_size(); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBytes(
-      9, this->data(i), output);
+      5, this->data(i), output);
   }
 
-  // .proto.AppMsg.platform_id platform_id = 10;
-  if (this->has_platform_id()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, _Internal::platform_id(this), output);
-  }
-
-  // .proto.AppMsg.station_id station_id = 11;
-  if (this->has_station_id()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, _Internal::station_id(this), output);
-  }
-
-  // .proto.AppMsg.turnout_id turnout_id = 12;
-  if (this->has_turnout_id()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, _Internal::turnout_id(this), output);
-  }
-
-  // .proto.AppMsg.item_id item_id = 13;
-  if (this->has_item_id()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, _Internal::item_id(this), output);
-  }
-
-  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  // repeated .proto.AppMsg.channel_info channel_info = 6;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->channel_info_size()); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      14,
+      6,
       this->channel_info(static_cast<int>(i)),
       output);
+  }
+
+  // .proto.AppMsg.platform_id platform_id = 7;
+  if (this->has_platform_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, _Internal::platform_id(this), output);
+  }
+
+  // .proto.AppMsg.station_id station_id = 8;
+  if (this->has_station_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, _Internal::station_id(this), output);
+  }
+
+  // .proto.AppMsg.turnout_id turnout_id = 9;
+  if (this->has_turnout_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, _Internal::turnout_id(this), output);
+  }
+
+  // .proto.AppMsg.item_id item_id = 10;
+  if (this->has_item_id()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, _Internal::item_id(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4478,46 +4478,46 @@ void AppMsg_adc_data::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->sample_number(), target);
   }
 
-  // repeated bytes data = 9;
+  // repeated bytes data = 5;
   for (int i = 0, n = this->data_size(); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      WriteBytesToArray(9, this->data(i), target);
+      WriteBytesToArray(5, this->data(i), target);
   }
 
-  // .proto.AppMsg.platform_id platform_id = 10;
-  if (this->has_platform_id()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, _Internal::platform_id(this), target);
-  }
-
-  // .proto.AppMsg.station_id station_id = 11;
-  if (this->has_station_id()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, _Internal::station_id(this), target);
-  }
-
-  // .proto.AppMsg.turnout_id turnout_id = 12;
-  if (this->has_turnout_id()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, _Internal::turnout_id(this), target);
-  }
-
-  // .proto.AppMsg.item_id item_id = 13;
-  if (this->has_item_id()) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, _Internal::item_id(this), target);
-  }
-
-  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  // repeated .proto.AppMsg.channel_info channel_info = 6;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->channel_info_size()); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        14, this->channel_info(static_cast<int>(i)), target);
+        6, this->channel_info(static_cast<int>(i)), target);
+  }
+
+  // .proto.AppMsg.platform_id platform_id = 7;
+  if (this->has_platform_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, _Internal::platform_id(this), target);
+  }
+
+  // .proto.AppMsg.station_id station_id = 8;
+  if (this->has_station_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, _Internal::station_id(this), target);
+  }
+
+  // .proto.AppMsg.turnout_id turnout_id = 9;
+  if (this->has_turnout_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, _Internal::turnout_id(this), target);
+  }
+
+  // .proto.AppMsg.item_id item_id = 10;
+  if (this->has_item_id()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, _Internal::item_id(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -4541,7 +4541,7 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated bytes data = 9;
+  // repeated bytes data = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->data_size());
   for (int i = 0, n = this->data_size(); i < n; i++) {
@@ -4549,7 +4549,7 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
       this->data(i));
   }
 
-  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  // repeated .proto.AppMsg.channel_info channel_info = 6;
   {
     unsigned int count = static_cast<unsigned int>(this->channel_info_size());
     total_size += 1UL * count;
@@ -4560,28 +4560,28 @@ size_t AppMsg_adc_data::ByteSizeLong() const {
     }
   }
 
-  // .proto.AppMsg.platform_id platform_id = 10;
+  // .proto.AppMsg.platform_id platform_id = 7;
   if (this->has_platform_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *platform_id_);
   }
 
-  // .proto.AppMsg.station_id station_id = 11;
+  // .proto.AppMsg.station_id station_id = 8;
   if (this->has_station_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *station_id_);
   }
 
-  // .proto.AppMsg.turnout_id turnout_id = 12;
+  // .proto.AppMsg.turnout_id turnout_id = 9;
   if (this->has_turnout_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *turnout_id_);
   }
 
-  // .proto.AppMsg.item_id item_id = 13;
+  // .proto.AppMsg.item_id item_id = 10;
   if (this->has_item_id()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(

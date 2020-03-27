@@ -1951,18 +1951,18 @@ class AppMsg_adc_data :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kDataFieldNumber = 9,
-    kChannelInfoFieldNumber = 14,
-    kPlatformIdFieldNumber = 10,
-    kStationIdFieldNumber = 11,
-    kTurnoutIdFieldNumber = 12,
-    kItemIdFieldNumber = 13,
+    kDataFieldNumber = 5,
+    kChannelInfoFieldNumber = 6,
+    kPlatformIdFieldNumber = 7,
+    kStationIdFieldNumber = 8,
+    kTurnoutIdFieldNumber = 9,
+    kItemIdFieldNumber = 10,
     kTimeFieldNumber = 1,
     kSampleCardNumFieldNumber = 2,
     kSampleFrequencyFieldNumber = 3,
     kSampleNumberFieldNumber = 4,
   };
-  // repeated bytes data = 9;
+  // repeated bytes data = 5;
   int data_size() const;
   void clear_data();
   const std::string& data(int index) const;
@@ -1979,7 +1979,7 @@ class AppMsg_adc_data :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& data() const;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_data();
 
-  // repeated .proto.AppMsg.channel_info channel_info = 14;
+  // repeated .proto.AppMsg.channel_info channel_info = 6;
   int channel_info_size() const;
   void clear_channel_info();
   ::proto::AppMsg_channel_info* mutable_channel_info(int index);
@@ -1990,7 +1990,7 @@ class AppMsg_adc_data :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AppMsg_channel_info >&
       channel_info() const;
 
-  // .proto.AppMsg.platform_id platform_id = 10;
+  // .proto.AppMsg.platform_id platform_id = 7;
   bool has_platform_id() const;
   void clear_platform_id();
   const ::proto::AppMsg_platform_id& platform_id() const;
@@ -1998,7 +1998,7 @@ class AppMsg_adc_data :
   ::proto::AppMsg_platform_id* mutable_platform_id();
   void set_allocated_platform_id(::proto::AppMsg_platform_id* platform_id);
 
-  // .proto.AppMsg.station_id station_id = 11;
+  // .proto.AppMsg.station_id station_id = 8;
   bool has_station_id() const;
   void clear_station_id();
   const ::proto::AppMsg_station_id& station_id() const;
@@ -2006,7 +2006,7 @@ class AppMsg_adc_data :
   ::proto::AppMsg_station_id* mutable_station_id();
   void set_allocated_station_id(::proto::AppMsg_station_id* station_id);
 
-  // .proto.AppMsg.turnout_id turnout_id = 12;
+  // .proto.AppMsg.turnout_id turnout_id = 9;
   bool has_turnout_id() const;
   void clear_turnout_id();
   const ::proto::AppMsg_turnout_id& turnout_id() const;
@@ -2014,7 +2014,7 @@ class AppMsg_adc_data :
   ::proto::AppMsg_turnout_id* mutable_turnout_id();
   void set_allocated_turnout_id(::proto::AppMsg_turnout_id* turnout_id);
 
-  // .proto.AppMsg.item_id item_id = 13;
+  // .proto.AppMsg.item_id item_id = 10;
   bool has_item_id() const;
   void clear_item_id();
   const ::proto::AppMsg_item_id& item_id() const;
@@ -3140,7 +3140,7 @@ inline void AppMsg_adc_data::set_sample_number(::PROTOBUF_NAMESPACE_ID::uint32 v
   // @@protoc_insertion_point(field_set:proto.AppMsg.adc_data.sample_number)
 }
 
-// repeated bytes data = 9;
+// repeated bytes data = 5;
 inline int AppMsg_adc_data::data_size() const {
   return data_.size();
 }
@@ -3205,7 +3205,37 @@ AppMsg_adc_data::mutable_data() {
   return &data_;
 }
 
-// .proto.AppMsg.platform_id platform_id = 10;
+// repeated .proto.AppMsg.channel_info channel_info = 6;
+inline int AppMsg_adc_data::channel_info_size() const {
+  return channel_info_.size();
+}
+inline void AppMsg_adc_data::clear_channel_info() {
+  channel_info_.Clear();
+}
+inline ::proto::AppMsg_channel_info* AppMsg_adc_data::mutable_channel_info(int index) {
+  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.channel_info)
+  return channel_info_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AppMsg_channel_info >*
+AppMsg_adc_data::mutable_channel_info() {
+  // @@protoc_insertion_point(field_mutable_list:proto.AppMsg.adc_data.channel_info)
+  return &channel_info_;
+}
+inline const ::proto::AppMsg_channel_info& AppMsg_adc_data::channel_info(int index) const {
+  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.channel_info)
+  return channel_info_.Get(index);
+}
+inline ::proto::AppMsg_channel_info* AppMsg_adc_data::add_channel_info() {
+  // @@protoc_insertion_point(field_add:proto.AppMsg.adc_data.channel_info)
+  return channel_info_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AppMsg_channel_info >&
+AppMsg_adc_data::channel_info() const {
+  // @@protoc_insertion_point(field_list:proto.AppMsg.adc_data.channel_info)
+  return channel_info_;
+}
+
+// .proto.AppMsg.platform_id platform_id = 7;
 inline bool AppMsg_adc_data::has_platform_id() const {
   return this != internal_default_instance() && platform_id_ != nullptr;
 }
@@ -3256,7 +3286,7 @@ inline void AppMsg_adc_data::set_allocated_platform_id(::proto::AppMsg_platform_
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.platform_id)
 }
 
-// .proto.AppMsg.station_id station_id = 11;
+// .proto.AppMsg.station_id station_id = 8;
 inline bool AppMsg_adc_data::has_station_id() const {
   return this != internal_default_instance() && station_id_ != nullptr;
 }
@@ -3307,7 +3337,7 @@ inline void AppMsg_adc_data::set_allocated_station_id(::proto::AppMsg_station_id
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.station_id)
 }
 
-// .proto.AppMsg.turnout_id turnout_id = 12;
+// .proto.AppMsg.turnout_id turnout_id = 9;
 inline bool AppMsg_adc_data::has_turnout_id() const {
   return this != internal_default_instance() && turnout_id_ != nullptr;
 }
@@ -3358,7 +3388,7 @@ inline void AppMsg_adc_data::set_allocated_turnout_id(::proto::AppMsg_turnout_id
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.turnout_id)
 }
 
-// .proto.AppMsg.item_id item_id = 13;
+// .proto.AppMsg.item_id item_id = 10;
 inline bool AppMsg_adc_data::has_item_id() const {
   return this != internal_default_instance() && item_id_ != nullptr;
 }
@@ -3407,36 +3437,6 @@ inline void AppMsg_adc_data::set_allocated_item_id(::proto::AppMsg_item_id* item
   }
   item_id_ = item_id;
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.adc_data.item_id)
-}
-
-// repeated .proto.AppMsg.channel_info channel_info = 14;
-inline int AppMsg_adc_data::channel_info_size() const {
-  return channel_info_.size();
-}
-inline void AppMsg_adc_data::clear_channel_info() {
-  channel_info_.Clear();
-}
-inline ::proto::AppMsg_channel_info* AppMsg_adc_data::mutable_channel_info(int index) {
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.adc_data.channel_info)
-  return channel_info_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AppMsg_channel_info >*
-AppMsg_adc_data::mutable_channel_info() {
-  // @@protoc_insertion_point(field_mutable_list:proto.AppMsg.adc_data.channel_info)
-  return &channel_info_;
-}
-inline const ::proto::AppMsg_channel_info& AppMsg_adc_data::channel_info(int index) const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.adc_data.channel_info)
-  return channel_info_.Get(index);
-}
-inline ::proto::AppMsg_channel_info* AppMsg_adc_data::add_channel_info() {
-  // @@protoc_insertion_point(field_add:proto.AppMsg.adc_data.channel_info)
-  return channel_info_.Add();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::proto::AppMsg_channel_info >&
-AppMsg_adc_data::channel_info() const {
-  // @@protoc_insertion_point(field_list:proto.AppMsg.adc_data.channel_info)
-  return channel_info_;
 }
 
 // -------------------------------------------------------------------
