@@ -164,15 +164,12 @@ enum AlarmMsg_Cmd : int {
   AlarmMsg_Cmd_alarm_report = 2001,
   AlarmMsg_Cmd_disk_state = 2002,
   AlarmMsg_Cmd_set_time = 2100,
-  AlarmMsg_Cmd_set_heart_beat = 2101,
-  AlarmMsg_Cmd_start_repair = 2102,
-  AlarmMsg_Cmd_stop_repair = 2103,
   AlarmMsg_Cmd_AlarmMsg_Cmd_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   AlarmMsg_Cmd_AlarmMsg_Cmd_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool AlarmMsg_Cmd_IsValid(int value);
 constexpr AlarmMsg_Cmd AlarmMsg_Cmd_Cmd_MIN = AlarmMsg_Cmd_NONE;
-constexpr AlarmMsg_Cmd AlarmMsg_Cmd_Cmd_MAX = AlarmMsg_Cmd_stop_repair;
+constexpr AlarmMsg_Cmd AlarmMsg_Cmd_Cmd_MAX = AlarmMsg_Cmd_set_time;
 constexpr int AlarmMsg_Cmd_Cmd_ARRAYSIZE = AlarmMsg_Cmd_Cmd_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* AlarmMsg_Cmd_descriptor();
@@ -969,12 +966,6 @@ class AlarmMsg :
     AlarmMsg_Cmd_disk_state;
   static constexpr Cmd set_time =
     AlarmMsg_Cmd_set_time;
-  static constexpr Cmd set_heart_beat =
-    AlarmMsg_Cmd_set_heart_beat;
-  static constexpr Cmd start_repair =
-    AlarmMsg_Cmd_start_repair;
-  static constexpr Cmd stop_repair =
-    AlarmMsg_Cmd_stop_repair;
   static inline bool Cmd_IsValid(int value) {
     return AlarmMsg_Cmd_IsValid(value);
   }

@@ -163,7 +163,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_AlarmMsg_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016AlarmMsg.proto\022\005proto\"\260\004\n\010AlarmMsg\032p\n\013"
+  "\n\016AlarmMsg.proto\022\005proto\"\365\003\n\010AlarmMsg\032p\n\013"
   "AlarmReport\0220\n\005alarm\030\001 \001(\0162!.proto.Alarm"
   "Msg.AlarmReport.Alarm\"/\n\005Alarm\022\n\n\006Normal"
   "\020\000\022\013\n\007Warning\020\001\022\r\n\tEmergency\020\002\032|\n\014Channe"
@@ -174,10 +174,9 @@ const char descriptor_table_protodef_AlarmMsg_2eproto[] PROTOBUF_SECTION_VARIABL
   "sg.DiskState.State\022\021\n\tavailable\030\002 \001(\004\022\014\n"
   "\004free\030\003 \001(\004\022\r\n\005total\030\004 \001(\004\"\035\n\005State\022\n\n\006N"
   "ormal\020\000\022\010\n\004Full\020\001\032\024\n\004Time\022\014\n\004time\030\001 \001(\004\""
-  "\220\001\n\003Cmd\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n"
-  "\014alarm_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set"
-  "_time\020\264\020\022\023\n\016set_heart_beat\020\265\020\022\021\n\014start_r"
-  "epair\020\266\020\022\020\n\013stop_repair\020\267\020b\006proto3"
+  "V\n\003Cmd\022\010\n\004NONE\020\000\022\022\n\rchannel_state\020\320\017\022\021\n\014"
+  "alarm_report\020\321\017\022\017\n\ndisk_state\020\322\017\022\r\n\010set_"
+  "time\020\264\020b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AlarmMsg_2eproto_deps[1] = {
 };
@@ -191,7 +190,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Ala
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AlarmMsg_2eproto_once;
 static bool descriptor_table_AlarmMsg_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AlarmMsg_2eproto = {
-  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 594,
+  &descriptor_table_AlarmMsg_2eproto_initialized, descriptor_table_protodef_AlarmMsg_2eproto, "AlarmMsg.proto", 535,
   &descriptor_table_AlarmMsg_2eproto_once, descriptor_table_AlarmMsg_2eproto_sccs, descriptor_table_AlarmMsg_2eproto_deps, 5, 0,
   schemas, file_default_instances, TableStruct_AlarmMsg_2eproto::offsets,
   file_level_metadata_AlarmMsg_2eproto, 5, file_level_enum_descriptors_AlarmMsg_2eproto, file_level_service_descriptors_AlarmMsg_2eproto,
@@ -278,9 +277,6 @@ bool AlarmMsg_Cmd_IsValid(int value) {
     case 2001:
     case 2002:
     case 2100:
-    case 2101:
-    case 2102:
-    case 2103:
       return true;
     default:
       return false;
@@ -293,9 +289,6 @@ constexpr AlarmMsg_Cmd AlarmMsg::channel_state;
 constexpr AlarmMsg_Cmd AlarmMsg::alarm_report;
 constexpr AlarmMsg_Cmd AlarmMsg::disk_state;
 constexpr AlarmMsg_Cmd AlarmMsg::set_time;
-constexpr AlarmMsg_Cmd AlarmMsg::set_heart_beat;
-constexpr AlarmMsg_Cmd AlarmMsg::start_repair;
-constexpr AlarmMsg_Cmd AlarmMsg::stop_repair;
 constexpr AlarmMsg_Cmd AlarmMsg::Cmd_MIN;
 constexpr AlarmMsg_Cmd AlarmMsg::Cmd_MAX;
 constexpr int AlarmMsg::Cmd_ARRAYSIZE;

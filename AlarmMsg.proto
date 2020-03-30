@@ -12,9 +12,6 @@ message AlarmMsg {
 
         //// 服务器到采集卡
         set_time = 2100;        // 校时命令
-        set_heart_beat = 2101;  // 设置心跳
-        start_repair = 2102;    // 维护开始
-        stop_repair = 2103;     // 维护结束
     }
 
     message AlarmReport {

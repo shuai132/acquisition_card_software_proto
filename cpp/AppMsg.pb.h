@@ -48,7 +48,7 @@ struct TableStruct_AppMsg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[15]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[14]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -89,9 +89,6 @@ extern AppMsg_sample_card_numDefaultTypeInternal _AppMsg_sample_card_num_default
 class AppMsg_sample_frequency;
 class AppMsg_sample_frequencyDefaultTypeInternal;
 extern AppMsg_sample_frequencyDefaultTypeInternal _AppMsg_sample_frequency_default_instance_;
-class AppMsg_sensor_id;
-class AppMsg_sensor_idDefaultTypeInternal;
-extern AppMsg_sensor_idDefaultTypeInternal _AppMsg_sensor_id_default_instance_;
 class AppMsg_server_add;
 class AppMsg_server_addDefaultTypeInternal;
 extern AppMsg_server_addDefaultTypeInternal _AppMsg_server_add_default_instance_;
@@ -114,7 +111,6 @@ template<> ::proto::AppMsg_pass_param* Arena::CreateMaybeMessage<::proto::AppMsg
 template<> ::proto::AppMsg_platform_id* Arena::CreateMaybeMessage<::proto::AppMsg_platform_id>(Arena*);
 template<> ::proto::AppMsg_sample_card_num* Arena::CreateMaybeMessage<::proto::AppMsg_sample_card_num>(Arena*);
 template<> ::proto::AppMsg_sample_frequency* Arena::CreateMaybeMessage<::proto::AppMsg_sample_frequency>(Arena*);
-template<> ::proto::AppMsg_sensor_id* Arena::CreateMaybeMessage<::proto::AppMsg_sensor_id>(Arena*);
 template<> ::proto::AppMsg_server_add* Arena::CreateMaybeMessage<::proto::AppMsg_server_add>(Arena*);
 template<> ::proto::AppMsg_station_id* Arena::CreateMaybeMessage<::proto::AppMsg_station_id>(Arena*);
 template<> ::proto::AppMsg_turnout_id* Arena::CreateMaybeMessage<::proto::AppMsg_turnout_id>(Arena*);
@@ -136,8 +132,6 @@ enum AppMsg_Cmd : int {
   AppMsg_Cmd_get_turnout_id = 20,
   AppMsg_Cmd_set_item_id = 21,
   AppMsg_Cmd_get_item_id = 22,
-  AppMsg_Cmd_set_sensor_id = 23,
-  AppMsg_Cmd_get_sensor_id = 24,
   AppMsg_Cmd_set_sample_frequency = 25,
   AppMsg_Cmd_get_sample_frequency = 26,
   AppMsg_Cmd_set_pass_param = 37,
@@ -1032,143 +1026,6 @@ class AppMsg_item_id :
 };
 // -------------------------------------------------------------------
 
-class AppMsg_sensor_id :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.sensor_id) */ {
- public:
-  AppMsg_sensor_id();
-  virtual ~AppMsg_sensor_id();
-
-  AppMsg_sensor_id(const AppMsg_sensor_id& from);
-  AppMsg_sensor_id(AppMsg_sensor_id&& from) noexcept
-    : AppMsg_sensor_id() {
-    *this = ::std::move(from);
-  }
-
-  inline AppMsg_sensor_id& operator=(const AppMsg_sensor_id& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline AppMsg_sensor_id& operator=(AppMsg_sensor_id&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const AppMsg_sensor_id& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AppMsg_sensor_id* internal_default_instance() {
-    return reinterpret_cast<const AppMsg_sensor_id*>(
-               &_AppMsg_sensor_id_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    6;
-
-  friend void swap(AppMsg_sensor_id& a, AppMsg_sensor_id& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(AppMsg_sensor_id* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline AppMsg_sensor_id* New() const final {
-    return CreateMaybeMessage<AppMsg_sensor_id>(nullptr);
-  }
-
-  AppMsg_sensor_id* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AppMsg_sensor_id>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AppMsg_sensor_id& from);
-  void MergeFrom(const AppMsg_sensor_id& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  #else
-  bool MergePartialFromCodedStream(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
-  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-  void SerializeWithCachedSizes(
-      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(AppMsg_sensor_id* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "proto.AppMsg.sensor_id";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AppMsg_2eproto);
-    return ::descriptor_table_AppMsg_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdFieldNumber = 2,
-  };
-  // string id = 2;
-  void clear_id();
-  const std::string& id() const;
-  void set_id(const std::string& value);
-  void set_id(std::string&& value);
-  void set_id(const char* value);
-  void set_id(const char* value, size_t size);
-  std::string* mutable_id();
-  std::string* release_id();
-  void set_allocated_id(std::string* id);
-
-  // @@protoc_insertion_point(class_scope:proto.AppMsg.sensor_id)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_AppMsg_2eproto;
-};
-// -------------------------------------------------------------------
-
 class AppMsg_sample_frequency :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:proto.AppMsg.sample_frequency) */ {
  public:
@@ -1211,7 +1068,7 @@ class AppMsg_sample_frequency :
                &_AppMsg_sample_frequency_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    6;
 
   friend void swap(AppMsg_sample_frequency& a, AppMsg_sample_frequency& b) {
     a.Swap(&b);
@@ -1342,7 +1199,7 @@ class AppMsg_abnormal_param :
                &_AppMsg_abnormal_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    7;
 
   friend void swap(AppMsg_abnormal_param& a, AppMsg_abnormal_param& b) {
     a.Swap(&b);
@@ -1480,7 +1337,7 @@ class AppMsg_pass_param :
                &_AppMsg_pass_param_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    8;
 
   friend void swap(AppMsg_pass_param& a, AppMsg_pass_param& b) {
     a.Swap(&b);
@@ -1618,7 +1475,7 @@ class AppMsg_sample_card_num :
                &_AppMsg_sample_card_num_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    9;
 
   friend void swap(AppMsg_sample_card_num& a, AppMsg_sample_card_num& b) {
     a.Swap(&b);
@@ -1749,7 +1606,7 @@ class AppMsg_file_cache_enable :
                &_AppMsg_file_cache_enable_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(AppMsg_file_cache_enable& a, AppMsg_file_cache_enable& b) {
     a.Swap(&b);
@@ -1880,7 +1737,7 @@ class AppMsg_adc_data :
                &_AppMsg_adc_data_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
   friend void swap(AppMsg_adc_data& a, AppMsg_adc_data& b) {
     a.Swap(&b);
@@ -2104,7 +1961,7 @@ class AppMsg_channel_info :
                &_AppMsg_channel_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    12;
 
   friend void swap(AppMsg_channel_info& a, AppMsg_channel_info& b) {
     a.Swap(&b);
@@ -2273,7 +2130,7 @@ class AppMsg :
                &_AppMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    13;
 
   friend void swap(AppMsg& a, AppMsg& b) {
     a.Swap(&b);
@@ -2347,7 +2204,6 @@ class AppMsg :
   typedef AppMsg_station_id station_id;
   typedef AppMsg_turnout_id turnout_id;
   typedef AppMsg_item_id item_id;
-  typedef AppMsg_sensor_id sensor_id;
   typedef AppMsg_sample_frequency sample_frequency;
   typedef AppMsg_abnormal_param abnormal_param;
   typedef AppMsg_pass_param pass_param;
@@ -2385,10 +2241,6 @@ class AppMsg :
     AppMsg_Cmd_set_item_id;
   static constexpr Cmd get_item_id =
     AppMsg_Cmd_get_item_id;
-  static constexpr Cmd set_sensor_id =
-    AppMsg_Cmd_set_sensor_id;
-  static constexpr Cmd get_sensor_id =
-    AppMsg_Cmd_get_sensor_id;
   static constexpr Cmd set_sample_frequency =
     AppMsg_Cmd_set_sample_frequency;
   static constexpr Cmd get_sample_frequency =
@@ -2905,61 +2757,6 @@ inline void AppMsg_item_id::set_allocated_id(std::string* id) {
   }
   id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
   // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.item_id.id)
-}
-
-// -------------------------------------------------------------------
-
-// AppMsg_sensor_id
-
-// string id = 2;
-inline void AppMsg_sensor_id::clear_id() {
-  id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& AppMsg_sensor_id::id() const {
-  // @@protoc_insertion_point(field_get:proto.AppMsg.sensor_id.id)
-  return id_.GetNoArena();
-}
-inline void AppMsg_sensor_id::set_id(const std::string& value) {
-  
-  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:proto.AppMsg.sensor_id.id)
-}
-inline void AppMsg_sensor_id::set_id(std::string&& value) {
-  
-  id_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:proto.AppMsg.sensor_id.id)
-}
-inline void AppMsg_sensor_id::set_id(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:proto.AppMsg.sensor_id.id)
-}
-inline void AppMsg_sensor_id::set_id(const char* value, size_t size) {
-  
-  id_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:proto.AppMsg.sensor_id.id)
-}
-inline std::string* AppMsg_sensor_id::mutable_id() {
-  
-  // @@protoc_insertion_point(field_mutable:proto.AppMsg.sensor_id.id)
-  return id_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* AppMsg_sensor_id::release_id() {
-  // @@protoc_insertion_point(field_release:proto.AppMsg.sensor_id.id)
-  
-  return id_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void AppMsg_sensor_id::set_allocated_id(std::string* id) {
-  if (id != nullptr) {
-    
-  } else {
-    
-  }
-  id_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:proto.AppMsg.sensor_id.id)
 }
 
 // -------------------------------------------------------------------
@@ -3571,8 +3368,6 @@ inline void AppMsg_channel_info::set_allocated_abnormal_param(::proto::AppMsg_ab
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -26,9 +26,6 @@ message AppMsg {
         set_item_id = 21;       // 设置监测项目ID
         get_item_id = 22;
 
-        set_sensor_id = 23;     // 设置指定采集通道对应的传感器ID
-        get_sensor_id = 24;
-
         set_sample_frequency = 25;  // 设置数据采集模块的低速采样频率
         get_sample_frequency = 26;
 
@@ -81,10 +78,6 @@ message AppMsg {
 
     message item_id {
         string id = 1;
-    }
-
-    message sensor_id {
-        string id = 2;
     }
 
     // 低速采用频率
